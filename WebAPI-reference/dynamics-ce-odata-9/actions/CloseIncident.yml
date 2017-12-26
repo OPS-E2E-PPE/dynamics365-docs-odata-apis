@@ -22,7 +22,7 @@ isbound: false
 parameters:
   description: "Parameters allow for data to be passed to the action."
   parameter_items:
-  - name: IncidentResolution
+  - testName: IncidentResolution
     type: Microsoft.Dynamics.CRM.incidentresolution
     nullable: false
     unicode: true
