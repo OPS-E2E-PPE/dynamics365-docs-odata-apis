@@ -39,6 +39,7 @@ parameters:
     description: "Status of the incident. "
 # This action has no return value.
 hasreturnvalue: false
+href_see_also
   description: "Use the CloseIncident action with the following entity types:"
   entity_items:
   - type: Microsoft.Dynamics.CRM.incident
