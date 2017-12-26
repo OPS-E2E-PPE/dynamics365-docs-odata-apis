@@ -27,11 +27,11 @@ parameters:
     nullable: false
     unicode: true
     description: "Incident resolution (case resolution) that is associated with the incident (case) to be closed."
-  - testName: IncidentResolution
-    type: Microsoft.Dynamics.CRM.incidentresolution
+  - name: Status
+    type: Edm.Int32
     nullable: false
     unicode: true
-    description: "Incident resolution (case resolution) that is associated with the incident (case) to be closed."
+    description: "Status of the incident. "
   - name: Status
     type: Edm.Int32
     nullable: false
