@@ -21,7 +21,7 @@ members:
   member_items:
   - description: "No access. "
     name: "None"
-    value: "1"
+    value: 0
   - description: "The right to read the specified type of record. "
     name: "ReadAccess"
     value: 1
