@@ -20,7 +20,7 @@ owningsolution: Microsoft.Dynamics.CRM.System
 bound_entities:
   description: "Bound actions are invoked by appending the action name to the URI representing an entity or collection."
   bound_entity_items:
-  - entity_type: {Microsoft.Dynamics.CRM.campaign}
+  - entity_type: Microsoft.Dynamics.CRM.campaign
     binding_type: entity
   - entity_type: Microsoft.Dynamics.CRM.list
     binding_type: entity
