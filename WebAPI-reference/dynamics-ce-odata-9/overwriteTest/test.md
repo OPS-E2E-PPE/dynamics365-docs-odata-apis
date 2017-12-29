@@ -1,5 +1,5 @@
 ---
 uid: Microsoft.Dynamics.CRM.AddAppComponents
-some_property: value
+namespace: "test overwrite"
 ---
-Further description for `microsoft.com/docfx/Contacts`
+Further description for `Microsoft.Dynamics.CRM.AddAppComponents`
