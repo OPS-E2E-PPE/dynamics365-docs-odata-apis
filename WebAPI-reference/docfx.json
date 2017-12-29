@@ -106,7 +106,7 @@
         "dest": "dynamics-ce-odata-9"
       }
     },
-    "overwrite": ["./dynamics-ce-odata-9/overwriteTest/.md" ],
+    "overwrite": ["./dynamics-ce-odata-9/overwriteTest/*.md" ],
     "externalReference": [ ],
     "globalMetadata": {
       "breadcrumb_path": "~/bc/toc.yml"
