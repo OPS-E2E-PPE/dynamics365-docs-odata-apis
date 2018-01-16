@@ -1,4 +1,3 @@
-### YamlMime:OData
 uid: Microsoft.Dynamics.CRM.CloseIncident
 name: "CloseIncident"
 type: action
