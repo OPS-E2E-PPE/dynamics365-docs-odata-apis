@@ -18,9 +18,10 @@ header:
   description: "Contains the metadata for a Decimal attribute."
   base_type: Microsoft.Dynamics.CRM.AttributeMetadata
   operations_supported:
-  - GET
+  - get
   - PUT
   - DELETE
+  - COPY
 namespace: Microsoft.Dynamics.CRM
 properties:
   description: "Properties represent fields of data stored in the entity."
