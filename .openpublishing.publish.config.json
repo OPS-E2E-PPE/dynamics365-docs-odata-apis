@@ -1,9 +1,9 @@
 {
   "docsets_to_publish": [
     {
-      "docset_name": "e2eppe-dynamics365-docs-odata-apis",
+      "docset_name": "E2E_dynamics365-docs-odata-apis_Internal",
       "build_source_folder": "WebAPI-reference",
-      "build_output_subfolder": "e2eppe-dynamics365-docs-odata-apis",
+      "build_output_subfolder": "E2E_dynamics365-docs-odata-apis_Internal",
       "locale": "en-us",
       "monikers": [],
       "moniker_ranges": [],
