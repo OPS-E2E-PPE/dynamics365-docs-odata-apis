@@ -4,7 +4,7 @@ name: "IncrementKnowledgeArticleViewCount"
 type: function
 metadata: 
   title: "Microsoft Dynamics 365 Customer Engagement IncrementKnowledgeArticleViewCount Function Reference | MicrosoftDocs"
-  ms.date: "10/20/2017"
+  ms.date: "03/20/2018"
   ms.service: "crm-online"
   ms.topic: "reference"
   applies_to: 
@@ -27,21 +27,25 @@ parameters:
     nullable: false
     unicode: true
     description: "The knowledge article record for incrementing the view count."
+    iscollection: false
   - name: ViewDate
     type: Edm.DateTimeOffset
     nullable: false
     unicode: true
     description: "The date for which the view count has to be incremented."
+    iscollection: false
   - name: Location
     type: Edm.Int32
     nullable: false
     unicode: true
     description: "The location where the knowledge article record was used."
+    iscollection: false
   - name: Count
     type: Edm.Int32
     nullable: false
     unicode: true
     description: "The view count of a knowledge article record."
+    iscollection: false
 return_type:
   description: "The IncrementKnowledgeArticleViewCount function returns the following value."
   type: Microsoft.Dynamics.CRM.crmbaseentity
@@ -55,7 +59,7 @@ entities:
     description: "No of times an article is viewed per day"
 # This function has no remarks.
 href_see_also:
-- text: "Use the Dynamics 365 Customer Engagement Web API"
+- text: "Use the Microsoft Dynamics 365 Customer Engagement Web API"
   href: "https://docs.microsoft.com/dynamics365/customer-engagement/developer/use-microsoft-dynamics-365-web-api"
 xref_see_also:
 - Microsoft.Dynamics.CRM.EntityTypeIndex

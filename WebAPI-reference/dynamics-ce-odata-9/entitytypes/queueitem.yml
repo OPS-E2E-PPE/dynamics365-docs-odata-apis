@@ -4,7 +4,7 @@ name: "queueitem"
 type: entitytype
 metadata: 
   title: "Microsoft Dynamics 365 Customer Engagement queueitem EntityType Reference | MicrosoftDocs"
-  ms.date: "10/20/2017"
+  ms.date: "03/20/2018"
   ms.service: "crm-online"
   ms.topic: "reference"
   applies_to: 
@@ -67,72 +67,72 @@ properties:
       iscomputed: false
       isreadonly: true
       options:
-        - value: 10007
-          label: "Booking Alert"
-        - value: 4401
-          label: "Campaign Response"
-        - value: 10028
-          label: "Time Group Detail"
-        - value: 4210
-          label: "Phone Call"
         - value: 10136
           label: "Inventory Transfer"
-        - value: 4402
-          label: "Campaign Activity"
-        - value: 10091
-          label: "Resource Request"
-        - value: 10074
-          label: "Project Task"
-        - value: 10182
-          label: "Work Order Service"
-        - value: 4406
-          label: "Quick Campaign"
-        - value: 10183
-          label: "Work Order Service Task"
-        - value: 4202
-          label: "Email"
-        - value: 10190
-          label: "IoT Alert"
+        - value: 10133
+          label: "Inventory Adjustment"
+        - value: 10179
+          label: "Work Order Incident"
         - value: 10176
           label: "Work Order"
         - value: 10113
           label: "Agreement Booking Setup"
-        - value: 4212
-          label: "Task"
+        - value: 10108
+          label: "Agreement Booking Date"
+        - value: 10116
+          label: "Agreement Invoice Setup"
+        - value: 10114
+          label: "Agreement Invoice Date"
+        - value: 4406
+          label: "Quick Campaign"
         - value: 4214
           label: "Service Activity"
+        - value: 4401
+          label: "Campaign Response"
+        - value: 4402
+          label: "Campaign Activity"
+        - value: 10183
+          label: "Work Order Service Task"
+        - value: 10182
+          label: "Work Order Service"
+        - value: 112
+          label: "Case"
+        - value: 10186
+          label: "IoT Alert"
+        - value: 10091
+          label: "Resource Request"
+        - value: 4200
+          label: "Activity"
+        - value: 4207
+          label: "Letter"
+        - value: 4210
+          label: "Phone Call"
+        - value: 4251
+          label: "Recurring Appointment"
         - value: 4201
           label: "Appointment"
         - value: 4204
           label: "Fax"
-        - value: 10133
-          label: "Inventory Adjustment"
-        - value: 10069
-          label: "Project"
-        - value: 112
-          label: "Case"
-        - value: 10114
-          label: "Agreement Invoice Date"
-        - value: 10027
-          label: "Time Group"
-        - value: 10032
-          label: "Approval"
-        - value: 4200
-          label: "Activity"
-        - value: 10179
-          label: "Work Order Incident"
-        - value: 10108
-          label: "Agreement Booking Date"
-        - value: 4251
-          label: "Recurring Appointment"
-        - value: 10116
-          label: "Agreement Invoice Setup"
-        - value: 4216
-          label: "Social Activity"
-        - value: 4207
-          label: "Letter"
         - value: 9953
           label: "Knowledge Article"
+        - value: 4216
+          label: "Social Activity"
+        - value: 10032
+          label: "Approval"
+        - value: 10028
+          label: "Time Group Detail"
+        - value: 10074
+          label: "Project Task"
+        - value: 10069
+          label: "Project"
+        - value: 4202
+          label: "Email"
+        - value: 4212
+          label: "Task"
+        - value: 10027
+          label: "Time Group"
+        - value: 10007
+          label: "Booking Alert"
     - name: overriddencreatedon
       type: Edm.DateTimeOffset
       display_name: "Record Created On"
@@ -218,7 +218,6 @@ lookup_properties:
     description: "Unique identifier of the delegate user who last modified the queueitem."
   - name: _objectid_value
     single_valued_navigation_property:
-    - objectid_msdyn_iotalert
     - objectid_incident
     - objectid_msdyn_timegroup
     - objectid_msdyn_timegroupdetail
@@ -235,6 +234,7 @@ lookup_properties:
     - objectid_msdyn_workorderincident
     - objectid_msdyn_workorderservice
     - objectid_msdyn_workorderservicetask
+    - objectid_msdyn_iotalert
     - objectid_knowledgearticle
     - objectid_activitypointer
     description: "Choose the activity, case, or article assigned to the queue."
@@ -431,7 +431,7 @@ solutions:
     description: "Internal CRM System Solution"
 # This entity has no remarks.
 href_see_also:
-- text: "Use the Dynamics 365 Customer Engagement Web API"
+- text: "Use the Microsoft Dynamics 365 Customer Engagement Web API"
   href: "https://docs.microsoft.com/dynamics365/customer-engagement/developer/use-microsoft-dynamics-365-web-api"
 xref_see_also:
 - Microsoft.Dynamics.CRM.EntityTypeIndex

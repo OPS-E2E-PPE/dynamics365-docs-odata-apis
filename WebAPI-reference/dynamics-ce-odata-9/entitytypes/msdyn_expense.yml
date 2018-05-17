@@ -4,7 +4,7 @@ name: "msdyn_expense"
 type: entitytype
 metadata: 
   title: "Microsoft Dynamics 365 Customer Engagement msdyn_expense EntityType Reference | MicrosoftDocs"
-  ms.date: "10/20/2017"
+  ms.date: "03/20/2018"
   ms.service: "crm-online"
   ms.topic: "reference"
   applies_to: 
@@ -397,7 +397,7 @@ solutions:
     description: "Microsoft Dynamics 365 for Project Service Automation is an end-to-end solution that helps sales and delivery teams engage customers and deliver billable projects on time and within budget. Project Service gives you the tools you need to: Estimate, quote, and contract work; Plan and assign resources; Enable team collaboration; Capture time, expense, and progress data for real-time insights and accurate invoicing."
 # This entity has no remarks.
 href_see_also:
-- text: "Use the Dynamics 365 Customer Engagement Web API"
+- text: "Use the Microsoft Dynamics 365 Customer Engagement Web API"
   href: "https://docs.microsoft.com/dynamics365/customer-engagement/developer/use-microsoft-dynamics-365-web-api"
 xref_see_also:
 - Microsoft.Dynamics.CRM.EntityTypeIndex

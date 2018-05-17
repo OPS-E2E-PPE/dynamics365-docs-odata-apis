@@ -4,7 +4,7 @@ name: "msdyn_BookingResource"
 type: action
 metadata: 
   title: "Microsoft Dynamics 365 Customer Engagement msdyn_BookingResource Action Reference | MicrosoftDocs"
-  ms.date: "10/20/2017"
+  ms.date: "03/20/2018"
   ms.service: "crm-online"
   ms.topic: "reference"
   applies_to: 
@@ -15,7 +15,7 @@ metadata:
   manager: "jdaly"
   meta-description: "Reference information about the Dynamics 365 Customer Engagement msdyn_BookingResource Action."
 namespace: Microsoft.Dynamics.CRM
-# This Action has no description.
+description: "For internal use only."
 owningsolution: Microsoft.Dynamics.CRM.MicrosoftDynamicsScheduling
 # This action has no bound entities.
 isbound: false
@@ -26,122 +26,122 @@ parameters:
     type: Edm.DateTimeOffset
     nullable: true
     unicode: true
-    description: ""
+    description: "For internal use only."
   - name: NewResourceId
     type: Edm.String
     nullable: true
     unicode: false
-    description: ""
+    description: "For internal use only."
   - name: ResourceId
     type: Edm.String
     nullable: false
     unicode: false
-    description: ""
+    description: "For internal use only."
   - name: RequirementId
     type: Edm.String
     nullable: true
     unicode: false
-    description: ""
+    description: "For internal use only."
   - name: Work
     type: Microsoft.Dynamics.CRM.crmbaseentity
     nullable: true
     unicode: true
-    description: ""
+    description: "For internal use only."
   - name: BookingStatusId
     type: Edm.String
     nullable: false
     unicode: false
-    description: ""
+    description: "For internal use only."
   - name: BookingMethod
     type: Edm.Int32
     nullable: false
     unicode: true
-    description: ""
+    description: "For internal use only."
   - name: BookingType
     type: Edm.Int32
     nullable: false
     unicode: true
-    description: ""
+    description: "For internal use only."
   - name: Schedules
     type: Edm.String
     nullable: false
     unicode: false
-    description: ""
+    description: "For internal use only."
   - name: Timeframe
     type: Edm.Int32
     nullable: false
     unicode: true
-    description: ""
+    description: "For internal use only."
   - name: Hours
     type: Edm.Decimal
     nullable: true
     unicode: true
-    description: ""
+    description: "For internal use only."
   - name: Percentage
     type: Edm.Decimal
     nullable: true
     unicode: true
-    description: ""
+    description: "For internal use only."
   - name: DistributeMethod
     type: Edm.Int32
     nullable: true
     unicode: true
-    description: ""
+    description: "For internal use only."
   - name: BookingIds
     type: Edm.String
     nullable: true
     unicode: false
-    description: ""
+    description: "For internal use only."
   - name: DefaultBookingHeader
     type: Microsoft.Dynamics.CRM.crmbaseentity
     nullable: true
     unicode: true
-    description: ""
+    description: "For internal use only."
   - name: DefaultBookingDetail
     type: Microsoft.Dynamics.CRM.crmbaseentity
     nullable: true
     unicode: true
-    description: ""
+    description: "For internal use only."
   - name: ReloadStartDate
     type: Edm.DateTimeOffset
     nullable: true
     unicode: true
-    description: ""
+    description: "For internal use only."
   - name: ReloadEndDate
     type: Edm.DateTimeOffset
     nullable: true
     unicode: true
-    description: ""
+    description: "For internal use only."
   - name: ReloadDetailBookings
     type: Edm.Boolean
     nullable: true
     unicode: true
-    description: ""
+    description: "For internal use only."
   - name: TimeZoneCode
     type: Edm.Int32
     nullable: true
     unicode: true
-    description: ""
+    description: "For internal use only."
   - name: SchedulerSettings
     type: Edm.String
     nullable: true
     unicode: false
-    description: ""
+    description: "For internal use only."
   - name: PreventPartialFulfillment
     type: Edm.Boolean
     nullable: true
     unicode: true
-    description: ""
+    description: "For internal use only."
   - name: AllowDoubleBooking
     type: Edm.Boolean
     nullable: true
     unicode: true
-    description: ""
+    description: "For internal use only."
   - name: CancelExistingBooking
     type: Edm.Boolean
     nullable: true
     unicode: true
-    description: ""
+    description: "For internal use only."
 return_type:
   description: "The msdyn_BookingResource action returns the following value."
   iscollection: false
@@ -150,7 +150,7 @@ return_type:
 # This action has no identified unbound entities.
 # This action has no remarks.
 href_see_also:
-- text: "Use the Dynamics 365 Customer Engagement Web API"
+- text: "Use the Microsoft Dynamics 365 Customer Engagement Web API"
   href: "https://docs.microsoft.com/dynamics365/customer-engagement/developer/use-microsoft-dynamics-365-web-api"
 xref_see_also:
 - Microsoft.Dynamics.CRM.EntityTypeIndex

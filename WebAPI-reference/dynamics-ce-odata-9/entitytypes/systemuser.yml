@@ -4,7 +4,7 @@ name: "systemuser"
 type: entitytype
 metadata: 
   title: "Microsoft Dynamics 365 Customer Engagement systemuser EntityType Reference | MicrosoftDocs"
-  ms.date: "10/20/2017"
+  ms.date: "03/20/2018"
   ms.service: "crm-online"
   ms.topic: "reference"
   applies_to: 
@@ -2181,6 +2181,18 @@ collection_valued_navigation_properties:
   - name: lk_mailmergetemplatebase_modifiedby
     type: Microsoft.Dynamics.CRM.mailmergetemplate
     partner: modifiedby
+  - name: lk_mbs_pluginprofile_createdby
+    type: Microsoft.Dynamics.CRM.mbs_pluginprofile
+    partner: createdby
+  - name: lk_mbs_pluginprofile_createdonbehalfby
+    type: Microsoft.Dynamics.CRM.mbs_pluginprofile
+    partner: createdonbehalfby
+  - name: lk_mbs_pluginprofile_modifiedby
+    type: Microsoft.Dynamics.CRM.mbs_pluginprofile
+    partner: modifiedby
+  - name: lk_mbs_pluginprofile_modifiedonbehalfby
+    type: Microsoft.Dynamics.CRM.mbs_pluginprofile
+    partner: modifiedonbehalfby
   - name: lk_metric_createdby
     type: Microsoft.Dynamics.CRM.metric
     partner: createdby
@@ -2244,6 +2256,30 @@ collection_valued_navigation_properties:
   - name: lk_monthlyfiscalcalendar_salespersonid
     type: Microsoft.Dynamics.CRM.monthlyfiscalcalendar
     partner: salespersonid
+  - name: lk_ms_newsitem_createdby
+    type: Microsoft.Dynamics.CRM.ms_newsitem
+    partner: createdby
+  - name: lk_ms_newsitem_createdonbehalfby
+    type: Microsoft.Dynamics.CRM.ms_newsitem
+    partner: createdonbehalfby
+  - name: lk_ms_newsitem_modifiedby
+    type: Microsoft.Dynamics.CRM.ms_newsitem
+    partner: modifiedby
+  - name: lk_ms_newsitem_modifiedonbehalfby
+    type: Microsoft.Dynamics.CRM.ms_newsitem
+    partner: modifiedonbehalfby
+  - name: lk_ms_satori_createdby
+    type: Microsoft.Dynamics.CRM.ms_satori
+    partner: createdby
+  - name: lk_ms_satori_createdonbehalfby
+    type: Microsoft.Dynamics.CRM.ms_satori
+    partner: createdonbehalfby
+  - name: lk_ms_satori_modifiedby
+    type: Microsoft.Dynamics.CRM.ms_satori
+    partner: modifiedby
+  - name: lk_ms_satori_modifiedonbehalfby
+    type: Microsoft.Dynamics.CRM.ms_satori
+    partner: modifiedonbehalfby
   - name: lk_msdyn_accountpricelist_createdby
     type: Microsoft.Dynamics.CRM.msdyn_accountpricelist
     partner: createdby
@@ -3251,6 +3287,18 @@ collection_valued_navigation_properties:
     partner: modifiedby
   - name: lk_msdyn_organizationalunit_modifiedonbehalfby
     type: Microsoft.Dynamics.CRM.msdyn_organizationalunit
+    partner: modifiedonbehalfby
+  - name: lk_msdyn_orginsightsuserdashboarddefinition_createdby
+    type: Microsoft.Dynamics.CRM.msdyn_orginsightsuserdashboarddefinition
+    partner: createdby
+  - name: lk_msdyn_orginsightsuserdashboarddefinition_createdonbehalfby
+    type: Microsoft.Dynamics.CRM.msdyn_orginsightsuserdashboarddefinition
+    partner: createdonbehalfby
+  - name: lk_msdyn_orginsightsuserdashboarddefinition_modifiedby
+    type: Microsoft.Dynamics.CRM.msdyn_orginsightsuserdashboarddefinition
+    partner: modifiedby
+  - name: lk_msdyn_orginsightsuserdashboarddefinition_modifiedonbehalfby
+    type: Microsoft.Dynamics.CRM.msdyn_orginsightsuserdashboarddefinition
     partner: modifiedonbehalfby
   - name: lk_msdyn_payment_createdby
     type: Microsoft.Dynamics.CRM.msdyn_payment
@@ -5592,6 +5640,9 @@ collection_valued_navigation_properties:
   - name: mailbox_regarding_systemuser
     type: Microsoft.Dynamics.CRM.mailbox
     partner: regardingobjectid
+  - name: mbs_systemuser_mbs_pluginprofile
+    type: Microsoft.Dynamics.CRM.mbs_pluginprofile
+    partner: mbs_InitiatingUserId
   - name: modifiedby_connection
     type: Microsoft.Dynamics.CRM.connection
     partner: modifiedby
@@ -6062,6 +6113,9 @@ collection_valued_navigation_properties:
     partner: ownerid
   - name: owner_msdyn_orderpricelist
     type: Microsoft.Dynamics.CRM.msdyn_orderpricelist
+    partner: ownerid
+  - name: owner_msdyn_orginsightsuserdashboarddefinition
+    type: Microsoft.Dynamics.CRM.msdyn_orginsightsuserdashboarddefinition
     partner: ownerid
   - name: owner_msdyn_payment
     type: Microsoft.Dynamics.CRM.msdyn_payment
@@ -6900,6 +6954,9 @@ collection_valued_navigation_properties:
   - name: user_msdyn_orderpricelist
     type: Microsoft.Dynamics.CRM.msdyn_orderpricelist
     partner: owninguser
+  - name: user_msdyn_orginsightsuserdashboarddefinition
+    type: Microsoft.Dynamics.CRM.msdyn_orginsightsuserdashboarddefinition
+    partner: owninguser
   - name: user_msdyn_payment
     type: Microsoft.Dynamics.CRM.msdyn_payment
     partner: owninguser
@@ -7263,6 +7320,8 @@ operations:
     binding_type: "Entity"
   - name: Microsoft.Dynamics.CRM.RetrievePrincipalSyncAttributeMappings
     binding_type: "Entity"
+  - name: Microsoft.Dynamics.CRM.RetrieveUserLicenseInfo
+    binding_type: "Entity"
   - name: Microsoft.Dynamics.CRM.RetrieveUserPrivileges
     binding_type: "Entity"
   - name: Microsoft.Dynamics.CRM.RetrieveUserQueues
@@ -7298,7 +7357,7 @@ solutions:
     description: "Internal CRM System Solution"
 # This entity has no remarks.
 href_see_also:
-- text: "Use the Dynamics 365 Customer Engagement Web API"
+- text: "Use the Microsoft Dynamics 365 Customer Engagement Web API"
   href: "https://docs.microsoft.com/dynamics365/customer-engagement/developer/use-microsoft-dynamics-365-web-api"
 xref_see_also:
 - Microsoft.Dynamics.CRM.EntityTypeIndex

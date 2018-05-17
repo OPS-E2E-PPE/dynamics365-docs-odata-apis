@@ -4,7 +4,7 @@ name: "RetrieveAttributeChangeHistory"
 type: function
 metadata: 
   title: "Microsoft Dynamics 365 Customer Engagement RetrieveAttributeChangeHistory Function Reference | MicrosoftDocs"
-  ms.date: "10/20/2017"
+  ms.date: "03/20/2018"
   ms.service: "crm-online"
   ms.topic: "reference"
   applies_to: 
@@ -15,7 +15,7 @@ metadata:
   manager: "jdaly"
   meta-description: "Reference information about the Dynamics 365 Customer Engagement RetrieveAttributeChangeHistory Function."
 namespace: Microsoft.Dynamics.CRM
-description: ""
+description: "retrieve all metadata changes to a specific attribute."
 iscomposable: false
 # This function is not bound to any entities.
 isbound: false
@@ -26,17 +26,20 @@ parameters:
     type: Microsoft.Dynamics.CRM.crmbaseentity
     nullable: false
     unicode: true
-    description: ""
+    description: "The record whose attribute change history is being asked."
+    iscollection: false
   - name: AttributeLogicalName
     type: Edm.String
     nullable: false
     unicode: false
-    description: ""
+    description: "The logical name of the target attribute."
+    iscollection: false
   - name: PagingInfo
     type: Microsoft.Dynamics.CRM.PagingInfo
     nullable: true
     unicode: true
-    description: ""
+    description: "A paging information for the retrieved attribute change history."
+    iscollection: false
 return_type:
   description: "The RetrieveAttributeChangeHistory function returns the following value."
   type: Microsoft.Dynamics.CRM.RetrieveAttributeChangeHistoryResponse
@@ -50,7 +53,7 @@ entities:
     description: "Track changes to records for analysis, record keeping, and compliance."
 # This function has no remarks.
 href_see_also:
-- text: "Use the Dynamics 365 Customer Engagement Web API"
+- text: "Use the Microsoft Dynamics 365 Customer Engagement Web API"
   href: "https://docs.microsoft.com/dynamics365/customer-engagement/developer/use-microsoft-dynamics-365-web-api"
 xref_see_also:
 - Microsoft.Dynamics.CRM.EntityTypeIndex

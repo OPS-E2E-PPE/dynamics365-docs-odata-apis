@@ -4,7 +4,7 @@ name: "RetrievePrincipalAccess"
 type: function
 metadata: 
   title: "Microsoft Dynamics 365 Customer Engagement RetrievePrincipalAccess Function Reference | MicrosoftDocs"
-  ms.date: "10/20/2017"
+  ms.date: "03/20/2018"
   ms.service: "crm-online"
   ms.topic: "reference"
   applies_to: 
@@ -32,6 +32,7 @@ parameters:
     nullable: false
     unicode: true
     description: "The target record for which to retrieve access rights."
+    iscollection: false
 return_type:
   description: "The RetrievePrincipalAccess function returns the following value."
   type: Microsoft.Dynamics.CRM.RetrievePrincipalAccessResponse
@@ -376,6 +377,9 @@ entities:
   - type: Microsoft.Dynamics.CRM.msdyn_orderpricelist
     displayName: "Project Contract Project Price List"
     description: "Sales price list used on the contract to set default sales prices on all project-based components such as time and expense."
+  - type: Microsoft.Dynamics.CRM.msdyn_orginsightsuserdashboarddefinition
+    displayName: "OrgInsights User Dashboard Definition"
+    description: "OrgInsights User Dashboard Definition"
   - type: Microsoft.Dynamics.CRM.msdyn_payment
     displayName: "Payment"
     description: "Specify payment."
@@ -500,7 +504,7 @@ entities:
     displayName: "Resource Assignment"
     description: "Entity used to keep track of resource assignment header information  on tasks."
   - type: Microsoft.Dynamics.CRM.msdyn_resourceassignmentdetail
-    displayName: "Resource Assignment Detail"
+    displayName: "Resource Assignment Detail (Deprecated)"
     description: "Entity used to keep track of resource assignment details on tasks. "
   - type: Microsoft.Dynamics.CRM.msdyn_resourcepaytype
     displayName: "Resource Pay Type"
@@ -711,7 +715,7 @@ entities:
     description: "Set of logical rules that define the steps necessary to automate a specific business process, task, or set of actions to be performed."
 # This function has no remarks.
 href_see_also:
-- text: "Use the Dynamics 365 Customer Engagement Web API"
+- text: "Use the Microsoft Dynamics 365 Customer Engagement Web API"
   href: "https://docs.microsoft.com/dynamics365/customer-engagement/developer/use-microsoft-dynamics-365-web-api"
 xref_see_also:
 - Microsoft.Dynamics.CRM.EntityTypeIndex

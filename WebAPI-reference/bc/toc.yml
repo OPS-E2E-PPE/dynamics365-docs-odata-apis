@@ -1,11 +1,15 @@
 - name: Dynamics 365
   tocHref: /dynamics365/
-  topicHref: /dynamics365/index
+  topicHref: /dynamics365/
   items:
-  - name: Customer Engagement Developer Documentation
-    tocHref: /dynamics365/customer-engagement/web-api/
-    topicHref: /dynamics365/customer-engagement/developer/index
+  - name: Customer Engagement
+    tocHref: /dynamics365/customer-engagement/
+    topicHref: /dynamics365/customer-engagement/
     items:
-    - name: Web API Reference
-      tocHref: /dynamics365/customer-engagement/developer/web-api/about
-      topicHref: /dynamics365/customer-engagement/developer/web-api/about
+    - name: Developer Documentation
+      tocHref: /dynamics365/customer-engagement/web-api/
+      topicHref: /dynamics365/customer-engagement/developer/
+      items:
+      - name: Web API
+        tocHref: /dynamics365/customer-engagement/web-api/
+        topicHref: /dynamics365/customer-engagement/developer/webapi/

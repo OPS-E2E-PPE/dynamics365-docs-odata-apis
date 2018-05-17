@@ -4,7 +4,7 @@ name: "SetProcess"
 type: action
 metadata: 
   title: "Microsoft Dynamics 365 Customer Engagement SetProcess Action Reference | MicrosoftDocs"
-  ms.date: "10/20/2017"
+  ms.date: "04/05/2018"
   ms.service: "crm-online"
   ms.topic: "reference"
   applies_to: 
@@ -15,35 +15,35 @@ metadata:
   manager: "jdaly"
   meta-description: "Reference information about the Dynamics 365 Customer Engagement SetProcess Action."
 namespace: Microsoft.Dynamics.CRM
-description: "Sets the process that associates with a given target entity. The user can set to another business process or specify null to clear out the current process."
+description: "For internal use only."
 owningsolution: Microsoft.Dynamics.CRM.System
 # This action has no bound entities.
 isbound: false
 parameters:
-  description: "Parameters allow for data to be passed to the action."
+  description: "For internal use only."
   parameter_items:
   - name: Target
     type: Microsoft.Dynamics.CRM.crmbaseentity
     nullable: false
     unicode: true
-    description: "The target entity."
+    description: "For internal use only."
   - name: NewProcess
     type: Microsoft.Dynamics.CRM.crmbaseentity
     nullable: true
     unicode: true
-    description: "The business process flow definition to be set to the target entity."
+    description: "For internal use only."
   - name: NewProcessInstance
     type: Microsoft.Dynamics.CRM.crmbaseentity
     nullable: true
     unicode: true
-    description: "The business process flow instance to be set as the active business process flow instance for the target entity. Optional. If you do not specify this parameter and there isn't any active business process flow instance for the target entity record and the specified business process flow definition, a new business process flow instance will be created and set as the active instance."
+    description: "For internal use only."
 # This action has no return value.
 hasreturnvalue: false
 # This action has no identified unbound entities.
 # This action has no remarks.
 href_see_also:
-- text: "Use the Dynamics 365 Customer Engagement Web API"
-  href: "https://docs.microsoft.com/dynamics365/customer-engagement/developer/use-microsoft-dynamics-365-web-api"
+- text: "Model business process flows"
+  href: "https://docs.microsoft.com/dynamics365/customer-engagement/developer/model-business-process-flows"
 xref_see_also:
 - Microsoft.Dynamics.CRM.EntityTypeIndex
 - Microsoft.Dynamics.CRM.ActionIndex

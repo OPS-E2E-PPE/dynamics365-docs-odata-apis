@@ -4,7 +4,7 @@ name: "RetrievePersonalWall"
 type: function
 metadata: 
   title: "Microsoft Dynamics 365 Customer Engagement RetrievePersonalWall Function Reference | MicrosoftDocs"
-  ms.date: "10/20/2017"
+  ms.date: "03/20/2018"
   ms.service: "crm-online"
   ms.topic: "reference"
   applies_to: 
@@ -30,41 +30,49 @@ parameters:
     nullable: false
     unicode: true
     description: "A specific page of posts that is designated by its page number "
+    iscollection: false
   - name: PageSize
     type: Edm.Int32
     nullable: false
     unicode: true
     description: "The number of posts per page "
+    iscollection: false
   - name: CommentsPerPost
     type: Edm.Int32
     nullable: false
     unicode: true
     description: "The number of comments per post.  "
+    iscollection: false
   - name: StartDate
     type: Edm.DateTimeOffset
     nullable: true
     unicode: true
     description: "The start date and time of the posts that you want to retrieve. "
+    iscollection: false
   - name: EndDate
     type: Edm.DateTimeOffset
     nullable: true
     unicode: true
     description: "The end date and time of the posts that you want to retrieve "
+    iscollection: false
   - name: Type
     type: Edm.Int32
     nullable: true
     unicode: true
     description: "Reserved for future use. "
+    iscollection: false
   - name: Source
     type: Edm.Int32
     nullable: true
     unicode: true
     description: "The source of the post. "
+    iscollection: false
   - name: SortDirection
     type: Edm.Boolean
     nullable: true
     unicode: true
     description: ""
+    iscollection: false
 return_type:
   description: "The RetrievePersonalWall function returns the following value."
   type: Microsoft.Dynamics.CRM.post
@@ -73,7 +81,7 @@ return_type:
 # This function no specific entities for this function identified.
 # This function has no remarks.
 href_see_also:
-- text: "Use the Dynamics 365 Customer Engagement Web API"
+- text: "Use the Microsoft Dynamics 365 Customer Engagement Web API"
   href: "https://docs.microsoft.com/dynamics365/customer-engagement/developer/use-microsoft-dynamics-365-web-api"
 xref_see_also:
 - Microsoft.Dynamics.CRM.EntityTypeIndex

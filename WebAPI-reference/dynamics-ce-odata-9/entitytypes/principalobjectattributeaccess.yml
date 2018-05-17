@@ -4,7 +4,7 @@ name: "principalobjectattributeaccess"
 type: entitytype
 metadata: 
   title: "Microsoft Dynamics 365 Customer Engagement principalobjectattributeaccess EntityType Reference | MicrosoftDocs"
-  ms.date: "10/20/2017"
+  ms.date: "03/20/2018"
   ms.service: "crm-online"
   ms.topic: "reference"
   applies_to: 
@@ -75,12 +75,6 @@ lookup_properties:
   property_items:
   - name: _objectid_value
     single_valued_navigation_property:
-    - objectid_msdyn_iotalert
-    - objectid_msdyn_iotdevice
-    - objectid_msdyn_iotdevicecategory
-    - objectid_msdyn_iotdevicecommand
-    - objectid_msdyn_iotdeviceregistrationhistory
-    - objectid_msdyn_bpf_477c16f59170487b8b4dc895c5dcd09b
     - objectid_territory
     - objectid_accountleads
     - objectid_contactleads
@@ -340,6 +334,16 @@ lookup_properties:
     - objectid_msdyn_workorderservicetask
     - objectid_msdyn_workordersubstatus
     - objectid_msdyn_workordertype
+    - objectid_mbs_pluginprofile
+    - objectid_msdyn_iotalert
+    - objectid_msdyn_iotdevice
+    - objectid_msdyn_iotdevicecategory
+    - objectid_msdyn_iotdevicecommand
+    - objectid_msdyn_iotdeviceregistrationhistory
+    - objectid_msdyn_bpf_477c16f59170487b8b4dc895c5dcd09b
+    - objectid_msdyn_orginsightsuserdashboarddefinition
+    - objectid_ms_newsitem
+    - objectid_ms_satori
     - objectid_contact
     - objectid_account
     - objectid_knowledgearticle
@@ -590,6 +594,15 @@ single_valued_navigation_properties:
   - name: objectid_mailmergetemplate
     type: Microsoft.Dynamics.CRM.mailmergetemplate
     partner: mailmergetemplate_principalobjectattributeaccess
+  - name: objectid_mbs_pluginprofile
+    type: Microsoft.Dynamics.CRM.mbs_pluginprofile
+    partner: mbs_pluginprofile_PrincipalObjectAttributeAccesses
+  - name: objectid_ms_newsitem
+    type: Microsoft.Dynamics.CRM.ms_newsitem
+    partner: ms_newsitem_PrincipalObjectAttributeAccesses
+  - name: objectid_ms_satori
+    type: Microsoft.Dynamics.CRM.ms_satori
+    partner: ms_satori_PrincipalObjectAttributeAccesses
   - name: objectid_msdyn_accountpricelist
     type: Microsoft.Dynamics.CRM.msdyn_accountpricelist
     partner: msdyn_accountpricelist_PrincipalObjectAttributeAccesses
@@ -848,6 +861,9 @@ single_valued_navigation_properties:
   - name: objectid_msdyn_organizationalunit
     type: Microsoft.Dynamics.CRM.msdyn_organizationalunit
     partner: msdyn_organizationalunit_PrincipalObjectAttributeAccesses
+  - name: objectid_msdyn_orginsightsuserdashboarddefinition
+    type: Microsoft.Dynamics.CRM.msdyn_orginsightsuserdashboarddefinition
+    partner: msdyn_orginsightsuserdashboarddefinition_PrincipalObjectAttributeAccesses
   - name: objectid_msdyn_payment
     type: Microsoft.Dynamics.CRM.msdyn_payment
     partner: msdyn_payment_PrincipalObjectAttributeAccesses
@@ -1305,7 +1321,7 @@ solutions:
     description: "Internal CRM System Solution"
 # This entity has no remarks.
 href_see_also:
-- text: "Use the Dynamics 365 Customer Engagement Web API"
+- text: "Use the Microsoft Dynamics 365 Customer Engagement Web API"
   href: "https://docs.microsoft.com/dynamics365/customer-engagement/developer/use-microsoft-dynamics-365-web-api"
 xref_see_also:
 - Microsoft.Dynamics.CRM.EntityTypeIndex

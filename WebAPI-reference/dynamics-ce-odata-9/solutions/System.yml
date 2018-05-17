@@ -4,7 +4,7 @@ name: "System Solution"
 type: solution
 metadata: 
   title: "Microsoft Dynamics 365 Customer Engagement System Solution Solution Reference | MicrosoftDocs"
-  ms.date: "10/20/2017"
+  ms.date: "03/20/2018"
   ms.service: "crm-online"
   ms.topic: "reference"
   applies_to: 
@@ -393,7 +393,7 @@ actions:
    - type: Microsoft.Dynamics.CRM.AutoMapEntity
      description: "Generates a new set of attribute mappings based on the metadata. "
    - type: Microsoft.Dynamics.CRM.BackgroundSendEmail
-     description: ""
+     description: "Send email messages asynchronously."
    - type: Microsoft.Dynamics.CRM.Book
      description: "Schedules or \"books\" an appointment, recurring appointment, or service appointment (service activity). "
    - type: Microsoft.Dynamics.CRM.BulkDelete
@@ -468,6 +468,8 @@ actions:
      description: "Deletes instances of a recurring appointment master that have an “Open” state.  "
    - type: Microsoft.Dynamics.CRM.DeleteOptionValue
      description: "Deletes an option value in a global or local option set.  "
+   - type: Microsoft.Dynamics.CRM.DeleteRecordChangeHistory
+     description: "Deletes all audit change history records for a particular record.  "
    - type: Microsoft.Dynamics.CRM.DeliverIncomingEmail
      description: "Creates an email activity record from an incoming email message. "
    - type: Microsoft.Dynamics.CRM.DeliverPromoteEmail
@@ -536,6 +538,8 @@ actions:
      description: "Merges the information from two entity records of the same type. "
    - type: Microsoft.Dynamics.CRM.ModifyAccess
      description: "Replaces the access rights on the target record for the specified security principal (user or team). "
+   - type: Microsoft.Dynamics.CRM.msdyn_ExpandResourceAssignment
+     description: ""
    - type: Microsoft.Dynamics.CRM.OrderOption
      description: "Sets the order for an option set.  "
    - type: Microsoft.Dynamics.CRM.ParseImport
@@ -565,7 +569,7 @@ actions:
    - type: Microsoft.Dynamics.CRM.QueryExpressionToFetchXml
      description: "Converts a QueryExpression query to its equivalent FetchXML query"
    - type: Microsoft.Dynamics.CRM.ReactivateEntityKey
-     description: ""
+     description: "Submit a new asynchronous system job to create the index for the key."
    - type: Microsoft.Dynamics.CRM.ReassignObjectsOwner
      description: "Reassigns all records that are owned by the security principal (user or team) to another security principal (user or team).  "
    - type: Microsoft.Dynamics.CRM.ReassignObjectsSystemUser
@@ -670,7 +674,7 @@ actions:
      description: "Sets the state of a quote to Won.  "
 # This solution has no remarks.
 href_see_also:
-- text: "Use the Dynamics 365 Customer Engagement Web API"
+- text: "Use the Microsoft Dynamics 365 Customer Engagement Web API"
   href: "https://docs.microsoft.com/dynamics365/customer-engagement/developer/use-microsoft-dynamics-365-web-api"
 xref_see_also:
 - Microsoft.Dynamics.CRM.EntityTypeIndex

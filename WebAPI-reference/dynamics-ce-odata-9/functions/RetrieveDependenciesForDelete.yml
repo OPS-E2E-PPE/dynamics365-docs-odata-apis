@@ -4,7 +4,7 @@ name: "RetrieveDependenciesForDelete"
 type: function
 metadata: 
   title: "Microsoft Dynamics 365 Customer Engagement RetrieveDependenciesForDelete Function Reference | MicrosoftDocs"
-  ms.date: "10/20/2017"
+  ms.date: "03/20/2018"
   ms.service: "crm-online"
   ms.topic: "reference"
   applies_to: 
@@ -27,11 +27,13 @@ parameters:
     nullable: false
     unicode: true
     description: "ID of the solution component to delete."
+    iscollection: false
   - name: ComponentType
     type: Edm.Int32
     nullable: false
     unicode: true
     description: "The component type that is to be deleted. "
+    iscollection: false
 return_type:
   description: "The RetrieveDependenciesForDelete function returns the following value."
   type: Microsoft.Dynamics.CRM.dependency
@@ -45,7 +47,7 @@ entities:
     description: "A component dependency in CRM."
 # This function has no remarks.
 href_see_also:
-- text: "Use the Dynamics 365 Customer Engagement Web API"
+- text: "Use the Microsoft Dynamics 365 Customer Engagement Web API"
   href: "https://docs.microsoft.com/dynamics365/customer-engagement/developer/use-microsoft-dynamics-365-web-api"
 xref_see_also:
 - Microsoft.Dynamics.CRM.EntityTypeIndex

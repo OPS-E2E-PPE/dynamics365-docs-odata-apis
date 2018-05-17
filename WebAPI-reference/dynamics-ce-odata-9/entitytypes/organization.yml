@@ -4,7 +4,7 @@ name: "organization"
 type: entitytype
 metadata: 
   title: "Microsoft Dynamics 365 Customer Engagement organization EntityType Reference | MicrosoftDocs"
-  ms.date: "10/20/2017"
+  ms.date: "03/20/2018"
   ms.service: "crm-online"
   ms.topic: "reference"
   applies_to: 
@@ -313,6 +313,12 @@ properties:
       type: Edm.String
       display_name: "Category Prefix"
       description: "Type the prefix to use for all categories in Microsoft Dynamics 365."
+      iscomputed: false
+      isreadonly: false
+    - name: clientfeatureset
+      type: Edm.String
+      display_name: "Client Feature Set"
+      description: "Client Features to be enabled as an XML BLOB."
       iscomputed: false
       isreadonly: false
     - name: contractprefix
@@ -1228,6 +1234,17 @@ properties:
       type: Edm.Boolean
       display_name: "option set values for isenabledforallroles"
       description: "Indicates whether appmodule is enabled for all roles"
+      iscomputed: false
+      isreadonly: false
+      options:
+        - value: 1
+          label: "Yes"
+        - value: 0
+          label: "No"
+    - name: isexternalfilestorageenabled
+      type: Edm.Boolean
+      display_name: "Enable external file storage"
+      description: "Indicates whether the organization's files are being stored in Azure."
       iscomputed: false
       isreadonly: false
       options:
@@ -2690,8 +2707,17 @@ collection_valued_navigation_properties:
   - name: Organization_MailboxTrackingFolder
     type: Microsoft.Dynamics.CRM.mailboxtrackingfolder
     partner: organizationid
+  - name: organization_mbs_pluginprofile
+    type: Microsoft.Dynamics.CRM.mbs_pluginprofile
+    partner: organizationid
   - name: organization_metric
     type: Microsoft.Dynamics.CRM.metric
+    partner: organizationid
+  - name: organization_ms_newsitem
+    type: Microsoft.Dynamics.CRM.ms_newsitem
+    partner: organizationid
+  - name: organization_ms_satori
+    type: Microsoft.Dynamics.CRM.ms_satori
     partner: organizationid
   - name: organization_msdyn_batchjob
     type: Microsoft.Dynamics.CRM.msdyn_batchjob
@@ -2960,7 +2986,7 @@ solutions:
     description: "Internal CRM System Solution"
 # This entity has no remarks.
 href_see_also:
-- text: "Use the Dynamics 365 Customer Engagement Web API"
+- text: "Use the Microsoft Dynamics 365 Customer Engagement Web API"
   href: "https://docs.microsoft.com/dynamics365/customer-engagement/developer/use-microsoft-dynamics-365-web-api"
 xref_see_also:
 - Microsoft.Dynamics.CRM.EntityTypeIndex

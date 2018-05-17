@@ -4,7 +4,7 @@ name: "connection"
 type: entitytype
 metadata: 
   title: "Microsoft Dynamics 365 Customer Engagement connection EntityType Reference | MicrosoftDocs"
-  ms.date: "10/20/2017"
+  ms.date: "03/20/2018"
   ms.service: "crm-online"
   ms.topic: "reference"
   applies_to: 
@@ -132,230 +132,234 @@ properties:
       iscomputed: false
       isreadonly: true
       options:
-        - value: 4300
-          label: "Marketing List"
-        - value: 10161
-          label: "RMA"
-        - value: 10155
-          label: "Quote Booking Service"
-        - value: 10131
-          label: "Incident Type Service"
-        - value: 10146
-          label: "Product Inventory"
-        - value: 4204
-          label: "Fax"
-        - value: 2013
-          label: "Territory"
-        - value: 10191
-          label: "IoT Device"
-        - value: 10147
-          label: "Purchase Order"
-        - value: 4251
-          label: "Recurring Appointment"
-        - value: 10149
-          label: "Purchase Order Product"
-        - value: 10129
-          label: "Incident Type Characteristic"
-        - value: 10179
-          label: "Work Order Incident"
-        - value: 4005
-          label: "Scheduling Group"
-        - value: 50
-          label: "Position"
-        - value: 10152
-          label: "Purchase Order Sub Status"
-        - value: 4201
-          label: "Appointment"
-        - value: 10154
-          label: "Quote Booking Product"
-        - value: 4216
-          label: "Social Activity"
-        - value: 9930
-          label: "Knowledge Base Record"
-        - value: 10069
-          label: "Project"
-        - value: 4202
-          label: "Email"
-        - value: 2
-          label: "Contact"
-        - value: 10141
-          label: "Payment"
-        - value: 10119
-          label: "Booking Timestamp"
-        - value: 1088
-          label: "Order"
-        - value: 10027
-          label: "Time Group"
+        - value: 10171
+          label: "Tax Code"
+        - value: 10173
+          label: "Time Off Request"
+        - value: 10175
+          label: "Warehouse"
         - value: 10170
           label: "Ship Via"
-        - value: 10144
-          label: "Payment Term"
-        - value: 9400
-          label: "Channel Access Profile Rule"
-        - value: 1084
-          label: "Quote"
+        - value: 10166
+          label: "RTV"
+        - value: 10167
+          label: "RTV Product"
+        - value: 10168
+          label: "RTV Sub-Status"
         - value: 10181
           label: "Resource Restriction (Deprecated)"
+        - value: 10182
+          label: "Work Order Service"
+        - value: 10183
+          label: "Work Order Service Task"
+        - value: 10180
+          label: "Work Order Product"
+        - value: 10176
+          label: "Work Order"
+        - value: 10177
+          label: "Work Order Characteristic (Deprecated)"
+        - value: 10179
+          label: "Work Order Incident"
+        - value: 10152
+          label: "Purchase Order Sub Status"
+        - value: 10153
+          label: "Quote Booking Incident"
+        - value: 10154
+          label: "Quote Booking Product"
+        - value: 10151
+          label: "Purchase Order Receipt Product"
+        - value: 10148
+          label: "Purchase Order Bill"
+        - value: 10149
+          label: "Purchase Order Product"
+        - value: 10150
+          label: "Purchase Order Receipt"
+        - value: 10163
+          label: "RMA Receipt"
+        - value: 10164
+          label: "RMA Receipt Product"
+        - value: 10165
+          label: "RMA Sub-Status"
+        - value: 10162
+          label: "RMA Product"
+        - value: 10155
+          label: "Quote Booking Service"
+        - value: 10156
+          label: "Quote Booking Service Task"
+        - value: 10161
+          label: "RMA"
+        - value: 10186
+          label: "IoT Alert"
+        - value: 1022
+          label: "Price List"
+        - value: 1024
+          label: "Product"
+        - value: 4400
+          label: "Campaign"
+        - value: 4
+          label: "Lead"
+        - value: 112
+          label: "Case"
+        - value: 4005
+          label: "Scheduling Group"
+        - value: 4214
+          label: "Service Activity"
+        - value: 1084
+          label: "Quote"
+        - value: 1088
+          label: "Order"
+        - value: 123
+          label: "Competitor"
+        - value: 3
+          label: "Opportunity"
+        - value: 4402
+          label: "Campaign Activity"
+        - value: 4300
+          label: "Marketing List"
+        - value: 1090
+          label: "Invoice"
+        - value: 10195
+          label: "News"
+        - value: 10196
+          label: "Wrong Company?"
+        - value: 10032
+          label: "Approval"
+        - value: 10190
+          label: "IoT Device Registration History"
+        - value: 10187
+          label: "IoT Device"
+        - value: 10188
+          label: "IoT Device Category"
+        - value: 10189
+          label: "IoT Device Command"
+        - value: 1010
+          label: "Contract"
+        - value: 9700
+          label: "Entitlement"
+        - value: 4000
+          label: "Facility/Equipment"
+        - value: 4007
+          label: "Resource Group"
+        - value: 10068
+          label: "Process Notes"
+        - value: 10069
+          label: "Project"
+        - value: 10077
+          label: "Project Team Member"
+        - value: 4710
+          label: "Process Session"
+        - value: 2013
+          label: "Territory"
+        - value: 9701
+          label: "Entitlement Channel"
+        - value: 9400
+          label: "Channel Access Profile Rule"
+        - value: 99
+          label: "Social Profile"
         - value: 4210
           label: "Phone Call"
         - value: 9
           label: "Team"
-        - value: 10182
-          label: "Work Order Service"
-        - value: 4710
-          label: "Process Session"
-        - value: 4000
-          label: "Facility/Equipment"
-        - value: 10124
-          label: "Customer Asset"
-        - value: 10068
-          label: "Process Notes"
-        - value: 10177
-          label: "Work Order Characteristic (Deprecated)"
-        - value: 10133
-          label: "Inventory Adjustment"
-        - value: 10135
-          label: "Inventory Journal"
-        - value: 4400
-          label: "Campaign"
-        - value: 10194
-          label: "IoT Device Registration History"
-        - value: 123
-          label: "Competitor"
-        - value: 4212
-          label: "Task"
-        - value: 10165
-          label: "RMA Sub-Status"
-        - value: 10111
-          label: "Agreement Booking Service"
-        - value: 10150
-          label: "Purchase Order Receipt"
-        - value: 1010
-          label: "Contract"
-        - value: 99
-          label: "Social Profile"
-        - value: 9703
-          label: "Entitlement Template Channel"
-        - value: 10023
-          label: "Resource Territory"
-        - value: 10173
-          label: "Time Off Request"
-        - value: 10130
-          label: "Incident Type Product"
-        - value: 10113
-          label: "Agreement Booking Setup"
-        - value: 9700
-          label: "Entitlement"
-        - value: 4200
-          label: "Activity"
         - value: 10008
           label: "Booking Alert Status"
-        - value: 3
-          label: "Opportunity"
-        - value: 4207
-          label: "Letter"
-        - value: 9701
-          label: "Entitlement Channel"
-        - value: 10153
-          label: "Quote Booking Incident"
-        - value: 10116
-          label: "Agreement Invoice Setup"
-        - value: 10001
-          label: "Profile Album"
-        - value: 10110
-          label: "Agreement Booking Product"
-        - value: 10107
-          label: "Agreement"
         - value: 10010
           label: "Booking Rule"
-        - value: 1024
-          label: "Product"
-        - value: 10108
-          label: "Agreement Booking Date"
-        - value: 10167
-          label: "RTV Product"
-        - value: 10142
-          label: "Payment Detail"
-        - value: 10112
-          label: "Agreement Booking Service Task"
-        - value: 10148
-          label: "Purchase Order Bill"
-        - value: 10171
-          label: "Tax Code"
-        - value: 10145
-          label: "Postal Code"
-        - value: 4
-          label: "Lead"
-        - value: 4402
-          label: "Campaign Activity"
-        - value: 1022
-          label: "Price List"
-        - value: 10026
-          label: "System User Scheduler Setting"
-        - value: 9953
-          label: "Knowledge Article"
-        - value: 10114
-          label: "Agreement Invoice Date"
-        - value: 10163
-          label: "RMA Receipt"
-        - value: 10176
-          label: "Work Order"
-        - value: 10193
-          label: "IoT Device Command"
-        - value: 4214
-          label: "Service Activity"
-        - value: 10183
-          label: "Work Order Service Task"
-        - value: 10156
-          label: "Quote Booking Service Task"
-        - value: 10166
-          label: "RTV"
-        - value: 10190
-          label: "IoT Alert"
-        - value: 10115
-          label: "Agreement Invoice Product"
-        - value: 10143
-          label: "Payment Method"
-        - value: 10168
-          label: "RTV Sub-Status"
-        - value: 1
-          label: "Account"
-        - value: 10175
-          label: "Warehouse"
-        - value: 10032
-          label: "Approval"
-        - value: 112
-          label: "Case"
+        - value: 10023
+          label: "Resource Territory"
         - value: 10007
           label: "Booking Alert"
-        - value: 10028
-          label: "Time Group Detail"
-        - value: 10164
-          label: "RMA Receipt Product"
-        - value: 10136
-          label: "Inventory Transfer"
-        - value: 10077
-          label: "Project Team Member"
-        - value: 10109
-          label: "Agreement Booking Incident"
-        - value: 4007
-          label: "Resource Group"
-        - value: 10180
-          label: "Work Order Product"
-        - value: 1090
-          label: "Invoice"
+        - value: 9703
+          label: "Entitlement Template Channel"
+        - value: 10001
+          label: "Profile Album"
         - value: 8
           label: "User"
-        - value: 10134
-          label: "Inventory Adjustment Product"
-        - value: 10151
-          label: "Purchase Order Receipt Product"
-        - value: 10192
-          label: "IoT Device Category"
+        - value: 1
+          label: "Account"
+        - value: 4216
+          label: "Social Activity"
+        - value: 9930
+          label: "Knowledge Base Record"
         - value: 9600
           label: "Goal"
-        - value: 10162
-          label: "RMA Product"
+        - value: 9953
+          label: "Knowledge Article"
+        - value: 4207
+          label: "Letter"
+        - value: 4200
+          label: "Activity"
+        - value: 4204
+          label: "Fax"
+        - value: 4251
+          label: "Recurring Appointment"
+        - value: 4212
+          label: "Task"
+        - value: 2
+          label: "Contact"
+        - value: 50
+          label: "Position"
+        - value: 4201
+          label: "Appointment"
+        - value: 4202
+          label: "Email"
+        - value: 10026
+          label: "System User Scheduler Setting"
+        - value: 10134
+          label: "Inventory Adjustment Product"
+        - value: 10135
+          label: "Inventory Journal"
+        - value: 10136
+          label: "Inventory Transfer"
+        - value: 10133
+          label: "Inventory Adjustment"
+        - value: 10129
+          label: "Incident Type Characteristic"
+        - value: 10130
+          label: "Incident Type Product"
+        - value: 10131
+          label: "Incident Type Service"
+        - value: 10145
+          label: "Postal Code"
+        - value: 10146
+          label: "Product Inventory"
+        - value: 10147
+          label: "Purchase Order"
+        - value: 10144
+          label: "Payment Term"
+        - value: 10141
+          label: "Payment"
+        - value: 10142
+          label: "Payment Detail"
+        - value: 10143
+          label: "Payment Method"
+        - value: 10109
+          label: "Agreement Booking Incident"
+        - value: 10110
+          label: "Agreement Booking Product"
+        - value: 10111
+          label: "Agreement Booking Service"
+        - value: 10108
+          label: "Agreement Booking Date"
+        - value: 10027
+          label: "Time Group"
+        - value: 10028
+          label: "Time Group Detail"
+        - value: 10107
+          label: "Agreement"
+        - value: 10116
+          label: "Agreement Invoice Setup"
+        - value: 10119
+          label: "Booking Timestamp"
+        - value: 10124
+          label: "Customer Asset"
+        - value: 10115
+          label: "Agreement Invoice Product"
+        - value: 10112
+          label: "Agreement Booking Service Task"
+        - value: 10113
+          label: "Agreement Booking Setup"
+        - value: 10114
+          label: "Agreement Invoice Date"
     - name: record2objecttypecode
       type: Edm.Int32
       display_name: "Type (To)"
@@ -363,230 +367,234 @@ properties:
       iscomputed: false
       isreadonly: true
       options:
-        - value: 4210
-          label: "Phone Call"
-        - value: 2
-          label: "Contact"
-        - value: 4005
-          label: "Scheduling Group"
-        - value: 10028
-          label: "Time Group Detail"
-        - value: 10176
-          label: "Work Order"
-        - value: 10166
-          label: "RTV"
-        - value: 4251
-          label: "Recurring Appointment"
-        - value: 10113
-          label: "Agreement Booking Setup"
-        - value: 4300
-          label: "Marketing List"
-        - value: 10153
-          label: "Quote Booking Incident"
-        - value: 10032
-          label: "Approval"
-        - value: 10165
-          label: "RMA Sub-Status"
-        - value: 9
-          label: "Team"
-        - value: 10068
-          label: "Process Notes"
-        - value: 10107
-          label: "Agreement"
-        - value: 10179
-          label: "Work Order Incident"
-        - value: 4710
-          label: "Process Session"
-        - value: 10109
-          label: "Agreement Booking Incident"
-        - value: 9701
-          label: "Entitlement Channel"
-        - value: 10130
-          label: "Incident Type Product"
-        - value: 10167
-          label: "RTV Product"
-        - value: 50
-          label: "Position"
-        - value: 10162
-          label: "RMA Product"
-        - value: 4204
-          label: "Fax"
+        - value: 10171
+          label: "Tax Code"
         - value: 10173
           label: "Time Off Request"
-        - value: 10134
-          label: "Inventory Adjustment Product"
-        - value: 9400
-          label: "Channel Access Profile Rule"
+        - value: 10175
+          label: "Warehouse"
+        - value: 10170
+          label: "Ship Via"
+        - value: 10166
+          label: "RTV"
+        - value: 10167
+          label: "RTV Product"
+        - value: 10168
+          label: "RTV Sub-Status"
+        - value: 10181
+          label: "Resource Restriction (Deprecated)"
+        - value: 10182
+          label: "Work Order Service"
+        - value: 10183
+          label: "Work Order Service Task"
+        - value: 10180
+          label: "Work Order Product"
+        - value: 10176
+          label: "Work Order"
+        - value: 10177
+          label: "Work Order Characteristic (Deprecated)"
+        - value: 10179
+          label: "Work Order Incident"
+        - value: 10152
+          label: "Purchase Order Sub Status"
+        - value: 10153
+          label: "Quote Booking Incident"
+        - value: 10154
+          label: "Quote Booking Product"
+        - value: 10151
+          label: "Purchase Order Receipt Product"
+        - value: 10148
+          label: "Purchase Order Bill"
+        - value: 10149
+          label: "Purchase Order Product"
+        - value: 10150
+          label: "Purchase Order Receipt"
+        - value: 10163
+          label: "RMA Receipt"
+        - value: 10164
+          label: "RMA Receipt Product"
+        - value: 10165
+          label: "RMA Sub-Status"
+        - value: 10162
+          label: "RMA Product"
+        - value: 10155
+          label: "Quote Booking Service"
+        - value: 10156
+          label: "Quote Booking Service Task"
+        - value: 10161
+          label: "RMA"
+        - value: 10186
+          label: "IoT Alert"
+        - value: 1022
+          label: "Price List"
+        - value: 4400
+          label: "Campaign"
+        - value: 4402
+          label: "Campaign Activity"
+        - value: 4
+          label: "Lead"
+        - value: 112
+          label: "Case"
+        - value: 4005
+          label: "Scheduling Group"
+        - value: 4214
+          label: "Service Activity"
+        - value: 1088
+          label: "Order"
+        - value: 123
+          label: "Competitor"
+        - value: 2013
+          label: "Territory"
+        - value: 1084
+          label: "Quote"
+        - value: 4300
+          label: "Marketing List"
+        - value: 1090
+          label: "Invoice"
+        - value: 3
+          label: "Opportunity"
+        - value: 10195
+          label: "News"
+        - value: 10196
+          label: "Wrong Company?"
+        - value: 10032
+          label: "Approval"
+        - value: 10190
+          label: "IoT Device Registration History"
+        - value: 10187
+          label: "IoT Device"
+        - value: 10188
+          label: "IoT Device Category"
+        - value: 10189
+          label: "IoT Device Command"
+        - value: 1010
+          label: "Contract"
+        - value: 9700
+          label: "Entitlement"
+        - value: 4000
+          label: "Facility/Equipment"
         - value: 4007
           label: "Resource Group"
-        - value: 10190
-          label: "IoT Alert"
+        - value: 10068
+          label: "Process Notes"
         - value: 10069
           label: "Project"
         - value: 10077
           label: "Project Team Member"
-        - value: 10129
-          label: "Incident Type Characteristic"
-        - value: 10154
-          label: "Quote Booking Product"
-        - value: 10149
-          label: "Purchase Order Product"
-        - value: 10168
-          label: "RTV Sub-Status"
-        - value: 10142
-          label: "Payment Detail"
-        - value: 10108
-          label: "Agreement Booking Date"
-        - value: 10146
-          label: "Product Inventory"
-        - value: 10148
-          label: "Purchase Order Bill"
-        - value: 1010
-          label: "Contract"
-        - value: 1088
-          label: "Order"
-        - value: 10194
-          label: "IoT Device Registration History"
-        - value: 10150
-          label: "Purchase Order Receipt"
-        - value: 8
-          label: "User"
-        - value: 10114
-          label: "Agreement Invoice Date"
-        - value: 4202
-          label: "Email"
-        - value: 10182
-          label: "Work Order Service"
-        - value: 1022
-          label: "Price List"
-        - value: 4207
-          label: "Letter"
-        - value: 10110
-          label: "Agreement Booking Product"
         - value: 4216
           label: "Social Activity"
-        - value: 4
-          label: "Lead"
-        - value: 10026
-          label: "System User Scheduler Setting"
-        - value: 9953
-          label: "Knowledge Article"
-        - value: 10001
-          label: "Profile Album"
-        - value: 10007
-          label: "Booking Alert"
-        - value: 10191
-          label: "IoT Device"
-        - value: 10136
-          label: "Inventory Transfer"
-        - value: 2013
-          label: "Territory"
-        - value: 10193
-          label: "IoT Device Command"
-        - value: 10145
-          label: "Postal Code"
-        - value: 4200
-          label: "Activity"
-        - value: 10155
-          label: "Quote Booking Service"
-        - value: 10008
-          label: "Booking Alert Status"
-        - value: 3
-          label: "Opportunity"
         - value: 1024
           label: "Product"
-        - value: 10143
-          label: "Payment Method"
-        - value: 4402
-          label: "Campaign Activity"
-        - value: 4201
-          label: "Appointment"
-        - value: 10183
-          label: "Work Order Service Task"
-        - value: 10027
-          label: "Time Group"
-        - value: 10147
-          label: "Purchase Order"
-        - value: 10170
-          label: "Ship Via"
-        - value: 10156
-          label: "Quote Booking Service Task"
-        - value: 10177
-          label: "Work Order Characteristic (Deprecated)"
-        - value: 10135
-          label: "Inventory Journal"
-        - value: 99
-          label: "Social Profile"
-        - value: 112
-          label: "Case"
+        - value: 9701
+          label: "Entitlement Channel"
+        - value: 9953
+          label: "Knowledge Article"
+        - value: 9
+          label: "Team"
+        - value: 4207
+          label: "Letter"
+        - value: 4202
+          label: "Email"
+        - value: 10008
+          label: "Booking Alert Status"
         - value: 10010
           label: "Booking Rule"
-        - value: 10180
-          label: "Work Order Product"
-        - value: 9600
-          label: "Goal"
-        - value: 10152
-          label: "Purchase Order Sub Status"
-        - value: 10192
-          label: "IoT Device Category"
-        - value: 10181
-          label: "Resource Restriction (Deprecated)"
-        - value: 10112
-          label: "Agreement Booking Service Task"
-        - value: 10124
-          label: "Customer Asset"
-        - value: 10175
-          label: "Warehouse"
-        - value: 4400
-          label: "Campaign"
-        - value: 1084
-          label: "Quote"
-        - value: 9700
-          label: "Entitlement"
-        - value: 4214
-          label: "Service Activity"
-        - value: 10164
-          label: "RMA Receipt Product"
-        - value: 4000
-          label: "Facility/Equipment"
-        - value: 10161
-          label: "RMA"
-        - value: 10111
-          label: "Agreement Booking Service"
-        - value: 10141
-          label: "Payment"
-        - value: 10171
-          label: "Tax Code"
+        - value: 10023
+          label: "Resource Territory"
+        - value: 10007
+          label: "Booking Alert"
+        - value: 9703
+          label: "Entitlement Template Channel"
+        - value: 10001
+          label: "Profile Album"
+        - value: 8
+          label: "User"
+        - value: 1
+          label: "Account"
+        - value: 9930
+          label: "Knowledge Base Record"
         - value: 4212
           label: "Task"
+        - value: 4201
+          label: "Appointment"
+        - value: 99
+          label: "Social Profile"
+        - value: 9600
+          label: "Goal"
+        - value: 4200
+          label: "Activity"
+        - value: 4251
+          label: "Recurring Appointment"
+        - value: 4210
+          label: "Phone Call"
+        - value: 2
+          label: "Contact"
+        - value: 4204
+          label: "Fax"
+        - value: 4710
+          label: "Process Session"
+        - value: 9400
+          label: "Channel Access Profile Rule"
+        - value: 50
+          label: "Position"
+        - value: 10026
+          label: "System User Scheduler Setting"
+        - value: 10134
+          label: "Inventory Adjustment Product"
+        - value: 10135
+          label: "Inventory Journal"
+        - value: 10136
+          label: "Inventory Transfer"
         - value: 10133
           label: "Inventory Adjustment"
+        - value: 10129
+          label: "Incident Type Characteristic"
+        - value: 10130
+          label: "Incident Type Product"
+        - value: 10131
+          label: "Incident Type Service"
+        - value: 10145
+          label: "Postal Code"
+        - value: 10146
+          label: "Product Inventory"
+        - value: 10147
+          label: "Purchase Order"
         - value: 10144
           label: "Payment Term"
+        - value: 10141
+          label: "Payment"
+        - value: 10142
+          label: "Payment Detail"
+        - value: 10143
+          label: "Payment Method"
+        - value: 10109
+          label: "Agreement Booking Incident"
+        - value: 10110
+          label: "Agreement Booking Product"
+        - value: 10111
+          label: "Agreement Booking Service"
+        - value: 10108
+          label: "Agreement Booking Date"
+        - value: 10027
+          label: "Time Group"
+        - value: 10028
+          label: "Time Group Detail"
+        - value: 10107
+          label: "Agreement"
         - value: 10116
           label: "Agreement Invoice Setup"
         - value: 10119
           label: "Booking Timestamp"
-        - value: 10023
-          label: "Resource Territory"
+        - value: 10124
+          label: "Customer Asset"
         - value: 10115
           label: "Agreement Invoice Product"
-        - value: 10131
-          label: "Incident Type Service"
-        - value: 123
-          label: "Competitor"
-        - value: 9930
-          label: "Knowledge Base Record"
-        - value: 1090
-          label: "Invoice"
-        - value: 10163
-          label: "RMA Receipt"
-        - value: 9703
-          label: "Entitlement Template Channel"
-        - value: 1
-          label: "Account"
-        - value: 10151
-          label: "Purchase Order Receipt Product"
+        - value: 10112
+          label: "Agreement Booking Service Task"
+        - value: 10113
+          label: "Agreement Booking Setup"
+        - value: 10114
+          label: "Agreement Invoice Date"
     - name: statecode
       type: Edm.Int32
       display_name: "Status"
@@ -648,11 +656,6 @@ lookup_properties:
     description: "Unique identifier of the user who owns the connection."
   - name: _record1id_value
     single_valued_navigation_property:
-    - record1id_msdyn_iotalert
-    - record1id_msdyn_iotdevice
-    - record1id_msdyn_iotdevicecategory
-    - record1id_msdyn_iotdevicecommand
-    - record1id_msdyn_iotdeviceregistrationhistory
     - record1id_territory
     - record1id_lead
     - record1id_pricelevel
@@ -736,6 +739,13 @@ lookup_properties:
     - record1id_msdyn_workorderresourcerestriction
     - record1id_msdyn_workorderservice
     - record1id_msdyn_workorderservicetask
+    - record1id_msdyn_iotalert
+    - record1id_msdyn_iotdevice
+    - record1id_msdyn_iotdevicecategory
+    - record1id_msdyn_iotdevicecommand
+    - record1id_msdyn_iotdeviceregistrationhistory
+    - record1id_ms_newsitem
+    - record1id_ms_satori
     - record1id_knowledgearticle
     - record1id_knowledgebaserecord
     - record1id_contact
@@ -754,11 +764,6 @@ lookup_properties:
     description: "Choose the primary party's role or relationship with the second party."
   - name: _record2id_value
     single_valued_navigation_property:
-    - record2id_msdyn_iotalert
-    - record2id_msdyn_iotdevice
-    - record2id_msdyn_iotdevicecategory
-    - record2id_msdyn_iotdevicecommand
-    - record2id_msdyn_iotdeviceregistrationhistory
     - record2id_territory
     - record2id_lead
     - record2id_pricelevel
@@ -842,6 +847,13 @@ lookup_properties:
     - record2id_msdyn_workorderresourcerestriction
     - record2id_msdyn_workorderservice
     - record2id_msdyn_workorderservicetask
+    - record2id_msdyn_iotalert
+    - record2id_msdyn_iotdevice
+    - record2id_msdyn_iotdevicecategory
+    - record2id_msdyn_iotdevicecommand
+    - record2id_msdyn_iotdeviceregistrationhistory
+    - record2id_ms_newsitem
+    - record2id_ms_satori
     - record2id_knowledgearticle
     - record2id_knowledgebaserecord
     - record2id_account
@@ -956,6 +968,12 @@ single_valued_navigation_properties:
   - name: record1id_list
     type: Microsoft.Dynamics.CRM.list
     partner: list_connections1
+  - name: record1id_ms_newsitem
+    type: Microsoft.Dynamics.CRM.ms_newsitem
+    partner: ms_newsitem_connections1
+  - name: record1id_ms_satori
+    type: Microsoft.Dynamics.CRM.ms_satori
+    partner: ms_satori_connections1
   - name: record1id_msdyn_agreement
     type: Microsoft.Dynamics.CRM.msdyn_agreement
     partner: msdyn_agreement_connections1
@@ -1292,6 +1310,12 @@ single_valued_navigation_properties:
   - name: record2id_list
     type: Microsoft.Dynamics.CRM.list
     partner: list_connections2
+  - name: record2id_ms_newsitem
+    type: Microsoft.Dynamics.CRM.ms_newsitem
+    partner: ms_newsitem_connections2
+  - name: record2id_ms_satori
+    type: Microsoft.Dynamics.CRM.ms_satori
+    partner: ms_satori_connections2
   - name: record2id_msdyn_agreement
     type: Microsoft.Dynamics.CRM.msdyn_agreement
     partner: msdyn_agreement_connections2
@@ -1624,7 +1648,7 @@ solutions:
     description: "Internal CRM System Solution"
 # This entity has no remarks.
 href_see_also:
-- text: "Use the Dynamics 365 Customer Engagement Web API"
+- text: "Use the Microsoft Dynamics 365 Customer Engagement Web API"
   href: "https://docs.microsoft.com/dynamics365/customer-engagement/developer/use-microsoft-dynamics-365-web-api"
 xref_see_also:
 - Microsoft.Dynamics.CRM.EntityTypeIndex

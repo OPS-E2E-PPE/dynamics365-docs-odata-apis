@@ -4,7 +4,7 @@ name: "phonecall"
 type: entitytype
 metadata: 
   title: "Microsoft Dynamics 365 Customer Engagement phonecall EntityType Reference | MicrosoftDocs"
-  ms.date: "10/20/2017"
+  ms.date: "03/20/2018"
   ms.service: "crm-online"
   ms.topic: "reference"
   applies_to: 
@@ -532,6 +532,18 @@ single_valued_navigation_properties:
   - name: regardingobjectid_lead_phonecall
     type: Microsoft.Dynamics.CRM.lead
     partner: Lead_Phonecalls
+  - name: regardingobjectid_ms_newsitem
+    type: Microsoft.Dynamics.CRM.ms_newsitem
+    partner: ms_newsitem_ActivityPointers
+  - name: regardingobjectid_ms_newsitem_phonecall
+    type: Microsoft.Dynamics.CRM.ms_newsitem
+    partner: ms_newsitem_PhoneCalls
+  - name: regardingobjectid_ms_satori
+    type: Microsoft.Dynamics.CRM.ms_satori
+    partner: ms_satori_ActivityPointers
+  - name: regardingobjectid_ms_satori_phonecall
+    type: Microsoft.Dynamics.CRM.ms_satori
+    partner: ms_satori_PhoneCalls
   - name: regardingobjectid_msdyn_agreement
     type: Microsoft.Dynamics.CRM.msdyn_agreement
     partner: msdyn_agreement_ActivityPointers
@@ -1151,7 +1163,7 @@ solutions:
     description: "Internal CRM System Solution"
 # This entity has no remarks.
 href_see_also:
-- text: "Use the Dynamics 365 Customer Engagement Web API"
+- text: "Use the Microsoft Dynamics 365 Customer Engagement Web API"
   href: "https://docs.microsoft.com/dynamics365/customer-engagement/developer/use-microsoft-dynamics-365-web-api"
 xref_see_also:
 - Microsoft.Dynamics.CRM.EntityTypeIndex

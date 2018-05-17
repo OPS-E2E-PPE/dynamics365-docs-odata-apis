@@ -4,7 +4,7 @@ name: "SetAutoNumberSeed"
 type: action
 metadata: 
   title: "Microsoft Dynamics 365 Customer Engagement SetAutoNumberSeed Action Reference | MicrosoftDocs"
-  ms.date: "10/20/2017"
+  ms.date: "03/20/2018"
   ms.service: "crm-online"
   ms.topic: "reference"
   applies_to: 
@@ -15,7 +15,7 @@ metadata:
   manager: "jdaly"
   meta-description: "Reference information about the Dynamics 365 Customer Engagement SetAutoNumberSeed Action."
 namespace: Microsoft.Dynamics.CRM
-description: "Sets the initial value for the auto-number attribute."
+# This Action has no description.
 owningsolution: Microsoft.Dynamics.CRM.System
 # This action has no bound entities.
 isbound: false
@@ -26,23 +26,23 @@ parameters:
     type: Edm.String
     nullable: false
     unicode: false
-    description: "The logical name of the entity that contains the attribute you want to set the seed on."
+    description: ""
   - name: AttributeName
     type: Edm.String
     nullable: false
     unicode: false
-    description: "The logical name of the attribute you want to set the seed on."
+    description: ""
   - name: Value
     type: Edm.Int64
     nullable: false
     unicode: true
-    description: "The next auto-number value for the attribute."
+    description: ""
 # This action has no return value.
 hasreturnvalue: false
 # This action has no identified unbound entities.
 # This action has no remarks.
 href_see_also:
-- text: "Use the Dynamics 365 Customer Engagement Web API"
+- text: "Use the Microsoft Dynamics 365 Customer Engagement Web API"
   href: "https://docs.microsoft.com/dynamics365/customer-engagement/developer/use-microsoft-dynamics-365-web-api"
 xref_see_also:
 - Microsoft.Dynamics.CRM.EntityTypeIndex

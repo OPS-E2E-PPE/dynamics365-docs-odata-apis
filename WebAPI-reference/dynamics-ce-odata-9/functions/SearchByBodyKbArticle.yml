@@ -4,7 +4,7 @@ name: "SearchByBodyKbArticle"
 type: function
 metadata: 
   title: "Microsoft Dynamics 365 Customer Engagement SearchByBodyKbArticle Function Reference | MicrosoftDocs"
-  ms.date: "10/20/2017"
+  ms.date: "03/20/2018"
   ms.service: "crm-online"
   ms.topic: "reference"
   applies_to: 
@@ -31,16 +31,19 @@ parameters:
     nullable: false
     unicode: false
     description: "Text contained in the body of the article. "
+    iscollection: false
   - name: Subject
     type: Microsoft.Dynamics.CRM.subject
     nullable: false
     unicode: true
     description: "Subject of the specified body text."
+    iscollection: false
   - name: UseInflection
     type: Edm.Boolean
     nullable: false
     unicode: true
     description: "Whether to use inflectional stem matching when searching for knowledge base articles with a specified body text."
+    iscollection: false
 return_type:
   description: "The SearchByBodyKbArticle function returns the following value."
   type: Microsoft.Dynamics.CRM.kbarticle
@@ -49,7 +52,7 @@ return_type:
 # This function no specific entities for this function identified.
 # This function has no remarks.
 href_see_also:
-- text: "Use the Dynamics 365 Customer Engagement Web API"
+- text: "Use the Microsoft Dynamics 365 Customer Engagement Web API"
   href: "https://docs.microsoft.com/dynamics365/customer-engagement/developer/use-microsoft-dynamics-365-web-api"
 xref_see_also:
 - Microsoft.Dynamics.CRM.EntityTypeIndex

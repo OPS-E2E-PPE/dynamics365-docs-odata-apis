@@ -4,7 +4,7 @@ name: "msdyn_priority"
 type: entitytype
 metadata: 
   title: "Microsoft Dynamics 365 Customer Engagement msdyn_priority EntityType Reference | MicrosoftDocs"
-  ms.date: "10/20/2017"
+  ms.date: "03/20/2018"
   ms.service: "crm-online"
   ms.topic: "reference"
   applies_to: 
@@ -33,7 +33,7 @@ properties:
     - name: createdon
       type: Edm.DateTimeOffset
       display_name: "Created On"
-      description: "Shows the date and time when the record was created. The date and time are displayed in the time zone selected in Microsoft Dynamics 365 options."
+      description: "Shows the date and time when the record was created. The date and time are displayed in the time zone selected in Microsoft Dynamics CRM options."
       iscomputed: false
       isreadonly: true
     - name: importsequencenumber
@@ -45,7 +45,7 @@ properties:
     - name: modifiedon
       type: Edm.DateTimeOffset
       display_name: "Modified On"
-      description: "Shows the date and time when the record was last updated. The date and time are displayed in the time zone selected in Microsoft Dynamics 365 options."
+      description: "Shows the date and time when the record was last updated. The date and time are displayed in the time zone selected in Microsoft Dynamics CRM options."
       iscomputed: false
       isreadonly: true
     - name: msdyn_levelofimportance
@@ -266,7 +266,7 @@ solutions:
     description: "Unified scheduling solution provides the infrastructure to express resource requirements for any entity in the system and help staff those requirements with resources based on the availability and applicability of the resource for the requirement."
 # This entity has no remarks.
 href_see_also:
-- text: "Use the Dynamics 365 Customer Engagement Web API"
+- text: "Use the Microsoft Dynamics 365 Customer Engagement Web API"
   href: "https://docs.microsoft.com/dynamics365/customer-engagement/developer/use-microsoft-dynamics-365-web-api"
 xref_see_also:
 - Microsoft.Dynamics.CRM.EntityTypeIndex

@@ -4,7 +4,7 @@ name: "IsValidStateTransition"
 type: function
 metadata: 
   title: "Microsoft Dynamics 365 Customer Engagement IsValidStateTransition Function Reference | MicrosoftDocs"
-  ms.date: "10/20/2017"
+  ms.date: "03/20/2018"
   ms.service: "crm-online"
   ms.topic: "reference"
   applies_to: 
@@ -27,16 +27,19 @@ parameters:
     nullable: false
     unicode: true
     description: "The record to validate. "
+    iscollection: false
   - name: NewState
     type: Edm.String
     nullable: false
     unicode: false
     description: "The proposed state for the record."
+    iscollection: false
   - name: NewStatus
     type: Edm.Int32
     nullable: false
     unicode: true
     description: "The proposed status for the record. "
+    iscollection: false
 return_type:
   description: "The IsValidStateTransition function returns the following value."
   type: Microsoft.Dynamics.CRM.IsValidStateTransitionResponse
@@ -48,6 +51,15 @@ entities:
   - type: Microsoft.Dynamics.CRM.incident
     displayName: "Case"
     description: "Service request case associated with a contract."
+  - type: Microsoft.Dynamics.CRM.mbs_pluginprofile
+    displayName: "Plug-in Profile"
+    description: ""
+  - type: Microsoft.Dynamics.CRM.ms_newsitem
+    displayName: "News"
+    description: ""
+  - type: Microsoft.Dynamics.CRM.ms_satori
+    displayName: "Wrong Company?"
+    description: ""
   - type: Microsoft.Dynamics.CRM.msdyn_accountpricelist
     displayName: "Account Project Price List"
     description: "Sales price list for this customer to capture special pricing agreements for products, roles and categories."
@@ -306,6 +318,9 @@ entities:
   - type: Microsoft.Dynamics.CRM.msdyn_organizationalunit
     displayName: "Organizational Unit"
     description: "Division of the company or organization that has a specific cost price list associated to it."
+  - type: Microsoft.Dynamics.CRM.msdyn_orginsightsuserdashboarddefinition
+    displayName: "OrgInsights User Dashboard Definition"
+    description: "OrgInsights User Dashboard Definition"
   - type: Microsoft.Dynamics.CRM.msdyn_payment
     displayName: "Payment"
     description: "Specify payment."
@@ -454,7 +469,7 @@ entities:
     displayName: "Resource Assignment"
     description: "Entity used to keep track of resource assignment header information  on tasks."
   - type: Microsoft.Dynamics.CRM.msdyn_resourceassignmentdetail
-    displayName: "Resource Assignment Detail"
+    displayName: "Resource Assignment Detail (Deprecated)"
     description: "Entity used to keep track of resource assignment details on tasks. "
   - type: Microsoft.Dynamics.CRM.msdyn_resourcecategorypricelevel
     displayName: "Role Price"
@@ -614,7 +629,7 @@ entities:
     description: "Potential revenue-generating event, or sale to an account, which needs to be tracked through a sales process to completion."
 # This function has no remarks.
 href_see_also:
-- text: "Use the Dynamics 365 Customer Engagement Web API"
+- text: "Use the Microsoft Dynamics 365 Customer Engagement Web API"
   href: "https://docs.microsoft.com/dynamics365/customer-engagement/developer/use-microsoft-dynamics-365-web-api"
 xref_see_also:
 - Microsoft.Dynamics.CRM.EntityTypeIndex

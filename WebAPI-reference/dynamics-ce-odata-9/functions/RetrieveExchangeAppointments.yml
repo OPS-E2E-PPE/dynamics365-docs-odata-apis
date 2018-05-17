@@ -4,7 +4,7 @@ name: "RetrieveExchangeAppointments"
 type: function
 metadata: 
   title: "Microsoft Dynamics 365 Customer Engagement RetrieveExchangeAppointments Function Reference | MicrosoftDocs"
-  ms.date: "10/20/2017"
+  ms.date: "03/20/2018"
   ms.service: "crm-online"
   ms.topic: "reference"
   applies_to: 
@@ -27,11 +27,13 @@ parameters:
     nullable: false
     unicode: true
     description: "The start date of the range in UTC."
+    iscollection: false
   - name: EndDate
     type: Edm.DateTimeOffset
     nullable: false
     unicode: true
     description: "The end date of the range in UTC."
+    iscollection: false
 return_type:
   description: "The RetrieveExchangeAppointments function returns the following value."
   type: Microsoft.Dynamics.CRM.crmbaseentity
@@ -40,7 +42,7 @@ return_type:
 # This function no specific entities for this function identified.
 # This function has no remarks.
 href_see_also:
-- text: "Use the Dynamics 365 Customer Engagement Web API"
+- text: "Use the Microsoft Dynamics 365 Customer Engagement Web API"
   href: "https://docs.microsoft.com/dynamics365/customer-engagement/developer/use-microsoft-dynamics-365-web-api"
 xref_see_also:
 - Microsoft.Dynamics.CRM.EntityTypeIndex

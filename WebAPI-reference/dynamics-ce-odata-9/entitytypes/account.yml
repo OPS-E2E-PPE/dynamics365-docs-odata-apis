@@ -4,7 +4,7 @@ name: "account"
 type: entitytype
 metadata: 
   title: "Microsoft Dynamics 365 Customer Engagement account EntityType Reference | MicrosoftDocs"
-  ms.date: "10/20/2017"
+  ms.date: "03/20/2018"
   ms.service: "crm-online"
   ms.topic: "reference"
   applies_to: 
@@ -796,6 +796,30 @@ properties:
       description: "Shows the date and time when the record was last updated. The date and time are displayed in the time zone selected in Microsoft Dynamics 365 options."
       iscomputed: false
       isreadonly: true
+    - name: ms_newsandsocialid
+      type: Edm.String
+      display_name: "News ID"
+      description: ""
+      iscomputed: false
+      isreadonly: false
+    - name: ms_traceid
+      type: Edm.String
+      display_name: "Trace ID"
+      description: ""
+      iscomputed: false
+      isreadonly: false
+    - name: ms_tweetsaboutdate
+      type: Edm.String
+      display_name: "Tweets About Date"
+      description: ""
+      iscomputed: false
+      isreadonly: false
+    - name: ms_tweetsfromdate
+      type: Edm.String
+      display_name: "Tweets From Date"
+      description: ""
+      iscomputed: false
+      isreadonly: false
     - name: msdyn_externalaccountid
       type: Edm.String
       display_name: "External ID"
@@ -1259,7 +1283,7 @@ lookup_properties:
     description: "Choose the primary contact for the account to provide quick access to contact details."
   - name: _slaid_value
     single_valued_navigation_property:
-    - sla_account_sla
+    - slaid_sla
     description: "Choose the service level agreement (SLA) that you want to apply to the Account record."
   - name: _slainvokedid_value
     single_valued_navigation_property:
@@ -1336,7 +1360,7 @@ single_valued_navigation_properties:
   - name: primarycontactid
     type: Microsoft.Dynamics.CRM.contact
     partner: account_primary_contact
-  - name: sla_account_sla
+  - name: slaid_sla
     type: Microsoft.Dynamics.CRM.sla
     partner: manualsla_account
   - name: slainvokedid_account_sla
@@ -1516,6 +1540,12 @@ collection_valued_navigation_properties:
   - name: listaccount_association
     type: Microsoft.Dynamics.CRM.list
     partner: listaccount_association
+  - name: ms_account_ms_newsitem
+    type: Microsoft.Dynamics.CRM.ms_newsitem
+    partner: ms_AccountId
+  - name: ms_account_ms_satori
+    type: Microsoft.Dynamics.CRM.ms_satori
+    partner: ms_AccountId
   - name: msdyn_account_account_BillingAccount
     type: Microsoft.Dynamics.CRM.account
     partner: msdyn_billingaccount_account
@@ -1710,7 +1740,7 @@ solutions:
     description: "Internal CRM System Solution"
 # This entity has no remarks.
 href_see_also:
-- text: "Use the Dynamics 365 Customer Engagement Web API"
+- text: "Use the Microsoft Dynamics 365 Customer Engagement Web API"
   href: "https://docs.microsoft.com/dynamics365/customer-engagement/developer/use-microsoft-dynamics-365-web-api"
 xref_see_also:
 - Microsoft.Dynamics.CRM.EntityTypeIndex

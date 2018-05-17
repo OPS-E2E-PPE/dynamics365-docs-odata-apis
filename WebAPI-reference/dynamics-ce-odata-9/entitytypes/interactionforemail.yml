@@ -4,7 +4,7 @@ name: "interactionforemail"
 type: entitytype
 metadata: 
   title: "Microsoft Dynamics 365 Customer Engagement interactionforemail EntityType Reference | MicrosoftDocs"
-  ms.date: "10/20/2017"
+  ms.date: "03/20/2018"
   ms.service: "crm-online"
   ms.topic: "reference"
   applies_to: 
@@ -23,6 +23,7 @@ header:
   primary_name_attribute: name
   operations_supported:
   - GET (RetrieveMultiple Only)
+  - DELETE
 namespace: Microsoft.Dynamics.CRM
 properties:
   description: "Properties represent fields of data stored in the entity.Some properties are read-only."
@@ -39,6 +40,12 @@ properties:
       description: "Email Activity Id."
       iscomputed: false
       isreadonly: true
+    - name: emailaddress
+      type: Edm.String
+      display_name: "Email Interaction Component Related Text"
+      description: "For internal use only."
+      iscomputed: false
+      isreadonly: false
     - name: emailinteractionreplyid
       type: Edm.Guid
       display_name: "Email Activity Id"
@@ -81,6 +88,12 @@ properties:
       description: "Shows the location for an Interaction"
       iscomputed: false
       isreadonly: false
+    - name: interactionpartyid
+      type: Edm.Guid
+      display_name: "Interaction party id."
+      description: "For internal use only."
+      iscomputed: false
+      isreadonly: true
     - name: interactionrepliedby
       type: Edm.String
       display_name: "Name who replied to email if interaction is reply"
@@ -289,7 +302,7 @@ solutions:
     description: "Internal CRM System Solution"
 # This entity has no remarks.
 href_see_also:
-- text: "Use the Dynamics 365 Customer Engagement Web API"
+- text: "Use the Microsoft Dynamics 365 Customer Engagement Web API"
   href: "https://docs.microsoft.com/dynamics365/customer-engagement/developer/use-microsoft-dynamics-365-web-api"
 xref_see_also:
 - Microsoft.Dynamics.CRM.EntityTypeIndex

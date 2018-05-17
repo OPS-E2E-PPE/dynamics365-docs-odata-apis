@@ -4,7 +4,7 @@ name: "actioncard"
 type: entitytype
 metadata: 
   title: "Microsoft Dynamics 365 Customer Engagement actioncard EntityType Reference | MicrosoftDocs"
-  ms.date: "10/20/2017"
+  ms.date: "03/20/2018"
   ms.service: "crm-online"
   ms.topic: "reference"
   applies_to: 
@@ -88,12 +88,6 @@ properties:
       type: Edm.DateTimeOffset
       display_name: "Record Created On"
       description: "Date and time that the record was migrated."
-      iscomputed: false
-      isreadonly: false
-    - name: parentregardingobjecttypecode
-      type: Edm.Int32
-      display_name: "ParentRegardingObjectTypeCode"
-      description: "ParentRegardingObjectTypeCode of the ActionCard"
       iscomputed: false
       isreadonly: false
     - name: priority
@@ -304,7 +298,7 @@ solutions:
     description: "Internal CRM System Solution"
 # This entity has no remarks.
 href_see_also:
-- text: "Use the Dynamics 365 Customer Engagement Web API"
+- text: "Use the Microsoft Dynamics 365 Customer Engagement Web API"
   href: "https://docs.microsoft.com/dynamics365/customer-engagement/developer/use-microsoft-dynamics-365-web-api"
 xref_see_also:
 - Microsoft.Dynamics.CRM.EntityTypeIndex

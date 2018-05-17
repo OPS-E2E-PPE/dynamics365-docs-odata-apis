@@ -4,7 +4,7 @@ name: "MetadataConditionExpression"
 type: complextype
 metadata: 
   title: "Microsoft Dynamics 365 Customer Engagement MetadataConditionExpression ComplexType Reference | MicrosoftDocs"
-  ms.date: "10/20/2017"
+  ms.date: "03/20/2018"
   ms.service: "crm-online"
   ms.topic: "reference"
   applies_to: 
@@ -16,7 +16,7 @@ metadata:
   meta-description: "Reference information about the Dynamics 365 Customer Engagement Web API MetadataConditionExpression ComplexType."
 namespace: Microsoft.Dynamics.CRM
 # This complex type doesn't inherit from another complextype.
-description: "" 
+description: "Contains a condition expression used to filter the results of the metadata query. " 
 properties:
   description: "The properties of a complex type contain the structured data of the type."
   property_items:
@@ -24,19 +24,19 @@ properties:
     type: Edm.String
     nullable: true
     unicode: false
-    description: ""
+    description: "The name of the metadata property in the condition expression."
     iscollection: false
   - name: ConditionOperator
     type: Microsoft.Dynamics.CRM.MetadataConditionOperator
     nullable: true
     unicode: true
-    description: ""
+    description: "The condition operator."
     iscollection: false
   - name: Value
     type: Microsoft.Dynamics.CRM.Object
     nullable: true
     unicode: true
-    description: ""
+    description: "The value for the metadata property."
     iscollection: false
 # This complex type doesn't have any navigation properties.
 usedby:
@@ -46,7 +46,7 @@ usedby:
     used_as: Property
 # This complex type has no remarks.
 href_see_also:
-- text: "Use the Dynamics 365 Customer Engagement Web API"
+- text: "Use the Microsoft Dynamics 365 Customer Engagement Web API"
   href: "https://docs.microsoft.com/dynamics365/customer-engagement/developer/use-microsoft-dynamics-365-web-api"
 xref_see_also:
 - Microsoft.Dynamics.CRM.EntityTypeIndex

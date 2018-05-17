@@ -3,7 +3,7 @@ uid: Microsoft.Dynamics.CRM.FunctionIndex
 name: Web API Function Reference
 title: "Dynamics 365 Customer Engagement Web API Function Reference | MicrosoftDocs"
 metadata:   
-  ms.date: "10/20/2017"
+  ms.date: "03/20/2018"
   ms.service: "crm-online"
   ms.topic: "reference"
   applies_to: 
@@ -33,7 +33,7 @@ in_this_section:
 - type: Microsoft.Dynamics.CRM.FindParentResourceGroup
   description: "Finds a parent resource group (scheduling group) for the specified resource groups (scheduling groups)."
 - type: Microsoft.Dynamics.CRM.FormatAddress
-  description: ""
+  description: "Builds the full address according to country/regional format specific requirements."
 - type: Microsoft.Dynamics.CRM.GetAllTimeZonesWithDisplayName
   description: "Retrieves all the time zone definitions for the specified locale and to return only the display name attribute.  "
 - type: Microsoft.Dynamics.CRM.GetDefaultPriceLevel
@@ -64,6 +64,8 @@ in_this_section:
   description: "Determines whether data encryption is currently running (active or inactive).  "
 - type: Microsoft.Dynamics.CRM.IsValidStateTransition
   description: "Validates the state transition."
+- type: Microsoft.Dynamics.CRM.LocalTimeFromUtcTime
+  description: ""
 - type: Microsoft.Dynamics.CRM.QueryMultipleSchedules
   description: "Searches multiple resources for available time block that matches the specified parameters."
 - type: Microsoft.Dynamics.CRM.QuerySchedule
@@ -81,9 +83,9 @@ in_this_section:
 - type: Microsoft.Dynamics.CRM.RetrieveApplicationRibbon
   description: "Retrieve the data that defines the content and behavior of the application ribbon.  "
 - type: Microsoft.Dynamics.CRM.RetrieveAttributeChangeHistory
-  description: ""
+  description: "retrieve all metadata changes to a specific attribute."
 - type: Microsoft.Dynamics.CRM.RetrieveAuditDetails
-  description: ""
+  description: "Retrieve the full audit details from an Audit record. "
 - type: Microsoft.Dynamics.CRM.RetrieveAuditPartitionList
   description: "Retrieves the list of database partitions that are used to store audited history data.  "
 - type: Microsoft.Dynamics.CRM.RetrieveAvailableLanguages
@@ -117,7 +119,7 @@ in_this_section:
 - type: Microsoft.Dynamics.CRM.RetrieveDuplicates
   description: "Detects and retrieves duplicates for a specified record."
 - type: Microsoft.Dynamics.CRM.RetrieveEntity
-  description: ""
+  description: "Retrieves entity metadata. "
 - type: Microsoft.Dynamics.CRM.RetrieveEntityRibbon
   description: "Retrieves ribbon definitions for an entity.  "
 - type: Microsoft.Dynamics.CRM.RetrieveExchangeAppointments
@@ -141,11 +143,13 @@ in_this_section:
 - type: Microsoft.Dynamics.CRM.RetrieveMembersBulkOperation
   description: "Retrieves the members of a bulk operation. "
 - type: Microsoft.Dynamics.CRM.RetrieveMetadataChanges
-  description: ""
+  description: " Retrieves a collection of metadata records that satisfy the specified criteria."
 - type: Microsoft.Dynamics.CRM.RetrieveMissingComponents
   description: "Retrieves a list of missing components in the target organization.  "
 - type: Microsoft.Dynamics.CRM.RetrieveMissingDependencies
   description: "Retrieves any required solution components that are not included in the solution. "
+- type: Microsoft.Dynamics.CRM.RetrieveOrganizationInfo
+  description: "Retrieves information about an organization such as the instance type and solutions available in the organization.  "
 - type: Microsoft.Dynamics.CRM.RetrieveOrganizationResources
   description: "Retrieves the resources that are used by an organization.  "
 - type: Microsoft.Dynamics.CRM.RetrieveParentGroupsResourceGroup
@@ -171,7 +175,7 @@ in_this_section:
 - type: Microsoft.Dynamics.CRM.RetrieveProvisionedLanguages
   description: "Retrieves the list of provisioned languages.  "
 - type: Microsoft.Dynamics.CRM.RetrieveRecordChangeHistory
-  description: ""
+  description: "Retrieve all attribute data changes for a specific entity."
 - type: Microsoft.Dynamics.CRM.RetrieveRecordWall
   description: "Retrieves pages of posts, including comments for each post, for a specified record. "
 - type: Microsoft.Dynamics.CRM.RetrieveRequiredComponents
@@ -179,7 +183,7 @@ in_this_section:
 - type: Microsoft.Dynamics.CRM.RetrieveRolePrivilegesRole
   description: "Retrieves the privileges that are assigned to the specified role.  "
 - type: Microsoft.Dynamics.CRM.RetrieveSharedPrincipalsAndAccess
-  description: ""
+  description: "Retrieves all security principals (users or teams) that have access to, and access rights for, the specified record.  "
 - type: Microsoft.Dynamics.CRM.RetrieveSubGroupsResourceGroup
   description: "Retrieves the collection of child resource groups from the specified resource group.  "
 - type: Microsoft.Dynamics.CRM.RetrieveTeamPrivileges
@@ -187,11 +191,13 @@ in_this_section:
 - type: Microsoft.Dynamics.CRM.RetrieveTimestamp
   description: "Retrieves a time stamp for the metadata.  "
 - type: Microsoft.Dynamics.CRM.RetrieveTotalRecordCount
-  description: ""
+  description: "Returns data on the total number of records for specific entities."
 - type: Microsoft.Dynamics.CRM.RetrieveUnpublished
   description: ""
 - type: Microsoft.Dynamics.CRM.RetrieveUnpublishedMultiple
   description: "Retrieves a collection of unpublished organization-owned records that satisfy the specified query criteria. "
+- type: Microsoft.Dynamics.CRM.RetrieveUserLicenseInfo
+  description: "Retrieves the license information for the specified system user (user).  "
 - type: Microsoft.Dynamics.CRM.RetrieveUserPrivileges
   description: "Retrieves the privileges a system user (user) has through his or her roles in the specified business unit.  "
 - type: Microsoft.Dynamics.CRM.RetrieveUserQueues
@@ -208,6 +214,8 @@ in_this_section:
   description: "Searches for knowledge base articles that contain the specified keywords."
 - type: Microsoft.Dynamics.CRM.SearchByTitleKbArticle
   description: "Searches for knowledge base articles that contain the specified title. "
+- type: Microsoft.Dynamics.CRM.UtcTimeFromLocalTime
+  description: ""
 - type: Microsoft.Dynamics.CRM.ValidateApp
   description: ""
 - type: Microsoft.Dynamics.CRM.ValidateRecurrenceRule
@@ -215,7 +223,7 @@ in_this_section:
 - type: Microsoft.Dynamics.CRM.WhoAmI
   description: "Retrieves the system user ID for the currently logged on user or the user under whose context the code is running.  "
 href_see_also:
-- text: "Use the Dynamics 365 Customer Engagement Web API"
+- text: "Use the Microsoft Dynamics 365 Customer Engagement Web API"
   href: "https://docs.microsoft.com/dynamics365/customer-engagement/developer/use-microsoft-dynamics-365-web-api"
 xref_see_also:
 - Microsoft.Dynamics.CRM.EntityTypeIndex

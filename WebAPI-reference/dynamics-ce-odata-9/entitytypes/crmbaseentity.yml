@@ -4,7 +4,7 @@ name: "crmbaseentity"
 type: entitytype
 metadata: 
   title: "Microsoft Dynamics 365 Customer Engagement crmbaseentity EntityType Reference | MicrosoftDocs"
-  ms.date: "10/20/2017"
+  ms.date: "03/20/2018"
   ms.service: "crm-online"
   ms.topic: "reference"
   applies_to: 
@@ -276,6 +276,8 @@ derived_types:
     description: "Stores data about what folders for a mailbox are auto tracked" 
   - type: Microsoft.Dynamics.CRM.mailmergetemplate 
     description: "Template for a mail merge document that contains the standard attributes of that document." 
+  - type: Microsoft.Dynamics.CRM.mbs_pluginprofile 
+    description: "" 
   - type: Microsoft.Dynamics.CRM.metric 
     description: "Type of measurement for a goal, such as money amount or count." 
   - type: Microsoft.Dynamics.CRM.mobileofflineprofileitemassociation 
@@ -286,6 +288,10 @@ derived_types:
     description: "Information to administer and manage the data available to mobile devices in offline mode." 
   - type: Microsoft.Dynamics.CRM.monthlyfiscalcalendar 
     description: "Monthly fiscal calendar of an organization. A span of time during which the financial activities of an organization are calculated." 
+  - type: Microsoft.Dynamics.CRM.ms_newsitem 
+    description: "" 
+  - type: Microsoft.Dynamics.CRM.ms_satori 
+    description: "" 
   - type: Microsoft.Dynamics.CRM.msdyn_accountpricelist 
     description: "Sales price list for this customer to capture special pricing agreements for products, roles and categories." 
   - type: Microsoft.Dynamics.CRM.msdyn_actual 
@@ -456,6 +462,8 @@ derived_types:
     description: "Sales price list used on the contract to set default sales prices on all project-based components such as time and expense." 
   - type: Microsoft.Dynamics.CRM.msdyn_organizationalunit 
     description: "Division of the company or organization that has a specific cost price list associated to it." 
+  - type: Microsoft.Dynamics.CRM.msdyn_orginsightsuserdashboarddefinition 
+    description: "OrgInsights User Dashboard Definition" 
   - type: Microsoft.Dynamics.CRM.msdyn_paymentdetail 
     description: "Specify payment details." 
   - type: Microsoft.Dynamics.CRM.msdyn_paymentmethod 
@@ -892,7 +900,7 @@ derived_types:
 # This entity is not included in any solutions.
 # This entity has no remarks.
 href_see_also:
-- text: "Use the Dynamics 365 Customer Engagement Web API"
+- text: "Use the Microsoft Dynamics 365 Customer Engagement Web API"
   href: "https://docs.microsoft.com/dynamics365/customer-engagement/developer/use-microsoft-dynamics-365-web-api"
 xref_see_also:
 - Microsoft.Dynamics.CRM.EntityTypeIndex

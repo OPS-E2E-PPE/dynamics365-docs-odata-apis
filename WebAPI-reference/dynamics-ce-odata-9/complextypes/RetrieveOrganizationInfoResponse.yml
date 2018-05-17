@@ -1,0 +1,47 @@
+### YamlMime:OData
+uid: Microsoft.Dynamics.CRM.RetrieveOrganizationInfoResponse
+name: "RetrieveOrganizationInfoResponse"
+type: complextype
+metadata: 
+  title: "Microsoft Dynamics 365 Customer Engagement RetrieveOrganizationInfoResponse ComplexType Reference | MicrosoftDocs"
+  ms.date: "03/20/2018"
+  ms.service: "crm-online"
+  ms.topic: "reference"
+  applies_to: 
+    - "Dynamics 365 (online)"
+  ms.assetid: 8853fe90-5a8b-4d82-9176-fcbd757ad3fa
+  author: "jimdaly"
+  ms.author: "jdaly"
+  manager: "jdaly"
+  meta-description: "Reference information about the Dynamics 365 Customer Engagement Web API RetrieveOrganizationInfoResponse ComplexType."
+namespace: Microsoft.Dynamics.CRM
+# This complex type doesn't inherit from another complextype.
+description: "" 
+properties:
+  description: "The properties of a complex type contain the structured data of the type."
+  property_items:
+  - name: organizationInfo
+    type: Microsoft.Dynamics.CRM.OrganizationInfo
+    nullable: true
+    unicode: true
+    description: ""
+    iscollection: false
+# This complex type doesn't have any navigation properties.
+usedby:
+  description: "The following use the RetrieveOrganizationInfoResponse ComplexType."
+  usedby_items:
+  - name: Microsoft.Dynamics.CRM.RetrieveOrganizationInfo
+    used_as: ReturnType
+# This complex type has no remarks.
+href_see_also:
+- text: "Use the Microsoft Dynamics 365 Customer Engagement Web API"
+  href: "https://docs.microsoft.com/dynamics365/customer-engagement/developer/use-microsoft-dynamics-365-web-api"
+xref_see_also:
+- Microsoft.Dynamics.CRM.EntityTypeIndex
+- Microsoft.Dynamics.CRM.ActionIndex
+- Microsoft.Dynamics.CRM.FunctionIndex
+- Microsoft.Dynamics.CRM.QueryFunctionIndex
+- Microsoft.Dynamics.CRM.ComplexTypeIndex
+- Microsoft.Dynamics.CRM.EnumTypeIndex
+- Microsoft.Dynamics.CRM.MetadataEntityTypeIndex
+- Microsoft.Dynamics.CRM.SolutionIndex

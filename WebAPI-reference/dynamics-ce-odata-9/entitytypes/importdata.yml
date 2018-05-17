@@ -4,7 +4,7 @@ name: "importdata"
 type: entitytype
 metadata: 
   title: "Microsoft Dynamics 365 Customer Engagement importdata EntityType Reference | MicrosoftDocs"
-  ms.date: "10/20/2017"
+  ms.date: "03/20/2018"
   ms.service: "crm-online"
   ms.topic: "reference"
   applies_to: 
@@ -26,21 +26,6 @@ namespace: Microsoft.Dynamics.CRM
 properties:
   description: "Properties represent fields of data stored in the entity.Some properties are read-only."
   property_items:
-    - name: componentstate
-      type: Edm.Int32
-      display_name: "Component State"
-      description: "For internal use only."
-      iscomputed: false
-      isreadonly: true
-      options:
-        - value: 0
-          label: "Published"
-        - value: 1
-          label: "Unpublished"
-        - value: 2
-          label: "Deleted"
-        - value: 3
-          label: "Deleted Unpublished"
     - name: createdon
       type: Edm.DateTimeOffset
       display_name: ""
@@ -81,29 +66,6 @@ properties:
       description: "Unique identifier of the import data."
       iscomputed: false
       isreadonly: false
-    - name: importdataidunique
-      type: Edm.Guid
-      display_name: ""
-      description: "Unique identifier of the Impport Data."
-      iscomputed: false
-      isreadonly: true
-    - name: introducedversion
-      type: Edm.String
-      display_name: "Introduced Version"
-      description: "Version in which the component is introduced."
-      iscomputed: false
-      isreadonly: false
-    - name: ismanaged
-      type: Edm.Boolean
-      display_name: "State"
-      description: "Information that specifies whether this component is managed."
-      iscomputed: false
-      isreadonly: true
-      options:
-        - value: 1
-          label: "Managed"
-        - value: 0
-          label: "Unmanaged"
     - name: linenumber
       type: Edm.Int32
       display_name: "Line Number"
@@ -116,24 +78,12 @@ properties:
       description: "Date and time when the import data was last modified."
       iscomputed: false
       isreadonly: true
-    - name: overwritetime
-      type: Edm.DateTimeOffset
-      display_name: "Record Overwrite Time"
-      description: "For internal use only."
-      iscomputed: false
-      isreadonly: true
     - name: recordid
       type: Edm.Guid
       display_name: "Record"
       description: "Unique identifier of the record."
       iscomputed: false
       isreadonly: false
-    - name: solutionid
-      type: Edm.Guid
-      display_name: "Solution"
-      description: "Unique identifier of the associated solution."
-      iscomputed: false
-      isreadonly: true
     - name: statecode
       type: Edm.Int32
       display_name: "Status"
@@ -242,7 +192,7 @@ solutions:
     description: "Internal CRM System Solution"
 # This entity has no remarks.
 href_see_also:
-- text: "Use the Dynamics 365 Customer Engagement Web API"
+- text: "Use the Microsoft Dynamics 365 Customer Engagement Web API"
   href: "https://docs.microsoft.com/dynamics365/customer-engagement/developer/use-microsoft-dynamics-365-web-api"
 xref_see_also:
 - Microsoft.Dynamics.CRM.EntityTypeIndex

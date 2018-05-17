@@ -4,7 +4,7 @@ name: "asyncoperation"
 type: entitytype
 metadata: 
   title: "Microsoft Dynamics 365 Customer Engagement asyncoperation EntityType Reference | MicrosoftDocs"
-  ms.date: "10/20/2017"
+  ms.date: "03/20/2018"
   ms.service: "crm-online"
   ms.topic: "reference"
   applies_to: 
@@ -262,6 +262,8 @@ properties:
           label: "Cleanup Solution Components"
         - value: 72
           label: "App Module Metadata Operation"
+        - value: 73
+          label: "ALM Anomaly Detection Operation"
     - name: parentpluginexecutionid
       type: Edm.Guid
       display_name: ""
@@ -304,6 +306,12 @@ properties:
       description: "Number of times to retry the system job."
       iscomputed: false
       isreadonly: true
+    - name: rootexecutioncontext
+      type: Edm.String
+      display_name: "RootExecutionContext"
+      description: "Root execution context of the job that trigerred async job."
+      iscomputed: false
+      isreadonly: false
     - name: sequence
       type: Edm.Int64
       display_name: "Sequence"
@@ -419,12 +427,6 @@ lookup_properties:
     description: "Unique identifier of the user who owns the record."
   - name: _regardingobjectid_value
     single_valued_navigation_property:
-    - regardingobjectid_msdyn_iotalert
-    - regardingobjectid_msdyn_iotdevice
-    - regardingobjectid_msdyn_iotdevicecategory
-    - regardingobjectid_msdyn_iotdevicecommand
-    - regardingobjectid_msdyn_iotdeviceregistrationhistory
-    - regardingobjectid_msdyn_bpf_477c16f59170487b8b4dc895c5dcd09b
     - regardingobjectid_territory
     - regardingobjectid_accountleads
     - regardingobjectid_contactleads
@@ -684,6 +686,16 @@ lookup_properties:
     - regardingobjectid_msdyn_workorderservicetask
     - regardingobjectid_msdyn_workordersubstatus
     - regardingobjectid_msdyn_workordertype
+    - regardingobjectid_mbs_pluginprofile
+    - regardingobjectid_msdyn_iotalert
+    - regardingobjectid_msdyn_iotdevice
+    - regardingobjectid_msdyn_iotdevicecategory
+    - regardingobjectid_msdyn_iotdevicecommand
+    - regardingobjectid_msdyn_iotdeviceregistrationhistory
+    - regardingobjectid_msdyn_bpf_477c16f59170487b8b4dc895c5dcd09b
+    - regardingobjectid_msdyn_orginsightsuserdashboarddefinition
+    - regardingobjectid_ms_newsitem
+    - regardingobjectid_ms_satori
     - regardingobjectid_theme
     - regardingobjectid_usermapping
     - regardingobjectid_new_interactionforemail
@@ -1046,12 +1058,21 @@ single_valued_navigation_properties:
   - name: regardingobjectid_mailmergetemplate
     type: Microsoft.Dynamics.CRM.mailmergetemplate
     partner: MailMergeTemplate_AsyncOperations
+  - name: regardingobjectid_mbs_pluginprofile
+    type: Microsoft.Dynamics.CRM.mbs_pluginprofile
+    partner: mbs_pluginprofile_AsyncOperations
   - name: regardingobjectid_metric
     type: Microsoft.Dynamics.CRM.metric
     partner: metric_AsyncOperations
   - name: regardingobjectid_monthlyfiscalcalendar
     type: Microsoft.Dynamics.CRM.monthlyfiscalcalendar
     partner: MonthlyFiscalCalendar_AsyncOperations
+  - name: regardingobjectid_ms_newsitem
+    type: Microsoft.Dynamics.CRM.ms_newsitem
+    partner: ms_newsitem_AsyncOperations
+  - name: regardingobjectid_ms_satori
+    type: Microsoft.Dynamics.CRM.ms_satori
+    partner: ms_satori_AsyncOperations
   - name: regardingobjectid_msdyn_accountpricelist
     type: Microsoft.Dynamics.CRM.msdyn_accountpricelist
     partner: msdyn_accountpricelist_AsyncOperations
@@ -1310,6 +1331,9 @@ single_valued_navigation_properties:
   - name: regardingobjectid_msdyn_organizationalunit
     type: Microsoft.Dynamics.CRM.msdyn_organizationalunit
     partner: msdyn_organizationalunit_AsyncOperations
+  - name: regardingobjectid_msdyn_orginsightsuserdashboarddefinition
+    type: Microsoft.Dynamics.CRM.msdyn_orginsightsuserdashboarddefinition
+    partner: msdyn_orginsightsuserdashboarddefinition_AsyncOperations
   - name: regardingobjectid_msdyn_payment
     type: Microsoft.Dynamics.CRM.msdyn_payment
     partner: msdyn_payment_AsyncOperations
@@ -1848,7 +1872,7 @@ solutions:
     description: "Internal CRM System Solution"
 # This entity has no remarks.
 href_see_also:
-- text: "Use the Dynamics 365 Customer Engagement Web API"
+- text: "Use the Microsoft Dynamics 365 Customer Engagement Web API"
   href: "https://docs.microsoft.com/dynamics365/customer-engagement/developer/use-microsoft-dynamics-365-web-api"
 xref_see_also:
 - Microsoft.Dynamics.CRM.EntityTypeIndex

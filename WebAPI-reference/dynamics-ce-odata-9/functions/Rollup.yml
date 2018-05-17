@@ -4,7 +4,7 @@ name: "Rollup"
 type: function
 metadata: 
   title: "Microsoft Dynamics 365 Customer Engagement Rollup Function Reference | MicrosoftDocs"
-  ms.date: "10/20/2017"
+  ms.date: "03/20/2018"
   ms.service: "crm-online"
   ms.topic: "reference"
   applies_to: 
@@ -27,16 +27,19 @@ parameters:
     nullable: false
     unicode: true
     description: "The target record for the rollup operation."
+    iscollection: false
   - name: Query
     type: Microsoft.Dynamics.CRM.QueryBase
     nullable: true
     unicode: true
     description: "The query criteria for the rollup operation. "
+    iscollection: false
   - name: RollupType
     type: Microsoft.Dynamics.CRM.RollupType
     nullable: false
     unicode: true
     description: "The rollup type."
+    iscollection: false
 return_type:
   description: "The Rollup function returns the following value."
   type: Microsoft.Dynamics.CRM.crmbaseentity
@@ -77,7 +80,7 @@ entities:
     description: "Quote that has been accepted."
 # This function has no remarks.
 href_see_also:
-- text: "Use the Dynamics 365 Customer Engagement Web API"
+- text: "Use the Microsoft Dynamics 365 Customer Engagement Web API"
   href: "https://docs.microsoft.com/dynamics365/customer-engagement/developer/use-microsoft-dynamics-365-web-api"
 xref_see_also:
 - Microsoft.Dynamics.CRM.EntityTypeIndex

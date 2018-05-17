@@ -4,7 +4,7 @@ name: "duplicaterecord"
 type: entitytype
 metadata: 
   title: "Microsoft Dynamics 365 Customer Engagement duplicaterecord EntityType Reference | MicrosoftDocs"
-  ms.date: "10/20/2017"
+  ms.date: "03/20/2018"
   ms.service: "crm-online"
   ms.topic: "reference"
   applies_to: 
@@ -60,10 +60,6 @@ lookup_properties:
     description: "Unique identifier of the system job that created this record."
   - name: _baserecordid_value
     single_valued_navigation_property:
-    - baserecordid_msdyn_iotdevice
-    - baserecordid_msdyn_iotdevicecategory
-    - baserecordid_msdyn_iotdevicecommand
-    - baserecordid_msdyn_iotdeviceregistrationhistory
     - baserecordid_lead
     - baserecordid_bookableresource
     - baserecordid_bookableresourcebooking
@@ -241,6 +237,12 @@ lookup_properties:
     - baserecordid_msdyn_workorderservicetask
     - baserecordid_msdyn_workordersubstatus
     - baserecordid_msdyn_workordertype
+    - baserecordid_msdyn_iotdevice
+    - baserecordid_msdyn_iotdevicecategory
+    - baserecordid_msdyn_iotdevicecommand
+    - baserecordid_msdyn_iotdeviceregistrationhistory
+    - baserecordid_ms_newsitem
+    - baserecordid_ms_satori
     - baserecordid_knowledgearticle
     - baserecordid_knowledgebaserecord
     - baserecordid_goalrollupquery
@@ -260,10 +262,6 @@ lookup_properties:
     description: "Unique identifier of the base record."
   - name: _duplicaterecordid_value
     single_valued_navigation_property:
-    - duplicaterecordid_msdyn_iotdevice
-    - duplicaterecordid_msdyn_iotdevicecategory
-    - duplicaterecordid_msdyn_iotdevicecommand
-    - duplicaterecordid_msdyn_iotdeviceregistrationhistory
     - duplicaterecordid_lead
     - duplicaterecordid_bookableresource
     - duplicaterecordid_bookableresourcebooking
@@ -441,6 +439,12 @@ lookup_properties:
     - duplicaterecordid_msdyn_workorderservicetask
     - duplicaterecordid_msdyn_workordersubstatus
     - duplicaterecordid_msdyn_workordertype
+    - duplicaterecordid_msdyn_iotdevice
+    - duplicaterecordid_msdyn_iotdevicecategory
+    - duplicaterecordid_msdyn_iotdevicecommand
+    - duplicaterecordid_msdyn_iotdeviceregistrationhistory
+    - duplicaterecordid_ms_newsitem
+    - duplicaterecordid_ms_satori
     - duplicaterecordid_knowledgearticle
     - duplicaterecordid_knowledgebaserecord
     - duplicaterecordid_publisher
@@ -566,6 +570,12 @@ single_valued_navigation_properties:
   - name: baserecordid_list
     type: Microsoft.Dynamics.CRM.list
     partner: List_DuplicateBaseRecord
+  - name: baserecordid_ms_newsitem
+    type: Microsoft.Dynamics.CRM.ms_newsitem
+    partner: ms_newsitem_DuplicateBaseRecord
+  - name: baserecordid_ms_satori
+    type: Microsoft.Dynamics.CRM.ms_satori
+    partner: ms_satori_DuplicateBaseRecord
   - name: baserecordid_msdyn_accountpricelist
     type: Microsoft.Dynamics.CRM.msdyn_accountpricelist
     partner: msdyn_accountpricelist_DuplicateBaseRecord
@@ -1190,6 +1200,12 @@ single_valued_navigation_properties:
   - name: duplicaterecordid_list
     type: Microsoft.Dynamics.CRM.list
     partner: List_DuplicateMatchingRecord
+  - name: duplicaterecordid_ms_newsitem
+    type: Microsoft.Dynamics.CRM.ms_newsitem
+    partner: ms_newsitem_DuplicateMatchingRecord
+  - name: duplicaterecordid_ms_satori
+    type: Microsoft.Dynamics.CRM.ms_satori
+    partner: ms_satori_DuplicateMatchingRecord
   - name: duplicaterecordid_msdyn_accountpricelist
     type: Microsoft.Dynamics.CRM.msdyn_accountpricelist
     partner: msdyn_accountpricelist_DuplicateMatchingRecord
@@ -1731,7 +1747,7 @@ solutions:
     description: "Internal CRM System Solution"
 # This entity has no remarks.
 href_see_also:
-- text: "Use the Dynamics 365 Customer Engagement Web API"
+- text: "Use the Microsoft Dynamics 365 Customer Engagement Web API"
   href: "https://docs.microsoft.com/dynamics365/customer-engagement/developer/use-microsoft-dynamics-365-web-api"
 xref_see_also:
 - Microsoft.Dynamics.CRM.EntityTypeIndex

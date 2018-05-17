@@ -4,7 +4,7 @@ name: "msdyn_LogFindWorkEvent"
 type: action
 metadata: 
   title: "Microsoft Dynamics 365 Customer Engagement msdyn_LogFindWorkEvent Action Reference | MicrosoftDocs"
-  ms.date: "10/20/2017"
+  ms.date: "03/20/2018"
   ms.service: "crm-online"
   ms.topic: "reference"
   applies_to: 
@@ -15,7 +15,7 @@ metadata:
   manager: "jdaly"
   meta-description: "Reference information about the Dynamics 365 Customer Engagement msdyn_LogFindWorkEvent Action."
 namespace: Microsoft.Dynamics.CRM
-# This Action has no description.
+description: "For internal use only."
 owningsolution: Microsoft.Dynamics.CRM.ProjectService
 bound_entities:
   description: "Bound actions are invoked by appending the action name to the URI representing an entity or collection."
@@ -29,22 +29,22 @@ parameters:
     type: Microsoft.Dynamics.CRM.msdyn_projectteam
     nullable: false
     unicode: true
-    description: ""
+    description: "For internal use only."
   - name: Type
     type: Edm.Int32
     nullable: false
     unicode: true
-    description: ""
+    description: "For internal use only."
   - name: Value
     type: Edm.String
     nullable: false
     unicode: false
-    description: ""
+    description: "For internal use only."
   - name: Timestamp
     type: Edm.DateTimeOffset
     nullable: false
     unicode: true
-    description: ""
+    description: "For internal use only."
 return_type:
   description: "The msdyn_LogFindWorkEvent action returns the following value."
   iscollection: false
@@ -53,7 +53,7 @@ return_type:
 # This action has no identified unbound entities.
 # This action has no remarks.
 href_see_also:
-- text: "Use the Dynamics 365 Customer Engagement Web API"
+- text: "Use the Microsoft Dynamics 365 Customer Engagement Web API"
   href: "https://docs.microsoft.com/dynamics365/customer-engagement/developer/use-microsoft-dynamics-365-web-api"
 xref_see_also:
 - Microsoft.Dynamics.CRM.EntityTypeIndex

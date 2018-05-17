@@ -4,7 +4,7 @@ name: "entitlement"
 type: entitytype
 metadata: 
   title: "Microsoft Dynamics 365 Customer Engagement entitlement EntityType Reference | MicrosoftDocs"
-  ms.date: "10/20/2017"
+  ms.date: "03/20/2018"
   ms.service: "crm-online"
   ms.topic: "reference"
   applies_to: 
@@ -118,12 +118,6 @@ properties:
           label: "Premium"
         - value: 2
           label: "None"
-    - name: lastonholdtime
-      type: Edm.DateTimeOffset
-      display_name: "Last On Hold Time"
-      description: "Contains the date and time stamp of the last on-hold time"
-      iscomputed: false
-      isreadonly: false
     - name: modifiedon
       type: Edm.DateTimeOffset
       display_name: "Modified On"
@@ -136,12 +130,6 @@ properties:
       description: "Type a meaningful name for the entitlement."
       iscomputed: false
       isreadonly: false
-    - name: onholdtime
-      type: Edm.Int32
-      display_name: "On Hold Time (Minutes)"
-      description: "Shows how long, in minutes, that the record was on hold"
-      iscomputed: false
-      isreadonly: true
     - name: overriddencreatedon
       type: Edm.DateTimeOffset
       display_name: "Record Created On"
@@ -439,9 +427,6 @@ collection_valued_navigation_properties:
   - name: entitlement_ServiceAppointments
     type: Microsoft.Dynamics.CRM.serviceappointment
     partner: regardingobjectid_entitlement_serviceappointment
-  - name: entitlement_SLAKPIInstances
-    type: Microsoft.Dynamics.CRM.slakpiinstance
-    partner: regarding_entitlement
   - name: entitlement_SocialActivities
     type: Microsoft.Dynamics.CRM.socialactivity
     partner: regardingobjectid_entitlement_socialactivity
@@ -482,7 +467,7 @@ solutions:
     description: "Dynamics 365 workload for service."
 # This entity has no remarks.
 href_see_also:
-- text: "Use the Dynamics 365 Customer Engagement Web API"
+- text: "Use the Microsoft Dynamics 365 Customer Engagement Web API"
   href: "https://docs.microsoft.com/dynamics365/customer-engagement/developer/use-microsoft-dynamics-365-web-api"
 xref_see_also:
 - Microsoft.Dynamics.CRM.EntityTypeIndex

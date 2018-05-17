@@ -4,7 +4,7 @@ name: "BackgroundSendEmail"
 type: action
 metadata: 
   title: "Microsoft Dynamics 365 Customer Engagement BackgroundSendEmail Action Reference | MicrosoftDocs"
-  ms.date: "10/20/2017"
+  ms.date: "03/20/2018"
   ms.service: "crm-online"
   ms.topic: "reference"
   applies_to: 
@@ -15,7 +15,7 @@ metadata:
   manager: "jdaly"
   meta-description: "Reference information about the Dynamics 365 Customer Engagement BackgroundSendEmail Action."
 namespace: Microsoft.Dynamics.CRM
-# This Action has no description.
+description: "Send email messages asynchronously."
 owningsolution: Microsoft.Dynamics.CRM.System
 # This action has no bound entities.
 isbound: false
@@ -26,7 +26,7 @@ parameters:
     type: Microsoft.Dynamics.CRM.QueryBase
     nullable: true
     unicode: true
-    description: ""
+    description: "The query criteria for sending email messages."
 return_type:
   description: "The BackgroundSendEmail action returns the following value."
   iscollection: false
@@ -40,7 +40,7 @@ entities:
     description: "Activity that is delivered using email protocols."
 # This action has no remarks.
 href_see_also:
-- text: "Use the Dynamics 365 Customer Engagement Web API"
+- text: "Use the Microsoft Dynamics 365 Customer Engagement Web API"
   href: "https://docs.microsoft.com/dynamics365/customer-engagement/developer/use-microsoft-dynamics-365-web-api"
 xref_see_also:
 - Microsoft.Dynamics.CRM.EntityTypeIndex

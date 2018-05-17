@@ -4,7 +4,7 @@ name: "IoT Connector for Microsoft Dynamics 365"
 type: solution
 metadata: 
   title: "Microsoft Dynamics 365 Customer Engagement IoT Connector for Microsoft Dynamics 365 Solution Reference | MicrosoftDocs"
-  ms.date: "10/20/2017"
+  ms.date: "03/20/2018"
   ms.service: "crm-online"
   ms.topic: "reference"
   applies_to: 
@@ -39,22 +39,22 @@ actions:
   description: "The following actions are included in this solution."
   action_items:
    - type: Microsoft.Dynamics.CRM.msdyn_IoTSendTestAlert
-     description: "[Reserved for future use.] "
+     description: "[Reserved for future use.]"
    - type: Microsoft.Dynamics.CRM.msdyn_JsonGetBoolean
-     description: "Reads a Boolean property in the specified JSON object."
+     description: "For internal use only."
    - type: Microsoft.Dynamics.CRM.msdyn_JsonGetNumber
-     description: "Reads a numeric property in the specified JSON object."
+     description: "For internal use only."
    - type: Microsoft.Dynamics.CRM.msdyn_JsonGetString
-     description: "Reads a text property in the specified JSON object"
+     description: "For internal use only."
    - type: Microsoft.Dynamics.CRM.msdyn_ParentIoTAlerts
-     description: "Calls the IoT - Debounce IoT Alerts action and passes 60 for the TimeSpan parameter."
+     description: "For internal use only."
    - type: Microsoft.Dynamics.CRM.msdyn_RegisterCustomEntity
      description: "Registers any custom entity that may or may not already have connected IoT devices. This action invokes the IoT – Register Device action."
    - type: Microsoft.Dynamics.CRM.msdyn_RegisterIoTDevice
      description: "Publishes the registration requests for an IoT device."
 # This solution has no remarks.
 href_see_also:
-- text: "Use the Dynamics 365 Customer Engagement Web API"
+- text: "Use the Microsoft Dynamics 365 Customer Engagement Web API"
   href: "https://docs.microsoft.com/dynamics365/customer-engagement/developer/use-microsoft-dynamics-365-web-api"
 xref_see_also:
 - Microsoft.Dynamics.CRM.EntityTypeIndex
