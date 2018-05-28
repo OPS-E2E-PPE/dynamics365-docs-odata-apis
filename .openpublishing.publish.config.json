@@ -34,6 +34,7 @@
   "skip_source_output_uploading": false,
   "need_preview_pull_request": false,
   "contribution_branch_mappings": {},
+  "xref_endpoint": "https://xref.docs.microsoft.com",
   "dependent_repositories": [
     {
       "path_to_root": "_themes",
