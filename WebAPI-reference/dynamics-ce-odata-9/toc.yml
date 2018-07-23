@@ -1,5 +1,4 @@
 - name: "Web API Reference"
-  href: about.md
   items:
   - uid: Microsoft.Dynamics.CRM.SolutionIndex
     name: Solutions
