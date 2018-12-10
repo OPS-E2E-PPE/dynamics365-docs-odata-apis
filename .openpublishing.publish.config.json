@@ -24,7 +24,7 @@
       "JoinTOCPlugin": [
         {
           "ReferenceTOC": "webapi-reference/dynamics-ce-odata-9/toc.yml",
-          "ConceptualTOCUrl": "/dynamics365/customer-engagement/developer/webapi/toc.json"
+          "ConceptualTOCUrl": "/powerapps/developer/common-data-service/webapi/toc.json"
         }
       ]
     }

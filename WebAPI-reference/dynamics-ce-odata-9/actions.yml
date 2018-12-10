@@ -15,7 +15,7 @@ metadata:
 description: "Actions represent operations which may have observable side effects, such as creating or updating records. An Action may require parameters and may return a value. Actions may be bound to entity types."
 in_this_section:
 - type: Microsoft.Dynamics.CRM.AddAppComponents
-  description: ""
+  description: "Adds app components to a business app."
 - type: Microsoft.Dynamics.CRM.AddItemCampaign
   description: "Adds an item to a campaign."
 - type: Microsoft.Dynamics.CRM.AddItemCampaignActivity
@@ -637,7 +637,7 @@ in_this_section:
 - type: Microsoft.Dynamics.CRM.SetParentSystemUser
   description: "Sets a new parent system user (user) for the specified user.  "
 - type: Microsoft.Dynamics.CRM.SetProcess
-  description: "Sets the process that associates with a given target entity. The user can set to another business process or specify null to clear out the current process."
+  description: "For internal use only."
 - type: Microsoft.Dynamics.CRM.SetReportRelated
   description: "Links an instance of a report entity to related entities.  "
 - type: Microsoft.Dynamics.CRM.TransformImport

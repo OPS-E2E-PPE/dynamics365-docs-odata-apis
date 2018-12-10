@@ -152,7 +152,7 @@ properties:
       isreadonly: true
     - name: visibility
       type: Edm.Boolean
-      display_name: "Visibiliy Status of ActionCard"
+      display_name: "Visibility Status of ActionCard"
       description: "Select whether the visibility should be set to public/private."
       iscomputed: false
       isreadonly: false

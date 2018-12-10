@@ -1,18 +1,19 @@
 ---
 title: "Dynamics 365 Customer Engagement Web API Reference| MicrosoftDocs"
-ms.date: "2017-04-16"
-ms.service: "crm-online"
+ms.date: 10/31/2018
+ms.service: "powerapps"
 ms.topic: "reference"
-applies_to: 
-  - "Dynamics 365 (online)"
 ms.assetid: 70cdf999-585a-4bc1-a34d-5ee75295295e
-author: "jimdaly"
-ms.author: "jdaly"
-manager: "jdaly"
+author: "kumarvivek"
+ms.author: "kvivek"
+ms.reviewer: "kvivek"
 ---
 # Web API Reference 
-This section contains reference documentation of the types, functions, and actions that constitute the Web API for 
-Dynamics 365 Customer Engagement. 
+This section contains reference documentation of the types, functions, and actions that constitute the Web API for Common Data Service (CDS) for Apps and Dynamics 365 Customer Engagement. More information:
+
+- [Use the Common Data Service for Apps Web API](/powerapps/developer/common-data-service/webapi/overview)
+
+- [Use the Microsoft Dynamics 365 Customer Engagement Web API](/dynamics365/customer-engagement/developer/use-microsoft-dynamics-365-web-api) 
 
 ## In This Section  
  <xref:Microsoft.Dynamics.CRM.EntityTypeIndex>
@@ -54,7 +55,8 @@ objects available to use in the Web API.
  [OData Version 4.0 Part 2: URL Conventions](http://docs.oasis-open.org/odata/odata/v4.0/os/part2-url-conventions/odata-v4.0-os-part2-url-conventions.html)<br />
  [OData Version 4.0 Part 3: Common Schema Definition Language (CSDL)](http://docs.oasis-open.org/odata/odata/v4.0/os/part3-csdl/odata-v4.0-os-part3-csdl.html)  
   
-## Related Sections  
- [Use the Microsoft Dynamics 365 Customer Engagement Web API](https://docs.microsoft.com/dynamics365/customer-engagement/developer/use-microsoft-dynamics-365-web-api)<br />
- [Web API types and operations](https://docs.microsoft.com/dynamics365/customer-engagement/developer/web-api-types-operations)<br />
- [Perform operations using the Web API](https://docs.microsoft.com/dynamics365/customer-engagement/developer/perform-operations-web-api)
+## Related Sections
+ [Use the Common Data Service for Apps Web API](/powerapps/developer/common-data-service/webapi/overview)
+
+ [Use the Microsoft Dynamics 365 Customer Engagement Web API](/dynamics365/customer-engagement/developer/use-microsoft-dynamics-365-web-api)
+ 

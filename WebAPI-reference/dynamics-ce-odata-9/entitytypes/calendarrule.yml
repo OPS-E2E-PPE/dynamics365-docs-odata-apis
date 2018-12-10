@@ -14,7 +14,7 @@ metadata:
   ms.author: "jdaly"
   manager: "jdaly"
   meta-description: "Reference information about the Dynamics 365 Customer Engagement calendarrule entitytype."
-description: "Defines free/busy times for a service and for resources or resource groups, such as working, non-working, vacation, and blocked."
+description: "Defines free/busy times for a service and for resources or resource groups, such as working, non-working, vacation, and blocked. <br /><b>Note:</b> It is not possible to perform GET, POST, PATCH and DELETE operations with this entity."
 header:
   entity_set_path: "[organization URI]/api/data/v9.0/calendarrules"
   base_type: Microsoft.Dynamics.CRM.crmbaseentity
