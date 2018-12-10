@@ -1,8 +1,9 @@
 ### YamlMime:ODataIndex
-uid: Microsoft.Dynamics.CRM.ActionIndex
-name: Web API Action Reference
-title: "Dynamics 365 Customer Engagement Web API Action Reference | MicrosoftDocs"
+uid: 123
+name: 123
+title: 123
 metadata:   
+  title: 123
   ms.date: "03/20/2018"
   ms.service: "crm-online"
   ms.topic: "reference"
@@ -16,8 +17,8 @@ description: "Actions represent operations which may have observable side effect
 in_this_section:
 - type: Microsoft.Dynamics.CRM.AddAppComponents
   description: "Adds app components to a business app."
-- type: Microsoft.Dynamics.CRM.AddItemCampaign
-  description: "Adds an item to a campaign."
+- type: 123
+  description: 123
 - type: Microsoft.Dynamics.CRM.AddItemCampaignActivity
   description: "Adds an item to a campaign activity. "
 - type: Microsoft.Dynamics.CRM.AddListMembersList
