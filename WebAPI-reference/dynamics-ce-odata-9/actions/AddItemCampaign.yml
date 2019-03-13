@@ -3,7 +3,7 @@ uid: Microsoft.Dynamics.CRM.AddItemCampaign
 name: "AddItemCampaign"
 type: action
 metadata: 
-  title: "this is testing"
+  title: 123
   ms.date: "10/20/2017"
   ms.service: "crm-online"
   ms.topic: "reference"
