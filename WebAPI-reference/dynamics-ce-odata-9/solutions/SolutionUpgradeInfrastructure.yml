@@ -1,0 +1,35 @@
+### YamlMime:OData
+uid: Microsoft.Dynamics.CRM.SolutionUpgradeInfrastructure
+name: "Solution Upgrade Infrastructure"
+type: solution
+metadata: 
+  title: "Common Data Service and Dynamics 365 Customer Engagement Solution Upgrade Infrastructure Solution Reference | MicrosoftDocs"
+  ms.date: "05/03/2020"
+  ms.service: "crm-online"
+  ms.topic: "reference"
+  ms.assetid: 0598839b-9719-4486-9bb7-be4c5f58a609
+  author: "KumarVivek"
+  ms.author: "kvivek"
+  manager: "Annbe"
+  meta-description: "Reference information about the Dynamics 365 Customer Engagement Solution Upgrade Infrastructure Solution."
+namespace: Microsoft.Dynamics.CRM
+header:
+ description: "Contains upgrade logs for some solutions"
+ unique_name: SolutionUpgradeInfrastructure
+ version: "2.6.0.0"
+ customization_prefix: msdyn
+# This solution includes no entities.
+# This solution includes no actions.
+# This solution has no remarks.
+href_see_also:
+- text: "Use the Common Data Service Web API"
+  href: "https://docs.microsoft.com/powerapps/developer/common-data-service/webapi/overview"
+xref_see_also:
+- Microsoft.Dynamics.CRM.EntityTypeIndex
+- Microsoft.Dynamics.CRM.ActionIndex
+- Microsoft.Dynamics.CRM.FunctionIndex
+- Microsoft.Dynamics.CRM.QueryFunctionIndex
+- Microsoft.Dynamics.CRM.ComplexTypeIndex
+- Microsoft.Dynamics.CRM.EnumTypeIndex
+- Microsoft.Dynamics.CRM.MetadataEntityTypeIndex
+- Microsoft.Dynamics.CRM.SolutionIndex

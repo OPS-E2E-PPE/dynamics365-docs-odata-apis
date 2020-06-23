@@ -1,0 +1,71 @@
+### YamlMime:OData
+uid: Microsoft.Dynamics.CRM.LookupDataRequest
+name: "LookupDataRequest"
+type: complextype
+metadata: 
+  title: "Common Data Service and Dynamics 365 Customer Engagement LookupDataRequest ComplexType Reference | MicrosoftDocs"
+  ms.date: "05/03/2020"
+  ms.service: "crm-online"
+  ms.topic: "reference"
+  ms.assetid: f4ac3f80-e932-4b58-888a-17ad261c8157
+  author: "KumarVivek"
+  ms.author: "kvivek"
+  manager: "Annbe"
+  meta-description: "Reference information about the Web API LookupDataRequest ComplexType."
+namespace: Microsoft.Dynamics.CRM
+# This complex type doesn't inherit from another complextype.
+description: "" 
+properties:
+  description: "The properties of a complex type contain the structured data of the type."
+  property_items:
+  - name: LookupEntityByName
+    type: Microsoft.Dynamics.CRM.LookupEntityInfo
+    nullable: false
+    unicode: true
+    description: ""
+    iscollection: true
+  - name: EntityAndAttribute
+    type: Microsoft.Dynamics.CRM.EntityAndAttribute
+    nullable: true
+    unicode: true
+    description: ""
+    iscollection: false
+  - name: AppId
+    type: Edm.Guid
+    nullable: true
+    unicode: true
+    description: ""
+    iscollection: false
+  - name: RelatedRecordId
+    type: Edm.Guid
+    nullable: true
+    unicode: true
+    description: ""
+    iscollection: false
+  - name: QueryString
+    type: Edm.String
+    nullable: true
+    unicode: false
+    description: ""
+    iscollection: false
+  - name: ReturnMetadata
+    type: Edm.Boolean
+    nullable: true
+    unicode: true
+    description: ""
+    iscollection: false
+# This complex type doesn't have any navigation properties.
+
+# This complex type has no remarks.
+href_see_also:
+- text: "Use the Common Data Service Web API"
+  href: "https://docs.microsoft.com/powerapps/developer/common-data-service/webapi/overview"
+xref_see_also:
+- Microsoft.Dynamics.CRM.EntityTypeIndex
+- Microsoft.Dynamics.CRM.ActionIndex
+- Microsoft.Dynamics.CRM.FunctionIndex
+- Microsoft.Dynamics.CRM.QueryFunctionIndex
+- Microsoft.Dynamics.CRM.ComplexTypeIndex
+- Microsoft.Dynamics.CRM.EnumTypeIndex
+- Microsoft.Dynamics.CRM.MetadataEntityTypeIndex
+- Microsoft.Dynamics.CRM.SolutionIndex

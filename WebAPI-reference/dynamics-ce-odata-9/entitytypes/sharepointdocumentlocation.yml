@@ -3,17 +3,15 @@ uid: Microsoft.Dynamics.CRM.sharepointdocumentlocation
 name: "sharepointdocumentlocation"
 type: entitytype
 metadata: 
-  title: "Microsoft Dynamics 365 Customer Engagement sharepointdocumentlocation EntityType Reference | MicrosoftDocs"
-  ms.date: "03/20/2018"
+  title: "Common Data Service and Dynamics 365 Customer Engagement sharepointdocumentlocation EntityType Reference | MicrosoftDocs"
+  ms.date: "05/03/2020"
   ms.service: "crm-online"
   ms.topic: "reference"
-  applies_to: 
-  - "Dynamics 365 (online)"
   ms.assetid: e36b40e6-57b5-4e1b-9d6c-885579320dc6
-  author: "jimdaly"
-  ms.author: "jdaly"
-  manager: "jdaly"
-  meta-description: "Reference information about the Dynamics 365 Customer Engagement sharepointdocumentlocation entitytype."
+  author: "KumarVivek"
+  ms.author: "kvivek"
+  manager: "Annbe"
+  meta-description: "Reference information about the sharepointdocumentlocation entitytype."
 description: "Document libraries or folders on a SharePoint server from where documents can be managed in Microsoft Dynamics 365."
 header:
   entity_set_path: "[organization URI]/api/data/v9.0/sharepointdocumentlocations"
@@ -108,6 +106,8 @@ properties:
           label: "OneDrive"
         - value: 2
           label: "Shared with me"
+        - value: 3
+          label: "MS Teams"
     - name: sharepointdocumentlocationid
       type: Edm.Guid
       display_name: "SharePoint Document Location ID"
@@ -208,16 +208,20 @@ lookup_properties:
     description: "Unique identifier of the parent site or location."
   - name: _regardingobjectid_value
     single_valued_navigation_property:
+    - regardingobjectid_kbarticle
+    - regardingobjectid_knowledgearticle
+    - regardingobjectid_account
+    - regardingobjectid_msdyn_knowledgearticletemplate
     - regardingobjectid_lead
     - regardingobjectid_product
+    - regardingobjectid_msdyn_playbookactivity
     - regardingobjectid_opportunity
     - regardingobjectid_quote
     - regardingobjectid_salesliterature
+    - regardingobjectid_contact
     - regardingobjectid_msdyn_resourceterritory
     - regardingobjectid_msdyn_timegroup
     - regardingobjectid_msdyn_timegroupdetail
-    - regardingobjectid_msdyn_expense
-    - regardingobjectid_msdyn_project
     - regardingobjectid_msdyn_agreement
     - regardingobjectid_msdyn_agreementbookingdate
     - regardingobjectid_msdyn_agreementbookingsetup
@@ -240,9 +244,8 @@ lookup_properties:
     - regardingobjectid_msdyn_workorderproduct
     - regardingobjectid_msdyn_workorderservice
     - regardingobjectid_msdyn_workorderservicetask
-    - regardingobjectid_knowledgearticle
-    - regardingobjectid_account
-    - regardingobjectid_kbarticle
+    - regardingobjectid_msdyn_expense
+    - regardingobjectid_msdyn_project
     description: "Unique identifier of the object with which the SharePoint document location record is associated."
   - name: _transactioncurrencyid_value
     single_valued_navigation_property:
@@ -284,6 +287,9 @@ single_valued_navigation_properties:
   - name: regardingobjectid_account
     type: Microsoft.Dynamics.CRM.account
     partner: Account_SharepointDocumentLocation
+  - name: regardingobjectid_contact
+    type: Microsoft.Dynamics.CRM.contact
+    partner: contact_SharePointDocumentLocations
   - name: regardingobjectid_kbarticle
     type: Microsoft.Dynamics.CRM.kbarticle
     partner: KbArticle_SharepointDocumentLocation
@@ -442,8 +448,8 @@ solutions:
     description: "Internal CRM System Solution"
 # This entity has no remarks.
 href_see_also:
-- text: "Use the Microsoft Dynamics 365 Customer Engagement Web API"
-  href: "https://docs.microsoft.com/dynamics365/customer-engagement/developer/use-microsoft-dynamics-365-web-api"
+- text: "Use the Common Data Service Web API"
+  href: "https://docs.microsoft.com/powerapps/developer/common-data-service/webapi/overview"
 xref_see_also:
 - Microsoft.Dynamics.CRM.EntityTypeIndex
 - Microsoft.Dynamics.CRM.ActionIndex

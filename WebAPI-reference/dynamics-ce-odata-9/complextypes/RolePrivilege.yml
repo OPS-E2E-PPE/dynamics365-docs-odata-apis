@@ -3,17 +3,15 @@ uid: Microsoft.Dynamics.CRM.RolePrivilege
 name: "RolePrivilege"
 type: complextype
 metadata: 
-  title: "Microsoft Dynamics 365 Customer Engagement RolePrivilege ComplexType Reference | MicrosoftDocs"
-  ms.date: "03/20/2018"
+  title: "Common Data Service and Dynamics 365 Customer Engagement RolePrivilege ComplexType Reference | MicrosoftDocs"
+  ms.date: "05/03/2020"
   ms.service: "crm-online"
   ms.topic: "reference"
-  applies_to: 
-    - "Dynamics 365 (online)"
   ms.assetid: d9487317-ed6d-4569-8d65-6732db95a86c
-  author: "jimdaly"
-  ms.author: "jdaly"
-  manager: "jdaly"
-  meta-description: "Reference information about the Dynamics 365 Customer Engagement Web API RolePrivilege ComplexType."
+  author: "KumarVivek"
+  ms.author: "kvivek"
+  manager: "Annbe"
+  meta-description: "Reference information about the Web API RolePrivilege ComplexType."
 namespace: Microsoft.Dynamics.CRM
 # This complex type doesn't inherit from another complextype.
 description: "Contains information about a privilege." 
@@ -50,12 +48,22 @@ usedby:
     used_as: Property
   - name: Microsoft.Dynamics.CRM.RetrieveTeamPrivilegesResponse
     used_as: Property
+  - name: Microsoft.Dynamics.CRM.RetrieveUserPrivilegeByPrivilegeIdResponse
+    used_as: Property
+  - name: Microsoft.Dynamics.CRM.RetrieveUserPrivilegeByPrivilegeNameResponse
+    used_as: Property
   - name: Microsoft.Dynamics.CRM.RetrieveUserPrivilegesResponse
+    used_as: Property
+  - name: Microsoft.Dynamics.CRM.RetrieveUsersPrivilegesThroughTeamsResponse
+    used_as: Property
+  - name: Microsoft.Dynamics.CRM.RolePrivilegeAuditDetail
+    used_as: Property
+  - name: Microsoft.Dynamics.CRM.RolePrivilegeAuditDetail
     used_as: Property
 # This complex type has no remarks.
 href_see_also:
-- text: "Use the Microsoft Dynamics 365 Customer Engagement Web API"
-  href: "https://docs.microsoft.com/dynamics365/customer-engagement/developer/use-microsoft-dynamics-365-web-api"
+- text: "Use the Common Data Service Web API"
+  href: "https://docs.microsoft.com/powerapps/developer/common-data-service/webapi/overview"
 xref_see_also:
 - Microsoft.Dynamics.CRM.EntityTypeIndex
 - Microsoft.Dynamics.CRM.ActionIndex

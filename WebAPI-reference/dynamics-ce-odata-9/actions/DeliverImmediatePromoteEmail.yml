@@ -1,0 +1,114 @@
+### YamlMime:OData
+uid: Microsoft.Dynamics.CRM.DeliverImmediatePromoteEmail
+name: "DeliverImmediatePromoteEmail"
+type: action
+metadata: 
+  title: "Common Data Service and Dynamics 365 Customer Engagement DeliverImmediatePromoteEmail Action Reference | MicrosoftDocs"
+  ms.date: "05/03/2020"
+  ms.service: "crm-online"
+  ms.topic: "reference"
+  ms.assetid: d33ae0f0-4e16-4456-b0ba-4b4c7881a70d
+  author: "KumarVivek"
+  ms.author: "kvivek"
+  manager: "Annbe"
+  meta-description: "Reference information about the DeliverImmediatePromoteEmail Action."
+namespace: Microsoft.Dynamics.CRM
+# This Action has no description.
+owningsolution: Microsoft.Dynamics.CRM.System
+bound_entities:
+  description: "Bound actions are invoked by appending the action name to the URI representing an entity or collection."
+  bound_entity_items:
+  - entity_type: Microsoft.Dynamics.CRM.email
+    binding_type: entity
+parameters:
+  description: "Parameters allow for data to be passed to the action."
+  parameter_items:
+  - name: MessageId
+    type: Edm.String
+    nullable: false
+    unicode: false
+    description: ""
+  - name: Subject
+    type: Edm.String
+    nullable: true
+    unicode: false
+    description: ""
+  - name: From
+    type: Edm.String
+    nullable: false
+    unicode: false
+    description: ""
+  - name: To
+    type: Edm.String
+    nullable: false
+    unicode: false
+    description: ""
+  - name: Cc
+    type: Edm.String
+    nullable: false
+    unicode: false
+    description: ""
+  - name: Bcc
+    type: Edm.String
+    nullable: false
+    unicode: false
+    description: ""
+  - name: ReceivedOn
+    type: Edm.DateTimeOffset
+    nullable: false
+    unicode: true
+    description: ""
+  - name: SubmittedBy
+    type: Edm.String
+    nullable: false
+    unicode: false
+    description: ""
+  - name: Importance
+    type: Edm.String
+    nullable: false
+    unicode: false
+    description: ""
+  - name: Body
+    type: Edm.String
+    nullable: false
+    unicode: false
+    description: ""
+  - name: AttachmentIds
+    type: Edm.String
+    nullable: false
+    unicode: false
+    description: ""
+  - name: EWSUrl
+    type: Edm.String
+    nullable: true
+    unicode: false
+    description: ""
+  - name: AttachmentToken
+    type: Edm.String
+    nullable: true
+    unicode: false
+    description: ""
+  - name: ExtraProperties
+    type: Microsoft.Dynamics.CRM.crmbaseentity
+    nullable: true
+    unicode: true
+    description: ""
+return_type:
+  description: "The DeliverImmediatePromoteEmail action returns the following value."
+  iscollection: false
+  nullable: false
+  type: Microsoft.Dynamics.CRM.email
+# This action has no identified unbound entities.
+# This action has no remarks.
+href_see_also:
+- text: "Use the Common Data Service Web API"
+  href: "https://docs.microsoft.com/powerapps/developer/common-data-service/webapi/overview"
+xref_see_also:
+- Microsoft.Dynamics.CRM.EntityTypeIndex
+- Microsoft.Dynamics.CRM.ActionIndex
+- Microsoft.Dynamics.CRM.FunctionIndex
+- Microsoft.Dynamics.CRM.QueryFunctionIndex
+- Microsoft.Dynamics.CRM.ComplexTypeIndex
+- Microsoft.Dynamics.CRM.EnumTypeIndex
+- Microsoft.Dynamics.CRM.MetadataEntityTypeIndex
+- Microsoft.Dynamics.CRM.SolutionIndex

@@ -1,0 +1,43 @@
+### YamlMime:OData
+uid: Microsoft.Dynamics.CRM.msdynce_OfficeProductivity
+name: "This solution contains Office Productivity implementation"
+type: solution
+metadata: 
+  title: "Common Data Service and Dynamics 365 Customer Engagement This solution contains Office Productivity implementation Solution Reference | MicrosoftDocs"
+  ms.date: "05/03/2020"
+  ms.service: "crm-online"
+  ms.topic: "reference"
+  ms.assetid: 28b0c999-6786-4f01-b6ea-19ead04a301d
+  author: "KumarVivek"
+  ms.author: "kvivek"
+  manager: "Annbe"
+  meta-description: "Reference information about the Dynamics 365 Customer Engagement This solution contains Office Productivity implementation Solution."
+namespace: Microsoft.Dynamics.CRM
+header:
+ description: "This solution contains Office Productivity implementation"
+ unique_name: msdynce_OfficeProductivity
+ version: "9.0.2.11032"
+ customization_prefix: msdyn
+entities:
+  description: "The following entities are included in this solution."
+  entity_items:
+   - type: Microsoft.Dynamics.CRM.msdyn_teamscollaboration
+     description: "Entity which stores collaboration data of Dynamics 365 with Microsoft Teams"
+actions:
+  description: "The following actions are included in this solution."
+  action_items:
+   - type: Microsoft.Dynamics.CRM.msdyn_IsSharePointEnabled
+     description: ""
+# This solution has no remarks.
+href_see_also:
+- text: "Use the Common Data Service Web API"
+  href: "https://docs.microsoft.com/powerapps/developer/common-data-service/webapi/overview"
+xref_see_also:
+- Microsoft.Dynamics.CRM.EntityTypeIndex
+- Microsoft.Dynamics.CRM.ActionIndex
+- Microsoft.Dynamics.CRM.FunctionIndex
+- Microsoft.Dynamics.CRM.QueryFunctionIndex
+- Microsoft.Dynamics.CRM.ComplexTypeIndex
+- Microsoft.Dynamics.CRM.EnumTypeIndex
+- Microsoft.Dynamics.CRM.MetadataEntityTypeIndex
+- Microsoft.Dynamics.CRM.SolutionIndex

@@ -1,0 +1,213 @@
+### YamlMime:OData
+uid: Microsoft.Dynamics.CRM.callbackregistration
+name: "callbackregistration"
+type: entitytype
+metadata: 
+  title: "Common Data Service and Dynamics 365 Customer Engagement callbackregistration EntityType Reference | MicrosoftDocs"
+  ms.date: "05/03/2020"
+  ms.service: "crm-online"
+  ms.topic: "reference"
+  ms.assetid: b8408d14-d2c8-4d19-941d-90cabc2e3847
+  author: "KumarVivek"
+  ms.author: "kvivek"
+  manager: "Annbe"
+  meta-description: "Reference information about the callbackregistration entitytype."
+description: "Callback Registration that stores configuration."
+header:
+  entity_set_path: "[organization URI]/api/data/v9.0/callbackregistrations"
+  base_type: Microsoft.Dynamics.CRM.crmbaseentity
+  display_name: Callback Registration
+  primary_key: callbackregistrationid
+  primary_name_attribute: name
+  operations_supported:
+  - POST
+  - GET
+  - PATCH
+  - DELETE
+namespace: Microsoft.Dynamics.CRM
+properties:
+  description: "Properties represent fields of data stored in the entity.Some properties are read-only."
+  property_items:
+    - name: callbackregistrationid
+      type: Edm.Guid
+      display_name: ""
+      description: "Unique identifier of the callback registration."
+      iscomputed: false
+      isreadonly: false
+    - name: createdon
+      type: Edm.DateTimeOffset
+      display_name: "Created On"
+      description: "Date and time when the callback registration was created."
+      iscomputed: false
+      isreadonly: true
+    - name: entityname
+      type: Edm.String
+      display_name: "Entity Name"
+      description: "Entity Name."
+      iscomputed: false
+      isreadonly: false
+    - name: filterexpression
+      type: Edm.String
+      display_name: "Filter Expression"
+      description: "condition represented with OData $filter syntax"
+      iscomputed: false
+      isreadonly: false
+    - name: filteringattributes
+      type: Edm.String
+      display_name: "Filtering Attributes"
+      description: "Comma-separated list of attributes. If at least one of these attributes is modified, the callback url should be called."
+      iscomputed: false
+      isreadonly: false
+    - name: message
+      type: Edm.Int32
+      display_name: "Specifies the message type"
+      description: "Specifies the message type"
+      iscomputed: false
+      isreadonly: false
+      options:
+        - value: 1
+          label: "Create"
+        - value: 2
+          label: "Delete"
+        - value: 3
+          label: "Update"
+        - value: 4
+          label: "Create or Update"
+        - value: 5
+          label: "Create or Delete"
+        - value: 6
+          label: "Update or Delete"
+        - value: 7
+          label: "Create or Update or Delete"
+    - name: modifiedon
+      type: Edm.DateTimeOffset
+      display_name: "Modified On"
+      description: "Date and time when the callback registration was last modified."
+      iscomputed: false
+      isreadonly: true
+    - name: name
+      type: Edm.String
+      display_name: "Name"
+      description: "Name of callback registration."
+      iscomputed: false
+      isreadonly: false
+    - name: postponeuntil
+      type: Edm.String
+      display_name: "Postpone Until"
+      description: "delay represented with OData expression"
+      iscomputed: false
+      isreadonly: false
+    - name: runas
+      type: Edm.Int32
+      display_name: "RunAs"
+      description: "Specifies the user context under which the callback will run"
+      iscomputed: false
+      isreadonly: false
+      options:
+        - value: 1
+          label: "Triggering User"
+        - value: 2
+          label: "Record Owner"
+        - value: 3
+          label: "Process Owner"
+    - name: scope
+      type: Edm.Int32
+      display_name: "Specifies the scope type"
+      description: "Specifies the Scope"
+      iscomputed: false
+      isreadonly: false
+      options:
+        - value: 1
+          label: "User"
+        - value: 2
+          label: "BusinessUnit"
+        - value: 3
+          label: "ParentChildBusinessUnit"
+        - value: 4
+          label: "Organization"
+    - name: url
+      type: Edm.String
+      display_name: "Url Address"
+      description: "Full callback registration Url."
+      iscomputed: false
+      isreadonly: false
+    - name: version
+      type: Edm.Int32
+      display_name: "Specifies the Callback registration version type"
+      description: "Specifies the Callback registration version type"
+      iscomputed: false
+      isreadonly: false
+      options:
+        - value: 1
+          label: "V1"
+        - value: 2
+          label: "V2"
+lookup_properties:
+  description: "Lookup properties are read-only, computed properties which contain entity primary key Edm.Guid data for one or more corresponding single-valued navigation properties. More information: [Lookup properties](https://docs.microsoft.com/dynamics365/customer-engagement/developer/webapi/web-api-types-operations#lookup-properties) and [Retrieve data about lookup properties](https://docs.microsoft.com/dynamics365/customer-engagement/developer/webapi/query-data-web-api#retrieve-data-about-lookup-properties)."
+  property_items:
+  - name: _createdby_value
+    single_valued_navigation_property:
+    - callbackregistration_createdby
+    description: "Shows who created the record."
+  - name: _createdonbehalfby_value
+    single_valued_navigation_property:
+    - callbackregistration_createdonbehalfby
+    description: "Shows who created the record on behalfÂ of another user."
+  - name: _modifiedby_value
+    single_valued_navigation_property:
+    - callbackregistration_modifiedby
+    description: "Shows who last updated the record."
+  - name: _modifiedonbehalfby_value
+    single_valued_navigation_property:
+    - callbackregistration_modifiedonbehalfby
+    description: "Shows who last updated the record on behalf of another user."
+  - name: _ownerid_value
+    single_valued_navigation_property:
+    - ownerid
+    description: "Unique identifier of the user or team who owns the callback registration."
+  - name: _owningbusinessunit_value
+    single_valued_navigation_property:
+    - owningbusinessunit
+    description: "Unique identifier of the business unit that owns the callback registration."
+  - name: _owningteam_value
+    description: "Unique identifier of the team who owns the callback registration."
+  - name: _owninguser_value
+    description: "Unique identifier of the user who owns the callback registration."
+single_valued_navigation_properties:
+  description: "Single-valued navigation properties represent lookup fields where a single entity can be referenced. Each single-valued navigation property has a corresponding partner collection-valued navigation property on the related entity."
+  property_items:
+  - name: callbackregistration_createdby
+    type: Microsoft.Dynamics.CRM.systemuser
+    partner: systemuser_callbackregistration_createdby
+  - name: callbackregistration_createdonbehalfby
+    type: Microsoft.Dynamics.CRM.systemuser
+    partner: systemuser_callbackregistration_createdonbehalfby
+  - name: callbackregistration_modifiedby
+    type: Microsoft.Dynamics.CRM.systemuser
+    partner: systemuser_callbackregistration_modifiedby
+  - name: callbackregistration_modifiedonbehalfby
+    type: Microsoft.Dynamics.CRM.systemuser
+    partner: systemuser_callbackregistration_modifiedonbehalfby
+  - name: ownerid
+    type: Microsoft.Dynamics.CRM.principal
+    partner: owner_callbackregistration
+  - name: owningbusinessunit
+    type: Microsoft.Dynamics.CRM.businessunit
+    partner: businessunit_callbackregistration
+# This entity has no collection-valued navigation properties
+# This entity has no derived entities.
+# This entity has no operations
+# This entity is not included in any solutions.
+# This entity has no remarks.
+href_see_also:
+- text: "Use the Common Data Service Web API"
+  href: "https://docs.microsoft.com/powerapps/developer/common-data-service/webapi/overview"
+xref_see_also:
+- Microsoft.Dynamics.CRM.EntityTypeIndex
+- Microsoft.Dynamics.CRM.ActionIndex
+- Microsoft.Dynamics.CRM.FunctionIndex
+- Microsoft.Dynamics.CRM.QueryFunctionIndex
+- Microsoft.Dynamics.CRM.ComplexTypeIndex
+- Microsoft.Dynamics.CRM.EnumTypeIndex
+- Microsoft.Dynamics.CRM.MetadataEntityTypeIndex
+- Microsoft.Dynamics.CRM.SolutionIndex

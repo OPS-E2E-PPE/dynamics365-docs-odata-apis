@@ -3,17 +3,15 @@ uid: Microsoft.Dynamics.CRM.mailbox
 name: "mailbox"
 type: entitytype
 metadata: 
-  title: "Microsoft Dynamics 365 Customer Engagement mailbox EntityType Reference | MicrosoftDocs"
-  ms.date: "03/20/2018"
+  title: "Common Data Service and Dynamics 365 Customer Engagement mailbox EntityType Reference | MicrosoftDocs"
+  ms.date: "05/03/2020"
   ms.service: "crm-online"
   ms.topic: "reference"
-  applies_to: 
-  - "Dynamics 365 (online)"
   ms.assetid: 55719fd5-c785-46af-8a59-ab9730f1ef2c
-  author: "jimdaly"
-  ms.author: "jdaly"
-  manager: "jdaly"
-  meta-description: "Reference information about the Dynamics 365 Customer Engagement mailbox entitytype."
+  author: "KumarVivek"
+  ms.author: "kvivek"
+  manager: "Annbe"
+  meta-description: "Reference information about the mailbox entitytype."
 # This entity doesn't have a description
 header:
   entity_set_path: "[organization URI]/api/data/v9.0/mailboxes"
@@ -335,7 +333,7 @@ properties:
       display_name: "Last Successful Sync Time"
       description: "Last Successful Sync Time"
       iscomputed: false
-      isreadonly: true
+      isreadonly: false
     - name: lastsyncerror
       type: Edm.String
       display_name: "Last Sync Error Stack"
@@ -707,8 +705,8 @@ lookup_properties:
     description: "Unique identifier for the user that owns the record."
   - name: _regardingobjectid_value
     single_valued_navigation_property:
-    - regardingobjectid
     - regardingobjectid_queue
+    - regardingobjectid
     description: "Choose the user associated to the mailbox."
 single_valued_navigation_properties:
   description: "Single-valued navigation properties represent lookup fields where a single entity can be referenced. Each single-valued navigation property has a corresponding partner collection-valued navigation property on the related entity."
@@ -831,12 +829,14 @@ solutions:
   solution_items:
   - type: Microsoft.Dynamics.CRM.msdynce_AppCommon
     description: "For internal use only."
+  - type: Microsoft.Dynamics.CRM.msdynce_AppCommonPatch
+    description: "For internal use only."
   - type: Microsoft.Dynamics.CRM.System
     description: "Internal CRM System Solution"
 # This entity has no remarks.
 href_see_also:
-- text: "Use the Microsoft Dynamics 365 Customer Engagement Web API"
-  href: "https://docs.microsoft.com/dynamics365/customer-engagement/developer/use-microsoft-dynamics-365-web-api"
+- text: "Use the Common Data Service Web API"
+  href: "https://docs.microsoft.com/powerapps/developer/common-data-service/webapi/overview"
 xref_see_also:
 - Microsoft.Dynamics.CRM.EntityTypeIndex
 - Microsoft.Dynamics.CRM.ActionIndex

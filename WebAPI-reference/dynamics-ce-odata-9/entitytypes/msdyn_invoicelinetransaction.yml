@@ -3,17 +3,15 @@ uid: Microsoft.Dynamics.CRM.msdyn_invoicelinetransaction
 name: "msdyn_invoicelinetransaction"
 type: entitytype
 metadata: 
-  title: "Microsoft Dynamics 365 Customer Engagement msdyn_invoicelinetransaction EntityType Reference | MicrosoftDocs"
-  ms.date: "03/20/2018"
+  title: "Common Data Service and Dynamics 365 Customer Engagement msdyn_invoicelinetransaction EntityType Reference | MicrosoftDocs"
+  ms.date: "05/03/2020"
   ms.service: "crm-online"
   ms.topic: "reference"
-  applies_to: 
-  - "Dynamics 365 (online)"
   ms.assetid: 600278f9-7031-42a5-ae3f-825b428fcd5a
-  author: "jimdaly"
-  ms.author: "jdaly"
-  manager: "jdaly"
-  meta-description: "Reference information about the Dynamics 365 Customer Engagement msdyn_invoicelinetransaction entitytype."
+  author: "KumarVivek"
+  ms.author: "kvivek"
+  manager: "Annbe"
+  meta-description: "Reference information about the msdyn_invoicelinetransaction entitytype."
 description: "Transactions that are associated to an invoice line."
 header:
   entity_set_path: "[organization URI]/api/data/v9.0/msdyn_invoicelinetransactions"
@@ -200,8 +198,8 @@ properties:
       isreadonly: true
     - name: msdyn_invoiceline
       type: Edm.String
-      display_name: "Invoice Line"
-      description: "Shows the invoice line that this invoice line transaction is associated to."
+      display_name: "(Deprecated) Invoice Line"
+      description: "(Deprecated) Shows the invoice line that this invoice line transaction is associated to."
       iscomputed: false
       isreadonly: false
     - name: msdyn_invoicelinetransactionid
@@ -248,8 +246,8 @@ properties:
       isreadonly: false
     - name: msdyn_salescontractline
       type: Edm.String
-      display_name: "Project Contract Line"
-      description: "Shows the ID of the project contract line for this invoice line"
+      display_name: "(Deprecated) Project Contract Line"
+      description: "(Deprecated) Shows the ID of the project contract line for this invoice line"
       iscomputed: false
       isreadonly: false
     - name: msdyn_startdatetime
@@ -269,8 +267,6 @@ properties:
           label: "Commission"
         - value: 690970001
           label: "Additional"
-        - value: 690970002
-          label: "Tax"
         - value: 192350000
           label: "Time"
         - value: 192350001
@@ -281,6 +277,8 @@ properties:
           label: "Milestone"
         - value: 192350004
           label: "Fee"
+        - value: 690970002
+          label: "Tax"
     - name: msdyn_transactiontypecode
       type: Edm.Int32
       display_name: "Transaction Type"
@@ -404,6 +402,10 @@ lookup_properties:
     single_valued_navigation_property:
     - msdyn_Invoice
     description: "The invoice to which this invoice line detail belongs."
+  - name: _msdyn_invoicelineid_value
+    single_valued_navigation_property:
+    - msdyn_InvoiceLineId
+    description: "Unique identifier for Invoice Line associated with Invoice Line Detail."
   - name: _msdyn_originalinvoicelinedetail_value
     single_valued_navigation_property:
     - msdyn_OriginalInvoiceLineDetail
@@ -432,6 +434,10 @@ lookup_properties:
     single_valued_navigation_property:
     - msdyn_SalesContract
     description: "Select the name of the project contract that this invoice belongs to."
+  - name: _msdyn_salescontractlineid_value
+    single_valued_navigation_property:
+    - msdyn_SalesContractLineId
+    description: "Unique identifier for Order Line associated with Invoice Line Detail."
   - name: _msdyn_task_value
     single_valued_navigation_property:
     - msdyn_Task
@@ -504,6 +510,9 @@ single_valued_navigation_properties:
   - name: msdyn_Invoice
     type: Microsoft.Dynamics.CRM.invoice
     partner: msdyn_invoice_msdyn_invoicelinetransaction_Invoice
+  - name: msdyn_InvoiceLineId
+    type: Microsoft.Dynamics.CRM.invoicedetail
+    partner: msdyn_invoicedetail_msdyn_invoicelinetransactio
   - name: msdyn_OriginalInvoiceLineDetail
     type: Microsoft.Dynamics.CRM.msdyn_invoicelinetransaction
     partner: msdyn_msdyn_invoicelinetransaction_msdyn_invoicelinetransaction_OriginalInvoiceLineDetail
@@ -525,6 +534,9 @@ single_valued_navigation_properties:
   - name: msdyn_SalesContract
     type: Microsoft.Dynamics.CRM.salesorder
     partner: msdyn_salesorder_msdyn_invoicelinetransaction_SalesContract
+  - name: msdyn_SalesContractLineId
+    type: Microsoft.Dynamics.CRM.salesorderdetail
+    partner: msdyn_salesorderdetail_msdyn_invoicelinetransac
   - name: msdyn_Task
     type: Microsoft.Dynamics.CRM.msdyn_projecttask
     partner: msdyn_msdyn_projecttask_msdyn_invoicelinetransaction_Task
@@ -608,8 +620,8 @@ solutions:
     description: "Microsoft Dynamics 365 for Project Service Automation is an end-to-end solution that helps sales and delivery teams engage customers and deliver billable projects on time and within budget. Project Service gives you the tools you need to: Estimate, quote, and contract work; Plan and assign resources; Enable team collaboration; Capture time, expense, and progress data for real-time insights and accurate invoicing."
 # This entity has no remarks.
 href_see_also:
-- text: "Use the Microsoft Dynamics 365 Customer Engagement Web API"
-  href: "https://docs.microsoft.com/dynamics365/customer-engagement/developer/use-microsoft-dynamics-365-web-api"
+- text: "Use the Common Data Service Web API"
+  href: "https://docs.microsoft.com/powerapps/developer/common-data-service/webapi/overview"
 xref_see_also:
 - Microsoft.Dynamics.CRM.EntityTypeIndex
 - Microsoft.Dynamics.CRM.ActionIndex

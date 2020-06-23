@@ -3,22 +3,20 @@ uid: Microsoft.Dynamics.CRM.IoTConnector
 name: "IoT Connector for Microsoft Dynamics 365"
 type: solution
 metadata: 
-  title: "Microsoft Dynamics 365 Customer Engagement IoT Connector for Microsoft Dynamics 365 Solution Reference | MicrosoftDocs"
-  ms.date: "03/20/2018"
+  title: "Common Data Service and Dynamics 365 Customer Engagement IoT Connector for Microsoft Dynamics 365 Solution Reference | MicrosoftDocs"
+  ms.date: "05/03/2020"
   ms.service: "crm-online"
   ms.topic: "reference"
-  applies_to: 
-  - "Dynamics 365 (online)"
-  ms.assetid: bf9660d7-4e0c-45fb-a03d-fcd4212c7198
-  author: "jimdaly"
-  ms.author: "jdaly"
-  manager: "jdaly"
+  ms.assetid: 67410e0d-c6e2-4e5a-a05c-8d977adf75de
+  author: "KumarVivek"
+  ms.author: "kvivek"
+  manager: "Annbe"
   meta-description: "Reference information about the Dynamics 365 Customer Engagement IoT Connector for Microsoft Dynamics 365 Solution."
 namespace: Microsoft.Dynamics.CRM
 header:
  description: "Enables IoT scenarios in Dynamics 365."
  unique_name: IoTConnector
- version: "1.0.17222.3"
+ version: "1.7.7.107"
  customization_prefix: msdyn
 entities:
   description: "The following entities are included in this solution."
@@ -28,20 +26,16 @@ entities:
    - type: Microsoft.Dynamics.CRM.msdyn_iotalert
      description: ""
    - type: Microsoft.Dynamics.CRM.msdyn_iotdevice
-     description: "Represents a connected device that can registered with an IoT hub."
+     description: "Represents a connected device that can be registered with an IoT provider."
    - type: Microsoft.Dynamics.CRM.msdyn_iotdevicecategory
      description: "Used to categorize IoT devices."
    - type: Microsoft.Dynamics.CRM.msdyn_iotdevicecommand
-     description: "Represents an outgoing message to a device connected to an IoT hub."
+     description: "Represents an outgoing message to a device connected to an IoT provider."
    - type: Microsoft.Dynamics.CRM.msdyn_iotdeviceregistrationhistory
      description: "Tracks registration activities on an IoT device."
 actions:
   description: "The following actions are included in this solution."
   action_items:
-   - type: Microsoft.Dynamics.CRM.msdyn_IoTSendTestAlert
-     description: "[Reserved for future use.]"
-   - type: Microsoft.Dynamics.CRM.msdyn_JsonGetBoolean
-     description: "For internal use only."
    - type: Microsoft.Dynamics.CRM.msdyn_JsonGetNumber
      description: "For internal use only."
    - type: Microsoft.Dynamics.CRM.msdyn_JsonGetString
@@ -50,12 +44,10 @@ actions:
      description: "For internal use only."
    - type: Microsoft.Dynamics.CRM.msdyn_RegisterCustomEntity
      description: "Registers any custom entity that may or may not already have connected IoT devices. This action invokes the IoT – Register Device action."
-   - type: Microsoft.Dynamics.CRM.msdyn_RegisterIoTDevice
-     description: "Publishes the registration requests for an IoT device."
 # This solution has no remarks.
 href_see_also:
-- text: "Use the Microsoft Dynamics 365 Customer Engagement Web API"
-  href: "https://docs.microsoft.com/dynamics365/customer-engagement/developer/use-microsoft-dynamics-365-web-api"
+- text: "Use the Common Data Service Web API"
+  href: "https://docs.microsoft.com/powerapps/developer/common-data-service/webapi/overview"
 xref_see_also:
 - Microsoft.Dynamics.CRM.EntityTypeIndex
 - Microsoft.Dynamics.CRM.ActionIndex

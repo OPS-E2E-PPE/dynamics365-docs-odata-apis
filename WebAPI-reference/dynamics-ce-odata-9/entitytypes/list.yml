@@ -3,17 +3,15 @@ uid: Microsoft.Dynamics.CRM.list
 name: "list"
 type: entitytype
 metadata: 
-  title: "Microsoft Dynamics 365 Customer Engagement list EntityType Reference | MicrosoftDocs"
-  ms.date: "03/20/2018"
+  title: "Common Data Service and Dynamics 365 Customer Engagement list EntityType Reference | MicrosoftDocs"
+  ms.date: "05/03/2020"
   ms.service: "crm-online"
   ms.topic: "reference"
-  applies_to: 
-  - "Dynamics 365 (online)"
   ms.assetid: ace4973a-7d83-441d-a981-0556fcd2d9b4
-  author: "jimdaly"
-  ms.author: "jdaly"
-  manager: "jdaly"
-  meta-description: "Reference information about the Dynamics 365 Customer Engagement list entitytype."
+  author: "KumarVivek"
+  ms.author: "kvivek"
+  manager: "Annbe"
+  meta-description: "Reference information about the list entitytype."
 description: "Group of existing or potential customers created for a marketing campaign or other sales purposes."
 header:
   entity_set_path: "[organization URI]/api/data/v9.0/lists"
@@ -139,7 +137,7 @@ properties:
     - name: membertype
       type: Edm.Int32
       display_name: "Member Type"
-      description: "Type of the members that can be stored in the marketing list."
+      description: "Type of the members that can be stored in the marketing list. Please do not remove from form!"
       iscomputed: false
       isreadonly: false
     - name: modifiedon
@@ -152,6 +150,18 @@ properties:
       type: Edm.DateTimeOffset
       display_name: "Record Created On"
       description: "Date and time that the record was migrated."
+      iscomputed: false
+      isreadonly: false
+    - name: processedmembercount
+      type: Edm.Int32
+      display_name: "processedMemberCount"
+      description: ""
+      iscomputed: false
+      isreadonly: false
+    - name: processfetchxml
+      type: Edm.String
+      display_name: "processFetchXML"
+      description: ""
       iscomputed: false
       isreadonly: false
     - name: processid
@@ -180,7 +190,7 @@ properties:
       isreadonly: false
     - name: stageid
       type: Edm.Guid
-      display_name: "Stage Id"
+      display_name: "(Deprecated) Stage Id"
       description: "Contains the id of the stage where the entity is located."
       iscomputed: false
       isreadonly: false
@@ -214,7 +224,7 @@ properties:
       isreadonly: false
     - name: traversedpath
       type: Edm.String
-      display_name: "Traversed Path"
+      display_name: "(Deprecated) Traversed Path"
       description: "A comma separated list of string values representing the unique identifiers of stages in a Business Process Flow Instance in the order that they occur."
       iscomputed: false
       isreadonly: false
@@ -377,6 +387,8 @@ operations:
     binding_type: "Not Bound"
   - name: Microsoft.Dynamics.CRM.AddMemberList
     binding_type: "Entity"
+  - name: Microsoft.Dynamics.CRM.AddMembersBatchList
+    binding_type: "Not Bound"
   - name: Microsoft.Dynamics.CRM.CopyDynamicListToStatic
     binding_type: "Entity"
   - name: Microsoft.Dynamics.CRM.CopyMembersList
@@ -389,6 +401,8 @@ operations:
     binding_type: "Not Bound"
   - name: Microsoft.Dynamics.CRM.QualifyMemberList
     binding_type: "Entity"
+  - name: Microsoft.Dynamics.CRM.RemoveListMembersList
+    binding_type: "Not Bound"
   - name: Microsoft.Dynamics.CRM.RemoveMemberList
     binding_type: "Entity"
   - name: Microsoft.Dynamics.CRM.RetrievePrincipalAccess
@@ -402,12 +416,18 @@ solutions:
   solution_items:
   - type: Microsoft.Dynamics.CRM.msdynce_Marketing
     description: "Dynamics 365 workload for marketing and enterprise."
+  - type: Microsoft.Dynamics.CRM.msdynce_MarketingPatch
+    description: "Patch for Dynamics 365 workload for marketing and enterprise."
+  - type: Microsoft.Dynamics.CRM.msdynce_MarketingPatch201905
+    description: "Patch from 05/2019 for Dynamics 365 workload for marketing and enterprise."
   - type: Microsoft.Dynamics.CRM.msdynce_MarketingSales
+    description: "For internal use only."
+  - type: Microsoft.Dynamics.CRM.msdynce_MarketingSalesPatch
     description: "For internal use only."
 # This entity has no remarks.
 href_see_also:
-- text: "Use the Microsoft Dynamics 365 Customer Engagement Web API"
-  href: "https://docs.microsoft.com/dynamics365/customer-engagement/developer/use-microsoft-dynamics-365-web-api"
+- text: "Use the Common Data Service Web API"
+  href: "https://docs.microsoft.com/powerapps/developer/common-data-service/webapi/overview"
 xref_see_also:
 - Microsoft.Dynamics.CRM.EntityTypeIndex
 - Microsoft.Dynamics.CRM.ActionIndex

@@ -1,0 +1,35 @@
+### YamlMime:OData
+uid: Microsoft.Dynamics.CRM.msdynce_Notesanalysis
+name: "Notes analysis"
+type: solution
+metadata: 
+  title: "Common Data Service and Dynamics 365 Customer Engagement Notes analysis Solution Reference | MicrosoftDocs"
+  ms.date: "05/03/2020"
+  ms.service: "crm-online"
+  ms.topic: "reference"
+  ms.assetid: d90fc80c-883d-41c9-acd2-119c915d2bbc
+  author: "KumarVivek"
+  ms.author: "kvivek"
+  manager: "Annbe"
+  meta-description: "Reference information about the Dynamics 365 Customer Engagement Notes analysis Solution."
+namespace: Microsoft.Dynamics.CRM
+header:
+ description: "Suggests actions for notes and posts on the timeline wall"
+ unique_name: msdynce_Notesanalysis
+ version: "9.0.1.70947"
+ customization_prefix: msdyn
+# This solution includes no entities.
+# This solution includes no actions.
+# This solution has no remarks.
+href_see_also:
+- text: "Use the Common Data Service Web API"
+  href: "https://docs.microsoft.com/powerapps/developer/common-data-service/webapi/overview"
+xref_see_also:
+- Microsoft.Dynamics.CRM.EntityTypeIndex
+- Microsoft.Dynamics.CRM.ActionIndex
+- Microsoft.Dynamics.CRM.FunctionIndex
+- Microsoft.Dynamics.CRM.QueryFunctionIndex
+- Microsoft.Dynamics.CRM.ComplexTypeIndex
+- Microsoft.Dynamics.CRM.EnumTypeIndex
+- Microsoft.Dynamics.CRM.MetadataEntityTypeIndex
+- Microsoft.Dynamics.CRM.SolutionIndex

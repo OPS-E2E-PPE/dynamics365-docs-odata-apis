@@ -3,17 +3,15 @@ uid: Microsoft.Dynamics.CRM.msdyn_projectparameter
 name: "msdyn_projectparameter"
 type: entitytype
 metadata: 
-  title: "Microsoft Dynamics 365 Customer Engagement msdyn_projectparameter EntityType Reference | MicrosoftDocs"
-  ms.date: "03/20/2018"
+  title: "Common Data Service and Dynamics 365 Customer Engagement msdyn_projectparameter EntityType Reference | MicrosoftDocs"
+  ms.date: "05/03/2020"
   ms.service: "crm-online"
   ms.topic: "reference"
-  applies_to: 
-  - "Dynamics 365 (online)"
   ms.assetid: df4523f0-7132-4e87-a72c-2016507dbcad
-  author: "jimdaly"
-  ms.author: "jdaly"
-  manager: "jdaly"
-  meta-description: "Reference information about the Dynamics 365 Customer Engagement msdyn_projectparameter entitytype."
+  author: "KumarVivek"
+  ms.author: "kvivek"
+  manager: "Annbe"
+  meta-description: "Reference information about the msdyn_projectparameter entitytype."
 description: "List of settings that determine the behavior of the project-based service solution."
 header:
   entity_set_path: "[organization URI]/api/data/v9.0/msdyn_projectparameters"
@@ -50,7 +48,7 @@ properties:
       isreadonly: true
     - name: msdyn_allowskillupdatebyresource
       type: Edm.Boolean
-      display_name: "Allow skill update by resource"
+      display_name: "Allow skill update by resource (Deprecated in v3.0)"
       description: "Allow resources to update their skills via the Project Finder Mobile app."
       iscomputed: false
       isreadonly: false
@@ -65,6 +63,17 @@ properties:
       description: "Type the name of the project parameters."
       iscomputed: false
       isreadonly: false
+    - name: msdyn_pricelistdefaultingiscurrencyagnostic
+      type: Edm.Boolean
+      display_name: "Enable multi-currency cost price list"
+      description: "Enabling this will make cost price list selection on projects agnostic of contracting unit currency and cost price lists will allow price setup in multiple currencies"
+      iscomputed: false
+      isreadonly: false
+      options:
+        - value: 1
+          label: "Yes"
+        - value: 0
+          label: "No"
     - name: msdyn_projectparameterid
       type: Edm.Guid
       display_name: "Project Parameter"
@@ -73,7 +82,7 @@ properties:
       isreadonly: false
     - name: msdyn_projectresourcerequirementsvisibletore
       type: Edm.Boolean
-      display_name: "Resource requirements visible to resources"
+      display_name: "Resource requirements visible to resources (Deprecated in v3.0)"
       description: "Select whether project resource requirements are visible to resources."
       iscomputed: false
       isreadonly: false
@@ -261,8 +270,8 @@ solutions:
     description: "Microsoft Dynamics 365 for Project Service Automation is an end-to-end solution that helps sales and delivery teams engage customers and deliver billable projects on time and within budget. Project Service gives you the tools you need to: Estimate, quote, and contract work; Plan and assign resources; Enable team collaboration; Capture time, expense, and progress data for real-time insights and accurate invoicing."
 # This entity has no remarks.
 href_see_also:
-- text: "Use the Microsoft Dynamics 365 Customer Engagement Web API"
-  href: "https://docs.microsoft.com/dynamics365/customer-engagement/developer/use-microsoft-dynamics-365-web-api"
+- text: "Use the Common Data Service Web API"
+  href: "https://docs.microsoft.com/powerapps/developer/common-data-service/webapi/overview"
 xref_see_also:
 - Microsoft.Dynamics.CRM.EntityTypeIndex
 - Microsoft.Dynamics.CRM.ActionIndex

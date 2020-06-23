@@ -1,0 +1,53 @@
+### YamlMime:OData
+uid: Microsoft.Dynamics.CRM.RemoveListMembersList
+name: "RemoveListMembersList"
+type: action
+metadata: 
+  title: "Common Data Service and Dynamics 365 Customer Engagement RemoveListMembersList Action Reference | MicrosoftDocs"
+  ms.date: "05/03/2020"
+  ms.service: "crm-online"
+  ms.topic: "reference"
+  ms.assetid: 9b43eecc-f837-4e5b-bebb-e287c066e281
+  author: "KumarVivek"
+  ms.author: "kvivek"
+  manager: "Annbe"
+  meta-description: "Reference information about the RemoveListMembersList Action."
+namespace: Microsoft.Dynamics.CRM
+# This Action has no description.
+owningsolution: Microsoft.Dynamics.CRM.System
+# This action has no bound entities.
+isbound: false
+parameters:
+  description: "Parameters allow for data to be passed to the action."
+  parameter_items:
+  - name: List
+    type: Microsoft.Dynamics.CRM.list
+    nullable: false
+    unicode: true
+    description: ""
+  - name: Members
+    type: Microsoft.Dynamics.CRM.crmbaseentity
+    nullable: false
+    unicode: true
+    description: ""
+# This action has no return value.
+hasreturnvalue: false
+entities:
+  description: "Use the RemoveListMembersList action with this entity type:"
+  entity_items:
+  - type: Microsoft.Dynamics.CRM.list
+    displayName: Marketing List
+    description: "Group of existing or potential customers created for a marketing campaign or other sales purposes."
+# This action has no remarks.
+href_see_also:
+- text: "Use the Common Data Service Web API"
+  href: "https://docs.microsoft.com/powerapps/developer/common-data-service/webapi/overview"
+xref_see_also:
+- Microsoft.Dynamics.CRM.EntityTypeIndex
+- Microsoft.Dynamics.CRM.ActionIndex
+- Microsoft.Dynamics.CRM.FunctionIndex
+- Microsoft.Dynamics.CRM.QueryFunctionIndex
+- Microsoft.Dynamics.CRM.ComplexTypeIndex
+- Microsoft.Dynamics.CRM.EnumTypeIndex
+- Microsoft.Dynamics.CRM.MetadataEntityTypeIndex
+- Microsoft.Dynamics.CRM.SolutionIndex

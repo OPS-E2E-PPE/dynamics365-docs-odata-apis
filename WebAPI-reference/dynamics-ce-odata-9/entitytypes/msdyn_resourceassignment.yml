@@ -3,17 +3,15 @@ uid: Microsoft.Dynamics.CRM.msdyn_resourceassignment
 name: "msdyn_resourceassignment"
 type: entitytype
 metadata: 
-  title: "Microsoft Dynamics 365 Customer Engagement msdyn_resourceassignment EntityType Reference | MicrosoftDocs"
-  ms.date: "03/20/2018"
+  title: "Common Data Service and Dynamics 365 Customer Engagement msdyn_resourceassignment EntityType Reference | MicrosoftDocs"
+  ms.date: "05/03/2020"
   ms.service: "crm-online"
   ms.topic: "reference"
-  applies_to: 
-  - "Dynamics 365 (online)"
   ms.assetid: fdbc49f3-72b0-4e29-97b3-1ea99ac78876
-  author: "jimdaly"
-  ms.author: "jdaly"
-  manager: "jdaly"
-  meta-description: "Reference information about the Dynamics 365 Customer Engagement msdyn_resourceassignment entitytype."
+  author: "KumarVivek"
+  ms.author: "kvivek"
+  manager: "Annbe"
+  meta-description: "Reference information about the msdyn_resourceassignment entitytype."
 description: "Entity used to keep track of resource assignment header information  on tasks."
 header:
   entity_set_path: "[organization URI]/api/data/v9.0/msdyn_resourceassignments"
@@ -36,6 +34,12 @@ properties:
       description: "Date and time when the record was created."
       iscomputed: false
       isreadonly: true
+    - name: exchangerate
+      type: Edm.Decimal
+      display_name: "Exchange Rate"
+      description: "Exchange rate for the currency associated with the entity with respect to the base currency."
+      iscomputed: false
+      isreadonly: true
     - name: importsequencenumber
       type: Edm.Int32
       display_name: "Import Sequence Number"
@@ -50,7 +54,7 @@ properties:
       isreadonly: true
     - name: msdyn_committype
       type: Edm.Int32
-      display_name: "Commit Type"
+      display_name: "Commit Type (Deprecated in v3.0)"
       description: "Select the commitment type of the assignment (hard or soft)."
       iscomputed: false
       isreadonly: false
@@ -89,10 +93,46 @@ properties:
       description: "Type the name of the custom entity."
       iscomputed: false
       isreadonly: false
+    - name: msdyn_plannedcost
+      type: Edm.Decimal
+      display_name: "Planned Cost"
+      description: "Planned Cost Amount"
+      iscomputed: false
+      isreadonly: false
+    - name: msdyn_plannedcost_base
+      type: Edm.Decimal
+      display_name: "Planned Cost (Base)"
+      description: "Value of the Planned Cost in base currency."
+      iscomputed: false
+      isreadonly: true
+    - name: msdyn_plannedcostcontour
+      type: Edm.String
+      display_name: "Planned Cost Contour"
+      description: "Serialized planned cost contour"
+      iscomputed: false
+      isreadonly: false
+    - name: msdyn_plannedsales
+      type: Edm.Decimal
+      display_name: "Planned Sales"
+      description: "Planned Sales Amount"
+      iscomputed: false
+      isreadonly: false
+    - name: msdyn_plannedsales_base
+      type: Edm.Decimal
+      display_name: "Planned Sales (Base)"
+      description: "Value of the Planned Sales in base currency."
+      iscomputed: false
+      isreadonly: true
+    - name: msdyn_plannedsalescontour
+      type: Edm.String
+      display_name: "Planned Sales Contour"
+      description: "Serialized planned sales contour"
+      iscomputed: false
+      isreadonly: false
     - name: msdyn_plannedwork
       type: Edm.String
       display_name: "Planned Work"
-      description: "Serialized planned work schedule for assignmed resource"
+      description: "Serialized planned work schedule for assigned resource"
       iscomputed: false
       isreadonly: false
     - name: msdyn_resourceassignmentid
@@ -210,6 +250,10 @@ lookup_properties:
     single_valued_navigation_property:
     - owninguser
     description: "Unique identifier for the user that owns the record."
+  - name: _transactioncurrencyid_value
+    single_valued_navigation_property:
+    - transactioncurrencyid
+    description: "Unique identifier of the currency associated with the entity."
 single_valued_navigation_properties:
   description: "Single-valued navigation properties represent lookup fields where a single entity can be referenced. Each single-valued navigation property has a corresponding partner collection-valued navigation property on the related entity."
   property_items:
@@ -252,6 +296,9 @@ single_valued_navigation_properties:
   - name: owninguser
     type: Microsoft.Dynamics.CRM.systemuser
     partner: user_msdyn_resourceassignment
+  - name: transactioncurrencyid
+    type: Microsoft.Dynamics.CRM.transactioncurrency
+    partner: TransactionCurrency_msdyn_resourceassignment
 collection_valued_navigation_properties:
   description: "Collection-valued navigation properties represent collections of entities which may represent either a one-to-many (1:N) or many-to-many (N:N) relationship between the entities."
   property_items:
@@ -301,8 +348,8 @@ solutions:
     description: "Microsoft Dynamics 365 for Project Service Automation is an end-to-end solution that helps sales and delivery teams engage customers and deliver billable projects on time and within budget. Project Service gives you the tools you need to: Estimate, quote, and contract work; Plan and assign resources; Enable team collaboration; Capture time, expense, and progress data for real-time insights and accurate invoicing."
 # This entity has no remarks.
 href_see_also:
-- text: "Use the Microsoft Dynamics 365 Customer Engagement Web API"
-  href: "https://docs.microsoft.com/dynamics365/customer-engagement/developer/use-microsoft-dynamics-365-web-api"
+- text: "Use the Common Data Service Web API"
+  href: "https://docs.microsoft.com/powerapps/developer/common-data-service/webapi/overview"
 xref_see_also:
 - Microsoft.Dynamics.CRM.EntityTypeIndex
 - Microsoft.Dynamics.CRM.ActionIndex

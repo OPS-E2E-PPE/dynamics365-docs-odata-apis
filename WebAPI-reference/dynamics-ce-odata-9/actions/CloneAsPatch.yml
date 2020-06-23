@@ -3,17 +3,15 @@ uid: Microsoft.Dynamics.CRM.CloneAsPatch
 name: "CloneAsPatch"
 type: action
 metadata: 
-  title: "Microsoft Dynamics 365 Customer Engagement CloneAsPatch Action Reference | MicrosoftDocs"
-  ms.date: "03/20/2018"
+  title: "Common Data Service and Dynamics 365 Customer Engagement CloneAsPatch Action Reference | MicrosoftDocs"
+  ms.date: "05/03/2020"
   ms.service: "crm-online"
   ms.topic: "reference"
-  applies_to: 
-  - "Dynamics 365 (online)"
   ms.assetid: 98223e6e-4a39-4cfc-bb32-2a153e4f9ae8
-  author: "jimdaly"
-  ms.author: "jdaly"
-  manager: "jdaly"
-  meta-description: "Reference information about the Dynamics 365 Customer Engagement CloneAsPatch Action."
+  author: "KumarVivek"
+  ms.author: "kvivek"
+  manager: "Annbe"
+  meta-description: "Reference information about the CloneAsPatch Action."
 namespace: Microsoft.Dynamics.CRM
 description: "Creates a solution patch from a managed or unmanaged solution."
 owningsolution: Microsoft.Dynamics.CRM.System
@@ -50,8 +48,8 @@ entities:
     description: "A solution which contains CRM customizations."
 # This action has no remarks.
 href_see_also:
-- text: "Use the Microsoft Dynamics 365 Customer Engagement Web API"
-  href: "https://docs.microsoft.com/dynamics365/customer-engagement/developer/use-microsoft-dynamics-365-web-api"
+- text: "Use the Common Data Service Web API"
+  href: "https://docs.microsoft.com/powerapps/developer/common-data-service/webapi/overview"
 xref_see_also:
 - Microsoft.Dynamics.CRM.EntityTypeIndex
 - Microsoft.Dynamics.CRM.ActionIndex

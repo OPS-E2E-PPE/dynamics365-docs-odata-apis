@@ -3,17 +3,15 @@ uid: Microsoft.Dynamics.CRM.msdyn_resourcecategorypricelevel
 name: "msdyn_resourcecategorypricelevel"
 type: entitytype
 metadata: 
-  title: "Microsoft Dynamics 365 Customer Engagement msdyn_resourcecategorypricelevel EntityType Reference | MicrosoftDocs"
-  ms.date: "03/20/2018"
+  title: "Common Data Service and Dynamics 365 Customer Engagement msdyn_resourcecategorypricelevel EntityType Reference | MicrosoftDocs"
+  ms.date: "05/03/2020"
   ms.service: "crm-online"
   ms.topic: "reference"
-  applies_to: 
-  - "Dynamics 365 (online)"
   ms.assetid: 17385be5-fc44-4899-8763-f9e6c3993f2b
-  author: "jimdaly"
-  ms.author: "jdaly"
-  manager: "jdaly"
-  meta-description: "Reference information about the Dynamics 365 Customer Engagement msdyn_resourcecategorypricelevel entitytype."
+  author: "KumarVivek"
+  ms.author: "kvivek"
+  manager: "Annbe"
+  meta-description: "Reference information about the msdyn_resourcecategorypricelevel entitytype."
 description: "List of prices by role on a price list."
 header:
   entity_set_path: "[organization URI]/api/data/v9.0/msdyn_resourcecategorypricelevels"
@@ -83,7 +81,7 @@ properties:
       display_name: "Price Calculation"
       description: "Select the price calculation method to determine the price as a function of cost. This field is only relevant for expense categories."
       iscomputed: false
-      isreadonly: false
+      isreadonly: true
       options:
         - value: 192350000
           label: "Price per unit"
@@ -174,6 +172,10 @@ lookup_properties:
     single_valued_navigation_property:
     - modifiedonbehalfby
     description: "Unique identifier of the delegate user who modified the record."
+  - name: _msdyn_bookableresource_value
+    single_valued_navigation_property:
+    - msdyn_bookableresource
+    description: "Select the bookable resource that the price is being set for."
   - name: _msdyn_organizationalunit_value
     single_valued_navigation_property:
     - msdyn_organizationalunit
@@ -190,6 +192,10 @@ lookup_properties:
     single_valued_navigation_property:
     - msdyn_ResourceCategory
     description: "Select the role that the price is being set for."
+  - name: _msdyn_transactioncategory_value
+    single_valued_navigation_property:
+    - msdyn_transactioncategory
+    description: "Select the transaction category that the price is being set for."
   - name: _msdyn_unit_value
     single_valued_navigation_property:
     - msdyn_Unit
@@ -221,6 +227,9 @@ single_valued_navigation_properties:
   - name: modifiedonbehalfby
     type: Microsoft.Dynamics.CRM.systemuser
     partner: lk_msdyn_resourcecategorypricelevel_modifiedonbehalfby
+  - name: msdyn_bookableresource
+    type: Microsoft.Dynamics.CRM.bookableresource
+    partner: msdyn_bookableresource_msdyn_resourcecategorypricelevel_bookableresource
   - name: msdyn_organizationalunit
     type: Microsoft.Dynamics.CRM.msdyn_organizationalunit
     partner: msdyn_resourcecategorypricelevel_organizationalunit
@@ -233,6 +242,9 @@ single_valued_navigation_properties:
   - name: msdyn_ResourceCategory
     type: Microsoft.Dynamics.CRM.bookableresourcecategory
     partner: msdyn_bookableresourcecategory_msdyn_resourcecategorypricelevel_ResourceCategory
+  - name: msdyn_transactioncategory
+    type: Microsoft.Dynamics.CRM.msdyn_transactioncategory
+    partner: msdyn_msdyn_transactioncategory_msdyn_resourcecategorypricelevel_transactioncategory
   - name: msdyn_Unit
     type: Microsoft.Dynamics.CRM.uom
     partner: msdyn_uom_msdyn_resourcecategorypricelevel_Unit
@@ -288,8 +300,8 @@ solutions:
     description: "Microsoft Dynamics 365 for Project Service Automation is an end-to-end solution that helps sales and delivery teams engage customers and deliver billable projects on time and within budget. Project Service gives you the tools you need to: Estimate, quote, and contract work; Plan and assign resources; Enable team collaboration; Capture time, expense, and progress data for real-time insights and accurate invoicing."
 # This entity has no remarks.
 href_see_also:
-- text: "Use the Microsoft Dynamics 365 Customer Engagement Web API"
-  href: "https://docs.microsoft.com/dynamics365/customer-engagement/developer/use-microsoft-dynamics-365-web-api"
+- text: "Use the Common Data Service Web API"
+  href: "https://docs.microsoft.com/powerapps/developer/common-data-service/webapi/overview"
 xref_see_also:
 - Microsoft.Dynamics.CRM.EntityTypeIndex
 - Microsoft.Dynamics.CRM.ActionIndex

@@ -3,17 +3,15 @@ uid: Microsoft.Dynamics.CRM.CreateWorkflowFromTemplate
 name: "CreateWorkflowFromTemplate"
 type: action
 metadata: 
-  title: "Microsoft Dynamics 365 Customer Engagement CreateWorkflowFromTemplate Action Reference | MicrosoftDocs"
-  ms.date: "03/20/2018"
+  title: "Common Data Service and Dynamics 365 Customer Engagement CreateWorkflowFromTemplate Action Reference | MicrosoftDocs"
+  ms.date: "05/03/2020"
   ms.service: "crm-online"
   ms.topic: "reference"
-  applies_to: 
-  - "Dynamics 365 (online)"
   ms.assetid: 1bf121f9-afd0-44c4-92c3-ad73f1e21a61
-  author: "jimdaly"
-  ms.author: "jdaly"
-  manager: "jdaly"
-  meta-description: "Reference information about the Dynamics 365 Customer Engagement CreateWorkflowFromTemplate Action."
+  author: "KumarVivek"
+  ms.author: "kvivek"
+  manager: "Annbe"
+  meta-description: "Reference information about the CreateWorkflowFromTemplate Action."
 namespace: Microsoft.Dynamics.CRM
 description: "Creates a workflow (process) from a workflow template. "
 owningsolution: Microsoft.Dynamics.CRM.System
@@ -38,8 +36,8 @@ return_type:
 # This action has no identified unbound entities.
 # This action has no remarks.
 href_see_also:
-- text: "Use the Microsoft Dynamics 365 Customer Engagement Web API"
-  href: "https://docs.microsoft.com/dynamics365/customer-engagement/developer/use-microsoft-dynamics-365-web-api"
+- text: "Use the Common Data Service Web API"
+  href: "https://docs.microsoft.com/powerapps/developer/common-data-service/webapi/overview"
 xref_see_also:
 - Microsoft.Dynamics.CRM.EntityTypeIndex
 - Microsoft.Dynamics.CRM.ActionIndex

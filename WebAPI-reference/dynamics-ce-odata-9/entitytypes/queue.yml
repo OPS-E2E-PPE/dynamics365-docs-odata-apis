@@ -3,17 +3,15 @@ uid: Microsoft.Dynamics.CRM.queue
 name: "queue"
 type: entitytype
 metadata: 
-  title: "Microsoft Dynamics 365 Customer Engagement queue EntityType Reference | MicrosoftDocs"
-  ms.date: "03/20/2018"
+  title: "Common Data Service and Dynamics 365 Customer Engagement queue EntityType Reference | MicrosoftDocs"
+  ms.date: "05/03/2020"
   ms.service: "crm-online"
   ms.topic: "reference"
-  applies_to: 
-  - "Dynamics 365 (online)"
   ms.assetid: b1ed7e9e-4a92-4ad4-b85e-ca8f4a522cc8
-  author: "jimdaly"
-  ms.author: "jdaly"
-  manager: "jdaly"
-  meta-description: "Reference information about the Dynamics 365 Customer Engagement queue entitytype."
+  author: "KumarVivek"
+  ms.author: "kvivek"
+  manager: "Annbe"
+  meta-description: "Reference information about the queue entitytype."
 description: "A list of records that require action, such as accounts, activities, and cases."
 header:
   entity_set_path: "[organization URI]/api/data/v9.0/queues"
@@ -138,6 +136,8 @@ properties:
           label: "Email messages from Dynamics 365 Leads, Contacts and Accounts"
         - value: 3
           label: "Email messages from Dynamics 365 records that are email enabled"
+        - value: 4
+          label: "No email messages"
     - name: isemailaddressapprovedbyo365admin
       type: Edm.Boolean
       display_name: "Email Address O365 Admin Approval Status"
@@ -397,12 +397,16 @@ operations:
 solutions:
   description: "The following solutions include the queue entity type."
   solution_items:
+  - type: Microsoft.Dynamics.CRM.msdynce_AppCommonPatch
+    description: "For internal use only."
+  - type: Microsoft.Dynamics.CRM.msdynce_AppCommonPatch201904
+    description: "For internal use only."
   - type: Microsoft.Dynamics.CRM.System
     description: "Internal CRM System Solution"
 # This entity has no remarks.
 href_see_also:
-- text: "Use the Microsoft Dynamics 365 Customer Engagement Web API"
-  href: "https://docs.microsoft.com/dynamics365/customer-engagement/developer/use-microsoft-dynamics-365-web-api"
+- text: "Use the Common Data Service Web API"
+  href: "https://docs.microsoft.com/powerapps/developer/common-data-service/webapi/overview"
 xref_see_also:
 - Microsoft.Dynamics.CRM.EntityTypeIndex
 - Microsoft.Dynamics.CRM.ActionIndex

@@ -3,17 +3,15 @@ uid: Microsoft.Dynamics.CRM.serviceappointment
 name: "serviceappointment"
 type: entitytype
 metadata: 
-  title: "Microsoft Dynamics 365 Customer Engagement serviceappointment EntityType Reference | MicrosoftDocs"
-  ms.date: "03/20/2018"
+  title: "Common Data Service and Dynamics 365 Customer Engagement serviceappointment EntityType Reference | MicrosoftDocs"
+  ms.date: "05/03/2020"
   ms.service: "crm-online"
   ms.topic: "reference"
-  applies_to: 
-  - "Dynamics 365 (online)"
   ms.assetid: 4ec486fe-d8d1-4fdb-bb7a-bdfdda7bb87d
-  author: "jimdaly"
-  ms.author: "jdaly"
-  manager: "jdaly"
-  meta-description: "Reference information about the Dynamics 365 Customer Engagement serviceappointment entitytype."
+  author: "KumarVivek"
+  ms.author: "kvivek"
+  manager: "Annbe"
+  meta-description: "Reference information about the serviceappointment entitytype."
 description: "Activity offered by the organization to satisfy its customer's needs. Each service activity includes date, time, duration, and required resources."
 header:
   entity_set_path: "[organization URI]/api/data/v9.0/serviceappointments"
@@ -316,7 +314,7 @@ properties:
       isreadonly: false
     - name: stageid
       type: Edm.Guid
-      display_name: "Process Stage"
+      display_name: "(Deprecated) Process Stage"
       description: "Unique identifier of the Stage."
       iscomputed: false
       isreadonly: false
@@ -386,7 +384,7 @@ properties:
       isreadonly: false
     - name: traversedpath
       type: Edm.String
-      display_name: "Traversed Path"
+      display_name: "(Deprecated) Traversed Path"
       description: "For internal use only."
       iscomputed: false
       isreadonly: false
@@ -581,18 +579,6 @@ single_valued_navigation_properties:
   - name: regardingobjectid_lead_serviceappointment
     type: Microsoft.Dynamics.CRM.lead
     partner: Lead_ServiceAppointments
-  - name: regardingobjectid_ms_newsitem
-    type: Microsoft.Dynamics.CRM.ms_newsitem
-    partner: ms_newsitem_ActivityPointers
-  - name: regardingobjectid_ms_newsitem_serviceappointment
-    type: Microsoft.Dynamics.CRM.ms_newsitem
-    partner: ms_newsitem_ServiceAppointments
-  - name: regardingobjectid_ms_satori
-    type: Microsoft.Dynamics.CRM.ms_satori
-    partner: ms_satori_ActivityPointers
-  - name: regardingobjectid_ms_satori_serviceappointment
-    type: Microsoft.Dynamics.CRM.ms_satori
-    partner: ms_satori_ServiceAppointments
   - name: regardingobjectid_msdyn_agreement
     type: Microsoft.Dynamics.CRM.msdyn_agreement
     partner: msdyn_agreement_ActivityPointers
@@ -1194,15 +1180,19 @@ operations:
     binding_type: "Not Bound"
   - name: Microsoft.Dynamics.CRM.ValidateSavedQuery
     binding_type: "Not Bound"
+  - name: Microsoft.Dynamics.CRM.ValidateUnpublished
+    binding_type: "Not Bound"
 solutions:
   description: "The following solutions include the serviceappointment entity type."
   solution_items:
   - type: Microsoft.Dynamics.CRM.msdynce_Service
     description: "Dynamics 365 workload for service."
+  - type: Microsoft.Dynamics.CRM.msdynce_ServicePatch201911
+    description: "Dynamics 365 workload for service."
 # This entity has no remarks.
 href_see_also:
-- text: "Use the Microsoft Dynamics 365 Customer Engagement Web API"
-  href: "https://docs.microsoft.com/dynamics365/customer-engagement/developer/use-microsoft-dynamics-365-web-api"
+- text: "Use the Common Data Service Web API"
+  href: "https://docs.microsoft.com/powerapps/developer/common-data-service/webapi/overview"
 xref_see_also:
 - Microsoft.Dynamics.CRM.EntityTypeIndex
 - Microsoft.Dynamics.CRM.ActionIndex

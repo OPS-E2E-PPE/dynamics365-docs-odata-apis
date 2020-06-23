@@ -1,29 +1,49 @@
 ### YamlMime:ODataIndex
 uid: Microsoft.Dynamics.CRM.ComplexTypeIndex
 name: Web API ComplexType Reference
-title: "Dynamics 365 Customer Engagement Web API ComplexType Reference | MicrosoftDocs"
+title: "Common Data Service and 365 Customer Engagement Web API ComplexType Reference | MicrosoftDocs"
 metadata:   
-  ms.date: "03/20/2018"
+  ms.date: "05/03/2020"
   ms.service: "crm-online"
   ms.topic: "reference"
-  applies_to: 
-    - "Dynamics 365 (online)"
   ms.assetid: b9ae2c53-0f0a-4428-8f2b-cf95f9f1ff6a
-  author: "jimdaly"
-  ms.author: "jdaly"
-  manager: "jdaly"
+  author: "KumarVivek"
+  ms.author: "kvivek"
+  manager: "Annbe"
 description: "ComplexTypes represent structured data that doesn't have a key. Complex types are frequently returned as a response from using an Action or Function."
 in_this_section:
 - type: Microsoft.Dynamics.CRM.AddItemCampaignActivityResponse
   description: "Contains the response from the AddItemCampaignActivity action."
 - type: Microsoft.Dynamics.CRM.AddMemberListResponse
   description: "Contains the response from the AddMemberList action."
+- type: Microsoft.Dynamics.CRM.AddMembersBatchListResponse
+  description: ""
 - type: Microsoft.Dynamics.CRM.AddSolutionComponentResponse
   description: "Contains the response from the AddSolutionComponent action."
 - type: Microsoft.Dynamics.CRM.AddToQueueResponse
   description: "Contains the response from the AddToQueue action."
 - type: Microsoft.Dynamics.CRM.AddUserToRecordTeamResponse
   description: "Contains the response from the AddUserToRecordTeam action."
+- type: Microsoft.Dynamics.CRM.AnalyticsStoreDetails
+  description: ""
+- type: Microsoft.Dynamics.CRM.AnalyzeSentimentResponse
+  description: ""
+- type: Microsoft.Dynamics.CRM.AppContext
+  description: ""
+- type: Microsoft.Dynamics.CRM.AppEntityInfo
+  description: ""
+- type: Microsoft.Dynamics.CRM.AppInfo
+  description: ""
+- type: Microsoft.Dynamics.CRM.AppModuleCollection
+  description: ""
+- type: Microsoft.Dynamics.CRM.AppModuleDetails
+  description: ""
+- type: Microsoft.Dynamics.CRM.AppModuleDetailsCollection
+  description: ""
+- type: Microsoft.Dynamics.CRM.AppModuleInfo
+  description: ""
+- type: Microsoft.Dynamics.CRM.AppModuleValidationResponse
+  description: ""
 - type: Microsoft.Dynamics.CRM.AppointmentProposal
   description: "Represents a proposed appointment time and date as a result of the Search function."
 - type: Microsoft.Dynamics.CRM.AppointmentRequest
@@ -31,9 +51,13 @@ in_this_section:
 - type: Microsoft.Dynamics.CRM.AppointmentsToIgnore
   description: "Specifies the appointments to ignore in an appointment request from the Search function."
 - type: Microsoft.Dynamics.CRM.AppValidationResponse
+  description: "Contains the results of the ValidateApp action. "
+- type: Microsoft.Dynamics.CRM.ArtifactIdType
   description: ""
 - type: Microsoft.Dynamics.CRM.AssociatedMenuConfiguration
   description: "Defines how the associated records are displayed for an entity relationship."
+- type: Microsoft.Dynamics.CRM.AttributeAuditDetail
+  description: ""
 - type: Microsoft.Dynamics.CRM.AttributeMapping
   description: "For internal use only."
 - type: Microsoft.Dynamics.CRM.AttributePrivilege
@@ -52,6 +76,8 @@ in_this_section:
   description: "Identifies a Microsoft SQL Server partition that is used to store changes to entity data records."
 - type: Microsoft.Dynamics.CRM.BackgroundSendEmailResponse
   description: "Contains the response from BackgroundSendEmail action. "
+- type: Microsoft.Dynamics.CRM.BatchPredictionResponse
+  description: ""
 - type: Microsoft.Dynamics.CRM.BookResponse
   description: " Contains the response from the Book action."
 - type: Microsoft.Dynamics.CRM.BooleanManagedProperty
@@ -60,10 +86,14 @@ in_this_section:
   description: "The response from the BulkDelete Action."
 - type: Microsoft.Dynamics.CRM.BulkDetectDuplicatesResponse
   description: "The response from the BulkDetectDuplicates Action."
+- type: Microsoft.Dynamics.CRM.BusinessEntityChanges
+  description: "The business entity changes from the RetrieveEntityChangesResponse.EntityChanges property"
 - type: Microsoft.Dynamics.CRM.BusinessNotification
   description: "For internal use only"
 - type: Microsoft.Dynamics.CRM.BusinessNotificationParameter
   description: "For internal use only."
+- type: Microsoft.Dynamics.CRM.CacheItem
+  description: ""
 - type: Microsoft.Dynamics.CRM.CalculateActualValueOpportunityResponse
   description: "
       Contains the response from the CalculateActualValueOpportunity action.
@@ -74,36 +104,88 @@ in_this_section:
   description: "Contains the response from the CanBeReferenced action. "
 - type: Microsoft.Dynamics.CRM.CanBeReferencingResponse
   description: "Contains the response from the CanBeReferencing action"
+- type: Microsoft.Dynamics.CRM.CancelTrainingResponse
+  description: ""
 - type: Microsoft.Dynamics.CRM.CanManyToManyResponse
   description: "Contains the response from the CanManyToMany action."
 - type: Microsoft.Dynamics.CRM.CascadeConfiguration
   description: "Contains properties representing actions that may be performed on the referenced entity in a one-to-many entity relationship."
+- type: Microsoft.Dynamics.CRM.CategorizeTextResponse
+  description: ""
 - type: Microsoft.Dynamics.CRM.CheckIncomingEmailResponse
   description: "Contains the response from the CheckIncomingEmail function."
 - type: Microsoft.Dynamics.CRM.CheckPromoteEmailResponse
   description: "Contains the response from the CheckPromoteEmail function."
+- type: Microsoft.Dynamics.CRM.ClientEntityMetadata
+  description: ""
+- type: Microsoft.Dynamics.CRM.ClientMetadataResults
+  description: ""
 - type: Microsoft.Dynamics.CRM.CloneAsPatchResponse
   description: "Contains the response from the CloneAsPatch action."
 - type: Microsoft.Dynamics.CRM.CloneAsSolutionResponse
   description: "Contains the response from the CloneAsSolution action."
+- type: Microsoft.Dynamics.CRM.Collection_Int32_String
+  description: ""
+- type: Microsoft.Dynamics.CRM.Collection_String_String
+  description: ""
 - type: Microsoft.Dynamics.CRM.ColumnSet
   description: "Specifies the attributes for which non-null values are returned from a query. "
+- type: Microsoft.Dynamics.CRM.CommitAnnotationBlocksUploadResponse
+  description: ""
+- type: Microsoft.Dynamics.CRM.CommitAttachmentBlocksUploadResponse
+  description: ""
+- type: Microsoft.Dynamics.CRM.CommitFileBlocksUploadResponse
+  description: ""
 - type: Microsoft.Dynamics.CRM.ComplexAttributeMetadata
   description: "Contains the metadata for a complex attribute."
+- type: Microsoft.Dynamics.CRM.ComplexBigIntAttributeMetadata
+  description: ""
+- type: Microsoft.Dynamics.CRM.ComplexBooleanAttributeMetadata
+  description: ""
+- type: Microsoft.Dynamics.CRM.ComplexBooleanOptionSetMetadata
+  description: ""
+- type: Microsoft.Dynamics.CRM.ComplexDateTimeAttributeMetadata
+  description: ""
+- type: Microsoft.Dynamics.CRM.ComplexDecimalAttributeMetadata
+  description: ""
+- type: Microsoft.Dynamics.CRM.ComplexDoubleAttributeMetadata
+  description: ""
 - type: Microsoft.Dynamics.CRM.ComplexEntityKeyMetadata
   description: "Contains the metadata for a complex entity key."
 - type: Microsoft.Dynamics.CRM.ComplexEntityMetadata
   description: "Contains the metadata for a complex entity."
+- type: Microsoft.Dynamics.CRM.ComplexEnumAttributeMetadata
+  description: ""
+- type: Microsoft.Dynamics.CRM.ComplexFileAttributeMetadata
+  description: ""
+- type: Microsoft.Dynamics.CRM.ComplexImageAttributeMetadata
+  description: ""
+- type: Microsoft.Dynamics.CRM.ComplexIntegerAttributeMetadata
+  description: ""
 - type: Microsoft.Dynamics.CRM.ComplexLookupAttributeMetadata
   description: "The definition of a lookup attribute passed to the CreateCustomerRelationships Action Lookup parameter."
+- type: Microsoft.Dynamics.CRM.ComplexManagedPropertyAttributeMetadata
+  description: ""
 - type: Microsoft.Dynamics.CRM.ComplexManyToManyRelationshipMetadata
   description: "Contains the metadata for a many-to-many entity relationship."
+- type: Microsoft.Dynamics.CRM.ComplexMemoAttributeMetadata
+  description: ""
+- type: Microsoft.Dynamics.CRM.ComplexMoneyAttributeMetadata
+  description: ""
 - type: Microsoft.Dynamics.CRM.ComplexOneToManyRelationshipMetadata
   description: "Contains the metadata for a one-to-many entity relationship."
+- type: Microsoft.Dynamics.CRM.ComplexOptionSetMetadata
+  description: ""
+- type: Microsoft.Dynamics.CRM.ComplexStringAttributeMetadata
+  description: ""
+- type: Microsoft.Dynamics.CRM.ComplexUniqueIdentifierAttributeMetadata
+  description: ""
 - type: Microsoft.Dynamics.CRM.Component
   description: "Contains a collection of components."
 - type: Microsoft.Dynamics.CRM.ComponentDetail
   description: " Provides additional information about the solution components that are related to a missing component."
+- type: Microsoft.Dynamics.CRM.ComponentImportResult
+  description: ""
 - type: Microsoft.Dynamics.CRM.ConditionExpression
   description: "An expression used to filter the results of the query."
 - type: Microsoft.Dynamics.CRM.ConstraintRelation
@@ -126,16 +208,54 @@ in_this_section:
   description: "Contains deleted metadata. "
 - type: Microsoft.Dynamics.CRM.DeleteRecordChangeHistoryResponse
   description: "The response for the DeleteRecordChangeHistory action."
+- type: Microsoft.Dynamics.CRM.DependentAttributeMetadata
+  description: ""
+- type: Microsoft.Dynamics.CRM.DependentAttributeMetadataCollection
+  description: ""
+- type: Microsoft.Dynamics.CRM.DependentEntityMetadata
+  description: ""
+- type: Microsoft.Dynamics.CRM.DependentEntityMetadataCollection
+  description: ""
+- type: Microsoft.Dynamics.CRM.DependentManyToManyRelationshipMetadata
+  description: ""
+- type: Microsoft.Dynamics.CRM.DependentOptionMetadata
+  description: ""
+- type: Microsoft.Dynamics.CRM.DependentOptionMetadataCollection
+  description: ""
+- type: Microsoft.Dynamics.CRM.DependentOptionSetMetadata
+  description: ""
+- type: Microsoft.Dynamics.CRM.DependentRelationship
+  description: ""
+- type: Microsoft.Dynamics.CRM.DependentRelationshipCollection
+  description: ""
+- type: Microsoft.Dynamics.CRM.DetectLanguageResponse
+  description: ""
+- type: Microsoft.Dynamics.CRM.DownloadBlockResponse
+  description: ""
 - type: Microsoft.Dynamics.CRM.DownloadReportDefinitionResponse
   description: "Contains the response from the DownloadReportDefinition function."
 - type: Microsoft.Dynamics.CRM.EndpointCollection
   description: "A collection of service endpoints."
+- type: Microsoft.Dynamics.CRM.EntityAndAttribute
+  description: ""
+- type: Microsoft.Dynamics.CRM.EntityClientSetting
+  description: ""
+- type: Microsoft.Dynamics.CRM.EntityCollection
+  description: ""
+- type: Microsoft.Dynamics.CRM.EntityFilePointersRequest
+  description: ""
+- type: Microsoft.Dynamics.CRM.EntityFilePointersResponse
+  description: ""
 - type: Microsoft.Dynamics.CRM.EntityKeyQueryExpression
   description: "Contains the details of retrieved entity keys."
 - type: Microsoft.Dynamics.CRM.EntityQueryExpression
   description: "Contains the retrieved entity metadata. "
 - type: Microsoft.Dynamics.CRM.EntityRecordCountCollection
   description: "The collection of results for the RetrieveTotalRecordCount Function."
+- type: Microsoft.Dynamics.CRM.EntityRelationsWithDependantEntityMetadata
+  description: ""
+- type: Microsoft.Dynamics.CRM.EntitySetting
+  description: ""
 - type: Microsoft.Dynamics.CRM.ErrorInfo
   description: "Specifies the results of a scheduling operation using the ValidateRequest, BookRequest, or Reschedule action."
 - type: Microsoft.Dynamics.CRM.ExpandCalendarResponse
@@ -148,6 +268,12 @@ in_this_section:
   description: "Contains the response from the ExportSolution action. "
 - type: Microsoft.Dynamics.CRM.ExportTranslationResponse
   description: "Contains the response from the ExportTranslation action."
+- type: Microsoft.Dynamics.CRM.ExtractKeyPhrasesResponse
+  description: ""
+- type: Microsoft.Dynamics.CRM.ExtractTextEntitiesResponse
+  description: ""
+- type: Microsoft.Dynamics.CRM.FetchExpression
+  description: ""
 - type: Microsoft.Dynamics.CRM.FetchXmlToQueryExpressionResponse
   description: "The response from the FetchXmlToQueryExpression Action."
 - type: Microsoft.Dynamics.CRM.FilterExpression
@@ -156,10 +282,20 @@ in_this_section:
   description: "Contains the response from the FindParentResourceGroup function."
 - type: Microsoft.Dynamics.CRM.FormatAddressResponse
   description: "Contains the response from the FormatAddress Function."
+- type: Microsoft.Dynamics.CRM.FormDisplayOrder
+  description: ""
+- type: Microsoft.Dynamics.CRM.FormDisplayOrderCollection
+  description: ""
+- type: Microsoft.Dynamics.CRM.GetAutoNumberSeedResponse
+  description: ""
 - type: Microsoft.Dynamics.CRM.GetDistinctValuesImportFileResponse
   description: "The response from the GetDistinctValuesImportFile function. "
 - type: Microsoft.Dynamics.CRM.GetHeaderColumnsImportFileResponse
   description: "The response from the GetHeaderColumnsImportFile function. "
+- type: Microsoft.Dynamics.CRM.GetJobStatusResponse
+  description: ""
+- type: Microsoft.Dynamics.CRM.GetNextAutoNumberValueResponse
+  description: ""
 - type: Microsoft.Dynamics.CRM.GetQuantityDecimalResponse
   description: "Contains the response from the GetQuantityDecimal function. "
 - type: Microsoft.Dynamics.CRM.GetReportHistoryLimitResponse
@@ -176,6 +312,22 @@ in_this_section:
   description: "Contains the response from the GetValidReferencingEntities function. "
 - type: Microsoft.Dynamics.CRM.GuidCollection
   description: "Contains the collection of unique identifiers."
+- type: Microsoft.Dynamics.CRM.ImmediateBookResponse
+  description: ""
+- type: Microsoft.Dynamics.CRM.ImportCardTypeSchemaResponse
+  description: ""
+- type: Microsoft.Dynamics.CRM.InitializeAnnotationBlocksDownloadResponse
+  description: ""
+- type: Microsoft.Dynamics.CRM.InitializeAnnotationBlocksUploadResponse
+  description: ""
+- type: Microsoft.Dynamics.CRM.InitializeAttachmentBlocksDownloadResponse
+  description: ""
+- type: Microsoft.Dynamics.CRM.InitializeAttachmentBlocksUploadResponse
+  description: ""
+- type: Microsoft.Dynamics.CRM.InitializeFileBlocksDownloadResponse
+  description: ""
+- type: Microsoft.Dynamics.CRM.InitializeFileBlocksUploadResponse
+  description: ""
 - type: Microsoft.Dynamics.CRM.InputArgument
   description: "Contains custom application data."
 - type: Microsoft.Dynamics.CRM.InputArgumentCollection
@@ -194,11 +346,31 @@ in_this_section:
   description: "Contains a collection of translations for a label. "
 - type: Microsoft.Dynamics.CRM.LabelQueryExpression
   description: "Contains the languages for the labels to be retrieved for metadata items. "
+- type: Microsoft.Dynamics.CRM.LayerDesiredOrder
+  description: ""
 - type: Microsoft.Dynamics.CRM.LinkEntity
   description: "Specifies the links between multiple entity types used in creating complex queries."
 - type: Microsoft.Dynamics.CRM.LocalizedLabel
   description: "Contains a localized label, including the label string and the language code. "
+- type: Microsoft.Dynamics.CRM.LocalizedLabelDetails
+  description: ""
+- type: Microsoft.Dynamics.CRM.LocalizedLabelInfo
+  description: ""
 - type: Microsoft.Dynamics.CRM.LocalTimeFromUtcTimeResponse
+  description: ""
+- type: Microsoft.Dynamics.CRM.LookupDataRequest
+  description: ""
+- type: Microsoft.Dynamics.CRM.LookupDataResponse
+  description: ""
+- type: Microsoft.Dynamics.CRM.LookupEntityInfo
+  description: ""
+- type: Microsoft.Dynamics.CRM.LookupEntityMetadata
+  description: ""
+- type: Microsoft.Dynamics.CRM.LookupEntityResponse
+  description: ""
+- type: Microsoft.Dynamics.CRM.LookupMetadata
+  description: ""
+- type: Microsoft.Dynamics.CRM.LookupView
   description: ""
 - type: Microsoft.Dynamics.CRM.MailboxTrackingFolderMapping
   description: "Represents an individual folder-level tracking rule item in the MailboxTrackingFolderMappingCollection. "
@@ -208,17 +380,13 @@ in_this_section:
   description: "Contains logical filter expressions used for filtering the results of a metadata query. "
 - type: Microsoft.Dynamics.CRM.MetadataPropertiesExpression
   description: "Contains the properties for which non-null values are returned from a query. "
+- type: Microsoft.Dynamics.CRM.MetadataQuery
+  description: ""
 - type: Microsoft.Dynamics.CRM.MissingComponent
   description: "Contains the data to describe a solution component that is required by a solution but not found in the system. "
+- type: Microsoft.Dynamics.CRM.MissingDependency
+  description: ""
 - type: Microsoft.Dynamics.CRM.msdyn_AcceptProposedBookingResponse
-  description: "For internal use only."
-- type: Microsoft.Dynamics.CRM.msdyn_AssignGenericResourceResponse
-  description: "For internal use only."
-- type: Microsoft.Dynamics.CRM.msdyn_AutoGenerateProjectTeamResponse
-  description: "For internal use only."
-- type: Microsoft.Dynamics.CRM.msdyn_BookingResourceRequirementResponse
-  description: "For internal use only."
-- type: Microsoft.Dynamics.CRM.msdyn_BookingResourceResponse
   description: "For internal use only."
 - type: Microsoft.Dynamics.CRM.msdyn_BulkCreatePredecessorsForTaskResponse
   description: ""
@@ -236,29 +404,13 @@ in_this_section:
   description: "For internal use only."
 - type: Microsoft.Dynamics.CRM.msdyn_DeleteEstimateLinesResponse
   description: "For internal use only."
-- type: Microsoft.Dynamics.CRM.msdyn_ExpandResourceAssignmentResponse
-  description: ""
-- type: Microsoft.Dynamics.CRM.msdyn_FetchProjectCalendarWorkHoursResponse
-  description: "For internal use only."
 - type: Microsoft.Dynamics.CRM.msdyn_FieldServiceSystemActionResponse
   description: "For internal use only."
 - type: Microsoft.Dynamics.CRM.msdyn_FpsActionResponse
   description: "For internal use only."
-- type: Microsoft.Dynamics.CRM.msdyn_FulfillResourceDemandResponse
-  description: "For internal use only."
-- type: Microsoft.Dynamics.CRM.msdyn_GeocodeAddressResponse
-  description: "For internal use only."
-- type: Microsoft.Dynamics.CRM.msdyn_GetAvailabilitySummaryFromDemandResponse
-  description: "For internal use only."
 - type: Microsoft.Dynamics.CRM.msdyn_GetBookingDetailsByRequirementIdsResponse
   description: "For internal use only."
-- type: Microsoft.Dynamics.CRM.msdyn_GetCollectionDataResponse
-  description: "For internal use only."
 - type: Microsoft.Dynamics.CRM.msdyn_GetContractBillingRadialGaugeDataResponse
-  description: "For internal use only."
-- type: Microsoft.Dynamics.CRM.msdyn_GetContractDetailedTransactionsResponse
-  description: "For internal use only."
-- type: Microsoft.Dynamics.CRM.msdyn_GetContractEffortRadialGaugeDataResponse
   description: "For internal use only."
 - type: Microsoft.Dynamics.CRM.msdyn_GetContractLineChargeabilityResponse
   description: ""
@@ -272,11 +424,7 @@ in_this_section:
   description: "For internal use only."
 - type: Microsoft.Dynamics.CRM.msdyn_GetDocumentStorePathResponse
   description: "For internal use only."
-- type: Microsoft.Dynamics.CRM.msdyn_GetGenericResourceDetailsResponse
-  description: "For internal use only."
 - type: Microsoft.Dynamics.CRM.msdyn_GetMultipleResourceBookingDetailsResponse
-  description: "For internal use only."
-- type: Microsoft.Dynamics.CRM.msdyn_GetMyChangedSkillsResponse
   description: "For internal use only."
 - type: Microsoft.Dynamics.CRM.msdyn_GetPriceResponse
   description: "For internal use only."
@@ -286,17 +434,11 @@ in_this_section:
   description: "For internal use only."
 - type: Microsoft.Dynamics.CRM.msdyn_GetProjectCoparticipationResponse
   description: "For internal use only."
-- type: Microsoft.Dynamics.CRM.msdyn_GetProjectCurrenciesResponse
-  description: "For internal use only."
-- type: Microsoft.Dynamics.CRM.msdyn_GetProjectDetailsResponse
-  description: "For internal use only."
 - type: Microsoft.Dynamics.CRM.msdyn_GetProjectMapForContractLineResponse
   description: "For internal use only."
 - type: Microsoft.Dynamics.CRM.msdyn_GetProjectMapForQuoteLineResponse
   description: "For internal use only."
 - type: Microsoft.Dynamics.CRM.msdyn_GetProjectsResponse
-  description: "For internal use only."
-- type: Microsoft.Dynamics.CRM.msdyn_GetProjectTaskCategoriesResponse
   description: "For internal use only."
 - type: Microsoft.Dynamics.CRM.msdyn_GetProposedResourcesResponse
   description: "For internal use only."
@@ -304,46 +446,30 @@ in_this_section:
   description: "For internal use only."
 - type: Microsoft.Dynamics.CRM.msdyn_GetRequirementChartDataResponse
   description: "For internal use only."
-- type: Microsoft.Dynamics.CRM.msdyn_GetRequirementDemandDisplayResponse
-  description: "For internal use only."
 - type: Microsoft.Dynamics.CRM.msdyn_GetRequirementDemandResponse
-  description: "For internal use only."
-- type: Microsoft.Dynamics.CRM.msdyn_GetResourceAvailabilityResponse
-  description: "For internal use only."
-- type: Microsoft.Dynamics.CRM.msdyn_GetResourceAvailabilitySummaryResponse
-  description: "For internal use only."
-- type: Microsoft.Dynamics.CRM.msdyn_GetResourceBookingByProjectResponse
   description: "For internal use only."
 - type: Microsoft.Dynamics.CRM.msdyn_GetResourceBookingDetailsResponse
   description: "For internal use only."
 - type: Microsoft.Dynamics.CRM.msdyn_GetResourceBookingFormParametersResponse
   description: "For internal use only."
-- type: Microsoft.Dynamics.CRM.msdyn_GetResourceDemandTimeLineResponse
-  description: ""
 - type: Microsoft.Dynamics.CRM.msdyn_GetResourcePopupDetailsResponse
   description: "For internal use only."
 - type: Microsoft.Dynamics.CRM.msdyn_GetResourcesResponse
   description: "For internal use only."
 - type: Microsoft.Dynamics.CRM.msdyn_GetSummaryBookingsResponse
   description: "For internal use only."
-- type: Microsoft.Dynamics.CRM.msdyn_GetTimelineDataResponse
-  description: ""
 - type: Microsoft.Dynamics.CRM.msdyn_GetTransactionUnitPricesResponse
   description: "For internal use only."
 - type: Microsoft.Dynamics.CRM.msdyn_GetUserTimeZoneNameResponse
   description: "For internal use only."
 - type: Microsoft.Dynamics.CRM.msdyn_IsProjectTemplatesViewResponse
   description: "For internal use only."
-- type: Microsoft.Dynamics.CRM.msdyn_JsonGetBooleanResponse
-  description: "Contains the value returned from the msdyn_JsonGetBoolean Action."
+- type: Microsoft.Dynamics.CRM.msdyn_IsSharePointEnabledResponse
+  description: ""
 - type: Microsoft.Dynamics.CRM.msdyn_JsonGetNumberResponse
   description: "Contains the value returned from the msdyn_JsonGetNumber Action."
 - type: Microsoft.Dynamics.CRM.msdyn_JsonGetStringResponse
   description: "Contains the value returned from the msdyn_JsonGetString Action."
-- type: Microsoft.Dynamics.CRM.msdyn_LogFindWorkEventResponse
-  description: "For internal use only."
-- type: Microsoft.Dynamics.CRM.msdyn_MSProject_GetFindResourcesURLResponse
-  description: "For internal use only."
 - type: Microsoft.Dynamics.CRM.msdyn_MSProject_ReadFromExistingProjectResponse
   description: "For internal use only."
 - type: Microsoft.Dynamics.CRM.msdyn_MSProject_ReadProjectTeamMembersResponse
@@ -352,33 +478,11 @@ in_this_section:
   description: "For internal use only."
 - type: Microsoft.Dynamics.CRM.msdyn_RecommendWorkResponse
   description: "For internal use only."
-- type: Microsoft.Dynamics.CRM.msdyn_RejectProposedBookingResponse
-  description: "For internal use only."
-- type: Microsoft.Dynamics.CRM.msdyn_ResAssignResourcesForTaskResponse
-  description: "For internal use only."
-- type: Microsoft.Dynamics.CRM.msdyn_ResGetResourceDetailResponse
-  description: "For internal use only."
-- type: Microsoft.Dynamics.CRM.msdyn_ResolveTimezoneResponse
-  description: "For internal use only."
-- type: Microsoft.Dynamics.CRM.msdyn_ResourceReservationCancelResponse
-  description: "For internal use only."
-- type: Microsoft.Dynamics.CRM.msdyn_ResourceSubstitutionResponse
-  description: "For internal use only."
-- type: Microsoft.Dynamics.CRM.msdyn_ResourceUtilizationChartResponse
-  description: "For internal use only."
-- type: Microsoft.Dynamics.CRM.msdyn_ResourceUtilizationResponse
-  description: "For internal use only."
 - type: Microsoft.Dynamics.CRM.msdyn_RetrieveDistanceMatrixResponse
   description: ""
 - type: Microsoft.Dynamics.CRM.msdyn_RetrieveResourceAvailabilityResponse
   description: ""
-- type: Microsoft.Dynamics.CRM.msdyn_SaveProjectLineTasksResponse
-  description: "For internal use only."
 - type: Microsoft.Dynamics.CRM.msdyn_TimeEntriesCopyPasteResponse
-  description: "For internal use only."
-- type: Microsoft.Dynamics.CRM.msdyn_TimeEntriesPasteResponse
-  description: "For internal use only."
-- type: Microsoft.Dynamics.CRM.msdyn_UpdateChangedSkillsResponse
   description: "For internal use only."
 - type: Microsoft.Dynamics.CRM.msdyn_UpdateEstimateLinesResponse
   description: "For internal use only."
@@ -402,24 +506,46 @@ in_this_section:
   description: "Contains data regarding the resources used by an organization. "
 - type: Microsoft.Dynamics.CRM.PagingInfo
   description: "Specifies a number of pages and a number of entity instances per page to return from the query. "
+- type: Microsoft.Dynamics.CRM.PredictionSchemaResponse
+  description: ""
+- type: Microsoft.Dynamics.CRM.PredictResponse
+  description: ""
 - type: Microsoft.Dynamics.CRM.PrincipalAccess
   description: "Contains access rights information for the security principal (user or team)."
 - type: Microsoft.Dynamics.CRM.PropagateByExpressionResponse
   description: "Contains the response from the PropagateByExpression Action."
 - type: Microsoft.Dynamics.CRM.ProposalParty
   description: "Represents a party (user, team, or resource) that is needed for the proposed appointment. "
+- type: Microsoft.Dynamics.CRM.PublishAIConfigurationResponse
+  description: ""
 - type: Microsoft.Dynamics.CRM.QueryBase
   description: "The abstract base class for constructing a query. "
+- type: Microsoft.Dynamics.CRM.QueryByAttribute
+  description: ""
 - type: Microsoft.Dynamics.CRM.QueryExpression
   description: "A complex query expressed in a hierarchy of expressions."
 - type: Microsoft.Dynamics.CRM.QueryExpressionToFetchXmlResponse
   description: "Contains the response from the QueryExpressionToFetchXml Action."
+- type: Microsoft.Dynamics.CRM.QueryMetadata
+  description: ""
 - type: Microsoft.Dynamics.CRM.QueryMultipleSchedulesResponse
   description: "Contains the response from the QueryMultipleSchedules function."
 - type: Microsoft.Dynamics.CRM.QueryScheduleResponse
   description: "Contains response from QuerySchedule function."
+- type: Microsoft.Dynamics.CRM.QueryWithEntityMetadata
+  description: ""
+- type: Microsoft.Dynamics.CRM.QuickFindResult
+  description: ""
+- type: Microsoft.Dynamics.CRM.QuickTestResponse
+  description: ""
+- type: Microsoft.Dynamics.CRM.RecentItem
+  description: ""
+- type: Microsoft.Dynamics.CRM.RelationshipAuditDetail
+  description: ""
 - type: Microsoft.Dynamics.CRM.RelationshipQueryExpression
   description: "Contains a complex query to retrieve entity relationship metadata for entities retrieved using an EntityQueryExpression."
+- type: Microsoft.Dynamics.CRM.RemoveActiveCustomizationsResponse
+  description: ""
 - type: Microsoft.Dynamics.CRM.RemoveSolutionComponentResponse
   description: "Contains the response from the RemoveSolutionComponent action."
 - type: Microsoft.Dynamics.CRM.RemoveUserFromRecordTeamResponse
@@ -428,12 +554,16 @@ in_this_section:
   description: "Specifies a resource that is required for a scheduling operation. "
 - type: Microsoft.Dynamics.CRM.RescheduleResponse
   description: "Contains the response from the Reschedule action."
+- type: Microsoft.Dynamics.CRM.ResetSyncStateInfo
+  description: ""
 - type: Microsoft.Dynamics.CRM.ResourceInfo
   description: "Contains information about a resource that has a scheduling problem for an appointment. "
 - type: Microsoft.Dynamics.CRM.RetrieveAbsoluteAndSiteCollectionUrlResponse
   description: "The response from the RetrieveAbsoluteAndSiteCollectionUrl function. "
 - type: Microsoft.Dynamics.CRM.RetrieveAllEntitiesResponse
   description: "Contains the response from the RetrieveAllEntities function."
+- type: Microsoft.Dynamics.CRM.RetrieveAnalyticsStoreDetailsResponse
+  description: ""
 - type: Microsoft.Dynamics.CRM.RetrieveApplicationRibbonResponse
   description: "Contains the response from the RetrieveApplicationRibbon function."
 - type: Microsoft.Dynamics.CRM.RetrieveAttributeChangeHistoryResponse
@@ -498,18 +628,38 @@ in_this_section:
   description: "Contains the response from RetrieveSharedPrincipalsAndAccess function."
 - type: Microsoft.Dynamics.CRM.RetrieveTeamPrivilegesResponse
   description: "Contains the response from the RetrieveTeamPrivileges function. "
+- type: Microsoft.Dynamics.CRM.RetrieveTimelineWallRecordsResponse
+  description: ""
 - type: Microsoft.Dynamics.CRM.RetrieveTimestampResponse
   description: "Contains the response from the RetrieveTimestamp function."
 - type: Microsoft.Dynamics.CRM.RetrieveTotalRecordCountResponse
   description: "Contains the response from the RetrieveTotalRecordCount Function."
 - type: Microsoft.Dynamics.CRM.RetrieveUserLicenseInfoResponse
   description: "Contains the response from the RetrieveUserLicenseInfo function. "
+- type: Microsoft.Dynamics.CRM.RetrieveUserPrivilegeByPrivilegeIdResponse
+  description: ""
+- type: Microsoft.Dynamics.CRM.RetrieveUserPrivilegeByPrivilegeNameResponse
+  description: ""
 - type: Microsoft.Dynamics.CRM.RetrieveUserPrivilegesResponse
   description: "Contains the response from the RetrieveUserPrivileges function. "
+- type: Microsoft.Dynamics.CRM.RetrieveUsersPrivilegesThroughTeamsResponse
+  description: ""
 - type: Microsoft.Dynamics.CRM.RetrieveVersionResponse
   description: "Contains the response from the RetrieveVersion function. "
 - type: Microsoft.Dynamics.CRM.RolePrivilege
   description: "Contains information about a privilege."
+- type: Microsoft.Dynamics.CRM.RolePrivilegeAuditDetail
+  description: ""
+- type: Microsoft.Dynamics.CRM.SchedulePredictionResponse
+  description: ""
+- type: Microsoft.Dynamics.CRM.ScheduleRetrainResponse
+  description: ""
+- type: Microsoft.Dynamics.CRM.ScheduleTrainingResponse
+  description: ""
+- type: Microsoft.Dynamics.CRM.SdkMessageProcessingStepImageRegistration
+  description: ""
+- type: Microsoft.Dynamics.CRM.SdkMessageProcessingStepRegistration
+  description: ""
 - type: Microsoft.Dynamics.CRM.SearchResponse
   description: "Contains the response from the Search function. "
 - type: Microsoft.Dynamics.CRM.SearchResults
@@ -520,8 +670,24 @@ in_this_section:
   description: "Contains the response from the BackgroundSendEmail action. "
 - type: Microsoft.Dynamics.CRM.ServicePlan
   description: "Contains information about a service plan assigned to a system user. "
-- type: Microsoft.Dynamics.CRM.Solution1
+- type: Microsoft.Dynamics.CRM.ShareAuditDetail
+  description: ""
+- type: Microsoft.Dynamics.CRM.Solution
   description: "Contains information about a solution in an organization. "
+- type: Microsoft.Dynamics.CRM.SolutionComponentDetails
+  description: ""
+- type: Microsoft.Dynamics.CRM.SolutionDetails
+  description: ""
+- type: Microsoft.Dynamics.CRM.SolutionInfo
+  description: ""
+- type: Microsoft.Dynamics.CRM.SolutionParameters
+  description: ""
+- type: Microsoft.Dynamics.CRM.SolutionValidationResult
+  description: ""
+- type: Microsoft.Dynamics.CRM.StageAndUpgradeResponse
+  description: ""
+- type: Microsoft.Dynamics.CRM.StageSolutionResults
+  description: ""
 - type: Microsoft.Dynamics.CRM.StateOptionMetadata
   description: "Contains data to define an option for the options in a State attribute. "
 - type: Microsoft.Dynamics.CRM.StatusOptionMetadata
@@ -530,17 +696,47 @@ in_this_section:
   description: "Collection of strings."
 - type: Microsoft.Dynamics.CRM.StringFormatName
   description: "Specifies the format of a StringAttributeMetadata attribute using the FormatName property. "
+- type: Microsoft.Dynamics.CRM.SubscriptionData
+  description: ""
+- type: Microsoft.Dynamics.CRM.SubscriptionDeletedEntityData
+  description: ""
+- type: Microsoft.Dynamics.CRM.SubscriptionEntityMetadata
+  description: ""
+- type: Microsoft.Dynamics.CRM.SubscriptionUpdatedEntityData
+  description: ""
+- type: Microsoft.Dynamics.CRM.SyncBulkOperationResponse
+  description: ""
+- type: Microsoft.Dynamics.CRM.SyncSubscriptionDataResponse
+  description: ""
+- type: Microsoft.Dynamics.CRM.SyncSubscriptionMetadataResponse
+  description: ""
 - type: Microsoft.Dynamics.CRM.TimeInfo
   description: "Specifies a set of time blocks with appointment information. "
 - type: Microsoft.Dynamics.CRM.TimeInfoCollection
   description: "The results of a search using the QueryMultipleSchedules function."
 - type: Microsoft.Dynamics.CRM.TraceInfo
   description: "Contains the results of a scheduling operation using the ValidateRequest, BookRequest, RescheduleRequest, or Search actions. "
+- type: Microsoft.Dynamics.CRM.TrainResponse
+  description: ""
+- type: Microsoft.Dynamics.CRM.UnpublishAIConfigurationResponse
+  description: ""
+- type: Microsoft.Dynamics.CRM.UnschedulePredictionResponse
+  description: ""
+- type: Microsoft.Dynamics.CRM.UnscheduleTrainingResponse
+  description: ""
+- type: Microsoft.Dynamics.CRM.UserAccessAuditDetail
+  description: ""
 - type: Microsoft.Dynamics.CRM.UserLicenseInfo
   description: "Contains information about the service plans that a system user has access to. "
 - type: Microsoft.Dynamics.CRM.UtcTimeFromLocalTimeResponse
   description: ""
+- type: Microsoft.Dynamics.CRM.ValidateAIConfigurationResponse
+  description: ""
 - type: Microsoft.Dynamics.CRM.ValidateAppResponse
+  description: "Contains the response from the ValidateApp action. "
+- type: Microsoft.Dynamics.CRM.ValidateFetchXmlExpressionResponse
+  description: ""
+- type: Microsoft.Dynamics.CRM.ValidateFetchXmlExpressionResult
   description: ""
 - type: Microsoft.Dynamics.CRM.ValidateRecurrenceRuleResponse
   description: "Contains the response from the ValidateRecurrenceRule function. "
@@ -550,8 +746,18 @@ in_this_section:
   description: ""
 - type: Microsoft.Dynamics.CRM.ValidationResult
   description: "Contains the result from the ValidateRequest, BookRequest, or Reschedule actions. "
+- type: Microsoft.Dynamics.CRM.ValidatorIssue
+  description: ""
+- type: Microsoft.Dynamics.CRM.ViewColumn
+  description: ""
+- type: Microsoft.Dynamics.CRM.WebResourceDetails
+  description: ""
+- type: Microsoft.Dynamics.CRM.WebResourceInfo
+  description: ""
 - type: Microsoft.Dynamics.CRM.WhoAmIResponse
   description: "Contains the response from WhoAmI function."
+- type: Microsoft.Dynamics.CRM.XrmAttributeExpression
+  description: ""
 href_see_also:
 - text: "Use the Microsoft Dynamics 365 Customer Engagement Web API"
   href: "https://docs.microsoft.com/dynamics365/customer-engagement/developer/use-microsoft-dynamics-365-web-api"

@@ -3,18 +3,16 @@ uid: Microsoft.Dynamics.CRM.msdyn_iotdevice
 name: "msdyn_iotdevice"
 type: entitytype
 metadata: 
-  title: "Microsoft Dynamics 365 Customer Engagement msdyn_iotdevice EntityType Reference | MicrosoftDocs"
-  ms.date: "03/20/2018"
+  title: "Common Data Service and Dynamics 365 Customer Engagement msdyn_iotdevice EntityType Reference | MicrosoftDocs"
+  ms.date: "05/03/2020"
   ms.service: "crm-online"
   ms.topic: "reference"
-  applies_to: 
-  - "Dynamics 365 (online)"
   ms.assetid: 0f2edad7-0605-48fb-ae89-f4f37a97778a
-  author: "jimdaly"
-  ms.author: "jdaly"
-  manager: "jdaly"
-  meta-description: "Reference information about the Dynamics 365 Customer Engagement msdyn_iotdevice entitytype."
-description: "Represents a connected device that can registered with an IoT hub."
+  author: "KumarVivek"
+  ms.author: "kvivek"
+  manager: "Annbe"
+  meta-description: "Reference information about the msdyn_iotdevice entitytype."
+description: "Represents a connected device that can be registered with an IoT provider."
 header:
   entity_set_path: "[organization URI]/api/data/v9.0/msdyn_iotdevices"
   base_type: Microsoft.Dynamics.CRM.crmbaseentity
@@ -48,16 +46,56 @@ properties:
       description: "Date and time when the record was modified."
       iscomputed: false
       isreadonly: true
+    - name: msdyn_connectionstate
+      type: Edm.Boolean
+      display_name: "Connection State"
+      description: "The connection status of the device (Disconnected or Connected)"
+      iscomputed: false
+      isreadonly: false
+      options:
+        - value: 1
+          label: "Connected"
+        - value: 0
+          label: "Disconnected"
     - name: msdyn_deviceid
       type: Edm.String
       display_name: "Device ID"
-      description: "Device ID used to register with IoT hub."
+      description: "Device ID used to register with the IoT provider."
+      iscomputed: false
+      isreadonly: false
+    - name: msdyn_devicereportedproperties
+      type: Edm.String
+      display_name: "Device Reported Properties"
+      description: "Reported Properties data for Device"
+      iscomputed: false
+      isreadonly: false
+    - name: msdyn_devicesettings
+      type: Edm.String
+      display_name: "Device Settings"
+      description: "The editable properties for a device."
       iscomputed: false
       isreadonly: false
     - name: msdyn_iotdeviceid
       type: Edm.Guid
       display_name: "IoT Device"
       description: "Unique identifier for entity instances"
+      iscomputed: false
+      isreadonly: false
+    - name: msdyn_issimulated
+      type: Edm.Int32
+      display_name: "Simulated"
+      description: "Select “Yes” if this device is simulated for testing and development purposes. Select “No” if this is a real device.​"
+      iscomputed: false
+      isreadonly: false
+      options:
+        - value: 192350000
+          label: "Yes"
+        - value: 192350001
+          label: "No"
+    - name: msdyn_lastactivitytime
+      type: Edm.DateTimeOffset
+      display_name: "Last Activity Time"
+      description: "The last activity time of the device"
       iscomputed: false
       isreadonly: false
     - name: msdyn_lastcommandsenttime
@@ -81,7 +119,7 @@ properties:
     - name: msdyn_registrationstatus
       type: Edm.Int32
       display_name: "Registration Status"
-      description: "A status field that denotes whether the device is registered with the IoT hub."
+      description: "A status field that denotes whether the device is registered with the IoT provider."
       iscomputed: false
       isreadonly: false
       options:
@@ -95,6 +133,12 @@ properties:
           label: "Registered"
         - value: 192350004
           label: "Error"
+    - name: msdyn_tags
+      type: Edm.String
+      display_name: "Device Tags"
+      description: "Identifying Tags for the Device"
+      iscomputed: false
+      isreadonly: false
     - name: msdyn_timezone
       type: Edm.Int32
       display_name: "Time Zone"
@@ -174,6 +218,10 @@ lookup_properties:
     single_valued_navigation_property:
     - msdyn_Category
     description: "The device category that this IoT device belongs to."
+  - name: _msdyn_iotproviderinstance_value
+    single_valued_navigation_property:
+    - msdyn_IoTProviderInstance
+    description: "The IoT Provider Instance to which this device belongs."
   - name: _msdyn_lastcommandsent_value
     single_valued_navigation_property:
     - msdyn_LastCommandSent
@@ -298,8 +346,8 @@ solutions:
     description: "Enables IoT scenarios in Dynamics 365."
 # This entity has no remarks.
 href_see_also:
-- text: "Use the Microsoft Dynamics 365 Customer Engagement Web API"
-  href: "https://docs.microsoft.com/dynamics365/customer-engagement/developer/use-microsoft-dynamics-365-web-api"
+- text: "Use the Common Data Service Web API"
+  href: "https://docs.microsoft.com/powerapps/developer/common-data-service/webapi/overview"
 xref_see_also:
 - Microsoft.Dynamics.CRM.EntityTypeIndex
 - Microsoft.Dynamics.CRM.ActionIndex

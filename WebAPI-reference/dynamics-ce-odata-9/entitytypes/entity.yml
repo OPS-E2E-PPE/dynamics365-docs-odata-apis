@@ -1,0 +1,177 @@
+### YamlMime:OData
+uid: Microsoft.Dynamics.CRM.entity
+name: "entity"
+type: entitytype
+metadata: 
+  title: "Common Data Service and Dynamics 365 Customer Engagement entity EntityType Reference | MicrosoftDocs"
+  ms.date: "05/03/2020"
+  ms.service: "crm-online"
+  ms.topic: "reference"
+  ms.assetid: 77fed666-9307-4314-a0ca-75fdbecfdeac
+  author: "KumarVivek"
+  ms.author: "kvivek"
+  manager: "Annbe"
+  meta-description: "Reference information about the entity entitytype."
+# This entity doesn't have a description
+header:
+  entity_set_path: "[organization URI]/api/data/v9.0/entities"
+  base_type: Microsoft.Dynamics.CRM.crmbaseentity
+  display_name: Entity
+  primary_key: entityid
+  primary_name_attribute: name
+  # This entity does not support any operations.
+namespace: Microsoft.Dynamics.CRM
+properties:
+  description: "Properties represent fields of data stored in the entity.Some properties are read-only."
+  property_items:
+    - name: addresstablename
+      type: Edm.String
+      display_name: "Address Table Name"
+      description: "The address table name of this entity."
+      iscomputed: false
+      isreadonly: false
+    - name: basetablename
+      type: Edm.String
+      display_name: "Base Table Name"
+      description: "The base table name of this entity."
+      iscomputed: false
+      isreadonly: false
+    - name: collectionname
+      type: Edm.String
+      display_name: "Collection Name"
+      description: "The collection name of this entity."
+      iscomputed: false
+      isreadonly: false
+    - name: componentstate
+      type: Edm.Int32
+      display_name: "Component State"
+      description: "For internal use only."
+      iscomputed: false
+      isreadonly: true
+      options:
+        - value: 0
+          label: "Published"
+        - value: 1
+          label: "Unpublished"
+        - value: 2
+          label: "Deleted"
+        - value: 3
+          label: "Deleted Unpublished"
+    - name: entityid
+      type: Edm.Guid
+      display_name: "Entity"
+      description: "Unique identifier of the entity."
+      iscomputed: false
+      isreadonly: false
+    - name: entitysetname
+      type: Edm.String
+      display_name: "Entity Set Name"
+      description: "The entity set name of this entity."
+      iscomputed: false
+      isreadonly: false
+    - name: extensiontablename
+      type: Edm.String
+      display_name: "Extension Table Name"
+      description: "The extension table name of this entity."
+      iscomputed: false
+      isreadonly: false
+    - name: externalcollectionname
+      type: Edm.String
+      display_name: "External Collection Name"
+      description: "The external collection name of this entity."
+      iscomputed: false
+      isreadonly: false
+    - name: externalname
+      type: Edm.String
+      display_name: "External Name"
+      description: "The external name of this entity."
+      iscomputed: false
+      isreadonly: false
+    - name: logicalcollectionname
+      type: Edm.String
+      display_name: "Logical Collection Name"
+      description: "The logical collection name of this entity."
+      iscomputed: false
+      isreadonly: false
+    - name: logicalname
+      type: Edm.String
+      display_name: "Logical Name"
+      description: "The logical name of this entity."
+      iscomputed: false
+      isreadonly: false
+    - name: name
+      type: Edm.String
+      display_name: "Name"
+      description: "The name of this Entity."
+      iscomputed: false
+      isreadonly: false
+    - name: originallocalizedcollectionname
+      type: Edm.String
+      display_name: "Original Localized Collection Name"
+      description: "The original localized collection name of this entity."
+      iscomputed: false
+      isreadonly: false
+    - name: originallocalizedname
+      type: Edm.String
+      display_name: "Original Localized Name"
+      description: "The original localized name of this entity."
+      iscomputed: false
+      isreadonly: false
+    - name: overwritetime
+      type: Edm.DateTimeOffset
+      display_name: "Record Overwrite Time"
+      description: "For internal use only."
+      iscomputed: false
+      isreadonly: true
+    - name: parentcontrollingattributename
+      type: Edm.String
+      display_name: "Parent Controlling Attribute Name"
+      description: "The parent controlling attribute name of this entity."
+      iscomputed: false
+      isreadonly: false
+    - name: physicalname
+      type: Edm.String
+      display_name: "Physical Name"
+      description: "The physical name of this entity."
+      iscomputed: false
+      isreadonly: false
+    - name: reportviewname
+      type: Edm.String
+      display_name: "Report View Name"
+      description: "The Report view name of this entity."
+      iscomputed: false
+      isreadonly: false
+    - name: solutionid
+      type: Edm.Guid
+      display_name: "Solution"
+      description: "Unique identifier of the associated solution."
+      iscomputed: false
+      isreadonly: true
+# This entity has no lookup properties
+# This entity has no single-valued navigation properties
+collection_valued_navigation_properties:
+  description: "Collection-valued navigation properties represent collections of entities which may represent either a one-to-many (1:N) or many-to-many (N:N) relationship between the entities."
+  property_items:
+  - name: entity_entityanalyticsconfig
+    type: Microsoft.Dynamics.CRM.entityanalyticsconfig
+    partner: parententityid
+# This entity has no derived entities.
+# This entity has no operations
+solutions:
+  description: "The following solutions include the entity entity type."
+  solution_items:
+  - type: Microsoft.Dynamics.CRM.System
+    description: "Internal CRM System Solution"
+# This entity has no remarks.
+href_see_also:
+- text: "Use the Common Data Service Web API"
+  href: "https://docs.microsoft.com/powerapps/developer/common-data-service/webapi/overview"
+xref_see_also:
+- Microsoft.Dynamics.CRM.EntityTypeIndex
+- Microsoft.Dynamics.CRM.ActionIndex
+- Microsoft.Dynamics.CRM.FunctionIndex
+- Microsoft.Dynamics.CRM.QueryFunctionIndex
+- Microsoft.Dynamics.CRM.ComplexTypeIndex
+- Microsoft.Dynamics.CRM.EnumTypeIndex
+- Microsoft.Dynamics.CRM.MetadataEntityTypeIndex
+- Microsoft.Dynamics.CRM.SolutionIndex

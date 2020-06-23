@@ -1,0 +1,66 @@
+### YamlMime:OData
+uid: Microsoft.Dynamics.CRM.ImmediateBook
+name: "ImmediateBook"
+type: action
+metadata: 
+  title: "Common Data Service and Dynamics 365 Customer Engagement ImmediateBook Action Reference | MicrosoftDocs"
+  ms.date: "05/03/2020"
+  ms.service: "crm-online"
+  ms.topic: "reference"
+  ms.assetid: d89efb54-30cb-46c8-a97c-49ee1d3e9ddd
+  author: "KumarVivek"
+  ms.author: "kvivek"
+  manager: "Annbe"
+  meta-description: "Reference information about the ImmediateBook Action."
+namespace: Microsoft.Dynamics.CRM
+# This Action has no description.
+owningsolution: Microsoft.Dynamics.CRM.System
+# This action has no bound entities.
+isbound: false
+parameters:
+  description: "Parameters allow for data to be passed to the action."
+  parameter_items:
+  - name: Target
+    type: Microsoft.Dynamics.CRM.crmbaseentity
+    nullable: false
+    unicode: true
+    description: ""
+  - name: AttachmentIds
+    type: Edm.String
+    nullable: false
+    unicode: false
+    description: ""
+  - name: EWSUrl
+    type: Edm.String
+    nullable: true
+    unicode: false
+    description: ""
+  - name: AttachmentToken
+    type: Edm.String
+    nullable: true
+    unicode: false
+    description: ""
+return_type:
+  description: "The ImmediateBook action returns the following value."
+  iscollection: false
+  nullable: false
+  type: Microsoft.Dynamics.CRM.ImmediateBookResponse
+entities:
+  description: "Use the ImmediateBook action with this entity type:"
+  entity_items:
+  - type: Microsoft.Dynamics.CRM.appointment
+    displayName: Appointment
+    description: "Commitment representing a time interval with start/end times and duration."
+# This action has no remarks.
+href_see_also:
+- text: "Use the Common Data Service Web API"
+  href: "https://docs.microsoft.com/powerapps/developer/common-data-service/webapi/overview"
+xref_see_also:
+- Microsoft.Dynamics.CRM.EntityTypeIndex
+- Microsoft.Dynamics.CRM.ActionIndex
+- Microsoft.Dynamics.CRM.FunctionIndex
+- Microsoft.Dynamics.CRM.QueryFunctionIndex
+- Microsoft.Dynamics.CRM.ComplexTypeIndex
+- Microsoft.Dynamics.CRM.EnumTypeIndex
+- Microsoft.Dynamics.CRM.MetadataEntityTypeIndex
+- Microsoft.Dynamics.CRM.SolutionIndex

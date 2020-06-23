@@ -3,17 +3,15 @@ uid: Microsoft.Dynamics.CRM.WinOpportunity
 name: "WinOpportunity"
 type: action
 metadata: 
-  title: "Microsoft Dynamics 365 Customer Engagement WinOpportunity Action Reference | MicrosoftDocs"
-  ms.date: "03/20/2018"
+  title: "Common Data Service and Dynamics 365 Customer Engagement WinOpportunity Action Reference | MicrosoftDocs"
+  ms.date: "05/03/2020"
   ms.service: "crm-online"
   ms.topic: "reference"
-  applies_to: 
-  - "Dynamics 365 (online)"
   ms.assetid: d024550b-e862-448b-a3b4-66de09fca3db
-  author: "jimdaly"
-  ms.author: "jdaly"
-  manager: "jdaly"
-  meta-description: "Reference information about the Dynamics 365 Customer Engagement WinOpportunity Action."
+  author: "KumarVivek"
+  ms.author: "kvivek"
+  manager: "Annbe"
+  meta-description: "Reference information about the WinOpportunity Action."
 namespace: Microsoft.Dynamics.CRM
 description: "Sets the state of an opportunity to Won.  "
 owningsolution: Microsoft.Dynamics.CRM.System
@@ -27,6 +25,11 @@ parameters:
     nullable: false
     unicode: true
     description: "The opportunity close activity associated with this state change. "
+  - name: Caller
+    type: Edm.String
+    nullable: true
+    unicode: false
+    description: ""
   - name: Status
     type: Edm.Int32
     nullable: false
@@ -45,8 +48,8 @@ entities:
     description: "Formal offer for products and/or services, proposed at specific prices and related payment terms, which is sent to a prospective customer."
 # This action has no remarks.
 href_see_also:
-- text: "Use the Microsoft Dynamics 365 Customer Engagement Web API"
-  href: "https://docs.microsoft.com/dynamics365/customer-engagement/developer/use-microsoft-dynamics-365-web-api"
+- text: "Use the Common Data Service Web API"
+  href: "https://docs.microsoft.com/powerapps/developer/common-data-service/webapi/overview"
 xref_see_also:
 - Microsoft.Dynamics.CRM.EntityTypeIndex
 - Microsoft.Dynamics.CRM.ActionIndex

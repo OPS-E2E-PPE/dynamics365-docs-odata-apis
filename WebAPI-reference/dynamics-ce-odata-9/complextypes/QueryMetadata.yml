@@ -1,0 +1,111 @@
+### YamlMime:OData
+uid: Microsoft.Dynamics.CRM.QueryMetadata
+name: "QueryMetadata"
+type: complextype
+metadata: 
+  title: "Common Data Service and Dynamics 365 Customer Engagement QueryMetadata ComplexType Reference | MicrosoftDocs"
+  ms.date: "05/03/2020"
+  ms.service: "crm-online"
+  ms.topic: "reference"
+  ms.assetid: e669928b-1260-4555-83c7-8d0d1a4eb15b
+  author: "KumarVivek"
+  ms.author: "kvivek"
+  manager: "Annbe"
+  meta-description: "Reference information about the Web API QueryMetadata ComplexType."
+namespace: Microsoft.Dynamics.CRM
+# This complex type doesn't inherit from another complextype.
+description: "" 
+properties:
+  description: "The properties of a complex type contain the structured data of the type."
+  property_items:
+  - name: QueryId
+    type: Edm.String
+    nullable: true
+    unicode: false
+    description: ""
+    iscollection: false
+  - name: ReturnedTypeCode
+    type: Edm.String
+    nullable: true
+    unicode: false
+    description: ""
+    iscollection: false
+  - name: ComponentState
+    type: Edm.Int32
+    nullable: true
+    unicode: true
+    description: ""
+    iscollection: false
+  - name: Name
+    type: Edm.String
+    nullable: true
+    unicode: false
+    description: ""
+    iscollection: false
+  - name: Description
+    type: Edm.String
+    nullable: true
+    unicode: false
+    description: ""
+    iscollection: false
+  - name: FetchXml
+    type: Edm.String
+    nullable: true
+    unicode: false
+    description: ""
+    iscollection: false
+  - name: LayoutXml
+    type: Edm.String
+    nullable: true
+    unicode: false
+    description: ""
+    iscollection: false
+  - name: IsDefault
+    type: Edm.Boolean
+    nullable: true
+    unicode: true
+    description: ""
+    iscollection: false
+  - name: ModifiedOn
+    type: Edm.String
+    nullable: true
+    unicode: false
+    description: ""
+    iscollection: false
+  - name: QueryApi
+    type: Edm.String
+    nullable: true
+    unicode: false
+    description: ""
+    iscollection: false
+  - name: QueryType
+    type: Edm.Int32
+    nullable: true
+    unicode: true
+    description: ""
+    iscollection: false
+  - name: IsCustomizable
+    type: Edm.Boolean
+    nullable: true
+    unicode: true
+    description: ""
+    iscollection: false
+# This complex type doesn't have any navigation properties.
+usedby:
+  description: "The following use the QueryMetadata ComplexType."
+  usedby_items:
+  - name: Microsoft.Dynamics.CRM.QueryWithEntityMetadata
+    used_as: Property
+# This complex type has no remarks.
+href_see_also:
+- text: "Use the Common Data Service Web API"
+  href: "https://docs.microsoft.com/powerapps/developer/common-data-service/webapi/overview"
+xref_see_also:
+- Microsoft.Dynamics.CRM.EntityTypeIndex
+- Microsoft.Dynamics.CRM.ActionIndex
+- Microsoft.Dynamics.CRM.FunctionIndex
+- Microsoft.Dynamics.CRM.QueryFunctionIndex
+- Microsoft.Dynamics.CRM.ComplexTypeIndex
+- Microsoft.Dynamics.CRM.EnumTypeIndex
+- Microsoft.Dynamics.CRM.MetadataEntityTypeIndex
+- Microsoft.Dynamics.CRM.SolutionIndex

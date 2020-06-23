@@ -3,17 +3,15 @@ uid: Microsoft.Dynamics.CRM.privilege
 name: "privilege"
 type: entitytype
 metadata: 
-  title: "Microsoft Dynamics 365 Customer Engagement privilege EntityType Reference | MicrosoftDocs"
-  ms.date: "03/20/2018"
+  title: "Common Data Service and Dynamics 365 Customer Engagement privilege EntityType Reference | MicrosoftDocs"
+  ms.date: "05/03/2020"
   ms.service: "crm-online"
   ms.topic: "reference"
-  applies_to: 
-  - "Dynamics 365 (online)"
   ms.assetid: 4f09008e-0654-48ff-8da9-de30c5f29afd
-  author: "jimdaly"
-  ms.author: "jdaly"
-  manager: "jdaly"
-  meta-description: "Reference information about the Dynamics 365 Customer Engagement privilege entitytype."
+  author: "KumarVivek"
+  ms.author: "kvivek"
+  manager: "Annbe"
+  meta-description: "Reference information about the privilege entitytype."
 description: "Permission to perform an action in Microsoft CRM. The platform checks for the privilege and rejects the attempt if the user does not hold the privilege."
 header:
   entity_set_path: "[organization URI]/api/data/v9.0/privileges"
@@ -168,7 +166,12 @@ properties:
       iscomputed: false
       isreadonly: true
 # This entity has no lookup properties
-# This entity has no single-valued navigation properties
+single_valued_navigation_properties:
+  description: "Single-valued navigation properties represent lookup fields where a single entity can be referenced. Each single-valued navigation property has a corresponding partner collection-valued navigation property on the related entity."
+  property_items:
+  - name: solution_privilege
+    type: Microsoft.Dynamics.CRM.solution
+    partner: solution_privilege
 collection_valued_navigation_properties:
   description: "Collection-valued navigation properties represent collections of entities which may represent either a one-to-many (1:N) or many-to-many (N:N) relationship between the entities."
   property_items:
@@ -197,8 +200,8 @@ solutions:
     description: "Internal CRM System Solution"
 # This entity has no remarks.
 href_see_also:
-- text: "Use the Microsoft Dynamics 365 Customer Engagement Web API"
-  href: "https://docs.microsoft.com/dynamics365/customer-engagement/developer/use-microsoft-dynamics-365-web-api"
+- text: "Use the Common Data Service Web API"
+  href: "https://docs.microsoft.com/powerapps/developer/common-data-service/webapi/overview"
 xref_see_also:
 - Microsoft.Dynamics.CRM.EntityTypeIndex
 - Microsoft.Dynamics.CRM.ActionIndex

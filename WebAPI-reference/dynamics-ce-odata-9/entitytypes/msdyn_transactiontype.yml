@@ -3,17 +3,15 @@ uid: Microsoft.Dynamics.CRM.msdyn_transactiontype
 name: "msdyn_transactiontype"
 type: entitytype
 metadata: 
-  title: "Microsoft Dynamics 365 Customer Engagement msdyn_transactiontype EntityType Reference | MicrosoftDocs"
-  ms.date: "03/20/2018"
+  title: "Common Data Service and Dynamics 365 Customer Engagement msdyn_transactiontype EntityType Reference | MicrosoftDocs"
+  ms.date: "05/03/2020"
   ms.service: "crm-online"
   ms.topic: "reference"
-  applies_to: 
-  - "Dynamics 365 (online)"
   ms.assetid: 2e927755-8a53-45be-b573-799421bf6a19
-  author: "jimdaly"
-  ms.author: "jdaly"
-  manager: "jdaly"
-  meta-description: "Reference information about the Dynamics 365 Customer Engagement msdyn_transactiontype entitytype."
+  author: "KumarVivek"
+  ms.author: "kvivek"
+  manager: "Annbe"
+  meta-description: "Reference information about the msdyn_transactiontype entitytype."
 description: "Broad classification, such as time or expense, and the context such cost, unbilled revenue, or billed revenue of a project actual."
 header:
   entity_set_path: "[organization URI]/api/data/v9.0/msdyn_transactiontypes"
@@ -65,8 +63,6 @@ properties:
           label: "Commission"
         - value: 690970001
           label: "Additional"
-        - value: 690970002
-          label: "Tax"
         - value: 192350000
           label: "Time"
         - value: 192350001
@@ -77,6 +73,8 @@ properties:
           label: "Milestone"
         - value: 192350004
           label: "Fee"
+        - value: 690970002
+          label: "Tax"
     - name: msdyn_transactiontypecode
       type: Edm.Int32
       display_name: "Transaction Type Code"
@@ -246,8 +244,8 @@ solutions:
     description: "Microsoft Dynamics 365 for Project Service Automation is an end-to-end solution that helps sales and delivery teams engage customers and deliver billable projects on time and within budget. Project Service gives you the tools you need to: Estimate, quote, and contract work; Plan and assign resources; Enable team collaboration; Capture time, expense, and progress data for real-time insights and accurate invoicing."
 # This entity has no remarks.
 href_see_also:
-- text: "Use the Microsoft Dynamics 365 Customer Engagement Web API"
-  href: "https://docs.microsoft.com/dynamics365/customer-engagement/developer/use-microsoft-dynamics-365-web-api"
+- text: "Use the Common Data Service Web API"
+  href: "https://docs.microsoft.com/powerapps/developer/common-data-service/webapi/overview"
 xref_see_also:
 - Microsoft.Dynamics.CRM.EntityTypeIndex
 - Microsoft.Dynamics.CRM.ActionIndex

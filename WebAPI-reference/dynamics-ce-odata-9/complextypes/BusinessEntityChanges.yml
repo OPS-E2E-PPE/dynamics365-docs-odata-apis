@@ -1,0 +1,65 @@
+### YamlMime:OData
+uid: Microsoft.Dynamics.CRM.BusinessEntityChanges
+name: "BusinessEntityChanges"
+type: complextype
+metadata: 
+  title: "Common Data Service and Dynamics 365 Customer Engagement BusinessEntityChanges ComplexType Reference | MicrosoftDocs"
+  ms.date: "05/03/2020"
+  ms.service: "crm-online"
+  ms.topic: "reference"
+  ms.assetid: 39cff05a-90a0-45ca-897f-0c943994f536
+  author: "KumarVivek"
+  ms.author: "kvivek"
+  manager: "Annbe"
+  meta-description: "Reference information about the Web API BusinessEntityChanges ComplexType."
+namespace: Microsoft.Dynamics.CRM
+# This complex type doesn't inherit from another complextype.
+description: "The business entity changes from the RetrieveEntityChangesResponse.EntityChanges property" 
+properties:
+  description: "The properties of a complex type contain the structured data of the type."
+  property_items:
+  - name: MoreRecords
+    type: Edm.Boolean
+    nullable: true
+    unicode: true
+    description: "Indicates whether there are more records in the business entity changes collection."
+    iscollection: false
+  - name: PagingCookie
+    type: Edm.String
+    nullable: true
+    unicode: false
+    description: "The paging cookie."
+    iscollection: false
+  - name: DataToken
+    type: Edm.String
+    nullable: true
+    unicode: false
+    description: "The data token."
+    iscollection: false
+  - name: Changes
+    type: Microsoft.Dynamics.CRM.IChangedItem
+    nullable: false
+    unicode: true
+    description: "The business entity changes collection."
+    iscollection: true
+  - name: GlobalMetadataVersion
+    type: Edm.String
+    nullable: true
+    unicode: false
+    description: ""
+    iscollection: false
+# This complex type doesn't have any navigation properties.
+
+# This complex type has no remarks.
+href_see_also:
+- text: "Use the Common Data Service Web API"
+  href: "https://docs.microsoft.com/powerapps/developer/common-data-service/webapi/overview"
+xref_see_also:
+- Microsoft.Dynamics.CRM.EntityTypeIndex
+- Microsoft.Dynamics.CRM.ActionIndex
+- Microsoft.Dynamics.CRM.FunctionIndex
+- Microsoft.Dynamics.CRM.QueryFunctionIndex
+- Microsoft.Dynamics.CRM.ComplexTypeIndex
+- Microsoft.Dynamics.CRM.EnumTypeIndex
+- Microsoft.Dynamics.CRM.MetadataEntityTypeIndex
+- Microsoft.Dynamics.CRM.SolutionIndex

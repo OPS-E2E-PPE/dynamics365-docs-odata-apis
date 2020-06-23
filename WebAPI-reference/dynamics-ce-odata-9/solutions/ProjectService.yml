@@ -3,22 +3,20 @@ uid: Microsoft.Dynamics.CRM.ProjectService
 name: "Project Service Automation"
 type: solution
 metadata: 
-  title: "Microsoft Dynamics 365 Customer Engagement Project Service Automation Solution Reference | MicrosoftDocs"
-  ms.date: "03/20/2018"
+  title: "Common Data Service and Dynamics 365 Customer Engagement Project Service Automation Solution Reference | MicrosoftDocs"
+  ms.date: "05/03/2020"
   ms.service: "crm-online"
   ms.topic: "reference"
-  applies_to: 
-  - "Dynamics 365 (online)"
-  ms.assetid: 5d8db9ed-c9f4-4144-ae18-d1bfa0dad0d1
-  author: "jimdaly"
-  ms.author: "jdaly"
-  manager: "jdaly"
+  ms.assetid: 6dd0d4a0-dd3e-4fa9-b0ca-5017d79ba17b
+  author: "KumarVivek"
+  ms.author: "kvivek"
+  manager: "Annbe"
   meta-description: "Reference information about the Dynamics 365 Customer Engagement Project Service Automation Solution."
 namespace: Microsoft.Dynamics.CRM
 header:
  description: "Microsoft Dynamics 365 for Project Service Automation is an end-to-end solution that helps sales and delivery teams engage customers and deliver billable projects on time and within budget. Project Service gives you the tools you need to: Estimate, quote, and contract work; Plan and assign resources; Enable team collaboration; Capture time, expense, and progress data for real-time insights and accurate invoicing."
  unique_name: ProjectService
- version: "2.0.0.273"
+ version: "3.10.0.31"
  customization_prefix: msdyn
 entities:
   description: "The following entities are included in this solution."
@@ -106,13 +104,13 @@ entities:
    - type: Microsoft.Dynamics.CRM.msdyn_mlresultcache
      description: "Cache for scored work items per resource that are returned from Azure Machine Learning."
    - type: Microsoft.Dynamics.CRM.msdyn_opportunitylineresourcecategory
-     description: "List of roles that will be considered as costs when understanding the profit of an opportunity line."
+     description: "List of roles that will be considered as costs when understanding the profit of an opportunity line (Deprecated in v3.0)"
    - type: Microsoft.Dynamics.CRM.msdyn_opportunitylinetransaction
-     description: "Sales estimate detail of an opportunity line."
+     description: "Sales estimate detail of an opportunity line (Deprecated in v3.0)"
    - type: Microsoft.Dynamics.CRM.msdyn_opportunitylinetransactioncategory
-     description: "List of transaction categories that will be considered as costs when computing the profit of an opportunity line."
+     description: "List of transaction categories that will be considered as costs when computing the profit of an opportunity line (Deprecated in v3.0)"
    - type: Microsoft.Dynamics.CRM.msdyn_opportunitylinetransactionclassificatio
-     description: "List of transaction classification heads, which are four broad cost categories of time, expense, material, and fee, that will be considered as costs when computing the profit of an opportunity line."
+     description: "List of transaction classification heads, which are four broad cost categories of time, expense, material, and fee, that will be considered as costs when computing the profit of an opportunity line (Deprecated in v3.0)"
    - type: Microsoft.Dynamics.CRM.msdyn_opportunitypricelist
      description: "Sales price list that will used by the opportunity to set default sales prices on all project-based components such as time and expense."
    - type: Microsoft.Dynamics.CRM.msdyn_orderlineresourcecategory
@@ -148,13 +146,13 @@ entities:
    - type: Microsoft.Dynamics.CRM.msdyn_projecttaskdependency
      description: "Dependency data between tasks."
    - type: Microsoft.Dynamics.CRM.msdyn_projecttaskstatususer
-     description: "User status for project tasks."
+     description: "User status for project tasks (Deprecated in v3.0)."
    - type: Microsoft.Dynamics.CRM.msdyn_projectteam
      description: "Entity used to model relationship between resources and project teams."
    - type: Microsoft.Dynamics.CRM.msdyn_projectteammembersignup
      description: "Entity used to capture all resources that have applied for open position on projects."
    - type: Microsoft.Dynamics.CRM.msdyn_projecttransactioncategory
-     description: ""
+     description: "(Deprecated in v3.0)"
    - type: Microsoft.Dynamics.CRM.msdyn_quotelineanalyticsbreakdown
      description: "Reporting entity that is used to show quoted sales and estimated cost amounts by various dimensions."
    - type: Microsoft.Dynamics.CRM.msdyn_quotelineinvoiceschedule
@@ -221,6 +219,8 @@ entities:
      description: "Entity that defines pricing levels."
    - type: Microsoft.Dynamics.CRM.product
      description: "Information about products and their pricing information."
+   - type: Microsoft.Dynamics.CRM.productpricelevel
+     description: "Information about how to price a product in the specified price level, including pricing method, rounding option, and discount type based on a specified product unit."
    - type: Microsoft.Dynamics.CRM.quote
      description: "Formal offer for products and/or services, proposed at specific prices and related payment terms, which is sent to a prospective customer."
    - type: Microsoft.Dynamics.CRM.quotedetail
@@ -246,15 +246,9 @@ actions:
      description: "For internal use only."
    - type: Microsoft.Dynamics.CRM.msdyn_AddInvoiceLineDetails
      description: "For internal use only."
-   - type: Microsoft.Dynamics.CRM.msdyn_applyworktemplate
-     description: "For internal use only."
    - type: Microsoft.Dynamics.CRM.msdyn_ApprovalStatusApprove
      description: "For internal use only."
    - type: Microsoft.Dynamics.CRM.msdyn_ApprovalStatusReject
-     description: "For internal use only."
-   - type: Microsoft.Dynamics.CRM.msdyn_AssignGenericResource
-     description: "For internal use only."
-   - type: Microsoft.Dynamics.CRM.msdyn_AutoGenerateProjectTeam
      description: "For internal use only."
    - type: Microsoft.Dynamics.CRM.msdyn_batchentityCUD
      description: "For internal use only."
@@ -280,20 +274,12 @@ actions:
      description: "For internal use only."
    - type: Microsoft.Dynamics.CRM.msdyn_CorrectInvoice
      description: "For internal use only."
-   - type: Microsoft.Dynamics.CRM.msdyn_CreateContractLineDetailsFromEstimate
-     description: "For internal use only."
    - type: Microsoft.Dynamics.CRM.msdyn_CreateContractSpecificPriceList
-     description: "For internal use only."
-   - type: Microsoft.Dynamics.CRM.msdyn_CreateEstimateLines
-     description: "For internal use only."
-   - type: Microsoft.Dynamics.CRM.msdyn_CreateEstimatesForProjectTask
      description: "For internal use only."
    - type: Microsoft.Dynamics.CRM.msdyn_CreateExtensionRequirement
      description: "For internal use only."
    - type: Microsoft.Dynamics.CRM.msdyn_createinvoicefrominvoiceschedule
      description: "For internal use only."
-   - type: Microsoft.Dynamics.CRM.msdyn_CreateQuoteFromOpportunity
-     description: ""
    - type: Microsoft.Dynamics.CRM.msdyn_CreateQuoteLineDetailsFromEstimate
      description: "For internal use only."
    - type: Microsoft.Dynamics.CRM.msdyn_CreateQuoteSpecificPriceList
@@ -302,21 +288,13 @@ actions:
      description: ""
    - type: Microsoft.Dynamics.CRM.msdyn_CreateSharepointDocumentLocation
      description: "For internal use only."
-   - type: Microsoft.Dynamics.CRM.msdyn_CreateTaskBasedEstimatesForProject
-     description: ""
    - type: Microsoft.Dynamics.CRM.msdyn_CreateTemplateFromProject
      description: ""
    - type: Microsoft.Dynamics.CRM.msdyn_DeleteEstimateLines
      description: "For internal use only."
    - type: Microsoft.Dynamics.CRM.msdyn_DeleteEstimatesForProjectTask
      description: ""
-   - type: Microsoft.Dynamics.CRM.msdyn_ExpenseApproveAction
-     description: ""
-   - type: Microsoft.Dynamics.CRM.msdyn_ExpenseEntriesApprove
-     description: "For internal use only."
    - type: Microsoft.Dynamics.CRM.msdyn_ExpenseEntriesPendingApproval
-     description: "For internal use only."
-   - type: Microsoft.Dynamics.CRM.msdyn_ExpenseEntriesRecall
      description: "For internal use only."
    - type: Microsoft.Dynamics.CRM.msdyn_ExpenseEntriesReject
      description: "For internal use only."
@@ -328,10 +306,6 @@ actions:
      description: ""
    - type: Microsoft.Dynamics.CRM.msdyn_ExportActual
      description: ""
-   - type: Microsoft.Dynamics.CRM.msdyn_FetchProjectCalendarWorkHours
-     description: "For internal use only."
-   - type: Microsoft.Dynamics.CRM.msdyn_FulfillResourceDemand
-     description: "For internal use only."
    - type: Microsoft.Dynamics.CRM.msdyn_GenerateContractLineInvoiceSchedule
      description: "For internal use only."
    - type: Microsoft.Dynamics.CRM.msdyn_GenerateContractLineScheduleOfValues
@@ -342,13 +316,7 @@ actions:
      description: "For internal use only."
    - type: Microsoft.Dynamics.CRM.msdyn_GetBookingDetailsByResource
      description: "For internal use only."
-   - type: Microsoft.Dynamics.CRM.msdyn_GetCollectionData
-     description: "For internal use only."
    - type: Microsoft.Dynamics.CRM.msdyn_GetContractBillingRadialGaugeData
-     description: "For internal use only."
-   - type: Microsoft.Dynamics.CRM.msdyn_GetContractDetailedTransactions
-     description: "For internal use only."
-   - type: Microsoft.Dynamics.CRM.msdyn_GetContractEffortRadialGaugeData
      description: "For internal use only."
    - type: Microsoft.Dynamics.CRM.msdyn_GetContractLineChargeability
      description: "For internal use only."
@@ -364,10 +332,6 @@ actions:
      description: "For internal use only."
    - type: Microsoft.Dynamics.CRM.msdyn_GetEstimatesforProject
      description: ""
-   - type: Microsoft.Dynamics.CRM.msdyn_GetGenericResourceDetails
-     description: "For internal use only."
-   - type: Microsoft.Dynamics.CRM.msdyn_GetMyChangedSkills
-     description: "For internal use only."
    - type: Microsoft.Dynamics.CRM.msdyn_GetOfficeGroupForEntity
      description: "For internal use only."
    - type: Microsoft.Dynamics.CRM.msdyn_GetPrice
@@ -380,43 +344,23 @@ actions:
      description: "For internal use only."
    - type: Microsoft.Dynamics.CRM.msdyn_GetProjectCoparticipation
      description: "For internal use only."
-   - type: Microsoft.Dynamics.CRM.msdyn_GetProjectCurrencies
-     description: "For internal use only."
-   - type: Microsoft.Dynamics.CRM.msdyn_GetProjectDetails
-     description: "For internal use only."
    - type: Microsoft.Dynamics.CRM.msdyn_GetProjectMapForContractLine
      description: "For internal use only."
    - type: Microsoft.Dynamics.CRM.msdyn_GetProjectMapForQuoteLine
      description: "For internal use only."
    - type: Microsoft.Dynamics.CRM.msdyn_GetProjects
      description: "For internal use only."
-   - type: Microsoft.Dynamics.CRM.msdyn_GetProjectsForContract
-     description: "For internal use only."
    - type: Microsoft.Dynamics.CRM.msdyn_GetProjectsForQuote
-     description: "For internal use only."
-   - type: Microsoft.Dynamics.CRM.msdyn_GetProjectTaskCategories
      description: "For internal use only."
    - type: Microsoft.Dynamics.CRM.msdyn_GetProposedResources
      description: "For internal use only."
    - type: Microsoft.Dynamics.CRM.msdyn_GetQuoteLineChargeability
-     description: "For internal use only."
-   - type: Microsoft.Dynamics.CRM.msdyn_GetResourceAvailability
-     description: "For internal use only."
-   - type: Microsoft.Dynamics.CRM.msdyn_GetResourceAvailabilitySummary
-     description: "For internal use only."
-   - type: Microsoft.Dynamics.CRM.msdyn_GetResourceBookingByProject
-     description: "For internal use only."
-   - type: Microsoft.Dynamics.CRM.msdyn_GetResourceDemandTimeLine
-     description: "For internal use only."
-   - type: Microsoft.Dynamics.CRM.msdyn_GetTimelineData
      description: "For internal use only."
    - type: Microsoft.Dynamics.CRM.msdyn_GetTransactionUnitPrices
      description: "For internal use only."
    - type: Microsoft.Dynamics.CRM.msdyn_GetUserTimeZoneName
      description: "For internal use only."
    - type: Microsoft.Dynamics.CRM.msdyn_IndentWBSTask
-     description: "For internal use only."
-   - type: Microsoft.Dynamics.CRM.msdyn_InvoicePaid
      description: "For internal use only."
    - type: Microsoft.Dynamics.CRM.msdyn_InvoiceRecalculate
      description: "For internal use only."
@@ -426,19 +370,11 @@ actions:
      description: "For internal use only."
    - type: Microsoft.Dynamics.CRM.msdyn_LoadFactTableEstimate
      description: "For internal use only."
-   - type: Microsoft.Dynamics.CRM.msdyn_LogFindWorkEvent
-     description: "For internal use only."
    - type: Microsoft.Dynamics.CRM.msdyn_MarkIntegrationJobAsFailedAsync
-     description: "For internal use only."
-   - type: Microsoft.Dynamics.CRM.msdyn_MoveDownWBSTask
      description: "For internal use only."
    - type: Microsoft.Dynamics.CRM.msdyn_MoveProject
      description: "For internal use only."
    - type: Microsoft.Dynamics.CRM.msdyn_MoveUpWBSTask
-     description: "For internal use only."
-   - type: Microsoft.Dynamics.CRM.msdyn_MSProject_ExportToProject
-     description: "For internal use only."
-   - type: Microsoft.Dynamics.CRM.msdyn_MSProject_GetFindResourcesURL
      description: "For internal use only."
    - type: Microsoft.Dynamics.CRM.msdyn_MSProject_LinkToProject
      description: "For internal use only."
@@ -448,21 +384,11 @@ actions:
      description: "For internal use only."
    - type: Microsoft.Dynamics.CRM.msdyn_MSProject_ReadProjectTeamMembers
      description: "For internal use only."
-   - type: Microsoft.Dynamics.CRM.msdyn_MSProject_UnlinkFromProject
-     description: "For internal use only."
-   - type: Microsoft.Dynamics.CRM.msdyn_NewInvoiceContract
-     description: "For internal use only."
    - type: Microsoft.Dynamics.CRM.msdyn_OutdentWBSTask
      description: "For internal use only."
    - type: Microsoft.Dynamics.CRM.msdyn_PostInvoice
      description: "For internal use only."
    - type: Microsoft.Dynamics.CRM.msdyn_PostJournal
-     description: "For internal use only."
-   - type: Microsoft.Dynamics.CRM.msdyn_ProjectTeamMemberSignUpProcess
-     description: "For internal use only."
-   - type: Microsoft.Dynamics.CRM.msdyn_ProjectTeamMemberSignupprocessaccept
-     description: ""
-   - type: Microsoft.Dynamics.CRM.msdyn_ProjectTeamUpdateMembershipStatus
      description: "For internal use only."
    - type: Microsoft.Dynamics.CRM.msdyn_ReadEstimateLines
      description: "For internal use only."
@@ -470,51 +396,21 @@ actions:
      description: "For internal use only."
    - type: Microsoft.Dynamics.CRM.msdyn_RecommendWork
      description: "For internal use only."
-   - type: Microsoft.Dynamics.CRM.msdyn_RejectProposedBooking
-     description: "For internal use only."
-   - type: Microsoft.Dynamics.CRM.msdyn_ResAssignResourcesForTask
-     description: "For internal use only."
-   - type: Microsoft.Dynamics.CRM.msdyn_ResGetResourceDetail
-     description: "For internal use only."
    - type: Microsoft.Dynamics.CRM.msdyn_ResourceAssignmentDetailUpdate
      description: "For internal use only."
-   - type: Microsoft.Dynamics.CRM.msdyn_ResourceReservationCancel
-     description: "For internal use only."
-   - type: Microsoft.Dynamics.CRM.msdyn_ResourceSubstitution
-     description: "For internal use only."
-   - type: Microsoft.Dynamics.CRM.msdyn_ResourceUtilization
-     description: "For internal use only."
-   - type: Microsoft.Dynamics.CRM.msdyn_ResourceUtilizationChart
-     description: "For internal use only."
-   - type: Microsoft.Dynamics.CRM.msdyn_SaveProjectLineTasks
-     description: "For internal use only."
    - type: Microsoft.Dynamics.CRM.msdyn_SetDefaultRole
-     description: "For internal use only."
-   - type: Microsoft.Dynamics.CRM.msdyn_SubmitCategoriesAndPriceLists
-     description: "For internal use only."
-   - type: Microsoft.Dynamics.CRM.msdyn_SubmitRolesAndPriceLists
      description: "For internal use only."
    - type: Microsoft.Dynamics.CRM.msdyn_TimeEntriesApprove
      description: "For internal use only."
    - type: Microsoft.Dynamics.CRM.msdyn_TimeEntriesCopyPaste
      description: "For internal use only."
-   - type: Microsoft.Dynamics.CRM.msdyn_TimeEntriesPaste
-     description: "For internal use only."
    - type: Microsoft.Dynamics.CRM.msdyn_TimeEntriesPendingApproval
-     description: "For internal use only."
-   - type: Microsoft.Dynamics.CRM.msdyn_TimeEntriesRecall
      description: "For internal use only."
    - type: Microsoft.Dynamics.CRM.msdyn_TimeEntriesReject
      description: "For internal use only."
    - type: Microsoft.Dynamics.CRM.msdyn_TimeEntriesSubmit
      description: "For internal use only."
    - type: Microsoft.Dynamics.CRM.msdyn_UpdateAllEstimatesForProject
-     description: "For internal use only."
-   - type: Microsoft.Dynamics.CRM.msdyn_UpdateChangedSkills
-     description: "For internal use only."
-   - type: Microsoft.Dynamics.CRM.msdyn_UpdateEffortContour
-     description: "For internal use only."
-   - type: Microsoft.Dynamics.CRM.msdyn_UpdateEstimateLineDetails
      description: "For internal use only."
    - type: Microsoft.Dynamics.CRM.msdyn_UpdateEstimateLines
      description: "For internal use only."
@@ -526,8 +422,8 @@ actions:
      description: "For internal use only."
 # This solution has no remarks.
 href_see_also:
-- text: "Use the Microsoft Dynamics 365 Customer Engagement Web API"
-  href: "https://docs.microsoft.com/dynamics365/customer-engagement/developer/use-microsoft-dynamics-365-web-api"
+- text: "Use the Common Data Service Web API"
+  href: "https://docs.microsoft.com/powerapps/developer/common-data-service/webapi/overview"
 xref_see_also:
 - Microsoft.Dynamics.CRM.EntityTypeIndex
 - Microsoft.Dynamics.CRM.ActionIndex

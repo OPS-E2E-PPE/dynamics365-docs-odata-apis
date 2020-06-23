@@ -3,17 +3,15 @@ uid: Microsoft.Dynamics.CRM.OptionMetadata
 name: "OptionMetadata"
 type: complextype
 metadata: 
-  title: "Microsoft Dynamics 365 Customer Engagement OptionMetadata ComplexType Reference | MicrosoftDocs"
-  ms.date: "03/20/2018"
+  title: "Common Data Service and Dynamics 365 Customer Engagement OptionMetadata ComplexType Reference | MicrosoftDocs"
+  ms.date: "05/03/2020"
   ms.service: "crm-online"
   ms.topic: "reference"
-  applies_to: 
-    - "Dynamics 365 (online)"
   ms.assetid: b9af4ea3-6e65-4100-8a99-4a3edf92158f
-  author: "jimdaly"
-  ms.author: "jdaly"
-  manager: "jdaly"
-  meta-description: "Reference information about the Dynamics 365 Customer Engagement Web API OptionMetadata ComplexType."
+  author: "KumarVivek"
+  ms.author: "kvivek"
+  manager: "Annbe"
+  meta-description: "Reference information about the Web API OptionMetadata ComplexType."
 namespace: Microsoft.Dynamics.CRM
 # This complex type doesn't inherit from another complextype.
 description: "Contains metadata representing an option within an Option set." 
@@ -56,6 +54,12 @@ properties:
     unicode: false
     description: ""
     iscollection: false
+  - name: ParentValues
+    type: Edm.Int32
+    nullable: false
+    unicode: true
+    description: ""
+    iscollection: true
   - name: MetadataId
     type: Edm.Guid
     nullable: true
@@ -78,10 +82,16 @@ usedby:
     used_as: Property
   - name: Microsoft.Dynamics.CRM.OptionSetMetadata
     used_as: Property
+  - name: Microsoft.Dynamics.CRM.ComplexBooleanOptionSetMetadata
+    used_as: Property
+  - name: Microsoft.Dynamics.CRM.ComplexBooleanOptionSetMetadata
+    used_as: Property
+  - name: Microsoft.Dynamics.CRM.ComplexOptionSetMetadata
+    used_as: Property
 # This complex type has no remarks.
 href_see_also:
-- text: "Use the Microsoft Dynamics 365 Customer Engagement Web API"
-  href: "https://docs.microsoft.com/dynamics365/customer-engagement/developer/use-microsoft-dynamics-365-web-api"
+- text: "Use the Common Data Service Web API"
+  href: "https://docs.microsoft.com/powerapps/developer/common-data-service/webapi/overview"
 xref_see_also:
 - Microsoft.Dynamics.CRM.EntityTypeIndex
 - Microsoft.Dynamics.CRM.ActionIndex

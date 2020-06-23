@@ -3,17 +3,15 @@ uid: Microsoft.Dynamics.CRM.usersettings
 name: "usersettings"
 type: entitytype
 metadata: 
-  title: "Microsoft Dynamics 365 Customer Engagement usersettings EntityType Reference | MicrosoftDocs"
-  ms.date: "03/20/2018"
+  title: "Common Data Service and Dynamics 365 Customer Engagement usersettings EntityType Reference | MicrosoftDocs"
+  ms.date: "05/03/2020"
   ms.service: "crm-online"
   ms.topic: "reference"
-  applies_to: 
-  - "Dynamics 365 (online)"
   ms.assetid: f93e4d4e-9827-4033-9659-b84232acbcb8
-  author: "jimdaly"
-  ms.author: "jdaly"
-  manager: "jdaly"
-  meta-description: "Reference information about the Dynamics 365 Customer Engagement usersettings entitytype."
+  author: "KumarVivek"
+  ms.author: "kvivek"
+  manager: "Annbe"
+  meta-description: "Reference information about the usersettings entitytype."
 description: "User's preferred settings."
 header:
   entity_set_path: "[organization URI]/api/data/v9.0/usersettingscollection"
@@ -44,6 +42,12 @@ properties:
       type: Edm.String
       display_name: ""
       description: "AM designator to use in Microsoft Dynamics 365."
+      iscomputed: false
+      isreadonly: false
+    - name: autocaptureuserstatus
+      type: Edm.Int32
+      display_name: ""
+      description: "Set user status for ADC Suggestions"
       iscomputed: false
       isreadonly: false
     - name: autocreatecontactonpromote
@@ -230,6 +234,8 @@ properties:
           label: "Email messages from Dynamics 365 Leads, Contacts and Accounts"
         - value: 3
           label: "Email messages from Dynamics 365 records that are email enabled"
+        - value: 4
+          label: "No email messages"
     - name: isappsforcrmalertdismissed
       type: Edm.Boolean
       display_name: "Show alert for Apps for 365."
@@ -267,6 +273,17 @@ properties:
       type: Edm.Boolean
       display_name: ""
       description: "Indicates if duplicate detection is enabled when going online."
+      iscomputed: false
+      isreadonly: false
+      options:
+        - value: 1
+          label: "Yes"
+        - value: 0
+          label: "No"
+    - name: isemailconversationviewenabled
+      type: Edm.Boolean
+      display_name: ""
+      description: "Enable or disable email conversation view on timeline wall selection."
       iscomputed: false
       isreadonly: false
       options:
@@ -740,8 +757,8 @@ solutions:
     description: "Internal CRM System Solution"
 # This entity has no remarks.
 href_see_also:
-- text: "Use the Microsoft Dynamics 365 Customer Engagement Web API"
-  href: "https://docs.microsoft.com/dynamics365/customer-engagement/developer/use-microsoft-dynamics-365-web-api"
+- text: "Use the Common Data Service Web API"
+  href: "https://docs.microsoft.com/powerapps/developer/common-data-service/webapi/overview"
 xref_see_also:
 - Microsoft.Dynamics.CRM.EntityTypeIndex
 - Microsoft.Dynamics.CRM.ActionIndex

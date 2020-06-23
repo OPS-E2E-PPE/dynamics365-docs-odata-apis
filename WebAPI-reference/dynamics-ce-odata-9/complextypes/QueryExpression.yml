@@ -3,17 +3,15 @@ uid: Microsoft.Dynamics.CRM.QueryExpression
 name: "QueryExpression"
 type: complextype
 metadata: 
-  title: "Microsoft Dynamics 365 Customer Engagement QueryExpression ComplexType Reference | MicrosoftDocs"
-  ms.date: "03/20/2018"
+  title: "Common Data Service and Dynamics 365 Customer Engagement QueryExpression ComplexType Reference | MicrosoftDocs"
+  ms.date: "05/03/2020"
   ms.service: "crm-online"
   ms.topic: "reference"
-  applies_to: 
-    - "Dynamics 365 (online)"
   ms.assetid: 1fafe641-bea4-4033-869c-593539b5a497
-  author: "jimdaly"
-  ms.author: "jdaly"
-  manager: "jdaly"
-  meta-description: "Reference information about the Dynamics 365 Customer Engagement Web API QueryExpression ComplexType."
+  author: "KumarVivek"
+  ms.author: "kvivek"
+  manager: "Annbe"
+  meta-description: "Reference information about the Web API QueryExpression ComplexType."
 namespace: Microsoft.Dynamics.CRM
 header:
   base_type: Microsoft.Dynamics.CRM.QueryBase
@@ -38,6 +36,12 @@ properties:
     nullable: true
     unicode: true
     description: "The number of pages and the number of entity instances per page returned from the query. "
+    iscollection: false
+  - name: QueryHints
+    type: Edm.String
+    nullable: true
+    unicode: false
+    description: "A hint for generated SQL text which affects the query's execution. See https://www.docs.microsoft.com/powerapps/developer/common-data-service/org-service/use-queryexpression-class#use-sql-hints-in-a-query for the list of supported values."
     iscollection: false
   - name: LinkEntities
     type: Microsoft.Dynamics.CRM.LinkEntity
@@ -81,12 +85,14 @@ usedby:
   usedby_items:
   - name: Microsoft.Dynamics.CRM.BulkDelete
     used_as: Parameter
+  - name: Microsoft.Dynamics.CRM.SyncBulkOperation
+    used_as: Parameter
   - name: Microsoft.Dynamics.CRM.FetchXmlToQueryExpressionResponse
     used_as: Property
 # This complex type has no remarks.
 href_see_also:
-- text: "Use the Microsoft Dynamics 365 Customer Engagement Web API"
-  href: "https://docs.microsoft.com/dynamics365/customer-engagement/developer/use-microsoft-dynamics-365-web-api"
+- text: "Use the Common Data Service Web API"
+  href: "https://docs.microsoft.com/powerapps/developer/common-data-service/webapi/overview"
 xref_see_also:
 - Microsoft.Dynamics.CRM.EntityTypeIndex
 - Microsoft.Dynamics.CRM.ActionIndex

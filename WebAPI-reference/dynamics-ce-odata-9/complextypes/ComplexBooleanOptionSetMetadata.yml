@@ -1,0 +1,123 @@
+### YamlMime:OData
+uid: Microsoft.Dynamics.CRM.ComplexBooleanOptionSetMetadata
+name: "ComplexBooleanOptionSetMetadata"
+type: complextype
+metadata: 
+  title: "Common Data Service and Dynamics 365 Customer Engagement ComplexBooleanOptionSetMetadata ComplexType Reference | MicrosoftDocs"
+  ms.date: "05/03/2020"
+  ms.service: "crm-online"
+  ms.topic: "reference"
+  ms.assetid: b95db8f0-524b-4ddc-9404-68507ed1e024
+  author: "KumarVivek"
+  ms.author: "kvivek"
+  manager: "Annbe"
+  meta-description: "Reference information about the Web API ComplexBooleanOptionSetMetadata ComplexType."
+namespace: Microsoft.Dynamics.CRM
+# This complex type doesn't inherit from another complextype.
+description: "" 
+properties:
+  description: "The properties of a complex type contain the structured data of the type."
+  property_items:
+  - name: TrueOption
+    type: Microsoft.Dynamics.CRM.OptionMetadata
+    nullable: true
+    unicode: true
+    description: ""
+    iscollection: false
+  - name: FalseOption
+    type: Microsoft.Dynamics.CRM.OptionMetadata
+    nullable: true
+    unicode: true
+    description: ""
+    iscollection: false
+  - name: Description
+    type: Microsoft.Dynamics.CRM.Label
+    nullable: true
+    unicode: true
+    description: ""
+    iscollection: false
+  - name: DisplayName
+    type: Microsoft.Dynamics.CRM.Label
+    nullable: true
+    unicode: true
+    description: ""
+    iscollection: false
+  - name: IsCustomOptionSet
+    type: Edm.Boolean
+    nullable: true
+    unicode: true
+    description: ""
+    iscollection: false
+  - name: IsGlobal
+    type: Edm.Boolean
+    nullable: true
+    unicode: true
+    description: ""
+    iscollection: false
+  - name: IsManaged
+    type: Edm.Boolean
+    nullable: true
+    unicode: true
+    description: ""
+    iscollection: false
+  - name: IsCustomizable
+    type: Microsoft.Dynamics.CRM.BooleanManagedProperty
+    nullable: true
+    unicode: true
+    description: ""
+    iscollection: false
+  - name: Name
+    type: Edm.String
+    nullable: true
+    unicode: false
+    description: ""
+    iscollection: false
+  - name: ExternalTypeName
+    type: Edm.String
+    nullable: true
+    unicode: false
+    description: ""
+    iscollection: false
+  - name: OptionSetType
+    type: Microsoft.Dynamics.CRM.OptionSetType
+    nullable: true
+    unicode: true
+    description: ""
+    iscollection: false
+  - name: IntroducedVersion
+    type: Edm.String
+    nullable: true
+    unicode: false
+    description: ""
+    iscollection: false
+  - name: MetadataId
+    type: Edm.Guid
+    nullable: true
+    unicode: true
+    description: ""
+    iscollection: false
+  - name: HasChanged
+    type: Edm.Boolean
+    nullable: true
+    unicode: true
+    description: ""
+    iscollection: false
+# This complex type doesn't have any navigation properties.
+usedby:
+  description: "The following use the ComplexBooleanOptionSetMetadata ComplexType."
+  usedby_items:
+  - name: Microsoft.Dynamics.CRM.ComplexBooleanAttributeMetadata
+    used_as: Property
+# This complex type has no remarks.
+href_see_also:
+- text: "Use the Common Data Service Web API"
+  href: "https://docs.microsoft.com/powerapps/developer/common-data-service/webapi/overview"
+xref_see_also:
+- Microsoft.Dynamics.CRM.EntityTypeIndex
+- Microsoft.Dynamics.CRM.ActionIndex
+- Microsoft.Dynamics.CRM.FunctionIndex
+- Microsoft.Dynamics.CRM.QueryFunctionIndex
+- Microsoft.Dynamics.CRM.ComplexTypeIndex
+- Microsoft.Dynamics.CRM.EnumTypeIndex
+- Microsoft.Dynamics.CRM.MetadataEntityTypeIndex
+- Microsoft.Dynamics.CRM.SolutionIndex

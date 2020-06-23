@@ -1,0 +1,41 @@
+### YamlMime:OData
+uid: Microsoft.Dynamics.CRM.AutoDataCapture
+name: "AutoDataCapture"
+type: solution
+metadata: 
+  title: "Common Data Service and Dynamics 365 Customer Engagement AutoDataCapture Solution Reference | MicrosoftDocs"
+  ms.date: "05/03/2020"
+  ms.service: "crm-online"
+  ms.topic: "reference"
+  ms.assetid: f3304004-4a83-41ec-86ce-98e8c295357f
+  author: "KumarVivek"
+  ms.author: "kvivek"
+  manager: "Annbe"
+  meta-description: "Reference information about the Dynamics 365 Customer Engagement AutoDataCapture Solution."
+namespace: Microsoft.Dynamics.CRM
+header:
+# This solution has no description.
+ unique_name: AutoDataCapture
+ version: "9.0.2.64"
+ customization_prefix: msdyn
+entities:
+  description: "The following entities are included in this solution."
+  entity_items:
+   - type: Microsoft.Dynamics.CRM.actioncard
+     description: "Action card entity to show action cards."
+   - type: Microsoft.Dynamics.CRM.recurringappointmentmaster
+     description: "The Master appointment of a recurring appointment series."
+# This solution includes no actions.
+# This solution has no remarks.
+href_see_also:
+- text: "Use the Common Data Service Web API"
+  href: "https://docs.microsoft.com/powerapps/developer/common-data-service/webapi/overview"
+xref_see_also:
+- Microsoft.Dynamics.CRM.EntityTypeIndex
+- Microsoft.Dynamics.CRM.ActionIndex
+- Microsoft.Dynamics.CRM.FunctionIndex
+- Microsoft.Dynamics.CRM.QueryFunctionIndex
+- Microsoft.Dynamics.CRM.ComplexTypeIndex
+- Microsoft.Dynamics.CRM.EnumTypeIndex
+- Microsoft.Dynamics.CRM.MetadataEntityTypeIndex
+- Microsoft.Dynamics.CRM.SolutionIndex

@@ -3,17 +3,15 @@ uid: Microsoft.Dynamics.CRM.audit
 name: "audit"
 type: entitytype
 metadata: 
-  title: "Microsoft Dynamics 365 Customer Engagement audit EntityType Reference | MicrosoftDocs"
-  ms.date: "03/20/2018"
+  title: "Common Data Service and Dynamics 365 Customer Engagement audit EntityType Reference | MicrosoftDocs"
+  ms.date: "05/03/2020"
   ms.service: "crm-online"
   ms.topic: "reference"
-  applies_to: 
-  - "Dynamics 365 (online)"
   ms.assetid: d67082f3-7351-4401-a8dd-f60c76cc686d
-  author: "jimdaly"
-  ms.author: "jdaly"
-  manager: "jdaly"
-  meta-description: "Reference information about the Dynamics 365 Customer Engagement audit entitytype."
+  author: "KumarVivek"
+  ms.author: "kvivek"
+  manager: "Annbe"
+  meta-description: "Reference information about the audit entitytype."
 description: "Track changes to records for analysis, record keeping, and compliance."
 header:
   entity_set_path: "[organization URI]/api/data/v9.0/audits"
@@ -200,6 +198,12 @@ properties:
       description: "Date and time when the audit record was created."
       iscomputed: false
       isreadonly: true
+    - name: objecttypecode
+      type: Edm.String
+      display_name: "Entity"
+      description: "Unique identifier of the entity that is being audited"
+      iscomputed: false
+      isreadonly: true
     - name: operation
       type: Edm.Int32
       display_name: "Operation"
@@ -275,8 +279,8 @@ solutions:
     description: "Internal CRM System Solution"
 # This entity has no remarks.
 href_see_also:
-- text: "Use the Microsoft Dynamics 365 Customer Engagement Web API"
-  href: "https://docs.microsoft.com/dynamics365/customer-engagement/developer/use-microsoft-dynamics-365-web-api"
+- text: "Use the Common Data Service Web API"
+  href: "https://docs.microsoft.com/powerapps/developer/common-data-service/webapi/overview"
 xref_see_also:
 - Microsoft.Dynamics.CRM.EntityTypeIndex
 - Microsoft.Dynamics.CRM.ActionIndex

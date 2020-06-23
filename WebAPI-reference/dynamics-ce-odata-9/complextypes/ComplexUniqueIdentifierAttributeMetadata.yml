@@ -1,0 +1,34 @@
+### YamlMime:OData
+uid: Microsoft.Dynamics.CRM.ComplexUniqueIdentifierAttributeMetadata
+name: "ComplexUniqueIdentifierAttributeMetadata"
+type: complextype
+metadata: 
+  title: "Common Data Service and Dynamics 365 Customer Engagement ComplexUniqueIdentifierAttributeMetadata ComplexType Reference | MicrosoftDocs"
+  ms.date: "05/03/2020"
+  ms.service: "crm-online"
+  ms.topic: "reference"
+  ms.assetid: e061657d-34ba-4ce5-83ce-639fd97ab49f
+  author: "KumarVivek"
+  ms.author: "kvivek"
+  manager: "Annbe"
+  meta-description: "Reference information about the Web API ComplexUniqueIdentifierAttributeMetadata ComplexType."
+namespace: Microsoft.Dynamics.CRM
+header:
+  base_type: Microsoft.Dynamics.CRM.ComplexAttributeMetadata
+description: "" 
+# This complex type doesn't have any properties.
+# This complex type doesn't have any navigation properties.
+
+# This complex type has no remarks.
+href_see_also:
+- text: "Use the Common Data Service Web API"
+  href: "https://docs.microsoft.com/powerapps/developer/common-data-service/webapi/overview"
+xref_see_also:
+- Microsoft.Dynamics.CRM.EntityTypeIndex
+- Microsoft.Dynamics.CRM.ActionIndex
+- Microsoft.Dynamics.CRM.FunctionIndex
+- Microsoft.Dynamics.CRM.QueryFunctionIndex
+- Microsoft.Dynamics.CRM.ComplexTypeIndex
+- Microsoft.Dynamics.CRM.EnumTypeIndex
+- Microsoft.Dynamics.CRM.MetadataEntityTypeIndex
+- Microsoft.Dynamics.CRM.SolutionIndex

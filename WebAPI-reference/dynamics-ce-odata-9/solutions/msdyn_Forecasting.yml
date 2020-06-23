@@ -1,0 +1,39 @@
+### YamlMime:OData
+uid: Microsoft.Dynamics.CRM.msdyn_Forecasting
+name: "Forecasting"
+type: solution
+metadata: 
+  title: "Common Data Service and Dynamics 365 Customer Engagement Forecasting Solution Reference | MicrosoftDocs"
+  ms.date: "05/03/2020"
+  ms.service: "crm-online"
+  ms.topic: "reference"
+  ms.assetid: 4c87a75c-598d-4e8c-bf89-c891ac5ac5f6
+  author: "KumarVivek"
+  ms.author: "kvivek"
+  manager: "Annbe"
+  meta-description: "Reference information about the Dynamics 365 Customer Engagement Forecasting Solution."
+namespace: Microsoft.Dynamics.CRM
+header:
+ description: "An extension that helps sales managers and sales people to predict risks in the revenue spotting pipeline."
+ unique_name: msdyn_Forecasting
+ version: "9.0.2001.4240"
+ customization_prefix: msdyn
+entities:
+  description: "The following entities are included in this solution."
+  entity_items:
+   - type: Microsoft.Dynamics.CRM.opportunity
+     description: "Potential revenue-generating event, or sale to an account, which needs to be tracked through a sales process to completion."
+# This solution includes no actions.
+# This solution has no remarks.
+href_see_also:
+- text: "Use the Common Data Service Web API"
+  href: "https://docs.microsoft.com/powerapps/developer/common-data-service/webapi/overview"
+xref_see_also:
+- Microsoft.Dynamics.CRM.EntityTypeIndex
+- Microsoft.Dynamics.CRM.ActionIndex
+- Microsoft.Dynamics.CRM.FunctionIndex
+- Microsoft.Dynamics.CRM.QueryFunctionIndex
+- Microsoft.Dynamics.CRM.ComplexTypeIndex
+- Microsoft.Dynamics.CRM.EnumTypeIndex
+- Microsoft.Dynamics.CRM.MetadataEntityTypeIndex
+- Microsoft.Dynamics.CRM.SolutionIndex

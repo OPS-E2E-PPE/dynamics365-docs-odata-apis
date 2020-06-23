@@ -1,0 +1,44 @@
+### YamlMime:OData
+uid: Microsoft.Dynamics.CRM.EntityCollection
+name: "EntityCollection"
+type: complextype
+metadata: 
+  title: "Common Data Service and Dynamics 365 Customer Engagement EntityCollection ComplexType Reference | MicrosoftDocs"
+  ms.date: "05/03/2020"
+  ms.service: "crm-online"
+  ms.topic: "reference"
+  ms.assetid: 9583d7f5-b508-43fe-98b1-0092b2362e68
+  author: "KumarVivek"
+  ms.author: "kvivek"
+  manager: "Annbe"
+  meta-description: "Reference information about the Web API EntityCollection ComplexType."
+namespace: Microsoft.Dynamics.CRM
+# This complex type doesn't inherit from another complextype.
+description: "" 
+# This complex type doesn't have any properties.
+navigation_properties:
+  description: "The navigation properties of a complex type contain references to an entity type or a collection of entity types."
+  property_items:
+  - name: Items
+    type: mscrm.crmbaseentity
+    nullable: false
+    description: ""
+    iscollection: true
+usedby:
+  description: "The following use the EntityCollection ComplexType."
+  usedby_items:
+  - name: Microsoft.Dynamics.CRM.SubscriptionUpdatedEntityData
+    used_as: Property
+# This complex type has no remarks.
+href_see_also:
+- text: "Use the Common Data Service Web API"
+  href: "https://docs.microsoft.com/powerapps/developer/common-data-service/webapi/overview"
+xref_see_also:
+- Microsoft.Dynamics.CRM.EntityTypeIndex
+- Microsoft.Dynamics.CRM.ActionIndex
+- Microsoft.Dynamics.CRM.FunctionIndex
+- Microsoft.Dynamics.CRM.QueryFunctionIndex
+- Microsoft.Dynamics.CRM.ComplexTypeIndex
+- Microsoft.Dynamics.CRM.EnumTypeIndex
+- Microsoft.Dynamics.CRM.MetadataEntityTypeIndex
+- Microsoft.Dynamics.CRM.SolutionIndex

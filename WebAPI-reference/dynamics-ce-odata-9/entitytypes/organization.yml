@@ -3,17 +3,15 @@ uid: Microsoft.Dynamics.CRM.organization
 name: "organization"
 type: entitytype
 metadata: 
-  title: "Microsoft Dynamics 365 Customer Engagement organization EntityType Reference | MicrosoftDocs"
-  ms.date: "03/20/2018"
+  title: "Common Data Service and Dynamics 365 Customer Engagement organization EntityType Reference | MicrosoftDocs"
+  ms.date: "05/03/2020"
   ms.service: "crm-online"
   ms.topic: "reference"
-  applies_to: 
-  - "Dynamics 365 (online)"
   ms.assetid: 9e191826-8548-4fe6-a631-0227c15d8c99
-  author: "jimdaly"
-  ms.author: "jdaly"
-  manager: "jdaly"
-  meta-description: "Reference information about the Dynamics 365 Customer Engagement organization entitytype."
+  author: "KumarVivek"
+  ms.author: "kvivek"
+  manager: "Annbe"
+  meta-description: "Reference information about the organization entitytype."
 description: "Top level of the Microsoft Dynamics 365 business hierarchy. The organization can be a specific business, holding company, or corporation."
 header:
   entity_set_path: "[organization URI]/api/data/v9.0/organizations"
@@ -93,6 +91,28 @@ properties:
       type: Edm.Boolean
       display_name: "Allow Entity Level Auditing"
       description: "Indicates whether auditing of changes to entity is allowed when no attributes have changed."
+      iscomputed: false
+      isreadonly: false
+      options:
+        - value: 1
+          label: "Yes"
+        - value: 0
+          label: "No"
+    - name: allowlegacyclientexperience
+      type: Edm.Boolean
+      display_name: "Enable access to legacy web client UI"
+      description: "Enable access to legacy web client UI"
+      iscomputed: false
+      isreadonly: false
+      options:
+        - value: 1
+          label: "Yes"
+        - value: 0
+          label: "No"
+    - name: allowlegacydialogsembedding
+      type: Edm.Boolean
+      display_name: "Enable embedding of certain legacy dialogs in Unified Interface browser client"
+      description: "Enable embedding of certain legacy dialogs in Unified Interface browser client"
       iscomputed: false
       isreadonly: false
       options:
@@ -194,6 +214,23 @@ properties:
           label: "Yes"
         - value: 0
           label: "No"
+    - name: appointmentricheditorexperience
+      type: Edm.Boolean
+      display_name: "Enable Rich Editing Experience for Appointment"
+      description: "Information on whether rich editing experience for Appointment is enabled."
+      iscomputed: false
+      isreadonly: false
+      options:
+        - value: 1
+          label: "Yes"
+        - value: 0
+          label: "No"
+    - name: auditretentionperiod
+      type: Edm.Int32
+      display_name: "Audit Retention Period Settings"
+      description: "Audit Retention Period settings stored in Organization Database."
+      iscomputed: false
+      isreadonly: false
     - name: autoapplydefaultoncasecreate
       type: Edm.Boolean
       display_name: "Auto Apply Default Entitlement on Case Create"
@@ -274,6 +311,12 @@ properties:
       description: "Prefix used for bulk operation numbering."
       iscomputed: false
       isreadonly: false
+    - name: businesscardoptions
+      type: Edm.String
+      display_name: "Enable New BusinessCardOptions"
+      description: "BusinessCardOptions"
+      iscomputed: false
+      isreadonly: false
     - name: businessclosurecalendarid
       type: Edm.Guid
       display_name: "Business Closure Calendar"
@@ -319,6 +362,12 @@ properties:
       type: Edm.String
       display_name: "Client Feature Set"
       description: "Client Features to be enabled as an XML BLOB."
+      iscomputed: false
+      isreadonly: false
+    - name: contentsecuritypolicyconfiguration
+      type: Edm.String
+      display_name: "Content Security Policy Configuration"
+      description: "Policy configuration for CSP"
       iscomputed: false
       isreadonly: false
     - name: contractprefix
@@ -567,6 +616,28 @@ properties:
           label: "Yes"
         - value: 0
           label: "No"
+    - name: enablelivepersonacarduci
+      type: Edm.Boolean
+      display_name: "Indicates whether the user has enabled or disabled Live Persona Card feature in UCI."
+      description: "Indicates whether the user has enabled or disabled Live Persona Card feature in UCI."
+      iscomputed: false
+      isreadonly: false
+      options:
+        - value: 1
+          label: "Yes"
+        - value: 0
+          label: "No"
+    - name: enablelivepersoncardintegrationinoffice
+      type: Edm.Boolean
+      display_name: "Indicates whether the user has enabled or disabled LivePersonCardIntegration in Office."
+      description: "Indicates whether the user has enabled or disabled LivePersonCardIntegration in Office."
+      iscomputed: false
+      isreadonly: false
+      options:
+        - value: 1
+          label: "Yes"
+        - value: 0
+          label: "No"
     - name: enablelpauthoring
       type: Edm.Boolean
       display_name: "Enable Learning Path Authoring"
@@ -604,6 +675,17 @@ properties:
       type: Edm.Boolean
       display_name: "Enable Smart Matching"
       description: "Use Smart Matching."
+      iscomputed: false
+      isreadonly: false
+      options:
+        - value: 1
+          label: "Yes"
+        - value: 0
+          label: "No"
+    - name: enableunifiedinterfaceshellrefresh
+      type: Edm.Boolean
+      display_name: "Enable site map and commanding update"
+      description: "Enable site map and commanding update"
       iscomputed: false
       isreadonly: false
       options:
@@ -1021,6 +1103,17 @@ properties:
           label: "Yes"
         - value: 0
           label: "No"
+    - name: isallmoneydecimal
+      type: Edm.Boolean
+      display_name: "Set if all money attributes are converted to decimal"
+      description: "Indicates whether all money attributes are converted to decimal."
+      iscomputed: false
+      isreadonly: true
+      options:
+        - value: 1
+          label: "Yes"
+        - value: 0
+          label: "No"
     - name: isappmode
       type: Edm.Boolean
       display_name: "Is Application Mode Enabled"
@@ -1076,6 +1169,17 @@ properties:
           label: "Yes"
         - value: 0
           label: "No"
+    - name: isautodatacapturev2enabled
+      type: Edm.Boolean
+      display_name: "Enable Auto Capture V2 for this Organization"
+      description: "Indicates whether the V2 feature of Auto Capture should be enabled for the organization."
+      iscomputed: false
+      isreadonly: false
+      options:
+        - value: 1
+          label: "Yes"
+        - value: 0
+          label: "No"
     - name: isautosaveenabled
       type: Edm.Boolean
       display_name: "Auto Save Enabled"
@@ -1113,6 +1217,50 @@ properties:
       type: Edm.Boolean
       display_name: "Is Mailing Address Sync Enabled"
       description: "Enable or disable mailing address sync for outlook and exchange."
+      iscomputed: false
+      isreadonly: false
+      options:
+        - value: 1
+          label: "Yes"
+        - value: 0
+          label: "No"
+    - name: iscontentsecuritypolicyenabled
+      type: Edm.Boolean
+      display_name: "Enable Content Security Policy for this organization"
+      description: "Indicates whether Content Security Policy has been enabled for the organization."
+      iscomputed: false
+      isreadonly: false
+      options:
+        - value: 1
+          label: "Yes"
+        - value: 0
+          label: "No"
+    - name: iscontextualemailenabled
+      type: Edm.Boolean
+      display_name: "Indicates whether Contextual email experience is enabled on this organization"
+      description: "Indicates whether Contextual email experience is enabled on this organization"
+      iscomputed: false
+      isreadonly: false
+      options:
+        - value: 1
+          label: "Yes"
+        - value: 0
+          label: "No"
+    - name: iscontextualhelpenabled
+      type: Edm.Boolean
+      display_name: "Enables Contextual Help in UCI"
+      description: "Select to enable Contextual Help in UCI."
+      iscomputed: false
+      isreadonly: false
+      options:
+        - value: 1
+          label: "Yes"
+        - value: 0
+          label: "No"
+    - name: iscustomcontrolsincanvasappsenabled
+      type: Edm.Boolean
+      display_name: "Enable Custom Controls in canvas PowerApps feature for this organization"
+      description: "Indicates whether Custom Controls in canvas PowerApps feature has been enabled for the organization."
       iscomputed: false
       isreadonly: false
       options:
@@ -1318,6 +1466,17 @@ properties:
           label: "Yes"
         - value: 0
           label: "No"
+    - name: isluisenabledford365bot
+      type: Edm.Boolean
+      display_name: "LUIS Consent for Dynamics 365 Bot"
+      description: "Give Consent to use LUIS in Dynamics 365 Bot"
+      iscomputed: false
+      isreadonly: false
+      options:
+        - value: 1
+          label: "Yes"
+        - value: 0
+          label: "No"
     - name: ismailboxforcedunlockingenabled
       type: Edm.Boolean
       display_name: "Is Mailbox Forced Unlocking Enabled"
@@ -1333,6 +1492,17 @@ properties:
       type: Edm.Boolean
       display_name: "Is Mailbox Keep Alive Enabled"
       description: "Enable or disable mailbox keep alive for Server Side Sync."
+      iscomputed: false
+      isreadonly: false
+      options:
+        - value: 1
+          label: "Yes"
+        - value: 0
+          label: "No"
+    - name: ismanualsalesforecastingenabled
+      type: Edm.Boolean
+      display_name: "Enable Manual Sales Forecasting feature for this organization"
+      description: "Indicates whether Manual Sales Forecasting feature has been enabled for the organization."
       iscomputed: false
       isreadonly: false
       options:
@@ -1362,6 +1532,72 @@ properties:
           label: "Yes"
         - value: 0
           label: "No"
+    - name: ismsteamscollaborationenabled
+      type: Edm.Boolean
+      display_name: "Enable Microsoft Teams Collaboration for this organization"
+      description: "Indicates whether Microsoft Teams Collaboration feature has been enabled for the organization."
+      iscomputed: false
+      isreadonly: false
+      options:
+        - value: 1
+          label: "Yes"
+        - value: 0
+          label: "No"
+    - name: ismsteamsenabled
+      type: Edm.Boolean
+      display_name: "Enable Microsoft Teams integration"
+      description: "Indicates whether Microsoft Teams integration has been enabled for the organization."
+      iscomputed: false
+      isreadonly: false
+      options:
+        - value: 1
+          label: "Yes"
+        - value: 0
+          label: "No"
+    - name: ismsteamssettingchangedbyuser
+      type: Edm.Boolean
+      display_name: "Microsoft Teams integration changed by user"
+      description: "Indicates whether the user has enabled or disabled Microsoft Teams integration."
+      iscomputed: false
+      isreadonly: false
+      options:
+        - value: 1
+          label: "Yes"
+        - value: 0
+          label: "No"
+    - name: ismsteamsusersyncenabled
+      type: Edm.Boolean
+      display_name: "Enable Microsoft Teams User Sync for this organization"
+      description: "Indicates whether Microsoft Teams User Sync feature has been enabled for the organization."
+      iscomputed: false
+      isreadonly: false
+      options:
+        - value: 1
+          label: "Yes"
+        - value: 0
+          label: "No"
+    - name: isnewaddproductexperienceenabled
+      type: Edm.Boolean
+      display_name: "Indicates whether new add product experience is enabled in opportunity form"
+      description: "Indicates whether new add product experience is enabled."
+      iscomputed: false
+      isreadonly: false
+      options:
+        - value: 1
+          label: "Yes"
+        - value: 0
+          label: "No"
+    - name: isnotesanalysisenabled
+      type: Edm.Boolean
+      display_name: "Enable Notes Analysis for this Organization"
+      description: "Indicates whether the feature Notes Analysis should be enabled for the organization."
+      iscomputed: false
+      isreadonly: false
+      options:
+        - value: 1
+          label: "Yes"
+        - value: 0
+          label: "No"
     - name: isofficegraphenabled
       type: Edm.Boolean
       display_name: "Enable OfficeGraph for this Organization"
@@ -1377,6 +1613,34 @@ properties:
       type: Edm.Boolean
       display_name: "Enable One Drive for this Organization"
       description: "Indicates whether the feature One Drive should be enabled for the organization."
+      iscomputed: false
+      isreadonly: false
+      options:
+        - value: 1
+          label: "Yes"
+        - value: 0
+          label: "No"
+    - name: ispaienabled
+      type: Edm.Boolean
+      display_name: "Enable PAI feature for this organization"
+      description: "Indicates whether PAI feature has been enabled for the organization."
+      iscomputed: false
+      isreadonly: false
+      options:
+        - value: 1
+          label: "Yes"
+        - value: 0
+          label: "No"
+    - name: ispdfgenerationenabled
+      type: Edm.String
+      display_name: "Enable PDF Generation feature for this organization"
+      description: "Indicates whether PDF Generation feature has been enabled for the organization."
+      iscomputed: false
+      isreadonly: false
+    - name: isplaybookenabled
+      type: Edm.Boolean
+      display_name: "Enable playbook feature for this organization"
+      description: "Indicates whether playbook feature has been enabled for the organization."
       iscomputed: false
       isreadonly: false
       options:
@@ -1428,6 +1692,39 @@ properties:
           label: "Yes"
         - value: 0
           label: "No"
+    - name: ispricelistmandatory
+      type: Edm.Boolean
+      display_name: "Indicates whether PriceList is mandatory for adding existing products to sales entities"
+      description: "Indicates whether PriceList is mandatory for adding existing products to sales entities."
+      iscomputed: false
+      isreadonly: false
+      options:
+        - value: 1
+          label: "Yes"
+        - value: 0
+          label: "No"
+    - name: isquickcreateenabledforopportunityclose
+      type: Edm.Boolean
+      display_name: "Enable quick create form for opportunity close feature for this organization"
+      description: "Select whether to use the standard Out-of-box Opportunity Close experience or opt to for a customized experience."
+      iscomputed: false
+      isreadonly: false
+      options:
+        - value: 1
+          label: "Yes"
+        - value: 0
+          label: "No"
+    - name: isreadauditenabled
+      type: Edm.Boolean
+      display_name: "Is Read Auditing Enabled"
+      description: "Enable or disable auditing of read operations."
+      iscomputed: false
+      isreadonly: false
+      options:
+        - value: 1
+          label: "Yes"
+        - value: 0
+          label: "No"
     - name: isrelationshipinsightsenabled
       type: Edm.Boolean
       display_name: "Enable Relationship Insights for this Organization"
@@ -1443,6 +1740,28 @@ properties:
       type: Edm.Boolean
       display_name: "Resource booking synchronization enabled"
       description: "Indicates if the synchronization of user resource booking with Exchange is enabled at organization level."
+      iscomputed: false
+      isreadonly: false
+      options:
+        - value: 1
+          label: "Yes"
+        - value: 0
+          label: "No"
+    - name: isrichtextnotesenabled
+      type: Edm.Boolean
+      display_name: "Indicates whether rich text editor for notes experience is enabled on this organization"
+      description: "Indicates whether rich text editor for notes experience is enabled on this organization"
+      iscomputed: false
+      isreadonly: false
+      options:
+        - value: 1
+          label: "Yes"
+        - value: 0
+          label: "No"
+    - name: issalesassistantenabled
+      type: Edm.Boolean
+      display_name: "Enable Sales Assistant mobile app"
+      description: "Indicates whether Sales Assistant mobile app has been enabled for the organization."
       iscomputed: false
       isreadonly: false
       options:
@@ -1476,6 +1795,17 @@ properties:
       type: Edm.Boolean
       display_name: "Is User Access Auditing Enabled"
       description: "Enable or disable auditing of user access."
+      iscomputed: false
+      isreadonly: false
+      options:
+        - value: 1
+          label: "Yes"
+        - value: 0
+          label: "No"
+    - name: iswriteinproductsallowed
+      type: Edm.Boolean
+      display_name: "Indicates whether Write-in Products can be added to Opportunity/Quote/Order/Invoice or not"
+      description: "Indicates whether Write-in Products can be added to Opportunity/Quote/Order/Invoice or not."
       iscomputed: false
       isreadonly: false
       options:
@@ -1635,8 +1965,8 @@ properties:
       isreadonly: true
     - name: microsoftflowenvironment
       type: Edm.String
-      display_name: "Environment selected for Integration with Microsoft Flow"
-      description: "Environment selected for Integration with Microsoft Flow"
+      display_name: "(Deprecated) Environment selected for Integration with Microsoft Flow"
+      description: "(Deprecated) Environment selected for Integration with Microsoft Flow"
       iscomputed: false
       isreadonly: false
     - name: minaddressbooksyncinterval
@@ -1817,6 +2147,17 @@ properties:
           label: "Yes"
         - value: 0
           label: "No"
+    - name: paipreviewscenarioenabled
+      type: Edm.Boolean
+      display_name: "Display Preview Feature for this organization"
+      description: "Indicates whether Preview feature has been enabled for the organization."
+      iscomputed: false
+      isreadonly: false
+      options:
+        - value: 1
+          label: "Yes"
+        - value: 0
+          label: "No"
     - name: parsedtablecolumnprefix
       type: Edm.String
       display_name: "Parsed Table Column Prefix"
@@ -1924,6 +2265,12 @@ properties:
           label: "Yes"
         - value: 0
           label: "No"
+    - name: qualifyleadadditionaloptions
+      type: Edm.String
+      display_name: "Enable New Qualify Lead Experience with configuration MDD"
+      description: "Indicates whether prompt should be shown for new Qualify Lead Experience"
+      iscomputed: false
+      isreadonly: false
     - name: quickfindrecordlimitenabled
       type: Edm.Boolean
       display_name: "Quick Find Record Limit Enabled"
@@ -2059,12 +2406,34 @@ properties:
       description: "Unique identifier of the sample data import job."
       iscomputed: false
       isreadonly: false
+    - name: schedulingengine
+      type: Edm.Int32
+      display_name: "Scheduling engine for Appointments and Service Activities"
+      description: "Scheduling engine for Appointments and Service Activities"
+      iscomputed: false
+      isreadonly: false
+      options:
+        - value: 0
+          label: "Legacy Scheduling Engine"
+        - value: 192350000
+          label: "Universal Resource Scheduling"
     - name: schemanameprefix
       type: Edm.String
       display_name: "Customization Name Prefix"
       description: "Prefix used for custom entities and attributes."
       iscomputed: false
       isreadonly: false
+    - name: sendbulkemailinuci
+      type: Edm.Boolean
+      display_name: "Send Bulk Email in UCI"
+      description: "Indicates whether Send Bulk Email in UCI is enabled for the org."
+      iscomputed: false
+      isreadonly: false
+      options:
+        - value: 1
+          label: "Yes"
+        - value: 0
+          label: "No"
     - name: servestaticresourcesfromazurecdn
       type: Edm.Boolean
       display_name: "Serve Static Content From CDN"
@@ -2229,6 +2598,18 @@ properties:
           label: "Yes"
         - value: 0
           label: "No"
+    - name: syncbulkoperationbatchsize
+      type: Edm.Int32
+      display_name: "Number of records to update per operation in Sync Bulk Pause/Resume/Cancel"
+      description: "Number of records to update per operation in Sync Bulk Pause/Resume/Cancel"
+      iscomputed: false
+      isreadonly: false
+    - name: syncbulkoperationmaxlimit
+      type: Edm.Int32
+      display_name: "Max total number of records to update in database for Sync Bulk Pause/Resume/Cancel"
+      description: "Max total number of records to update in database for Sync Bulk Pause/Resume/Cancel"
+      iscomputed: false
+      isreadonly: false
     - name: syncoptinselection
       type: Edm.Boolean
       display_name: "Enable dynamics 365 azure sync framework for this organization."
@@ -2329,6 +2710,12 @@ properties:
       description: "Token key."
       iscomputed: false
       isreadonly: false
+    - name: tracelogmaximumageindays
+      type: Edm.Int32
+      display_name: "Tracelog record maximum age in days"
+      description: "Tracelog record maximum age in days"
+      iscomputed: false
+      isreadonly: false
     - name: trackingprefix
       type: Edm.String
       display_name: "Tracking Prefix"
@@ -2390,6 +2777,17 @@ properties:
       type: Edm.Boolean
       display_name: "Use position hierarchy"
       description: "Use position hierarchy"
+      iscomputed: false
+      isreadonly: false
+      options:
+        - value: 1
+          label: "Yes"
+        - value: 0
+          label: "No"
+    - name: usequickfindviewforgridsearch
+      type: Edm.Boolean
+      display_name: "Use Quick Find view when searching in grids"
+      description: "Indicates whether searching in a grid should use the Quick Find view for the entity."
       iscomputed: false
       isreadonly: false
       options:
@@ -2680,6 +3078,9 @@ collection_valued_navigation_properties:
   - name: organization_emailserverprofile
     type: Microsoft.Dynamics.CRM.emailserverprofile
     partner: organizationid
+  - name: organization_entityanalyticsconfig
+    type: Microsoft.Dynamics.CRM.entityanalyticsconfig
+    partner: organizationid
   - name: organization_equipment
     type: Microsoft.Dynamics.CRM.equipment
     partner: organizationid
@@ -2707,17 +3108,8 @@ collection_valued_navigation_properties:
   - name: Organization_MailboxTrackingFolder
     type: Microsoft.Dynamics.CRM.mailboxtrackingfolder
     partner: organizationid
-  - name: organization_mbs_pluginprofile
-    type: Microsoft.Dynamics.CRM.mbs_pluginprofile
-    partner: organizationid
   - name: organization_metric
     type: Microsoft.Dynamics.CRM.metric
-    partner: organizationid
-  - name: organization_ms_newsitem
-    type: Microsoft.Dynamics.CRM.ms_newsitem
-    partner: organizationid
-  - name: organization_ms_satori
-    type: Microsoft.Dynamics.CRM.ms_satori
     partner: organizationid
   - name: organization_msdyn_batchjob
     type: Microsoft.Dynamics.CRM.msdyn_batchjob
@@ -2796,6 +3188,9 @@ collection_valued_navigation_properties:
     partner: organizationid
   - name: organization_msdyn_schedulingparameter
     type: Microsoft.Dynamics.CRM.msdyn_schedulingparameter
+    partner: organizationid
+  - name: organization_msdyn_sikeyvalueconfig
+    type: Microsoft.Dynamics.CRM.msdyn_sikeyvalueconfig
     partner: organizationid
   - name: organization_msdyn_transactioncategory
     type: Microsoft.Dynamics.CRM.msdyn_transactioncategory
@@ -2982,12 +3377,18 @@ collection_valued_navigation_properties:
 solutions:
   description: "The following solutions include the organization entity type."
   solution_items:
+  - type: Microsoft.Dynamics.CRM.MicrosoftDynamicsScheduling
+    description: "The Universal Resource Scheduling solution provides the infrastructure to express resource requirements for any entity in the system and help staff those requirements with resources based on the availability and applicability of the resource for the requirement."
+  - type: Microsoft.Dynamics.CRM.msdynce_Activities
+    description: "Dynamics 365 workload for activities."
+  - type: Microsoft.Dynamics.CRM.msdynce_SchedulingPatch
+    description: "Dynamics 365 workload for scheduling."
   - type: Microsoft.Dynamics.CRM.System
     description: "Internal CRM System Solution"
 # This entity has no remarks.
 href_see_also:
-- text: "Use the Microsoft Dynamics 365 Customer Engagement Web API"
-  href: "https://docs.microsoft.com/dynamics365/customer-engagement/developer/use-microsoft-dynamics-365-web-api"
+- text: "Use the Common Data Service Web API"
+  href: "https://docs.microsoft.com/powerapps/developer/common-data-service/webapi/overview"
 xref_see_also:
 - Microsoft.Dynamics.CRM.EntityTypeIndex
 - Microsoft.Dynamics.CRM.ActionIndex

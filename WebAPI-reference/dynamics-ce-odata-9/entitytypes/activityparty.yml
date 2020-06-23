@@ -3,17 +3,15 @@ uid: Microsoft.Dynamics.CRM.activityparty
 name: "activityparty"
 type: entitytype
 metadata: 
-  title: "Microsoft Dynamics 365 Customer Engagement activityparty EntityType Reference | MicrosoftDocs"
-  ms.date: "03/20/2018"
+  title: "Common Data Service and Dynamics 365 Customer Engagement activityparty EntityType Reference | MicrosoftDocs"
+  ms.date: "05/03/2020"
   ms.service: "crm-online"
   ms.topic: "reference"
-  applies_to: 
-  - "Dynamics 365 (online)"
   ms.assetid: c505dbea-388a-4925-a15b-b7b740089109
-  author: "jimdaly"
-  ms.author: "jdaly"
-  manager: "jdaly"
-  meta-description: "Reference information about the Dynamics 365 Customer Engagement activityparty entitytype."
+  author: "KumarVivek"
+  ms.author: "kvivek"
+  manager: "Annbe"
+  meta-description: "Reference information about the activityparty entitytype."
 description: "Person or group associated with an activity. An activity can have multiple activity parties."
 header:
   entity_set_path: "[organization URI]/api/data/v9.0/activityparties"
@@ -187,6 +185,11 @@ lookup_properties:
     description: "Unique identifier of the user or team who owns the activity_party."
   - name: _partyid_value
     single_valued_navigation_property:
+    - partyid_systemuser
+    - partyid_contact
+    - partyid_knowledgearticle
+    - partyid_account
+    - partyid_queue
     - partyid_lead
     - partyid_campaign
     - partyid_contract
@@ -197,11 +200,6 @@ lookup_properties:
     - partyid_opportunity
     - partyid_quote
     - partyid_salesorder
-    - partyid_queue
-    - partyid_systemuser
-    - partyid_knowledgearticle
-    - partyid_account
-    - partyid_contact
     description: "Unique identifier of the party associated with the activity."
   - name: _resourcespecid_value
     single_valued_navigation_property:
@@ -335,8 +333,8 @@ solutions:
     description: "Internal CRM System Solution"
 # This entity has no remarks.
 href_see_also:
-- text: "Use the Microsoft Dynamics 365 Customer Engagement Web API"
-  href: "https://docs.microsoft.com/dynamics365/customer-engagement/developer/use-microsoft-dynamics-365-web-api"
+- text: "Use the Common Data Service Web API"
+  href: "https://docs.microsoft.com/powerapps/developer/common-data-service/webapi/overview"
 xref_see_also:
 - Microsoft.Dynamics.CRM.EntityTypeIndex
 - Microsoft.Dynamics.CRM.ActionIndex

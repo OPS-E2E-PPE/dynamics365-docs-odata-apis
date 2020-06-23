@@ -3,17 +3,15 @@ uid: Microsoft.Dynamics.CRM.msdyn_orderlineresourcecategory
 name: "msdyn_orderlineresourcecategory"
 type: entitytype
 metadata: 
-  title: "Microsoft Dynamics 365 Customer Engagement msdyn_orderlineresourcecategory EntityType Reference | MicrosoftDocs"
-  ms.date: "03/20/2018"
+  title: "Common Data Service and Dynamics 365 Customer Engagement msdyn_orderlineresourcecategory EntityType Reference | MicrosoftDocs"
+  ms.date: "05/03/2020"
   ms.service: "crm-online"
   ms.topic: "reference"
-  applies_to: 
-  - "Dynamics 365 (online)"
   ms.assetid: dff1f79b-f758-4058-8e60-a23caecdce31
-  author: "jimdaly"
-  ms.author: "jdaly"
-  manager: "jdaly"
-  meta-description: "Reference information about the Dynamics 365 Customer Engagement msdyn_orderlineresourcecategory entitytype."
+  author: "KumarVivek"
+  ms.author: "kvivek"
+  manager: "Annbe"
+  meta-description: "Reference information about the msdyn_orderlineresourcecategory entitytype."
 description: "List of roles that will be considered as costs when computing the profit of a project contract line."
 header:
   entity_set_path: "[organization URI]/api/data/v9.0/msdyn_orderlineresourcecategories"
@@ -65,8 +63,8 @@ properties:
           label: "Not Available"
     - name: msdyn_contractline
       type: Edm.String
-      display_name: "Project Contract Line"
-      description: "Project contract line corresponding to this record."
+      display_name: "(Deprecated) Project Contract Line"
+      description: "(Deprecated) Project contract line corresponding to this record."
       iscomputed: false
       isreadonly: false
     - name: msdyn_description
@@ -92,8 +90,6 @@ properties:
           label: "Commission"
         - value: 690970001
           label: "Additional"
-        - value: 690970002
-          label: "Tax"
         - value: 192350000
           label: "Time"
         - value: 192350001
@@ -104,6 +100,8 @@ properties:
           label: "Milestone"
         - value: 192350004
           label: "Fee"
+        - value: 690970002
+          label: "Tax"
     - name: overriddencreatedon
       type: Edm.DateTimeOffset
       display_name: "Record Created On"
@@ -169,6 +167,10 @@ lookup_properties:
     single_valued_navigation_property:
     - modifiedonbehalfby
     description: "Unique identifier of the delegate user who modified the record."
+  - name: _msdyn_contractlineid_value
+    single_valued_navigation_property:
+    - msdyn_ContractLineId
+    description: "Unique identifier for Project Contract Line associated with Project Contract Line Resource Category."
   - name: _msdyn_contractlinetransactionclassification_value
     single_valued_navigation_property:
     - msdyn_ContractLineTransactionClassification
@@ -208,6 +210,9 @@ single_valued_navigation_properties:
   - name: modifiedonbehalfby
     type: Microsoft.Dynamics.CRM.systemuser
     partner: lk_msdyn_orderlineresourcecategory_modifiedonbehalfby
+  - name: msdyn_ContractLineId
+    type: Microsoft.Dynamics.CRM.salesorderdetail
+    partner: msdyn_salesorderdetail_msdyn_orderlineresourcec
   - name: msdyn_ContractLineTransactionClassification
     type: Microsoft.Dynamics.CRM.msdyn_orderlinetransactionclassification
     partner: msdyn_orderlinetransactionclassification_msdyn_orderlineresourcecategory_ContractLineTransactionCla
@@ -279,8 +284,8 @@ solutions:
     description: "Microsoft Dynamics 365 for Project Service Automation is an end-to-end solution that helps sales and delivery teams engage customers and deliver billable projects on time and within budget. Project Service gives you the tools you need to: Estimate, quote, and contract work; Plan and assign resources; Enable team collaboration; Capture time, expense, and progress data for real-time insights and accurate invoicing."
 # This entity has no remarks.
 href_see_also:
-- text: "Use the Microsoft Dynamics 365 Customer Engagement Web API"
-  href: "https://docs.microsoft.com/dynamics365/customer-engagement/developer/use-microsoft-dynamics-365-web-api"
+- text: "Use the Common Data Service Web API"
+  href: "https://docs.microsoft.com/powerapps/developer/common-data-service/webapi/overview"
 xref_see_also:
 - Microsoft.Dynamics.CRM.EntityTypeIndex
 - Microsoft.Dynamics.CRM.ActionIndex

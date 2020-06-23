@@ -1,0 +1,59 @@
+### YamlMime:OData
+uid: Microsoft.Dynamics.CRM.SICommon
+name: "SI Common"
+type: solution
+metadata: 
+  title: "Common Data Service and Dynamics 365 Customer Engagement SI Common Solution Reference | MicrosoftDocs"
+  ms.date: "05/03/2020"
+  ms.service: "crm-online"
+  ms.topic: "reference"
+  ms.assetid: 6bbcad99-9e2d-4591-aed2-59bff44c4193
+  author: "KumarVivek"
+  ms.author: "kvivek"
+  manager: "Annbe"
+  meta-description: "Reference information about the Dynamics 365 Customer Engagement SI Common Solution."
+namespace: Microsoft.Dynamics.CRM
+header:
+# This solution has no description.
+ unique_name: SICommon
+ version: "9.0.2.618"
+ customization_prefix: msdyn
+entities:
+  description: "The following entities are included in this solution."
+  entity_items:
+   - type: Microsoft.Dynamics.CRM.account
+     description: "Business that represents a customer or potential customer. The company that is billed in business transactions."
+   - type: Microsoft.Dynamics.CRM.contact
+     description: "Person with whom a business unit has a relationship, such as customer, supplier, and colleague."
+   - type: Microsoft.Dynamics.CRM.lead
+     description: "Prospect or potential sales opportunity. Leads are converted into accounts, contacts, or opportunities when they are qualified. Otherwise, they are deleted or archived."
+   - type: Microsoft.Dynamics.CRM.msdyn_siconfig
+     description: ""
+   - type: Microsoft.Dynamics.CRM.msdyn_sikeyvalueconfig
+     description: ""
+   - type: Microsoft.Dynamics.CRM.opportunity
+     description: "Potential revenue-generating event, or sale to an account, which needs to be tracked through a sales process to completion."
+   - type: Microsoft.Dynamics.CRM.systemuser
+     description: "Person with access to the Microsoft CRM system and who owns objects in the Microsoft CRM database."
+actions:
+  description: "The following actions are included in this solution."
+  action_items:
+   - type: Microsoft.Dynamics.CRM.msdyn_GDPROptoutContact
+     description: ""
+   - type: Microsoft.Dynamics.CRM.msdyn_GDPROptoutLead
+     description: ""
+   - type: Microsoft.Dynamics.CRM.msdyn_GDPROptoutUser
+     description: ""
+# This solution has no remarks.
+href_see_also:
+- text: "Use the Common Data Service Web API"
+  href: "https://docs.microsoft.com/powerapps/developer/common-data-service/webapi/overview"
+xref_see_also:
+- Microsoft.Dynamics.CRM.EntityTypeIndex
+- Microsoft.Dynamics.CRM.ActionIndex
+- Microsoft.Dynamics.CRM.FunctionIndex
+- Microsoft.Dynamics.CRM.QueryFunctionIndex
+- Microsoft.Dynamics.CRM.ComplexTypeIndex
+- Microsoft.Dynamics.CRM.EnumTypeIndex
+- Microsoft.Dynamics.CRM.MetadataEntityTypeIndex
+- Microsoft.Dynamics.CRM.SolutionIndex

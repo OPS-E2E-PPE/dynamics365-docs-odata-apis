@@ -3,17 +3,15 @@ uid: Microsoft.Dynamics.CRM.campaignactivity
 name: "campaignactivity"
 type: entitytype
 metadata: 
-  title: "Microsoft Dynamics 365 Customer Engagement campaignactivity EntityType Reference | MicrosoftDocs"
-  ms.date: "03/20/2018"
+  title: "Common Data Service and Dynamics 365 Customer Engagement campaignactivity EntityType Reference | MicrosoftDocs"
+  ms.date: "05/03/2020"
   ms.service: "crm-online"
   ms.topic: "reference"
-  applies_to: 
-  - "Dynamics 365 (online)"
   ms.assetid: a582f179-b748-4195-acc4-9dc6a55b3239
-  author: "jimdaly"
-  ms.author: "jdaly"
-  manager: "jdaly"
-  meta-description: "Reference information about the Dynamics 365 Customer Engagement campaignactivity entitytype."
+  author: "KumarVivek"
+  ms.author: "kvivek"
+  manager: "Annbe"
+  meta-description: "Reference information about the campaignactivity entitytype."
 description: "Task performed, or to be performed, by a user for planning or running a campaign."
 header:
   entity_set_path: "[organization URI]/api/data/v9.0/campaignactivities"
@@ -197,7 +195,7 @@ properties:
     - name: excludeifcontactedinxdays
       type: Edm.Int32
       display_name: "No. of Days"
-      description: "Type the minimum number of days that must be passed before a marketing list member can be contacted in a campaign again. The campaign activity will not be applied to members contacted within the specified time period."
+      description: "Limits the frequency (in days) of marketing activities directed at any contact. Contacts that have been contacted more recently than this will be excluded from new campaign activity distributions. Enter a value of zero to disable the limit."
       iscomputed: false
       isreadonly: false
     - name: ignoreinactivelistmembers
@@ -376,7 +374,7 @@ properties:
       isreadonly: false
     - name: stageid
       type: Edm.Guid
-      display_name: "Process Stage"
+      display_name: "(Deprecated) Process Stage"
       description: "Unique identifier of the Stage."
       iscomputed: false
       isreadonly: false
@@ -434,7 +432,7 @@ properties:
       isreadonly: false
     - name: traversedpath
       type: Edm.String
-      display_name: "Traversed Path"
+      display_name: "(Deprecated) Traversed Path"
       description: "For internal use only."
       iscomputed: false
       isreadonly: false
@@ -561,9 +559,6 @@ single_valued_navigation_properties:
   - name: regardingobjectid_account
     type: Microsoft.Dynamics.CRM.account
     partner: Account_ActivityPointers
-  - name: regardingobjectid_account_campaignactivity
-    type: Microsoft.Dynamics.CRM.account
-    partner: account_CampaignActivities
   - name: regardingobjectid_bookableresourcebooking
     type: Microsoft.Dynamics.CRM.bookableresourcebooking
     partner: bookableresourcebooking_ActivityPointers
@@ -579,9 +574,6 @@ single_valued_navigation_properties:
   - name: regardingobjectid_bulkoperation
     type: Microsoft.Dynamics.CRM.bulkoperation
     partner: BulkOperation_ActivityPointers
-  - name: regardingobjectid_bulkoperation_campaignactivity
-    type: Microsoft.Dynamics.CRM.bulkoperation
-    partner: bulkoperation_CampaignActivities
   - name: regardingobjectid_campaign
     type: Microsoft.Dynamics.CRM.campaign
     partner: Campaign_ActivityPointers
@@ -612,27 +604,12 @@ single_valued_navigation_properties:
   - name: regardingobjectid_knowledgearticle
     type: Microsoft.Dynamics.CRM.knowledgearticle
     partner: KnowledgeArticle_ActivityPointers
-  - name: regardingobjectid_knowledgearticle_campaignactivity
-    type: Microsoft.Dynamics.CRM.knowledgearticle
-    partner: knowledgearticle_CampaignActivities
   - name: regardingobjectid_knowledgebaserecord
     type: Microsoft.Dynamics.CRM.knowledgebaserecord
     partner: KnowledgeBaseRecord_ActivityPointers
-  - name: regardingobjectid_knowledgebaserecord_campaignactivity
-    type: Microsoft.Dynamics.CRM.knowledgebaserecord
-    partner: knowledgebaserecord_CampaignActivities
   - name: regardingobjectid_lead
     type: Microsoft.Dynamics.CRM.lead
     partner: Lead_ActivityPointers
-  - name: regardingobjectid_lead_campaignactivity
-    type: Microsoft.Dynamics.CRM.lead
-    partner: lead_CampaignActivities
-  - name: regardingobjectid_ms_newsitem
-    type: Microsoft.Dynamics.CRM.ms_newsitem
-    partner: ms_newsitem_ActivityPointers
-  - name: regardingobjectid_ms_satori
-    type: Microsoft.Dynamics.CRM.ms_satori
-    partner: ms_satori_ActivityPointers
   - name: regardingobjectid_msdyn_agreement
     type: Microsoft.Dynamics.CRM.msdyn_agreement
     partner: msdyn_agreement_ActivityPointers
@@ -825,9 +802,6 @@ single_valued_navigation_properties:
   - name: regardingobjectid_new_interactionforemail
     type: Microsoft.Dynamics.CRM.interactionforemail
     partner: new_interactionforemail_ActivityPointers
-  - name: regardingobjectid_new_interactionforemail_campaignactivity
-    type: Microsoft.Dynamics.CRM.interactionforemail
-    partner: interactionforemail_CampaignActivities
   - name: regardingobjectid_opportunity
     type: Microsoft.Dynamics.CRM.opportunity
     partner: Opportunity_ActivityPointers
@@ -960,6 +934,9 @@ collection_valued_navigation_properties:
   - name: ActivityPointer_QueueItem
     type: Microsoft.Dynamics.CRM.queueitem
     partner: objectid_activitypointer
+  - name: CampaignActivity_Accounts
+    type: Microsoft.Dynamics.CRM.account
+    partner: CampaignActivity_Logs_Accounts
   - name: campaignactivity_activity_parties
     type: Microsoft.Dynamics.CRM.activityparty
     partner: activityid_campaignactivity
@@ -993,6 +970,9 @@ collection_valued_navigation_properties:
   - name: campaignactivity_connections2
     type: Microsoft.Dynamics.CRM.connection
     partner: record2id_campaignactivity
+  - name: CampaignActivity_Contacts
+    type: Microsoft.Dynamics.CRM.contact
+    partner: CampaignActivity_Logs_Contacts
   - name: CampaignActivity_Emails
     type: Microsoft.Dynamics.CRM.email
     partner: regardingobjectid_campaignactivity_email
@@ -1002,9 +982,15 @@ collection_valued_navigation_properties:
   - name: campaignactivity_IncidentResolutions
     type: Microsoft.Dynamics.CRM.incidentresolution
     partner: regardingobjectid_campaignactivity_incidentresolution
+  - name: CampaignActivity_Leads
+    type: Microsoft.Dynamics.CRM.lead
+    partner: CampaignActivity_Logs_Leads
   - name: CampaignActivity_Letters
     type: Microsoft.Dynamics.CRM.letter
     partner: regardingobjectid_campaignactivity_letter
+  - name: CampaignActivity_logs
+    type: Microsoft.Dynamics.CRM.bulkoperationlog
+    partner: CampaignActivityId_Logs
   - name: CampaignActivity_MailboxTrackingFolder
     type: Microsoft.Dynamics.CRM.mailboxtrackingfolder
     partner: regardingobjectid_campaignactivity
@@ -1091,12 +1077,16 @@ solutions:
   solution_items:
   - type: Microsoft.Dynamics.CRM.msdynce_Marketing
     description: "Dynamics 365 workload for marketing and enterprise."
+  - type: Microsoft.Dynamics.CRM.msdynce_MarketingPatch
+    description: "Patch for Dynamics 365 workload for marketing and enterprise."
+  - type: Microsoft.Dynamics.CRM.msdynce_MarketingPatch201905
+    description: "Patch from 05/2019 for Dynamics 365 workload for marketing and enterprise."
   - type: Microsoft.Dynamics.CRM.msdynce_MarketingService
     description: "For internal use only."
 # This entity has no remarks.
 href_see_also:
-- text: "Use the Microsoft Dynamics 365 Customer Engagement Web API"
-  href: "https://docs.microsoft.com/dynamics365/customer-engagement/developer/use-microsoft-dynamics-365-web-api"
+- text: "Use the Common Data Service Web API"
+  href: "https://docs.microsoft.com/powerapps/developer/common-data-service/webapi/overview"
 xref_see_also:
 - Microsoft.Dynamics.CRM.EntityTypeIndex
 - Microsoft.Dynamics.CRM.ActionIndex

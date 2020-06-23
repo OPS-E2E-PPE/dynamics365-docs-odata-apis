@@ -3,17 +3,15 @@ uid: Microsoft.Dynamics.CRM.invaliddependency
 name: "invaliddependency"
 type: entitytype
 metadata: 
-  title: "Microsoft Dynamics 365 Customer Engagement invaliddependency EntityType Reference | MicrosoftDocs"
-  ms.date: "03/20/2018"
+  title: "Common Data Service and Dynamics 365 Customer Engagement invaliddependency EntityType Reference | MicrosoftDocs"
+  ms.date: "05/03/2020"
   ms.service: "crm-online"
   ms.topic: "reference"
-  applies_to: 
-  - "Dynamics 365 (online)"
   ms.assetid: 96c618ec-da21-48a7-9042-393d82c6f9e4
-  author: "jimdaly"
-  ms.author: "jdaly"
-  manager: "jdaly"
-  meta-description: "Reference information about the Dynamics 365 Customer Engagement invaliddependency entitytype."
+  author: "KumarVivek"
+  ms.author: "kvivek"
+  manager: "Annbe"
+  meta-description: "Reference information about the invaliddependency entitytype."
 description: "An invalid dependency in the CRM system."
 header:
   entity_set_path: "[organization URI]/api/data/v9.0/invaliddependencies"
@@ -198,6 +196,28 @@ properties:
           label: "Index"
         - value: 208
           label: "Import Map"
+        - value: 300
+          label: "Canvas App"
+        - value: 371
+          label: "Connector"
+        - value: 372
+          label: "Connector"
+        - value: 380
+          label: "Environment Variable Definition"
+        - value: 381
+          label: "Environment Variable Value"
+        - value: 400
+          label: "AI Project Type"
+        - value: 401
+          label: "AI Project"
+        - value: 402
+          label: "AI Configuration"
+        - value: 430
+          label: "Entity Analytics Configuration"
+        - value: 431
+          label: "Attribute Image Configuration"
+        - value: 432
+          label: "Entity Image Configuration"
     - name: existingdependencytype
       type: Edm.Int32
       display_name: "Weight"
@@ -413,6 +433,28 @@ properties:
           label: "Index"
         - value: 208
           label: "Import Map"
+        - value: 300
+          label: "Canvas App"
+        - value: 371
+          label: "Connector"
+        - value: 372
+          label: "Connector"
+        - value: 380
+          label: "Environment Variable Definition"
+        - value: 381
+          label: "Environment Variable Value"
+        - value: 400
+          label: "AI Project Type"
+        - value: 401
+          label: "AI Project"
+        - value: 402
+          label: "AI Configuration"
+        - value: 430
+          label: "Entity Analytics Configuration"
+        - value: 431
+          label: "Attribute Image Configuration"
+        - value: 432
+          label: "Entity Image Configuration"
 # This entity has no lookup properties
 # This entity has no single-valued navigation properties
 # This entity has no collection-valued navigation properties
@@ -425,8 +467,8 @@ solutions:
     description: "Internal CRM System Solution"
 # This entity has no remarks.
 href_see_also:
-- text: "Use the Microsoft Dynamics 365 Customer Engagement Web API"
-  href: "https://docs.microsoft.com/dynamics365/customer-engagement/developer/use-microsoft-dynamics-365-web-api"
+- text: "Use the Common Data Service Web API"
+  href: "https://docs.microsoft.com/powerapps/developer/common-data-service/webapi/overview"
 xref_see_also:
 - Microsoft.Dynamics.CRM.EntityTypeIndex
 - Microsoft.Dynamics.CRM.ActionIndex

@@ -3,17 +3,15 @@ uid: Microsoft.Dynamics.CRM.msdyn_requirementcharacteristic
 name: "msdyn_requirementcharacteristic"
 type: entitytype
 metadata: 
-  title: "Microsoft Dynamics 365 Customer Engagement msdyn_requirementcharacteristic EntityType Reference | MicrosoftDocs"
-  ms.date: "03/20/2018"
+  title: "Common Data Service and Dynamics 365 Customer Engagement msdyn_requirementcharacteristic EntityType Reference | MicrosoftDocs"
+  ms.date: "05/03/2020"
   ms.service: "crm-online"
   ms.topic: "reference"
-  applies_to: 
-  - "Dynamics 365 (online)"
   ms.assetid: fd122fbd-7d48-4949-940b-15521e1d9900
-  author: "jimdaly"
-  ms.author: "jdaly"
-  manager: "jdaly"
-  meta-description: "Reference information about the Dynamics 365 Customer Engagement msdyn_requirementcharacteristic entitytype."
+  author: "KumarVivek"
+  ms.author: "kvivek"
+  manager: "Annbe"
+  meta-description: "Reference information about the msdyn_requirementcharacteristic entitytype."
 description: "Requirement Characteristic"
 header:
   entity_set_path: "[organization URI]/api/data/v9.0/msdyn_requirementcharacteristics"
@@ -133,6 +131,10 @@ lookup_properties:
     single_valued_navigation_property:
     - msdyn_ratingvalue
     description: "Rating Value"
+  - name: _msdyn_requirementsystemuse_value
+    single_valued_navigation_property:
+    - msdyn_RequirementSystemUse
+    description: "Internal use. Tracks the related Requirement when it is equally or less restrictive than other Requirement Characteristics with the same Requirement/Characteristic combination."
   - name: _msdyn_resourcerequirement_value
     single_valued_navigation_property:
     - msdyn_ResourceRequirement
@@ -182,6 +184,9 @@ single_valued_navigation_properties:
   - name: msdyn_ratingvalue
     type: Microsoft.Dynamics.CRM.ratingvalue
     partner: msdyn_ratingvalue_msdyn_requirementcharacteristic_ratingvalue
+  - name: msdyn_RequirementSystemUse
+    type: Microsoft.Dynamics.CRM.msdyn_resourcerequirement
+    partner: msdyn_msdyn_resourcerequirement_msdyn_requirementcharacteristic_RequirementSystemUse
   - name: msdyn_ResourceRequirement
     type: Microsoft.Dynamics.CRM.msdyn_resourcerequirement
     partner: msdyn_resourcerequirement_requirementcharacteristic_resourcerequirement
@@ -255,11 +260,11 @@ solutions:
   - type: Microsoft.Dynamics.CRM.FieldService
     description: "Microsoft Dynamics 365 for Field Service allows organizations of any size to deliver intelligent, world class field service, managing all aspects of the end-to-end field service management cycle. Features include scheduling, mobile, asset management, inventory control, customer notifications, and resource utilization controls that help maximize efficiency and minimize costs."
   - type: Microsoft.Dynamics.CRM.MicrosoftDynamicsScheduling
-    description: "Unified scheduling solution provides the infrastructure to express resource requirements for any entity in the system and help staff those requirements with resources based on the availability and applicability of the resource for the requirement."
+    description: "The Universal Resource Scheduling solution provides the infrastructure to express resource requirements for any entity in the system and help staff those requirements with resources based on the availability and applicability of the resource for the requirement."
 # This entity has no remarks.
 href_see_also:
-- text: "Use the Microsoft Dynamics 365 Customer Engagement Web API"
-  href: "https://docs.microsoft.com/dynamics365/customer-engagement/developer/use-microsoft-dynamics-365-web-api"
+- text: "Use the Common Data Service Web API"
+  href: "https://docs.microsoft.com/powerapps/developer/common-data-service/webapi/overview"
 xref_see_also:
 - Microsoft.Dynamics.CRM.EntityTypeIndex
 - Microsoft.Dynamics.CRM.ActionIndex

@@ -3,17 +3,15 @@ uid: Microsoft.Dynamics.CRM.actioncard
 name: "actioncard"
 type: entitytype
 metadata: 
-  title: "Microsoft Dynamics 365 Customer Engagement actioncard EntityType Reference | MicrosoftDocs"
-  ms.date: "03/20/2018"
+  title: "Common Data Service and Dynamics 365 Customer Engagement actioncard EntityType Reference | MicrosoftDocs"
+  ms.date: "05/03/2020"
   ms.service: "crm-online"
   ms.topic: "reference"
-  applies_to: 
-  - "Dynamics 365 (online)"
   ms.assetid: 83b4cfe3-5b08-456a-80a8-20ccea1833be
-  author: "jimdaly"
-  ms.author: "jdaly"
-  manager: "jdaly"
-  meta-description: "Reference information about the Dynamics 365 Customer Engagement actioncard entitytype."
+  author: "KumarVivek"
+  ms.author: "kvivek"
+  manager: "Annbe"
+  meta-description: "Reference information about the actioncard entitytype."
 description: "Action card entity to show action cards."
 header:
   entity_set_path: "[organization URI]/api/data/v9.0/actioncards"
@@ -51,13 +49,13 @@ properties:
     - name: data
       type: Edm.String
       display_name: "Data Associated with Card Commandbar Actions"
-      description: "For internal use only."
+      description: "Json formatted string for generic purpose."
       iscomputed: false
       isreadonly: false
     - name: description
       type: Edm.String
       display_name: "Card Description"
-      description: "For internal use only."
+      description: "Card Description"
       iscomputed: false
       isreadonly: false
     - name: exchangerate
@@ -84,10 +82,34 @@ properties:
       description: "Date and time when action card was last modified."
       iscomputed: false
       isreadonly: true
+    - name: msdyn_actioncardregardingid
+      type: Edm.String
+      display_name: "actioncardregardingid"
+      description: ""
+      iscomputed: false
+      isreadonly: false
+    - name: msdyn_regardingobjectid
+      type: Edm.String
+      display_name: "regardingobjectid"
+      description: ""
+      iscomputed: false
+      isreadonly: false
+    - name: msdyn_regardingobjectlogicalname
+      type: Edm.String
+      display_name: "regardingobjectlogicalname"
+      description: ""
+      iscomputed: false
+      isreadonly: false
     - name: overriddencreatedon
       type: Edm.DateTimeOffset
       display_name: "Record Created On"
       description: "Date and time that the record was migrated."
+      iscomputed: false
+      isreadonly: false
+    - name: parentregardingobjectiddata
+      type: Edm.String
+      display_name: "ParentRegardingObjectIdData"
+      description: "Json formatted string for parent regarding object."
       iscomputed: false
       isreadonly: false
     - name: priority
@@ -152,7 +174,7 @@ properties:
       isreadonly: true
     - name: visibility
       type: Edm.Boolean
-      display_name: "Visibility Status of ActionCard"
+      display_name: "Visibiliy Status of ActionCard"
       description: "Select whether the visibility should be set to public/private."
       iscomputed: false
       isreadonly: false
@@ -200,11 +222,11 @@ lookup_properties:
     description: "Shows the record ID."
   - name: _regardingobjectid_value
     single_valued_navigation_property:
+    - regardingobjectid_account_actioncard
+    - regardingobjectid_contact_actioncard
     - regardingobjectid_lead_actioncard
     - regardingobjectid_incident_actioncard
     - regardingobjectid_opportunity_actioncard
-    - regardingobjectid_contact_actioncard
-    - regardingobjectid_account_actioncard
     description: "Choose the record that the card relates to."
   - name: _transactioncurrencyid_value
     single_valued_navigation_property:
@@ -290,16 +312,22 @@ collection_valued_navigation_properties:
 solutions:
   description: "The following solutions include the actioncard entity type."
   solution_items:
+  - type: Microsoft.Dynamics.CRM.AutoDataCapture
+    description: ""
+  - type: Microsoft.Dynamics.CRM.msdyn_LinkedInExtensions
+    description: "LinkedIn Extension for Dynamics365"
   - type: Microsoft.Dynamics.CRM.msdynce_Sales
     description: "Dynamics 365 workload for sales."
   - type: Microsoft.Dynamics.CRM.msdynce_Service
     description: "Dynamics 365 workload for service."
+  - type: Microsoft.Dynamics.CRM.Relationshipassistant
+    description: "Relationship assistant Feature Description."
   - type: Microsoft.Dynamics.CRM.System
     description: "Internal CRM System Solution"
 # This entity has no remarks.
 href_see_also:
-- text: "Use the Microsoft Dynamics 365 Customer Engagement Web API"
-  href: "https://docs.microsoft.com/dynamics365/customer-engagement/developer/use-microsoft-dynamics-365-web-api"
+- text: "Use the Common Data Service Web API"
+  href: "https://docs.microsoft.com/powerapps/developer/common-data-service/webapi/overview"
 xref_see_also:
 - Microsoft.Dynamics.CRM.EntityTypeIndex
 - Microsoft.Dynamics.CRM.ActionIndex

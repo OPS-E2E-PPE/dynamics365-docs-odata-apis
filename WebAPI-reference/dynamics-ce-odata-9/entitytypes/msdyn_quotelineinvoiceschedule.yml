@@ -3,17 +3,15 @@ uid: Microsoft.Dynamics.CRM.msdyn_quotelineinvoiceschedule
 name: "msdyn_quotelineinvoiceschedule"
 type: entitytype
 metadata: 
-  title: "Microsoft Dynamics 365 Customer Engagement msdyn_quotelineinvoiceschedule EntityType Reference | MicrosoftDocs"
-  ms.date: "03/20/2018"
+  title: "Common Data Service and Dynamics 365 Customer Engagement msdyn_quotelineinvoiceschedule EntityType Reference | MicrosoftDocs"
+  ms.date: "05/03/2020"
   ms.service: "crm-online"
   ms.topic: "reference"
-  applies_to: 
-  - "Dynamics 365 (online)"
   ms.assetid: 8fb372fc-c729-4312-8763-fe2b9edd9399
-  author: "jimdaly"
-  ms.author: "jdaly"
-  manager: "jdaly"
-  meta-description: "Reference information about the Dynamics 365 Customer Engagement msdyn_quotelineinvoiceschedule entitytype."
+  author: "KumarVivek"
+  ms.author: "kvivek"
+  manager: "Annbe"
+  meta-description: "Reference information about the msdyn_quotelineinvoiceschedule entitytype."
 description: "List of dates on which invoicing for this customer should be run. This list is used by an invoice creation job."
 header:
   entity_set_path: "[organization URI]/api/data/v9.0/msdyn_quotelineinvoiceschedules"
@@ -62,8 +60,8 @@ properties:
       isreadonly: false
     - name: msdyn_quoteline
       type: Edm.String
-      display_name: "Quote Line"
-      description: "Type the reference to the quote line that this invoice schedule is for."
+      display_name: "(Deprecated) Quote Line"
+      description: "(Deprecated) Type the reference to the quote line that this invoice schedule is for."
       iscomputed: false
       isreadonly: false
     - name: msdyn_quotelineinvoicescheduleid
@@ -143,6 +141,10 @@ lookup_properties:
     single_valued_navigation_property:
     - modifiedonbehalfby
     description: "Unique identifier of the delegate user who modified the record."
+  - name: _msdyn_quotelineid_value
+    single_valued_navigation_property:
+    - msdyn_quotelineid
+    description: "Unique identifier for Quote Line associated with this invoice schedule."
   - name: _msdyn_quotelinescheduleofvalue_value
     single_valued_navigation_property:
     - msdyn_QuoteLineScheduleOfValue
@@ -166,6 +168,9 @@ single_valued_navigation_properties:
   - name: modifiedonbehalfby
     type: Microsoft.Dynamics.CRM.systemuser
     partner: lk_msdyn_quotelineinvoiceschedule_modifiedonbehalfby
+  - name: msdyn_quotelineid
+    type: Microsoft.Dynamics.CRM.quotedetail
+    partner: msdyn_quotedetail_msdyn_quotelineinvoiceschedu
   - name: msdyn_QuoteLineScheduleOfValue
     type: Microsoft.Dynamics.CRM.msdyn_quotelinescheduleofvalue
     partner: msdyn_msdyn_quotelinescheduleofvalue_msdyn_quotelineinvoiceschedule_QuoteLineScheduleOfValue
@@ -212,8 +217,8 @@ solutions:
     description: "Microsoft Dynamics 365 for Project Service Automation is an end-to-end solution that helps sales and delivery teams engage customers and deliver billable projects on time and within budget. Project Service gives you the tools you need to: Estimate, quote, and contract work; Plan and assign resources; Enable team collaboration; Capture time, expense, and progress data for real-time insights and accurate invoicing."
 # This entity has no remarks.
 href_see_also:
-- text: "Use the Microsoft Dynamics 365 Customer Engagement Web API"
-  href: "https://docs.microsoft.com/dynamics365/customer-engagement/developer/use-microsoft-dynamics-365-web-api"
+- text: "Use the Common Data Service Web API"
+  href: "https://docs.microsoft.com/powerapps/developer/common-data-service/webapi/overview"
 xref_see_also:
 - Microsoft.Dynamics.CRM.EntityTypeIndex
 - Microsoft.Dynamics.CRM.ActionIndex

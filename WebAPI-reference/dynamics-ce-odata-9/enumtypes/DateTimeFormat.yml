@@ -3,17 +3,15 @@ uid: Microsoft.Dynamics.CRM.DateTimeFormat
 name: "DateTimeFormat"
 type: enumtype
 metadata: 
-  title: "Microsoft Dynamics 365 Customer Engagement DateTimeFormat EnumType Reference | MicrosoftDocs"
-  ms.date: "03/20/2018"
+  title: "Common Data Service and Dynamics 365 Customer Engagement DateTimeFormat EnumType Reference | MicrosoftDocs"
+  ms.date: "05/03/2020"
   ms.service: "crm-online"
   ms.topic: "reference"
-  applies_to: 
-    - "Dynamics 365 (online)"
   ms.assetid: 39e23353-d152-4f0a-8d7c-a3491fba431b
-  author: "jimdaly"
-  ms.author: "jdaly"
-  manager: "jdaly"
-  meta-description: "Reference information about the Dynamics 365 Customer Engagement Web API DateTimeFormat ComplexType."
+  author: "KumarVivek"
+  ms.author: "kvivek"
+  manager: "Annbe"
+  meta-description: "Reference information about the Web API DateTimeFormat ComplexType."
 namespace: Microsoft.Dynamics.CRM
 description: "Describes the formatting of a DateTimeAttributeMetadata attribute. " 
 members:
@@ -30,10 +28,12 @@ usedby:
   usedby_items:
   - name: Microsoft.Dynamics.CRM.DateTimeAttributeMetadata
     used_as: Property
+  - name: Microsoft.Dynamics.CRM.ComplexDateTimeAttributeMetadata
+    used_as: Property
 # This enum type has no remarks.
 href_see_also:
-- text: "Use the Microsoft Dynamics 365 Customer Engagement Web API"
-  href: "https://docs.microsoft.com/dynamics365/customer-engagement/developer/use-microsoft-dynamics-365-web-api"
+- text: "Use the Common Data Service Web API"
+  href: "https://docs.microsoft.com/powerapps/developer/common-data-service/webapi/overview"
 xref_see_also:
 - Microsoft.Dynamics.CRM.EntityTypeIndex
 - Microsoft.Dynamics.CRM.ActionIndex

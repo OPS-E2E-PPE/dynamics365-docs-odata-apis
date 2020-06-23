@@ -3,17 +3,15 @@ uid: Microsoft.Dynamics.CRM.campaignresponse
 name: "campaignresponse"
 type: entitytype
 metadata: 
-  title: "Microsoft Dynamics 365 Customer Engagement campaignresponse EntityType Reference | MicrosoftDocs"
-  ms.date: "03/20/2018"
+  title: "Common Data Service and Dynamics 365 Customer Engagement campaignresponse EntityType Reference | MicrosoftDocs"
+  ms.date: "05/03/2020"
   ms.service: "crm-online"
   ms.topic: "reference"
-  applies_to: 
-  - "Dynamics 365 (online)"
   ms.assetid: 104d3d5a-d44d-4560-9467-1750daad492e
-  author: "jimdaly"
-  ms.author: "jdaly"
-  manager: "jdaly"
-  meta-description: "Reference information about the Dynamics 365 Customer Engagement campaignresponse entitytype."
+  author: "KumarVivek"
+  ms.author: "kvivek"
+  manager: "Annbe"
+  meta-description: "Reference information about the campaignresponse entitytype."
 description: "Response from an existing or a potential new customer for a campaign."
 header:
   entity_set_path: "[organization URI]/api/data/v9.0/campaignresponses"
@@ -375,7 +373,7 @@ properties:
       isreadonly: false
     - name: stageid
       type: Edm.Guid
-      display_name: "Process Stage"
+      display_name: "(Deprecated) Process Stage"
       description: "Unique identifier of the Stage."
       iscomputed: false
       isreadonly: false
@@ -431,7 +429,7 @@ properties:
       isreadonly: false
     - name: traversedpath
       type: Edm.String
-      display_name: "Traversed Path"
+      display_name: "(Deprecated) Traversed Path"
       description: "For internal use only."
       iscomputed: false
       isreadonly: false
@@ -619,7 +617,7 @@ single_valued_navigation_properties:
     partner: BulkOperation_ActivityPointers
   - name: regardingobjectid_bulkoperation_campaignresponse
     type: Microsoft.Dynamics.CRM.bulkoperation
-    partner: bulkoperation_CampaignResponses
+    partner: BulkOperation_CampaignResponse
   - name: regardingobjectid_campaign
     type: Microsoft.Dynamics.CRM.campaign
     partner: Campaign_ActivityPointers
@@ -671,12 +669,6 @@ single_valued_navigation_properties:
   - name: regardingobjectid_lead_campaignresponse
     type: Microsoft.Dynamics.CRM.lead
     partner: lead_CampaignResponses
-  - name: regardingobjectid_ms_newsitem
-    type: Microsoft.Dynamics.CRM.ms_newsitem
-    partner: ms_newsitem_ActivityPointers
-  - name: regardingobjectid_ms_satori
-    type: Microsoft.Dynamics.CRM.ms_satori
-    partner: ms_satori_ActivityPointers
   - name: regardingobjectid_msdyn_agreement
     type: Microsoft.Dynamics.CRM.msdyn_agreement
     partner: msdyn_agreement_ActivityPointers
@@ -1067,14 +1059,18 @@ solutions:
   solution_items:
   - type: Microsoft.Dynamics.CRM.msdynce_Marketing
     description: "Dynamics 365 workload for marketing and enterprise."
+  - type: Microsoft.Dynamics.CRM.msdynce_MarketingPatch
+    description: "Patch for Dynamics 365 workload for marketing and enterprise."
   - type: Microsoft.Dynamics.CRM.msdynce_MarketingSales
+    description: "For internal use only."
+  - type: Microsoft.Dynamics.CRM.msdynce_MarketingSalesPatch
     description: "For internal use only."
   - type: Microsoft.Dynamics.CRM.msdynce_MarketingService
     description: "For internal use only."
 # This entity has no remarks.
 href_see_also:
-- text: "Use the Microsoft Dynamics 365 Customer Engagement Web API"
-  href: "https://docs.microsoft.com/dynamics365/customer-engagement/developer/use-microsoft-dynamics-365-web-api"
+- text: "Use the Common Data Service Web API"
+  href: "https://docs.microsoft.com/powerapps/developer/common-data-service/webapi/overview"
 xref_see_also:
 - Microsoft.Dynamics.CRM.EntityTypeIndex
 - Microsoft.Dynamics.CRM.ActionIndex

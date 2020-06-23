@@ -3,17 +3,15 @@ uid: Microsoft.Dynamics.CRM.msdyn_projectteam
 name: "msdyn_projectteam"
 type: entitytype
 metadata: 
-  title: "Microsoft Dynamics 365 Customer Engagement msdyn_projectteam EntityType Reference | MicrosoftDocs"
-  ms.date: "03/20/2018"
+  title: "Common Data Service and Dynamics 365 Customer Engagement msdyn_projectteam EntityType Reference | MicrosoftDocs"
+  ms.date: "05/03/2020"
   ms.service: "crm-online"
   ms.topic: "reference"
-  applies_to: 
-  - "Dynamics 365 (online)"
   ms.assetid: a4e84799-872c-4277-a4f8-744e8b5c1ffa
-  author: "jimdaly"
-  ms.author: "jdaly"
-  manager: "jdaly"
-  meta-description: "Reference information about the Dynamics 365 Customer Engagement msdyn_projectteam entitytype."
+  author: "KumarVivek"
+  ms.author: "kvivek"
+  manager: "Annbe"
+  meta-description: "Reference information about the msdyn_projectteam entitytype."
 description: "Entity used to model relationship between resources and project teams."
 header:
   entity_set_path: "[organization URI]/api/data/v9.0/msdyn_projectteams"
@@ -85,7 +83,7 @@ properties:
       isreadonly: true
     - name: msdyn_applicantsavailable
       type: Edm.Boolean
-      display_name: "Applicants available"
+      display_name: "Applicants available (Deprecated in v3.0)"
       description: "Shows if there are applicants available for this project team."
       iscomputed: true
       isreadonly: true
@@ -135,8 +133,8 @@ properties:
       isreadonly: false
     - name: msdyn_hardbookedhours
       type: Edm.Decimal
-      display_name: "Booked Hours"
-      description: "Hard Book"
+      display_name: "Hard Booked Hours"
+      description: "Hard Booked Hours"
       iscomputed: false
       isreadonly: false
     - name: msdyn_hours
@@ -147,13 +145,13 @@ properties:
       isreadonly: false
     - name: msdyn_hoursrequested
       type: Edm.Double
-      display_name: "Required Hours"
+      display_name: "Required Hours (Deprecated in v3.0)"
       description: "Shows the number of hours required of this team member on the project."
       iscomputed: false
       isreadonly: false
     - name: msdyn_membershipstatus
       type: Edm.Int32
-      display_name: "Membership Status"
+      display_name: "Membership Status (Deprecated in v3.0)"
       description: "Shows the membership status of this project team member."
       iscomputed: false
       isreadonly: false
@@ -219,8 +217,8 @@ properties:
       isreadonly: false
     - name: msdyn_softbookedhours
       type: Edm.Decimal
-      display_name: "Soft Book"
-      description: "Soft Book"
+      display_name: "Soft Booked Hours"
+      description: "Soft Booked Hours"
       iscomputed: false
       isreadonly: false
     - name: msdyn_to
@@ -298,6 +296,10 @@ lookup_properties:
     single_valued_navigation_property:
     - msdyn_bookableresourceid
     description: "Shows the resource."
+  - name: _msdyn_organizationalunit_value
+    single_valued_navigation_property:
+    - msdyn_organizationalunit
+    description: "The organizational unit of the resource performing the work."
   - name: _msdyn_project_value
     single_valued_navigation_property:
     - msdyn_project
@@ -348,6 +350,9 @@ single_valued_navigation_properties:
   - name: msdyn_bookableresourceid
     type: Microsoft.Dynamics.CRM.bookableresource
     partner: msdyn_bookableresource_msdyn_projectteam_bookableresourceid
+  - name: msdyn_organizationalunit
+    type: Microsoft.Dynamics.CRM.msdyn_organizationalunit
+    partner: msdyn_msdyn_organizationalunit_msdyn_projectteam_organizationalunit
   - name: msdyn_project
     type: Microsoft.Dynamics.CRM.msdyn_project
     partner: msdyn_msdyn_project_msdyn_projectteam_project
@@ -472,12 +477,6 @@ operations:
     binding_type: "Not Bound"
   - name: Microsoft.Dynamics.CRM.ModifyAccess
     binding_type: "Not Bound"
-  - name: Microsoft.Dynamics.CRM.msdyn_AssignGenericResource
-    binding_type: "Entity"
-  - name: Microsoft.Dynamics.CRM.msdyn_MSProject_GetFindResourcesURL
-    binding_type: "Entity"
-  - name: Microsoft.Dynamics.CRM.msdyn_ProjectTeamMemberSignUpProcess
-    binding_type: "Entity"
   - name: Microsoft.Dynamics.CRM.RetrievePrincipalAccess
     binding_type: "Not Bound"
   - name: Microsoft.Dynamics.CRM.RetrieveSharedPrincipalsAndAccess
@@ -491,8 +490,8 @@ solutions:
     description: "Microsoft Dynamics 365 for Project Service Automation is an end-to-end solution that helps sales and delivery teams engage customers and deliver billable projects on time and within budget. Project Service gives you the tools you need to: Estimate, quote, and contract work; Plan and assign resources; Enable team collaboration; Capture time, expense, and progress data for real-time insights and accurate invoicing."
 # This entity has no remarks.
 href_see_also:
-- text: "Use the Microsoft Dynamics 365 Customer Engagement Web API"
-  href: "https://docs.microsoft.com/dynamics365/customer-engagement/developer/use-microsoft-dynamics-365-web-api"
+- text: "Use the Common Data Service Web API"
+  href: "https://docs.microsoft.com/powerapps/developer/common-data-service/webapi/overview"
 xref_see_also:
 - Microsoft.Dynamics.CRM.EntityTypeIndex
 - Microsoft.Dynamics.CRM.ActionIndex

@@ -3,22 +3,20 @@ uid: Microsoft.Dynamics.CRM.msdynce_AppCommon
 name: "Application Common"
 type: solution
 metadata: 
-  title: "Microsoft Dynamics 365 Customer Engagement Application Common Solution Reference | MicrosoftDocs"
-  ms.date: "03/20/2018"
+  title: "Common Data Service and Dynamics 365 Customer Engagement Application Common Solution Reference | MicrosoftDocs"
+  ms.date: "05/03/2020"
   ms.service: "crm-online"
   ms.topic: "reference"
-  applies_to: 
-  - "Dynamics 365 (online)"
-  ms.assetid: cb279ea7-4aa1-4083-9bc9-4688dd96864c
-  author: "jimdaly"
-  ms.author: "jdaly"
-  manager: "jdaly"
+  ms.assetid: cf374717-162f-49e3-b4bb-3d08d5392762
+  author: "KumarVivek"
+  ms.author: "kvivek"
+  manager: "Annbe"
   meta-description: "Reference information about the Dynamics 365 Customer Engagement Application Common Solution."
 namespace: Microsoft.Dynamics.CRM
 header:
  description: "For internal use only."
  unique_name: msdynce_AppCommon
- version: "9.0.1.61"
+ version: "9.0.4.0066"
  customization_prefix: none
 entities:
   description: "The following entities are included in this solution."
@@ -37,18 +35,28 @@ entities:
      description: "Activity that is delivered using email protocols."
    - type: Microsoft.Dynamics.CRM.fax
      description: "Activity that tracks call outcome and number of pages for a fax and optionally stores an electronic copy of the document."
+   - type: Microsoft.Dynamics.CRM.goal
+     description: "Target objective for a user or a team for a specified time period."
+   - type: Microsoft.Dynamics.CRM.goalrollupquery
+     description: "Query that is used to filter the results of the goal rollup."
    - type: Microsoft.Dynamics.CRM.importfile
      description: "File name of file used for import."
    - type: Microsoft.Dynamics.CRM.letter
      description: "Activity that tracks the delivery of a letter. The activity can contain the electronic copy of the letter."
    - type: Microsoft.Dynamics.CRM.mailbox
      description: ""
+   - type: Microsoft.Dynamics.CRM.metric
+     description: "Type of measurement for a goal, such as money amount or count."
+   - type: Microsoft.Dynamics.CRM.personaldocumenttemplate
+     description: "Used to store Personal Document Templates in database in binary format."
    - type: Microsoft.Dynamics.CRM.phonecall
      description: "Activity to track a telephone call."
    - type: Microsoft.Dynamics.CRM.queueitem
      description: "A specific item in a queue, such as a case record or an activity record."
    - type: Microsoft.Dynamics.CRM.recurringappointmentmaster
      description: "The Master appointment of a recurring appointment series."
+   - type: Microsoft.Dynamics.CRM.rollupfield
+     description: "Field to be rolled up to calculate the actual and in-progress values against the goal."
    - type: Microsoft.Dynamics.CRM.savedquery
      description: "Saved query against the database."
    - type: Microsoft.Dynamics.CRM.systemform
@@ -66,8 +74,8 @@ entities:
 # This solution includes no actions.
 # This solution has no remarks.
 href_see_also:
-- text: "Use the Microsoft Dynamics 365 Customer Engagement Web API"
-  href: "https://docs.microsoft.com/dynamics365/customer-engagement/developer/use-microsoft-dynamics-365-web-api"
+- text: "Use the Common Data Service Web API"
+  href: "https://docs.microsoft.com/powerapps/developer/common-data-service/webapi/overview"
 xref_see_also:
 - Microsoft.Dynamics.CRM.EntityTypeIndex
 - Microsoft.Dynamics.CRM.ActionIndex

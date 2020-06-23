@@ -1,0 +1,95 @@
+### YamlMime:OData
+uid: Microsoft.Dynamics.CRM.EntityRelationsWithDependantEntityMetadata
+name: "EntityRelationsWithDependantEntityMetadata"
+type: complextype
+metadata: 
+  title: "Common Data Service and Dynamics 365 Customer Engagement EntityRelationsWithDependantEntityMetadata ComplexType Reference | MicrosoftDocs"
+  ms.date: "05/03/2020"
+  ms.service: "crm-online"
+  ms.topic: "reference"
+  ms.assetid: 8bdc2c8c-5c50-4b14-b84f-080d7af1de4b
+  author: "KumarVivek"
+  ms.author: "kvivek"
+  manager: "Annbe"
+  meta-description: "Reference information about the Web API EntityRelationsWithDependantEntityMetadata ComplexType."
+namespace: Microsoft.Dynamics.CRM
+# This complex type doesn't inherit from another complextype.
+description: "" 
+properties:
+  description: "The properties of a complex type contain the structured data of the type."
+  property_items:
+  - name: EntityId
+    type: Edm.String
+    nullable: true
+    unicode: false
+    description: ""
+    iscollection: false
+  - name: LogicalName
+    type: Edm.String
+    nullable: true
+    unicode: false
+    description: ""
+    iscollection: false
+  - name: LogicalCollectionName
+    type: Edm.String
+    nullable: true
+    unicode: false
+    description: ""
+    iscollection: false
+  - name: ObjectTypeCode
+    type: Edm.Int32
+    nullable: true
+    unicode: true
+    description: ""
+    iscollection: false
+  - name: DisplayName
+    type: Edm.String
+    nullable: true
+    unicode: false
+    description: ""
+    iscollection: false
+  - name: PrimaryNameAttribute
+    type: Edm.String
+    nullable: true
+    unicode: false
+    description: ""
+    iscollection: false
+  - name: PrimaryIdAttribute
+    type: Edm.String
+    nullable: true
+    unicode: false
+    description: ""
+    iscollection: false
+  - name: AttributesMetadata
+    type: Microsoft.Dynamics.CRM.DependentAttributeMetadataCollection
+    nullable: true
+    unicode: true
+    description: ""
+    iscollection: false
+  - name: EntityRelationshipCollection
+    type: Microsoft.Dynamics.CRM.DependentRelationshipCollection
+    nullable: true
+    unicode: true
+    description: ""
+    iscollection: false
+  - name: DependantEntitiesCollection
+    type: Microsoft.Dynamics.CRM.DependentEntityMetadataCollection
+    nullable: true
+    unicode: true
+    description: ""
+    iscollection: false
+# This complex type doesn't have any navigation properties.
+
+# This complex type has no remarks.
+href_see_also:
+- text: "Use the Common Data Service Web API"
+  href: "https://docs.microsoft.com/powerapps/developer/common-data-service/webapi/overview"
+xref_see_also:
+- Microsoft.Dynamics.CRM.EntityTypeIndex
+- Microsoft.Dynamics.CRM.ActionIndex
+- Microsoft.Dynamics.CRM.FunctionIndex
+- Microsoft.Dynamics.CRM.QueryFunctionIndex
+- Microsoft.Dynamics.CRM.ComplexTypeIndex
+- Microsoft.Dynamics.CRM.EnumTypeIndex
+- Microsoft.Dynamics.CRM.MetadataEntityTypeIndex
+- Microsoft.Dynamics.CRM.SolutionIndex

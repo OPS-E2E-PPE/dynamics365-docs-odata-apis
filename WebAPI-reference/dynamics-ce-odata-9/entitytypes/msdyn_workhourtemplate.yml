@@ -3,17 +3,15 @@ uid: Microsoft.Dynamics.CRM.msdyn_workhourtemplate
 name: "msdyn_workhourtemplate"
 type: entitytype
 metadata: 
-  title: "Microsoft Dynamics 365 Customer Engagement msdyn_workhourtemplate EntityType Reference | MicrosoftDocs"
-  ms.date: "03/20/2018"
+  title: "Common Data Service and Dynamics 365 Customer Engagement msdyn_workhourtemplate EntityType Reference | MicrosoftDocs"
+  ms.date: "05/03/2020"
   ms.service: "crm-online"
   ms.topic: "reference"
-  applies_to: 
-  - "Dynamics 365 (online)"
   ms.assetid: 2fcb0d3b-b9c0-4bb1-b2b4-d9008e946adb
-  author: "jimdaly"
-  ms.author: "jdaly"
-  manager: "jdaly"
-  meta-description: "Reference information about the Dynamics 365 Customer Engagement msdyn_workhourtemplate entitytype."
+  author: "KumarVivek"
+  ms.author: "kvivek"
+  manager: "Annbe"
+  meta-description: "Reference information about the msdyn_workhourtemplate entitytype."
 description: "Template where resource working hours can be saved and reused."
 header:
   entity_set_path: "[organization URI]/api/data/v9.0/msdyn_workhourtemplates"
@@ -190,6 +188,9 @@ single_valued_navigation_properties:
 collection_valued_navigation_properties:
   description: "Collection-valued navigation properties represent collections of entities which may represent either a one-to-many (1:N) or many-to-many (N:N) relationship between the entities."
   property_items:
+  - name: msdyn_msdyn_workhourtemplate_account_workhourtemplate
+    type: Microsoft.Dynamics.CRM.account
+    partner: msdyn_workhourtemplate
   - name: msdyn_msdyn_workhourtemplate_msdyn_project_workhourtemplate
     type: Microsoft.Dynamics.CRM.msdyn_project
     partner: msdyn_workhourtemplate
@@ -199,6 +200,9 @@ collection_valued_navigation_properties:
   - name: msdyn_msdyn_workhourtemplate_msdyn_projectteam_worktemplate
     type: Microsoft.Dynamics.CRM.msdyn_projectteam
     partner: msdyn_worktemplate
+  - name: msdyn_msdyn_workhourtemplate_msdyn_workorder_workhourtemplate
+    type: Microsoft.Dynamics.CRM.msdyn_workorder
+    partner: msdyn_workhourtemplate
   - name: msdyn_workhourtemplate_Annotations
     type: Microsoft.Dynamics.CRM.annotation
     partner: objectid_msdyn_workhourtemplate
@@ -249,13 +253,13 @@ solutions:
   description: "The following solutions include the msdyn_workhourtemplate entity type."
   solution_items:
   - type: Microsoft.Dynamics.CRM.MicrosoftDynamicsScheduling
-    description: "Unified scheduling solution provides the infrastructure to express resource requirements for any entity in the system and help staff those requirements with resources based on the availability and applicability of the resource for the requirement."
+    description: "The Universal Resource Scheduling solution provides the infrastructure to express resource requirements for any entity in the system and help staff those requirements with resources based on the availability and applicability of the resource for the requirement."
   - type: Microsoft.Dynamics.CRM.ProjectService
     description: "Microsoft Dynamics 365 for Project Service Automation is an end-to-end solution that helps sales and delivery teams engage customers and deliver billable projects on time and within budget. Project Service gives you the tools you need to: Estimate, quote, and contract work; Plan and assign resources; Enable team collaboration; Capture time, expense, and progress data for real-time insights and accurate invoicing."
 # This entity has no remarks.
 href_see_also:
-- text: "Use the Microsoft Dynamics 365 Customer Engagement Web API"
-  href: "https://docs.microsoft.com/dynamics365/customer-engagement/developer/use-microsoft-dynamics-365-web-api"
+- text: "Use the Common Data Service Web API"
+  href: "https://docs.microsoft.com/powerapps/developer/common-data-service/webapi/overview"
 xref_see_also:
 - Microsoft.Dynamics.CRM.EntityTypeIndex
 - Microsoft.Dynamics.CRM.ActionIndex

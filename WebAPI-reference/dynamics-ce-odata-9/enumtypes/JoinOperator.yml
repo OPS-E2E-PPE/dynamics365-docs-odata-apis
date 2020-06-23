@@ -3,17 +3,15 @@ uid: Microsoft.Dynamics.CRM.JoinOperator
 name: "JoinOperator"
 type: enumtype
 metadata: 
-  title: "Microsoft Dynamics 365 Customer Engagement JoinOperator EnumType Reference | MicrosoftDocs"
-  ms.date: "03/20/2018"
+  title: "Common Data Service and Dynamics 365 Customer Engagement JoinOperator EnumType Reference | MicrosoftDocs"
+  ms.date: "05/03/2020"
   ms.service: "crm-online"
   ms.topic: "reference"
-  applies_to: 
-    - "Dynamics 365 (online)"
   ms.assetid: 95fc87e3-dac1-495d-b3d1-9ca3449eb8a1
-  author: "jimdaly"
-  ms.author: "jdaly"
-  manager: "jdaly"
-  meta-description: "Reference information about the Dynamics 365 Customer Engagement Web API JoinOperator ComplexType."
+  author: "KumarVivek"
+  ms.author: "kvivek"
+  manager: "Annbe"
+  meta-description: "Reference information about the Web API JoinOperator ComplexType."
 namespace: Microsoft.Dynamics.CRM
 description: " the possible values for a join operator in a LinkEntity. " 
 members:
@@ -28,6 +26,27 @@ members:
   - description: "Only one value of the two joined attributes is returned if an equal-join operation is performed and the two values are identical. "
     name: "Natural"
     value: 2
+  - description: ""
+    name: "MatchFirstRowUsingCrossApply"
+    value: 3
+  - description: ""
+    name: "In"
+    value: 4
+  - description: ""
+    name: "Exists"
+    value: 5
+  - description: ""
+    name: "Any"
+    value: 6
+  - description: ""
+    name: "NotAny"
+    value: 7
+  - description: ""
+    name: "All"
+    value: 8
+  - description: ""
+    name: "NotAll"
+    value: 9
 usedby:
   description: "The following use the JoinOperator EnumType."
   usedby_items:
@@ -35,8 +54,8 @@ usedby:
     used_as: Property
 # This enum type has no remarks.
 href_see_also:
-- text: "Use the Microsoft Dynamics 365 Customer Engagement Web API"
-  href: "https://docs.microsoft.com/dynamics365/customer-engagement/developer/use-microsoft-dynamics-365-web-api"
+- text: "Use the Common Data Service Web API"
+  href: "https://docs.microsoft.com/powerapps/developer/common-data-service/webapi/overview"
 xref_see_also:
 - Microsoft.Dynamics.CRM.EntityTypeIndex
 - Microsoft.Dynamics.CRM.ActionIndex

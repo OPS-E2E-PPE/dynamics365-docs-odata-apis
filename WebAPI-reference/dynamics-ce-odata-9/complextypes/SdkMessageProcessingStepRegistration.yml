@@ -1,0 +1,119 @@
+### YamlMime:OData
+uid: Microsoft.Dynamics.CRM.SdkMessageProcessingStepRegistration
+name: "SdkMessageProcessingStepRegistration"
+type: complextype
+metadata: 
+  title: "Common Data Service and Dynamics 365 Customer Engagement SdkMessageProcessingStepRegistration ComplexType Reference | MicrosoftDocs"
+  ms.date: "05/03/2020"
+  ms.service: "crm-online"
+  ms.topic: "reference"
+  ms.assetid: 365f1bef-b910-49d4-8938-a4dc2326e5b6
+  author: "KumarVivek"
+  ms.author: "kvivek"
+  manager: "Annbe"
+  meta-description: "Reference information about the Web API SdkMessageProcessingStepRegistration ComplexType."
+namespace: Microsoft.Dynamics.CRM
+# This complex type doesn't inherit from another complextype.
+description: "" 
+properties:
+  description: "The properties of a complex type contain the structured data of the type."
+  property_items:
+  - name: MessageName
+    type: Edm.String
+    nullable: true
+    unicode: false
+    description: ""
+    iscollection: false
+  - name: PrimaryEntityName
+    type: Edm.String
+    nullable: true
+    unicode: false
+    description: ""
+    iscollection: false
+  - name: SecondaryEntityName
+    type: Edm.String
+    nullable: true
+    unicode: false
+    description: ""
+    iscollection: false
+  - name: Description
+    type: Edm.String
+    nullable: true
+    unicode: false
+    description: ""
+    iscollection: false
+  - name: Stage
+    type: Edm.Int32
+    nullable: true
+    unicode: true
+    description: ""
+    iscollection: false
+  - name: Mode
+    type: Edm.Int32
+    nullable: true
+    unicode: true
+    description: ""
+    iscollection: false
+  - name: ImpersonatingUserId
+    type: Edm.Guid
+    nullable: true
+    unicode: true
+    description: ""
+    iscollection: false
+  - name: SupportedDeployment
+    type: Edm.Int32
+    nullable: true
+    unicode: true
+    description: ""
+    iscollection: false
+  - name: FilteringAttributes
+    type: Edm.String
+    nullable: true
+    unicode: false
+    description: ""
+    iscollection: false
+  - name: PluginTypeFriendlyName
+    type: Edm.String
+    nullable: true
+    unicode: false
+    description: ""
+    iscollection: false
+  - name: PluginTypeName
+    type: Edm.String
+    nullable: true
+    unicode: false
+    description: ""
+    iscollection: false
+  - name: CustomConfiguration
+    type: Edm.String
+    nullable: true
+    unicode: false
+    description: ""
+    iscollection: false
+  - name: InvocationSource
+    type: Edm.Int32
+    nullable: true
+    unicode: true
+    description: ""
+    iscollection: false
+  - name: Images
+    type: Microsoft.Dynamics.CRM.SdkMessageProcessingStepImageRegistration
+    nullable: false
+    unicode: true
+    description: ""
+    iscollection: true
+# This complex type doesn't have any navigation properties.
+
+# This complex type has no remarks.
+href_see_also:
+- text: "Use the Common Data Service Web API"
+  href: "https://docs.microsoft.com/powerapps/developer/common-data-service/webapi/overview"
+xref_see_also:
+- Microsoft.Dynamics.CRM.EntityTypeIndex
+- Microsoft.Dynamics.CRM.ActionIndex
+- Microsoft.Dynamics.CRM.FunctionIndex
+- Microsoft.Dynamics.CRM.QueryFunctionIndex
+- Microsoft.Dynamics.CRM.ComplexTypeIndex
+- Microsoft.Dynamics.CRM.EnumTypeIndex
+- Microsoft.Dynamics.CRM.MetadataEntityTypeIndex
+- Microsoft.Dynamics.CRM.SolutionIndex

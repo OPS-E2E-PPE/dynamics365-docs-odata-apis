@@ -3,17 +3,15 @@ uid: Microsoft.Dynamics.CRM.bulkoperationlog
 name: "bulkoperationlog"
 type: entitytype
 metadata: 
-  title: "Microsoft Dynamics 365 Customer Engagement bulkoperationlog EntityType Reference | MicrosoftDocs"
-  ms.date: "03/20/2018"
+  title: "Common Data Service and Dynamics 365 Customer Engagement bulkoperationlog EntityType Reference | MicrosoftDocs"
+  ms.date: "05/03/2020"
   ms.service: "crm-online"
   ms.topic: "reference"
-  applies_to: 
-  - "Dynamics 365 (online)"
   ms.assetid: fb1b40b6-1b3c-4e2f-912b-f17ed9176b73
-  author: "jimdaly"
-  ms.author: "jdaly"
-  manager: "jdaly"
-  meta-description: "Reference information about the Dynamics 365 Customer Engagement bulkoperationlog entitytype."
+  author: "KumarVivek"
+  ms.author: "kvivek"
+  manager: "Annbe"
+  meta-description: "Reference information about the bulkoperationlog entitytype."
 description: "Log used to track bulk operation execution, successes, and failures."
 header:
   entity_set_path: "[organization URI]/api/data/v9.0/bulkoperationlogs"
@@ -40,12 +38,24 @@ properties:
       description: "Unique identifier of the bulk operation log."
       iscomputed: false
       isreadonly: false
+    - name: errordescriptionformatted
+      type: Edm.String
+      display_name: "Error description"
+      description: "The error description formatted."
+      iscomputed: false
+      isreadonly: false
     - name: errornumber
       type: Edm.Int32
       display_name: "Reason Id"
       description: "Shows the error code that is used to troubleshoot issues in the bulk operation."
       iscomputed: false
       isreadonly: true
+    - name: errornumberformatted
+      type: Edm.String
+      display_name: "Error number"
+      description: "The error number formatted."
+      iscomputed: false
+      isreadonly: false
     - name: importsequencenumber
       type: Edm.Int32
       display_name: "Import Sequence Number"
@@ -89,6 +99,8 @@ lookup_properties:
     single_valued_navigation_property:
     - bulkoperationid_activitypointer
     description: "Shows the quick campaign record that the log applies to. This information is used to relate log data to the parent quick campaign."
+  - name: _campaignactivityid_value
+    description: "Shows the campaign activity record that the log applies to. This information is used to relate log data to the parent campaign activity."
   - name: _createdobjectid_value
     single_valued_navigation_property:
     - createdobjectid_account
@@ -124,6 +136,9 @@ single_valued_navigation_properties:
   - name: bulkoperationid_activitypointer
     type: Microsoft.Dynamics.CRM.activitypointer
     partner: activity_pointer_BulkOperation_logs
+  - name: CampaignActivityId_Logs
+    type: Microsoft.Dynamics.CRM.campaignactivity
+    partner: CampaignActivity_logs
   - name: createdobjectid_account
     type: Microsoft.Dynamics.CRM.account
     partner: CreatedAccount_BulkOperationLogs2
@@ -179,10 +194,14 @@ solutions:
   solution_items:
   - type: Microsoft.Dynamics.CRM.msdynce_Marketing
     description: "Dynamics 365 workload for marketing and enterprise."
+  - type: Microsoft.Dynamics.CRM.msdynce_MarketingPatch
+    description: "Patch for Dynamics 365 workload for marketing and enterprise."
+  - type: Microsoft.Dynamics.CRM.msdynce_MarketingPatch201905
+    description: "Patch from 05/2019 for Dynamics 365 workload for marketing and enterprise."
 # This entity has no remarks.
 href_see_also:
-- text: "Use the Microsoft Dynamics 365 Customer Engagement Web API"
-  href: "https://docs.microsoft.com/dynamics365/customer-engagement/developer/use-microsoft-dynamics-365-web-api"
+- text: "Use the Common Data Service Web API"
+  href: "https://docs.microsoft.com/powerapps/developer/common-data-service/webapi/overview"
 xref_see_also:
 - Microsoft.Dynamics.CRM.EntityTypeIndex
 - Microsoft.Dynamics.CRM.ActionIndex

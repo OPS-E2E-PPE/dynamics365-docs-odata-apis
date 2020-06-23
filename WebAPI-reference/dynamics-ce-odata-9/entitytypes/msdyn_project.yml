@@ -3,17 +3,15 @@ uid: Microsoft.Dynamics.CRM.msdyn_project
 name: "msdyn_project"
 type: entitytype
 metadata: 
-  title: "Microsoft Dynamics 365 Customer Engagement msdyn_project EntityType Reference | MicrosoftDocs"
-  ms.date: "03/20/2018"
+  title: "Common Data Service and Dynamics 365 Customer Engagement msdyn_project EntityType Reference | MicrosoftDocs"
+  ms.date: "05/03/2020"
   ms.service: "crm-online"
   ms.topic: "reference"
-  applies_to: 
-  - "Dynamics 365 (online)"
   ms.assetid: 1ad0b5f3-65cd-4e51-aab3-6a815b539deb
-  author: "jimdaly"
-  ms.author: "jdaly"
-  manager: "jdaly"
-  meta-description: "Reference information about the Dynamics 365 Customer Engagement msdyn_project entitytype."
+  author: "KumarVivek"
+  ms.author: "kvivek"
+  manager: "Annbe"
+  meta-description: "Reference information about the msdyn_project entitytype."
 description: "Delivery entity in an engagement."
 header:
   entity_set_path: "[organization URI]/api/data/v9.0/msdyn_projects"
@@ -66,12 +64,36 @@ properties:
       description: "Enter the actual end time of the project."
       iscomputed: false
       isreadonly: false
+    - name: msdyn_actualexpensecost
+      type: Edm.Decimal
+      display_name: "Actual Expense Cost"
+      description: "Shows the aggregate of actual expense cost on the project."
+      iscomputed: false
+      isreadonly: false
+    - name: msdyn_actualexpensecost_base
+      type: Edm.Decimal
+      display_name: "Actual Expense Cost (Base)"
+      description: "Value of the Actual Expense Cost in base currency."
+      iscomputed: false
+      isreadonly: true
     - name: msdyn_actualhours
       type: Edm.Decimal
       display_name: "Actual Hours"
       description: "Shows the total actual hours of the project"
       iscomputed: false
       isreadonly: false
+    - name: msdyn_actuallaborcost
+      type: Edm.Decimal
+      display_name: "Actual Labor Cost"
+      description: "Shows the aggregate of actual labor cost on the project."
+      iscomputed: false
+      isreadonly: false
+    - name: msdyn_actuallaborcost_base
+      type: Edm.Decimal
+      display_name: "Actual Labor Cost (Base)"
+      description: "Value of the Actual Labor Cost in base currency."
+      iscomputed: false
+      isreadonly: true
     - name: msdyn_actualsales
       type: Edm.Decimal
       display_name: "Actual Sales"
@@ -226,12 +248,36 @@ properties:
           label: "Yellow"
         - value: 3
           label: "Red"
+    - name: msdyn_plannedexpensecost
+      type: Edm.Decimal
+      display_name: "Estimated Expense Cost"
+      description: "Shows the aggregate of the planned expense cost of all the associated tasks."
+      iscomputed: false
+      isreadonly: false
+    - name: msdyn_plannedexpensecost_base
+      type: Edm.Decimal
+      display_name: "Estimated Expense Cost (Base)"
+      description: "Value of the Estimated Expense Cost in base currency."
+      iscomputed: false
+      isreadonly: true
     - name: msdyn_plannedhours
       type: Edm.Decimal
       display_name: "Estimated Hours"
       description: "Shows the total estimate hours of the project."
       iscomputed: false
       isreadonly: false
+    - name: msdyn_plannedlaborcost
+      type: Edm.Decimal
+      display_name: "Estimated Labor Cost"
+      description: "Shows the aggregate of the planned labor cost of all the associated tasks."
+      iscomputed: false
+      isreadonly: false
+    - name: msdyn_plannedlaborcost_base
+      type: Edm.Decimal
+      display_name: "Estimated Labor Cost (Base)"
+      description: "Value of the Estimated Labor Cost in base currency."
+      iscomputed: false
+      isreadonly: true
     - name: msdyn_plannedsales
       type: Edm.Decimal
       display_name: "Planned Sales"
@@ -366,8 +412,8 @@ properties:
       isreadonly: false
     - name: msdyn_stagename
       type: Edm.String
-      display_name: "Stage Name"
-      description: "Shows the stage of the project."
+      display_name: "Stage Name (Deprecated in v3.0)"
+      description: "Shows the stage of the project (Deprecated in v3.0)."
       iscomputed: false
       isreadonly: false
     - name: msdyn_statusupdatedon
@@ -402,25 +448,25 @@ properties:
       isreadonly: true
     - name: msdyn_totalactualcost
       type: Edm.Decimal
-      display_name: "Actual Cost"
+      display_name: "Actual Total Cost"
       description: "Shows the aggregated cost from actuals on the project."
       iscomputed: false
       isreadonly: false
     - name: msdyn_totalactualcost_base
       type: Edm.Decimal
-      display_name: "Total Actual Cost (Base)"
+      display_name: "Actual Total Cost (Base)"
       description: "Shows the value of the total actual cost in the base currency."
       iscomputed: false
       isreadonly: true
     - name: msdyn_totalplannedcost
       type: Edm.Decimal
-      display_name: "Estimated Cost"
+      display_name: "Estimated Total Cost"
       description: "Shows the aggregate of the total planned cost of all the associated tasks."
       iscomputed: false
       isreadonly: false
     - name: msdyn_totalplannedcost_base
       type: Edm.Decimal
-      display_name: "Total Planned Cost (Base)"
+      display_name: "Estimated Total Cost (Base)"
       description: "Shows the value of the total planned cost in the base currency."
       iscomputed: false
       isreadonly: true
@@ -463,7 +509,9 @@ properties:
         - value: 1
           label: "Active"
         - value: 2
-          label: "Inactive"
+          label: "Inactive - Sets project to read only"
+        - value: 192350000
+          label: "Closed - Sets project to read only and cancels future bookings"
     - name: timezoneruleversionnumber
       type: Edm.Int32
       display_name: "Time Zone Rule Version Number"
@@ -652,6 +700,9 @@ collection_valued_navigation_properties:
   - name: msdyn_msdyn_project_msdyn_journal_DefaultProject
     type: Microsoft.Dynamics.CRM.msdyn_journal
     partner: msdyn_DefaultProject
+  - name: msdyn_msdyn_project_msdyn_journal_Project
+    type: Microsoft.Dynamics.CRM.msdyn_journal
+    partner: msdyn_Project
   - name: msdyn_msdyn_project_msdyn_journalline_Project
     type: Microsoft.Dynamics.CRM.msdyn_journalline
     partner: msdyn_Project
@@ -752,37 +803,25 @@ operations:
     binding_type: "Not Bound"
   - name: Microsoft.Dynamics.CRM.ModifyAccess
     binding_type: "Not Bound"
-  - name: Microsoft.Dynamics.CRM.msdyn_AutoGenerateProjectTeam
-    binding_type: "Entity"
   - name: Microsoft.Dynamics.CRM.msdyn_CopyProject
     binding_type: "Entity"
   - name: Microsoft.Dynamics.CRM.msdyn_CopyRelatedProjectEntitiesFromTemplate
     binding_type: "Entity"
   - name: Microsoft.Dynamics.CRM.msdyn_CopyWbsToProject
     binding_type: "Entity"
-  - name: Microsoft.Dynamics.CRM.msdyn_CreateTaskBasedEstimatesForProject
-    binding_type: "Entity"
   - name: Microsoft.Dynamics.CRM.msdyn_CreateTemplateFromProject
     binding_type: "Entity"
-  - name: Microsoft.Dynamics.CRM.msdyn_FetchProjectCalendarWorkHours
-    binding_type: "Entity"
   - name: Microsoft.Dynamics.CRM.msdyn_GetEstimatesforProject
-    binding_type: "Entity"
-  - name: Microsoft.Dynamics.CRM.msdyn_GetProjectCurrencies
     binding_type: "Entity"
   - name: Microsoft.Dynamics.CRM.msdyn_JoinProjectTeam
     binding_type: "Entity"
   - name: Microsoft.Dynamics.CRM.msdyn_MoveProject
-    binding_type: "Entity"
-  - name: Microsoft.Dynamics.CRM.msdyn_MSProject_ExportToProject
     binding_type: "Entity"
   - name: Microsoft.Dynamics.CRM.msdyn_MSProject_LinkToProject
     binding_type: "Entity"
   - name: Microsoft.Dynamics.CRM.msdyn_MSProject_PublishToExistingProject
     binding_type: "Entity"
   - name: Microsoft.Dynamics.CRM.msdyn_MSProject_ReadFromExistingProject
-    binding_type: "Entity"
-  - name: Microsoft.Dynamics.CRM.msdyn_MSProject_UnlinkFromProject
     binding_type: "Entity"
   - name: Microsoft.Dynamics.CRM.msdyn_UpdateAllEstimatesForProject
     binding_type: "Entity"
@@ -799,8 +838,8 @@ solutions:
     description: "Microsoft Dynamics 365 for Project Service Automation is an end-to-end solution that helps sales and delivery teams engage customers and deliver billable projects on time and within budget. Project Service gives you the tools you need to: Estimate, quote, and contract work; Plan and assign resources; Enable team collaboration; Capture time, expense, and progress data for real-time insights and accurate invoicing."
 # This entity has no remarks.
 href_see_also:
-- text: "Use the Microsoft Dynamics 365 Customer Engagement Web API"
-  href: "https://docs.microsoft.com/dynamics365/customer-engagement/developer/use-microsoft-dynamics-365-web-api"
+- text: "Use the Common Data Service Web API"
+  href: "https://docs.microsoft.com/powerapps/developer/common-data-service/webapi/overview"
 xref_see_also:
 - Microsoft.Dynamics.CRM.EntityTypeIndex
 - Microsoft.Dynamics.CRM.ActionIndex

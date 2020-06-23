@@ -1,0 +1,39 @@
+### YamlMime:OData
+uid: Microsoft.Dynamics.CRM.msdynce_Talkingpoints
+name: "Talking points"
+type: solution
+metadata: 
+  title: "Common Data Service and Dynamics 365 Customer Engagement Talking points Solution Reference | MicrosoftDocs"
+  ms.date: "05/03/2020"
+  ms.service: "crm-online"
+  ms.topic: "reference"
+  ms.assetid: 7330db97-cad4-4bce-b28b-412716ea58ab
+  author: "KumarVivek"
+  ms.author: "kvivek"
+  manager: "Annbe"
+  meta-description: "Reference information about the Dynamics 365 Customer Engagement Talking points Solution."
+namespace: Microsoft.Dynamics.CRM
+header:
+ description: "Intelligently extracts talking points with your contact, from your exchange mailbox"
+ unique_name: msdynce_Talkingpoints
+ version: "9.0.1.70947"
+ customization_prefix: msdyn
+entities:
+  description: "The following entities are included in this solution."
+  entity_items:
+   - type: Microsoft.Dynamics.CRM.contact
+     description: "Person with whom a business unit has a relationship, such as customer, supplier, and colleague."
+# This solution includes no actions.
+# This solution has no remarks.
+href_see_also:
+- text: "Use the Common Data Service Web API"
+  href: "https://docs.microsoft.com/powerapps/developer/common-data-service/webapi/overview"
+xref_see_also:
+- Microsoft.Dynamics.CRM.EntityTypeIndex
+- Microsoft.Dynamics.CRM.ActionIndex
+- Microsoft.Dynamics.CRM.FunctionIndex
+- Microsoft.Dynamics.CRM.QueryFunctionIndex
+- Microsoft.Dynamics.CRM.ComplexTypeIndex
+- Microsoft.Dynamics.CRM.EnumTypeIndex
+- Microsoft.Dynamics.CRM.MetadataEntityTypeIndex
+- Microsoft.Dynamics.CRM.SolutionIndex

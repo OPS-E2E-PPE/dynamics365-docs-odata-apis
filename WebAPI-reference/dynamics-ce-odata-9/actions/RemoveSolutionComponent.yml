@@ -3,17 +3,15 @@ uid: Microsoft.Dynamics.CRM.RemoveSolutionComponent
 name: "RemoveSolutionComponent"
 type: action
 metadata: 
-  title: "Microsoft Dynamics 365 Customer Engagement RemoveSolutionComponent Action Reference | MicrosoftDocs"
-  ms.date: "03/20/2018"
+  title: "Common Data Service and Dynamics 365 Customer Engagement RemoveSolutionComponent Action Reference | MicrosoftDocs"
+  ms.date: "05/03/2020"
   ms.service: "crm-online"
   ms.topic: "reference"
-  applies_to: 
-  - "Dynamics 365 (online)"
   ms.assetid: fc7c8ee7-75ee-46a8-bc3a-fed182443f97
-  author: "jimdaly"
-  ms.author: "jdaly"
-  manager: "jdaly"
-  meta-description: "Reference information about the Dynamics 365 Customer Engagement RemoveSolutionComponent Action."
+  author: "KumarVivek"
+  ms.author: "kvivek"
+  manager: "Annbe"
+  meta-description: "Reference information about the RemoveSolutionComponent Action."
 namespace: Microsoft.Dynamics.CRM
 description: "Removes a component from an unmanaged solution. "
 owningsolution: Microsoft.Dynamics.CRM.System
@@ -50,8 +48,8 @@ entities:
     description: "A component of a CRM solution."
 # This action has no remarks.
 href_see_also:
-- text: "Use the Microsoft Dynamics 365 Customer Engagement Web API"
-  href: "https://docs.microsoft.com/dynamics365/customer-engagement/developer/use-microsoft-dynamics-365-web-api"
+- text: "Use the Common Data Service Web API"
+  href: "https://docs.microsoft.com/powerapps/developer/common-data-service/webapi/overview"
 xref_see_also:
 - Microsoft.Dynamics.CRM.EntityTypeIndex
 - Microsoft.Dynamics.CRM.ActionIndex

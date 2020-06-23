@@ -3,24 +3,22 @@ uid: Microsoft.Dynamics.CRM.opportunityproduct
 name: "opportunityproduct"
 type: entitytype
 metadata: 
-  title: "Microsoft Dynamics 365 Customer Engagement opportunityproduct EntityType Reference | MicrosoftDocs"
-  ms.date: "03/20/2018"
+  title: "Common Data Service and Dynamics 365 Customer Engagement opportunityproduct EntityType Reference | MicrosoftDocs"
+  ms.date: "05/03/2020"
   ms.service: "crm-online"
   ms.topic: "reference"
-  applies_to: 
-  - "Dynamics 365 (online)"
   ms.assetid: 705d3a47-3986-4f18-bce8-8b0b408ee3af
-  author: "jimdaly"
-  ms.author: "jdaly"
-  manager: "jdaly"
-  meta-description: "Reference information about the Dynamics 365 Customer Engagement opportunityproduct entitytype."
+  author: "KumarVivek"
+  ms.author: "kvivek"
+  manager: "Annbe"
+  meta-description: "Reference information about the opportunityproduct entitytype."
 description: "Association between an opportunity and a product."
 header:
   entity_set_path: "[organization URI]/api/data/v9.0/opportunityproducts"
   base_type: Microsoft.Dynamics.CRM.crmbaseentity
   display_name: Opportunity Line
   primary_key: opportunityproductid
-  primary_name_attribute: productidname
+  primary_name_attribute: opportunityproductname
   operations_supported:
   - POST
   - GET
@@ -230,6 +228,12 @@ properties:
       description: "Unique identifier of the opportunity product."
       iscomputed: false
       isreadonly: false
+    - name: opportunityproductname
+      type: Edm.String
+      display_name: "Name"
+      description: "Opportunity Product Name. Added for 1:n referential relationship (internal purposes only)"
+      iscomputed: false
+      isreadonly: false
     - name: opportunitystatecode
       type: Edm.Int32
       display_name: "Opportunity Status"
@@ -343,6 +347,8 @@ properties:
           label: "Base Currency Attribute Overflow"
         - value: 37
           label: "Base Currency Attribute Underflow"
+        - value: 38
+          label: "Transaction currency is not set for the product price list item"
     - name: productassociationid
       type: Edm.Guid
       display_name: "Bundle Item Association"
@@ -403,6 +409,19 @@ properties:
       description: "Shows the ID of the data that maintains the sequence."
       iscomputed: false
       isreadonly: false
+    - name: skippricecalculation
+      type: Edm.Int32
+      display_name: "Skip Price Calculation"
+      description: "Skip price calculation"
+      iscomputed: false
+      isreadonly: false
+      options:
+        - value: 0
+          label: "DoPriceCalcAlways"
+        - value: 1
+          label: "SkipPriceCalcOnCreate"
+        - value: 2
+          label: "SkipPriceCalcOnUpdate"
     - name: tax
       type: Edm.Decimal
       display_name: "Tax"
@@ -492,6 +511,10 @@ lookup_properties:
     single_valued_navigation_property:
     - owninguser
     description: "Unique identifier for the user that owns the record."
+  - name: _parentbundleidref_value
+    single_valued_navigation_property:
+    - parentbundleidref_opportunityproduct
+    description: "Choose the parent bundle associated with this product"
   - name: _productid_value
     single_valued_navigation_property:
     - productid
@@ -540,6 +563,9 @@ single_valued_navigation_properties:
   - name: parentbundleid_opportunityproduct
     type: Microsoft.Dynamics.CRM.opportunityproduct
     partner: opportunityproduct_parent_opportunityproduct
+  - name: parentbundleidref_opportunityproduct
+    type: Microsoft.Dynamics.CRM.opportunityproduct
+    partner: opportunityproduct_parentref_opportunityproduct
   - name: productassociationid_productassociation
     type: Microsoft.Dynamics.CRM.productassociation
     partner: productAssociation_opportunity_product
@@ -570,6 +596,9 @@ collection_valued_navigation_properties:
   - name: opportunityproduct_parent_opportunityproduct
     type: Microsoft.Dynamics.CRM.opportunityproduct
     partner: parentbundleid_opportunityproduct
+  - name: opportunityproduct_parentref_opportunityproduct
+    type: Microsoft.Dynamics.CRM.opportunityproduct
+    partner: parentbundleidref_opportunityproduct
   - name: opportunityproduct_principalobjectattributeaccess
     type: Microsoft.Dynamics.CRM.principalobjectattributeaccess
     partner: objectid_opportunityproduct
@@ -594,12 +623,18 @@ solutions:
     description: "Microsoft Dynamics 365 for Field Service allows organizations of any size to deliver intelligent, world class field service, managing all aspects of the end-to-end field service management cycle. Features include scheduling, mobile, asset management, inventory control, customer notifications, and resource utilization controls that help maximize efficiency and minimize costs."
   - type: Microsoft.Dynamics.CRM.msdynce_Sales
     description: "Dynamics 365 workload for sales."
+  - type: Microsoft.Dynamics.CRM.msdynce_SalesPatch
+    description: "Patch for Dynamics 365 workload for sales."
+  - type: Microsoft.Dynamics.CRM.msdynce_SalesPatch201904
+    description: "Dynamics 365 workload for Sales Patch Version 2."
+  - type: Microsoft.Dynamics.CRM.msdynce_SalesPatch202001
+    description: "Dynamics 365 workload for third patch of Sales."
   - type: Microsoft.Dynamics.CRM.ProjectService
     description: "Microsoft Dynamics 365 for Project Service Automation is an end-to-end solution that helps sales and delivery teams engage customers and deliver billable projects on time and within budget. Project Service gives you the tools you need to: Estimate, quote, and contract work; Plan and assign resources; Enable team collaboration; Capture time, expense, and progress data for real-time insights and accurate invoicing."
 # This entity has no remarks.
 href_see_also:
-- text: "Use the Microsoft Dynamics 365 Customer Engagement Web API"
-  href: "https://docs.microsoft.com/dynamics365/customer-engagement/developer/use-microsoft-dynamics-365-web-api"
+- text: "Use the Common Data Service Web API"
+  href: "https://docs.microsoft.com/powerapps/developer/common-data-service/webapi/overview"
 xref_see_also:
 - Microsoft.Dynamics.CRM.EntityTypeIndex
 - Microsoft.Dynamics.CRM.ActionIndex

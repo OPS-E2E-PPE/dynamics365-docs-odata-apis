@@ -1,0 +1,77 @@
+### YamlMime:OData
+uid: Microsoft.Dynamics.CRM.msdynce_AppCommonPatch
+name: "Application Common Patch"
+type: solution
+metadata: 
+  title: "Common Data Service and Dynamics 365 Customer Engagement Application Common Patch Solution Reference | MicrosoftDocs"
+  ms.date: "05/03/2020"
+  ms.service: "crm-online"
+  ms.topic: "reference"
+  ms.assetid: 9f60923d-3725-4bb7-a5ff-de825565e8b5
+  author: "KumarVivek"
+  ms.author: "kvivek"
+  manager: "Annbe"
+  meta-description: "Reference information about the Dynamics 365 Customer Engagement Application Common Patch Solution."
+namespace: Microsoft.Dynamics.CRM
+header:
+ description: "For internal use only."
+ unique_name: msdynce_AppCommonPatch
+ version: "9.0.1904.4006"
+ customization_prefix: none
+entities:
+  description: "The following entities are included in this solution."
+  entity_items:
+   - type: Microsoft.Dynamics.CRM.account
+     description: "Business that represents a customer or potential customer. The company that is billed in business transactions."
+   - type: Microsoft.Dynamics.CRM.calendar
+     description: "Calendar used by the scheduling system to define when an appointment or activity is to occur."
+   - type: Microsoft.Dynamics.CRM.connection
+     description: "Relationship between two entities."
+   - type: Microsoft.Dynamics.CRM.customeraddress
+     description: "Address and shipping information. Used to store additional addresses for an account or contact."
+   - type: Microsoft.Dynamics.CRM.documenttemplate
+     description: "Used to store Document Templates in database in binary format."
+   - type: Microsoft.Dynamics.CRM.goal
+     description: "Target objective for a user or a team for a specified time period."
+   - type: Microsoft.Dynamics.CRM.goalrollupquery
+     description: "Query that is used to filter the results of the goal rollup."
+   - type: Microsoft.Dynamics.CRM.mailbox
+     description: ""
+   - type: Microsoft.Dynamics.CRM.metric
+     description: "Type of measurement for a goal, such as money amount or count."
+   - type: Microsoft.Dynamics.CRM.personaldocumenttemplate
+     description: "Used to store Personal Document Templates in database in binary format."
+   - type: Microsoft.Dynamics.CRM.queue
+     description: "A list of records that require action, such as accounts, activities, and cases."
+   - type: Microsoft.Dynamics.CRM.queueitem
+     description: "A specific item in a queue, such as a case record or an activity record."
+   - type: Microsoft.Dynamics.CRM.rollupfield
+     description: "Field to be rolled up to calculate the actual and in-progress values against the goal."
+   - type: Microsoft.Dynamics.CRM.savedquery
+     description: "Saved query against the database."
+   - type: Microsoft.Dynamics.CRM.systemform
+     description: "Organization-owned entity customizations including form layout and dashboards."
+   - type: Microsoft.Dynamics.CRM.systemuser
+     description: "Person with access to the Microsoft CRM system and who owns objects in the Microsoft CRM database."
+   - type: Microsoft.Dynamics.CRM.team
+     description: "Collection of system users that routinely collaborate. Teams can be used to simplify record sharing and provide team members with common access to organization data when team members belong to different Business Units."
+   - type: Microsoft.Dynamics.CRM.territory
+     description: "Territory represents sales regions."
+   - type: Microsoft.Dynamics.CRM.transactioncurrency
+     description: "Currency in which a financial transaction is carried out."
+   - type: Microsoft.Dynamics.CRM.workflow
+     description: "Set of logical rules that define the steps necessary to automate a specific business process, task, or set of actions to be performed."
+# This solution includes no actions.
+# This solution has no remarks.
+href_see_also:
+- text: "Use the Common Data Service Web API"
+  href: "https://docs.microsoft.com/powerapps/developer/common-data-service/webapi/overview"
+xref_see_also:
+- Microsoft.Dynamics.CRM.EntityTypeIndex
+- Microsoft.Dynamics.CRM.ActionIndex
+- Microsoft.Dynamics.CRM.FunctionIndex
+- Microsoft.Dynamics.CRM.QueryFunctionIndex
+- Microsoft.Dynamics.CRM.ComplexTypeIndex
+- Microsoft.Dynamics.CRM.EnumTypeIndex
+- Microsoft.Dynamics.CRM.MetadataEntityTypeIndex
+- Microsoft.Dynamics.CRM.SolutionIndex

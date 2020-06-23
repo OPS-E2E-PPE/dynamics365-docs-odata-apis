@@ -3,17 +3,15 @@ uid: Microsoft.Dynamics.CRM.msdyn_GetEstimatesforProject
 name: "msdyn_GetEstimatesforProject"
 type: action
 metadata: 
-  title: "Microsoft Dynamics 365 Customer Engagement msdyn_GetEstimatesforProject Action Reference | MicrosoftDocs"
-  ms.date: "03/20/2018"
+  title: "Common Data Service and Dynamics 365 Customer Engagement msdyn_GetEstimatesforProject Action Reference | MicrosoftDocs"
+  ms.date: "05/03/2020"
   ms.service: "crm-online"
   ms.topic: "reference"
-  applies_to: 
-  - "Dynamics 365 (online)"
   ms.assetid: 98db7aef-390d-441d-8156-34e2bc3ac167
-  author: "jimdaly"
-  ms.author: "jdaly"
-  manager: "jdaly"
-  meta-description: "Reference information about the Dynamics 365 Customer Engagement msdyn_GetEstimatesforProject Action."
+  author: "KumarVivek"
+  ms.author: "kvivek"
+  manager: "Annbe"
+  meta-description: "Reference information about the msdyn_GetEstimatesforProject Action."
 namespace: Microsoft.Dynamics.CRM
 # This Action has no description.
 owningsolution: Microsoft.Dynamics.CRM.ProjectService
@@ -29,7 +27,7 @@ parameters:
     type: Edm.Boolean
     nullable: true
     unicode: true
-    description: "For internal use only."
+    description: ""
 return_type:
   description: "The msdyn_GetEstimatesforProject action returns the following value."
   iscollection: true
@@ -38,8 +36,8 @@ return_type:
 # This action has no identified unbound entities.
 # This action has no remarks.
 href_see_also:
-- text: "Use the Microsoft Dynamics 365 Customer Engagement Web API"
-  href: "https://docs.microsoft.com/dynamics365/customer-engagement/developer/use-microsoft-dynamics-365-web-api"
+- text: "Use the Common Data Service Web API"
+  href: "https://docs.microsoft.com/powerapps/developer/common-data-service/webapi/overview"
 xref_see_also:
 - Microsoft.Dynamics.CRM.EntityTypeIndex
 - Microsoft.Dynamics.CRM.ActionIndex

@@ -1,0 +1,35 @@
+### YamlMime:OData
+uid: Microsoft.Dynamics.CRM.CRMSettingsAPIs
+name: "Microsoft Dynamics 365 Settings APIs"
+type: solution
+metadata: 
+  title: "Common Data Service and Dynamics 365 Customer Engagement Microsoft Dynamics 365 Settings APIs Solution Reference | MicrosoftDocs"
+  ms.date: "05/03/2020"
+  ms.service: "crm-online"
+  ms.topic: "reference"
+  ms.assetid: 154e84df-280d-4dfd-b0ff-048b42ba192f
+  author: "KumarVivek"
+  ms.author: "kvivek"
+  manager: "Annbe"
+  meta-description: "Reference information about the Dynamics 365 Customer Engagement Microsoft Dynamics 365 Settings APIs Solution."
+namespace: Microsoft.Dynamics.CRM
+header:
+# This solution has no description.
+ unique_name: CRMSettingsAPIs
+ version: "10.0.0.119"
+ customization_prefix: msdyn
+# This solution includes no entities.
+# This solution includes no actions.
+# This solution has no remarks.
+href_see_also:
+- text: "Use the Common Data Service Web API"
+  href: "https://docs.microsoft.com/powerapps/developer/common-data-service/webapi/overview"
+xref_see_also:
+- Microsoft.Dynamics.CRM.EntityTypeIndex
+- Microsoft.Dynamics.CRM.ActionIndex
+- Microsoft.Dynamics.CRM.FunctionIndex
+- Microsoft.Dynamics.CRM.QueryFunctionIndex
+- Microsoft.Dynamics.CRM.ComplexTypeIndex
+- Microsoft.Dynamics.CRM.EnumTypeIndex
+- Microsoft.Dynamics.CRM.MetadataEntityTypeIndex
+- Microsoft.Dynamics.CRM.SolutionIndex

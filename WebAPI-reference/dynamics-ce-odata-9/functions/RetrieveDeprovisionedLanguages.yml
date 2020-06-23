@@ -3,17 +3,15 @@ uid: Microsoft.Dynamics.CRM.RetrieveDeprovisionedLanguages
 name: "RetrieveDeprovisionedLanguages"
 type: function
 metadata: 
-  title: "Microsoft Dynamics 365 Customer Engagement RetrieveDeprovisionedLanguages Function Reference | MicrosoftDocs"
-  ms.date: "03/20/2018"
+  title: "Common Data Service and Dynamics 365 Customer Engagement RetrieveDeprovisionedLanguages Function Reference | MicrosoftDocs"
+  ms.date: "05/03/2020"
   ms.service: "crm-online"
   ms.topic: "reference"
-  applies_to: 
-  - "Dynamics 365 (online)"
   ms.assetid: 6871a3fa-e1cc-44a2-a284-05c5249fdb14
-  author: "jimdaly"
-  ms.author: "jdaly"
-  manager: "jdaly"
-  meta-description: "Reference information about the Dynamics 365 Customer Engagement RetrieveDeprovisionedLanguages Function."
+  author: "KumarVivek"
+  ms.author: "kvivek"
+  manager: "Annbe"
+  meta-description: "Reference information about the RetrieveDeprovisionedLanguages Function."
 namespace: Microsoft.Dynamics.CRM
 description: "Retrieves a list of language packs that are installed on the server that have been disabled. "
 iscomposable: false
@@ -29,8 +27,8 @@ return_type:
 # This function no specific entities for this function identified.
 # This function has no remarks.
 href_see_also:
-- text: "Use the Microsoft Dynamics 365 Customer Engagement Web API"
-  href: "https://docs.microsoft.com/dynamics365/customer-engagement/developer/use-microsoft-dynamics-365-web-api"
+- text: "Use the Common Data Service Web API"
+  href: "https://docs.microsoft.com/powerapps/developer/common-data-service/webapi/overview"
 xref_see_also:
 - Microsoft.Dynamics.CRM.EntityTypeIndex
 - Microsoft.Dynamics.CRM.ActionIndex

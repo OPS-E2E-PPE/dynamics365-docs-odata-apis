@@ -3,17 +3,15 @@ uid: Microsoft.Dynamics.CRM.msdyn_expense
 name: "msdyn_expense"
 type: entitytype
 metadata: 
-  title: "Microsoft Dynamics 365 Customer Engagement msdyn_expense EntityType Reference | MicrosoftDocs"
-  ms.date: "03/20/2018"
+  title: "Common Data Service and Dynamics 365 Customer Engagement msdyn_expense EntityType Reference | MicrosoftDocs"
+  ms.date: "05/03/2020"
   ms.service: "crm-online"
   ms.topic: "reference"
-  applies_to: 
-  - "Dynamics 365 (online)"
   ms.assetid: 19302b4c-210f-4f5e-9749-3e9a4e65c141
-  author: "jimdaly"
-  ms.author: "jdaly"
-  manager: "jdaly"
-  meta-description: "Reference information about the Dynamics 365 Customer Engagement msdyn_expense entitytype."
+  author: "KumarVivek"
+  ms.author: "kvivek"
+  manager: "Annbe"
+  meta-description: "Reference information about the msdyn_expense entitytype."
 description: "Main container that holds expense information."
 header:
   entity_set_path: "[organization URI]/api/data/v9.0/msdyn_expenses"
@@ -91,6 +89,8 @@ properties:
           label: "Posted"
         - value: 192350005
           label: "Paid"
+        - value: 192350006
+          label: "Recall Requested"
     - name: msdyn_externaldescription
       type: Edm.String
       display_name: "External Comments"
@@ -101,6 +101,24 @@ properties:
       type: Edm.String
       display_name: "Expense Purpose"
       description: "Enter the expense's purpose."
+      iscomputed: false
+      isreadonly: false
+    - name: msdyn_price
+      type: Edm.Decimal
+      display_name: "Price"
+      description: "Enter the Price"
+      iscomputed: false
+      isreadonly: false
+    - name: msdyn_price_base
+      type: Edm.Decimal
+      display_name: "Price (Base)"
+      description: "Value of the Price in base currency."
+      iscomputed: false
+      isreadonly: true
+    - name: msdyn_quantity
+      type: Edm.Decimal
+      display_name: "Quantity"
+      description: "Enter the Quantity"
       iscomputed: false
       isreadonly: false
     - name: msdyn_salestaxamount
@@ -134,6 +152,8 @@ properties:
           label: "Posted"
         - value: 192350005
           label: "Paid"
+        - value: 192350006
+          label: "Recall Requested"
     - name: msdyn_totalamount
       type: Edm.Decimal
       display_name: "Total Amount"
@@ -257,6 +277,14 @@ lookup_properties:
     single_valued_navigation_property:
     - msdyn_ResourceOrganizationalUnitId
     description: "Select the organizational unit at the time the entry was registered of the resource who had the expense."
+  - name: _msdyn_unit_value
+    single_valued_navigation_property:
+    - msdyn_Unit
+    description: "Enter the Unit"
+  - name: _msdyn_unitgroup_value
+    single_valued_navigation_property:
+    - msdyn_UnitGroup
+    description: "Enter the Unit Group"
   - name: _ownerid_value
     single_valued_navigation_property:
     - ownerid
@@ -311,6 +339,12 @@ single_valued_navigation_properties:
   - name: msdyn_ResourceOrganizationalUnitId
     type: Microsoft.Dynamics.CRM.msdyn_organizationalunit
     partner: msdyn_organizationalunit_expense
+  - name: msdyn_Unit
+    type: Microsoft.Dynamics.CRM.uom
+    partner: msdyn_uom_msdyn_expense_Unit
+  - name: msdyn_UnitGroup
+    type: Microsoft.Dynamics.CRM.uomschedule
+    partner: msdyn_uomschedule_msdyn_expense_UnitGroup
   - name: ownerid
     type: Microsoft.Dynamics.CRM.principal
     partner: owner_msdyn_expense
@@ -368,6 +402,9 @@ collection_valued_navigation_properties:
   - name: msdyn_msdyn_expense_msdyn_projectapproval_ExpenseEntry
     type: Microsoft.Dynamics.CRM.msdyn_projectapproval
     partner: msdyn_ExpenseEntry
+  - name: msdyn_msdyn_journal_msdyn_expense
+    type: Microsoft.Dynamics.CRM.msdyn_journal
+    partner: msdyn_msdyn_journal_msdyn_expense
 # This entity has no derived entities.
 operations:
   description: "The following operations can be used with the msdyn_expense entity type."
@@ -378,8 +415,6 @@ operations:
     binding_type: "Not Bound"
   - name: Microsoft.Dynamics.CRM.ModifyAccess
     binding_type: "Not Bound"
-  - name: Microsoft.Dynamics.CRM.msdyn_ExpenseApproveAction
-    binding_type: "Entity"
   - name: Microsoft.Dynamics.CRM.msdyn_ExpenseRejectAction
     binding_type: "Entity"
   - name: Microsoft.Dynamics.CRM.msdyn_ExpenseSubmitAction
@@ -397,8 +432,8 @@ solutions:
     description: "Microsoft Dynamics 365 for Project Service Automation is an end-to-end solution that helps sales and delivery teams engage customers and deliver billable projects on time and within budget. Project Service gives you the tools you need to: Estimate, quote, and contract work; Plan and assign resources; Enable team collaboration; Capture time, expense, and progress data for real-time insights and accurate invoicing."
 # This entity has no remarks.
 href_see_also:
-- text: "Use the Microsoft Dynamics 365 Customer Engagement Web API"
-  href: "https://docs.microsoft.com/dynamics365/customer-engagement/developer/use-microsoft-dynamics-365-web-api"
+- text: "Use the Common Data Service Web API"
+  href: "https://docs.microsoft.com/powerapps/developer/common-data-service/webapi/overview"
 xref_see_also:
 - Microsoft.Dynamics.CRM.EntityTypeIndex
 - Microsoft.Dynamics.CRM.ActionIndex

@@ -3,17 +3,15 @@ uid: Microsoft.Dynamics.CRM.msdyn_CancelBookings
 name: "msdyn_CancelBookings"
 type: action
 metadata: 
-  title: "Microsoft Dynamics 365 Customer Engagement msdyn_CancelBookings Action Reference | MicrosoftDocs"
-  ms.date: "03/20/2018"
+  title: "Common Data Service and Dynamics 365 Customer Engagement msdyn_CancelBookings Action Reference | MicrosoftDocs"
+  ms.date: "05/03/2020"
   ms.service: "crm-online"
   ms.topic: "reference"
-  applies_to: 
-  - "Dynamics 365 (online)"
   ms.assetid: a9a14b67-5368-4cff-a580-1c5044276035
-  author: "jimdaly"
-  ms.author: "jdaly"
-  manager: "jdaly"
-  meta-description: "Reference information about the Dynamics 365 Customer Engagement msdyn_CancelBookings Action."
+  author: "KumarVivek"
+  ms.author: "kvivek"
+  manager: "Annbe"
+  meta-description: "Reference information about the msdyn_CancelBookings Action."
 namespace: Microsoft.Dynamics.CRM
 description: "For internal use only."
 owningsolution: Microsoft.Dynamics.CRM.MicrosoftDynamicsScheduling
@@ -22,32 +20,17 @@ isbound: false
 parameters:
   description: "Parameters allow for data to be passed to the action."
   parameter_items:
-  - name: ReloadStartDate
-    type: Edm.DateTimeOffset
-    nullable: true
-    unicode: true
-    description: "For internal use only."
-  - name: ReloadEndDate
-    type: Edm.DateTimeOffset
-    nullable: true
-    unicode: true
-    description: "For internal use only."
-  - name: Timescale
-    type: Edm.Int32
-    nullable: false
-    unicode: true
-    description: "For internal use only."
-  - name: BookingCancelContext
+  - name: BookingIds
     type: Edm.String
-    nullable: false
+    nullable: true
     unicode: false
-    description: "For internal use only."
-  - name: TimeZoneCode
-    type: Edm.Int32
+    description: ""
+  - name: DefaultBookingDetail
+    type: Microsoft.Dynamics.CRM.crmbaseentity
     nullable: true
     unicode: true
-    description: "For internal use only."
-  - name: SchedulerSettings
+    description: ""
+  - name: BookingCancelContext
     type: Edm.String
     nullable: true
     unicode: false
@@ -60,8 +43,8 @@ return_type:
 # This action has no identified unbound entities.
 # This action has no remarks.
 href_see_also:
-- text: "Use the Microsoft Dynamics 365 Customer Engagement Web API"
-  href: "https://docs.microsoft.com/dynamics365/customer-engagement/developer/use-microsoft-dynamics-365-web-api"
+- text: "Use the Common Data Service Web API"
+  href: "https://docs.microsoft.com/powerapps/developer/common-data-service/webapi/overview"
 xref_see_also:
 - Microsoft.Dynamics.CRM.EntityTypeIndex
 - Microsoft.Dynamics.CRM.ActionIndex

@@ -3,17 +3,15 @@ uid: Microsoft.Dynamics.CRM.salesliteratureitem
 name: "salesliteratureitem"
 type: entitytype
 metadata: 
-  title: "Microsoft Dynamics 365 Customer Engagement salesliteratureitem EntityType Reference | MicrosoftDocs"
-  ms.date: "03/20/2018"
+  title: "Common Data Service and Dynamics 365 Customer Engagement salesliteratureitem EntityType Reference | MicrosoftDocs"
+  ms.date: "05/03/2020"
   ms.service: "crm-online"
   ms.topic: "reference"
-  applies_to: 
-  - "Dynamics 365 (online)"
   ms.assetid: 12b02c2e-31ba-438b-b3d3-15606e21fb15
-  author: "jimdaly"
-  ms.author: "jdaly"
-  manager: "jdaly"
-  meta-description: "Reference information about the Dynamics 365 Customer Engagement salesliteratureitem entitytype."
+  author: "KumarVivek"
+  ms.author: "kvivek"
+  manager: "Annbe"
+  meta-description: "Reference information about the salesliteratureitem entitytype."
 description: "Item in the sales literature collection."
 header:
   entity_set_path: "[organization URI]/api/data/v9.0/salesliteratureitems"
@@ -77,7 +75,7 @@ properties:
       display_name: "File Size (Bytes)"
       description: "File size of the document."
       iscomputed: false
-      isreadonly: true
+      isreadonly: false
     - name: filetypecode
       type: Edm.Int32
       display_name: "File Type"
@@ -114,6 +112,12 @@ properties:
       type: Edm.String
       display_name: "Mime Type"
       description: "Shows the file type of the sales literature document attachment, such as text or document."
+      iscomputed: false
+      isreadonly: false
+    - name: mode
+      type: Edm.String
+      display_name: "Mode"
+      description: "Defines the mode of the sales literature document attachment."
       iscomputed: false
       isreadonly: false
     - name: modifiedon
@@ -233,10 +237,14 @@ solutions:
   solution_items:
   - type: Microsoft.Dynamics.CRM.msdynce_Sales
     description: "Dynamics 365 workload for sales."
+  - type: Microsoft.Dynamics.CRM.msdynce_SalesPatch
+    description: "Patch for Dynamics 365 workload for sales."
+  - type: Microsoft.Dynamics.CRM.msdynce_SalesPatch202001
+    description: "Dynamics 365 workload for third patch of Sales."
 # This entity has no remarks.
 href_see_also:
-- text: "Use the Microsoft Dynamics 365 Customer Engagement Web API"
-  href: "https://docs.microsoft.com/dynamics365/customer-engagement/developer/use-microsoft-dynamics-365-web-api"
+- text: "Use the Common Data Service Web API"
+  href: "https://docs.microsoft.com/powerapps/developer/common-data-service/webapi/overview"
 xref_see_also:
 - Microsoft.Dynamics.CRM.EntityTypeIndex
 - Microsoft.Dynamics.CRM.ActionIndex

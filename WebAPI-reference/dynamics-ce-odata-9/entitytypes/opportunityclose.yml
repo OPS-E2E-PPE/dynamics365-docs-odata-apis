@@ -3,17 +3,15 @@ uid: Microsoft.Dynamics.CRM.opportunityclose
 name: "opportunityclose"
 type: entitytype
 metadata: 
-  title: "Microsoft Dynamics 365 Customer Engagement opportunityclose EntityType Reference | MicrosoftDocs"
-  ms.date: "03/20/2018"
+  title: "Common Data Service and Dynamics 365 Customer Engagement opportunityclose EntityType Reference | MicrosoftDocs"
+  ms.date: "05/03/2020"
   ms.service: "crm-online"
   ms.topic: "reference"
-  applies_to: 
-  - "Dynamics 365 (online)"
   ms.assetid: 279bed26-60c4-43a7-aa60-d7d30781f1cf
-  author: "jimdaly"
-  ms.author: "jdaly"
-  manager: "jdaly"
-  meta-description: "Reference information about the Dynamics 365 Customer Engagement opportunityclose entitytype."
+  author: "KumarVivek"
+  ms.author: "kvivek"
+  manager: "Annbe"
+  meta-description: "Reference information about the opportunityclose entitytype."
 description: "Activity that is created automatically when an opportunity is closed, containing information such as the description of the closing and actual revenue."
 header:
   entity_set_path: "[organization URI]/api/data/v9.0/opportunitycloses"
@@ -242,6 +240,36 @@ properties:
       description: "Shows how long, in minutes, that the record was on hold."
       iscomputed: false
       isreadonly: true
+    - name: opportunitystatecode
+      type: Edm.Int32
+      display_name: "Status"
+      description: "Status of the opportunity."
+      iscomputed: false
+      isreadonly: false
+      options:
+        - value: 0
+          label: "Open"
+        - value: 1
+          label: "Won"
+        - value: 2
+          label: "Lost"
+    - name: opportunitystatuscode
+      type: Edm.Int32
+      display_name: "Status Reason"
+      description: "Status reason of the opportunity."
+      iscomputed: false
+      isreadonly: false
+      options:
+        - value: 1
+          label: "In Progress"
+        - value: 2
+          label: "On Hold"
+        - value: 3
+          label: "Won"
+        - value: 4
+          label: "Canceled"
+        - value: 5
+          label: "Out-Sold"
     - name: overriddencreatedon
       type: Edm.DateTimeOffset
       display_name: "Record Created On"
@@ -311,7 +339,7 @@ properties:
       isreadonly: false
     - name: stageid
       type: Edm.Guid
-      display_name: "Process Stage"
+      display_name: "(Deprecated) Process Stage"
       description: "Unique identifier of the Stage."
       iscomputed: false
       isreadonly: false
@@ -361,7 +389,7 @@ properties:
       isreadonly: false
     - name: traversedpath
       type: Edm.String
-      display_name: "Traversed Path"
+      display_name: "(Deprecated) Traversed Path"
       description: "For internal use only."
       iscomputed: false
       isreadonly: false
@@ -557,12 +585,6 @@ single_valued_navigation_properties:
   - name: regardingobjectid_lead_opportunityclose
     type: Microsoft.Dynamics.CRM.lead
     partner: lead_OpportunityCloses
-  - name: regardingobjectid_ms_newsitem
-    type: Microsoft.Dynamics.CRM.ms_newsitem
-    partner: ms_newsitem_ActivityPointers
-  - name: regardingobjectid_ms_satori
-    type: Microsoft.Dynamics.CRM.ms_satori
-    partner: ms_satori_ActivityPointers
   - name: regardingobjectid_msdyn_agreement
     type: Microsoft.Dynamics.CRM.msdyn_agreement
     partner: msdyn_agreement_ActivityPointers
@@ -945,12 +967,20 @@ solutions:
   solution_items:
   - type: Microsoft.Dynamics.CRM.msdynce_Sales
     description: "Dynamics 365 workload for sales."
+  - type: Microsoft.Dynamics.CRM.msdynce_SalesPatch
+    description: "Patch for Dynamics 365 workload for sales."
+  - type: Microsoft.Dynamics.CRM.msdynce_SalesPatch201904
+    description: "Dynamics 365 workload for Sales Patch Version 2."
+  - type: Microsoft.Dynamics.CRM.msdynce_SalesPatch202001
+    description: "Dynamics 365 workload for third patch of Sales."
   - type: Microsoft.Dynamics.CRM.msdynce_SalesService
+    description: "For internal use only."
+  - type: Microsoft.Dynamics.CRM.msdynce_SalesServicePatch
     description: "For internal use only."
 # This entity has no remarks.
 href_see_also:
-- text: "Use the Microsoft Dynamics 365 Customer Engagement Web API"
-  href: "https://docs.microsoft.com/dynamics365/customer-engagement/developer/use-microsoft-dynamics-365-web-api"
+- text: "Use the Common Data Service Web API"
+  href: "https://docs.microsoft.com/powerapps/developer/common-data-service/webapi/overview"
 xref_see_also:
 - Microsoft.Dynamics.CRM.EntityTypeIndex
 - Microsoft.Dynamics.CRM.ActionIndex

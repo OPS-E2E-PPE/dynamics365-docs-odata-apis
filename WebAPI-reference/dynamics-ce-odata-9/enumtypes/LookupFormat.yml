@@ -3,17 +3,15 @@ uid: Microsoft.Dynamics.CRM.LookupFormat
 name: "LookupFormat"
 type: enumtype
 metadata: 
-  title: "Microsoft Dynamics 365 Customer Engagement LookupFormat EnumType Reference | MicrosoftDocs"
-  ms.date: "03/20/2018"
+  title: "Common Data Service and Dynamics 365 Customer Engagement LookupFormat EnumType Reference | MicrosoftDocs"
+  ms.date: "05/03/2020"
   ms.service: "crm-online"
   ms.topic: "reference"
-  applies_to: 
-    - "Dynamics 365 (online)"
   ms.assetid: b819357c-2050-42fa-bca4-247ccc8b3a2c
-  author: "jimdaly"
-  ms.author: "jdaly"
-  manager: "jdaly"
-  meta-description: "Reference information about the Dynamics 365 Customer Engagement Web API LookupFormat ComplexType."
+  author: "KumarVivek"
+  ms.author: "kvivek"
+  manager: "Annbe"
+  meta-description: "Reference information about the Web API LookupFormat ComplexType."
 namespace: Microsoft.Dynamics.CRM
 description: "Not Found" 
 members:
@@ -40,8 +38,8 @@ usedby:
     used_as: Property
 # This enum type has no remarks.
 href_see_also:
-- text: "Use the Microsoft Dynamics 365 Customer Engagement Web API"
-  href: "https://docs.microsoft.com/dynamics365/customer-engagement/developer/use-microsoft-dynamics-365-web-api"
+- text: "Use the Common Data Service Web API"
+  href: "https://docs.microsoft.com/powerapps/developer/common-data-service/webapi/overview"
 xref_see_also:
 - Microsoft.Dynamics.CRM.EntityTypeIndex
 - Microsoft.Dynamics.CRM.ActionIndex

@@ -3,17 +3,15 @@ uid: Microsoft.Dynamics.CRM.msdyn_journal
 name: "msdyn_journal"
 type: entitytype
 metadata: 
-  title: "Microsoft Dynamics 365 Customer Engagement msdyn_journal EntityType Reference | MicrosoftDocs"
-  ms.date: "03/20/2018"
+  title: "Common Data Service and Dynamics 365 Customer Engagement msdyn_journal EntityType Reference | MicrosoftDocs"
+  ms.date: "05/03/2020"
   ms.service: "crm-online"
   ms.topic: "reference"
-  applies_to: 
-  - "Dynamics 365 (online)"
   ms.assetid: 3a70c6ae-c89d-4ce0-b7a4-402f7143c547
-  author: "jimdaly"
-  ms.author: "jdaly"
-  manager: "jdaly"
-  meta-description: "Reference information about the Dynamics 365 Customer Engagement msdyn_journal entitytype."
+  author: "KumarVivek"
+  ms.author: "kvivek"
+  manager: "Annbe"
+  meta-description: "Reference information about the msdyn_journal entitytype."
 description: "Unposted business transactions, for example, time and expense."
 header:
   entity_set_path: "[organization URI]/api/data/v9.0/msdyn_journals"
@@ -48,6 +46,12 @@ properties:
       description: "Date and time when the record was modified."
       iscomputed: false
       isreadonly: true
+    - name: msdyn_date
+      type: Edm.DateTimeOffset
+      display_name: "Time Entry Date"
+      description: "Time Entry Date"
+      iscomputed: false
+      isreadonly: false
     - name: msdyn_description
       type: Edm.String
       display_name: "Description"
@@ -69,6 +73,25 @@ properties:
       type: Edm.Guid
       display_name: "Journal"
       description: "Unique identifier for entity instances"
+      iscomputed: false
+      isreadonly: false
+    - name: msdyn_journaltype
+      type: Edm.Int32
+      display_name: "Journal Type"
+      description: "The type of the journal."
+      iscomputed: false
+      isreadonly: false
+      options:
+        - value: 192350000
+          label: "Entry"
+        - value: 192350001
+          label: "Time Correction"
+        - value: 192350002
+          label: "Expense Correction"
+    - name: msdyn_transactiondate
+      type: Edm.DateTimeOffset
+      display_name: "Expense Date"
+      description: "Expense Date"
       iscomputed: false
       isreadonly: false
     - name: overriddencreatedon
@@ -103,6 +126,8 @@ properties:
       options:
         - value: 1
           label: "Active"
+        - value: 192350000
+          label: "Draft Adjustment"
         - value: 2
           label: "Inactive"
     - name: timezoneruleversionnumber
@@ -148,10 +173,30 @@ lookup_properties:
     single_valued_navigation_property:
     - modifiedonbehalfby
     description: "Unique identifier of the delegate user who modified the record."
+  - name: _msdyn_bookableresource_value
+    single_valued_navigation_property:
+    - msdyn_BookableResource
+    description: "Bookable Resource"
   - name: _msdyn_defaultproject_value
     single_valued_navigation_property:
     - msdyn_DefaultProject
     description: ""
+  - name: _msdyn_expensecategory_value
+    single_valued_navigation_property:
+    - msdyn_ExpenseCategory
+    description: "Expense Category"
+  - name: _msdyn_project_value
+    single_valued_navigation_property:
+    - msdyn_Project
+    description: "Project"
+  - name: _msdyn_projecttask_value
+    single_valued_navigation_property:
+    - msdyn_ProjectTask
+    description: "Project Task"
+  - name: _msdyn_resourcecategory_value
+    single_valued_navigation_property:
+    - msdyn_ResourceCategory
+    description: "Resource Role"
   - name: _ownerid_value
     single_valued_navigation_property:
     - ownerid
@@ -187,9 +232,24 @@ single_valued_navigation_properties:
   - name: modifiedonbehalfby
     type: Microsoft.Dynamics.CRM.systemuser
     partner: lk_msdyn_journal_modifiedonbehalfby
+  - name: msdyn_BookableResource
+    type: Microsoft.Dynamics.CRM.bookableresource
+    partner: msdyn_bookableresource_msdyn_journal_BookableResource
   - name: msdyn_DefaultProject
     type: Microsoft.Dynamics.CRM.msdyn_project
     partner: msdyn_msdyn_project_msdyn_journal_DefaultProject
+  - name: msdyn_ExpenseCategory
+    type: Microsoft.Dynamics.CRM.msdyn_expensecategory
+    partner: msdyn_msdyn_expensecategory_msdyn_journal_ExpenseCategory
+  - name: msdyn_Project
+    type: Microsoft.Dynamics.CRM.msdyn_project
+    partner: msdyn_msdyn_project_msdyn_journal_Project
+  - name: msdyn_ProjectTask
+    type: Microsoft.Dynamics.CRM.msdyn_projecttask
+    partner: msdyn_msdyn_projecttask_msdyn_journal_ProjectTask
+  - name: msdyn_ResourceCategory
+    type: Microsoft.Dynamics.CRM.bookableresourcecategory
+    partner: msdyn_bookableresourcecategory_msdyn_journal_ResourceCategory
   - name: ownerid
     type: Microsoft.Dynamics.CRM.principal
     partner: owner_msdyn_journal
@@ -235,9 +295,15 @@ collection_valued_navigation_properties:
   - name: msdyn_journal_SyncErrors
     type: Microsoft.Dynamics.CRM.syncerror
     partner: regardingobjectid_msdyn_journal
+  - name: msdyn_msdyn_journal_msdyn_expense
+    type: Microsoft.Dynamics.CRM.msdyn_expense
+    partner: msdyn_msdyn_journal_msdyn_expense
   - name: msdyn_msdyn_journal_msdyn_journalline_Journal
     type: Microsoft.Dynamics.CRM.msdyn_journalline
     partner: msdyn_Journal
+  - name: msdyn_msdyn_journal_msdyn_timeentry
+    type: Microsoft.Dynamics.CRM.msdyn_timeentry
+    partner: msdyn_msdyn_journal_msdyn_timeentry
 # This entity has no derived entities.
 operations:
   description: "The following operations can be used with the msdyn_journal entity type."
@@ -263,8 +329,8 @@ solutions:
     description: "Microsoft Dynamics 365 for Project Service Automation is an end-to-end solution that helps sales and delivery teams engage customers and deliver billable projects on time and within budget. Project Service gives you the tools you need to: Estimate, quote, and contract work; Plan and assign resources; Enable team collaboration; Capture time, expense, and progress data for real-time insights and accurate invoicing."
 # This entity has no remarks.
 href_see_also:
-- text: "Use the Microsoft Dynamics 365 Customer Engagement Web API"
-  href: "https://docs.microsoft.com/dynamics365/customer-engagement/developer/use-microsoft-dynamics-365-web-api"
+- text: "Use the Common Data Service Web API"
+  href: "https://docs.microsoft.com/powerapps/developer/common-data-service/webapi/overview"
 xref_see_also:
 - Microsoft.Dynamics.CRM.EntityTypeIndex
 - Microsoft.Dynamics.CRM.ActionIndex

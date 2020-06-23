@@ -1,17 +1,15 @@
 ### YamlMime:ODataIndex
 uid: Microsoft.Dynamics.CRM.FunctionIndex
 name: Web API Function Reference
-title: "Dynamics 365 Customer Engagement Web API Function Reference | MicrosoftDocs"
+title: "Common Data Service and 365 Customer Engagement Web API Function Reference | MicrosoftDocs"
 metadata:   
-  ms.date: "03/20/2018"
+  ms.date: "05/03/2020"
   ms.service: "crm-online"
   ms.topic: "reference"
-  applies_to: 
-    - "Dynamics 365 (online)"
   ms.assetid: ab719434-7c3c-4bc3-8fee-bb14335d3f9d
-  author: "jimdaly"
-  ms.author: "jdaly"
-  manager: "jdaly"
+  author: "KumarVivek"
+  ms.author: "kvivek"
+  manager: "Annbe"
 description: "A function is an operation which does not have observable side effects. They typically retrieve data. They may have parameters and they may return values. Functions may be bound to entity types."
 in_this_section:
 - type: Microsoft.Dynamics.CRM.CalculateRollupField
@@ -70,6 +68,8 @@ in_this_section:
   description: "Searches multiple resources for available time block that matches the specified parameters."
 - type: Microsoft.Dynamics.CRM.QuerySchedule
   description: "Searches the specified resource for an available time block that matches the specified parameters.  "
+- type: Microsoft.Dynamics.CRM.RemoveActiveCustomizations
+  description: ""
 - type: Microsoft.Dynamics.CRM.RetrieveAbsoluteAndSiteCollectionUrl
   description: "Retrieves the absolute URL and the site collection URL for a SharePoint location record in Microsoft Dynamics 365. "
 - type: Microsoft.Dynamics.CRM.RetrieveActivePath
@@ -78,12 +78,14 @@ in_this_section:
   description: "Retrieves the collection of users that report to the specified system user (user).  "
 - type: Microsoft.Dynamics.CRM.RetrieveAllEntities
   description: "Retrieves metadata information about all the entities. "
+- type: Microsoft.Dynamics.CRM.RetrieveAnalyticsStoreDetails
+  description: ""
 - type: Microsoft.Dynamics.CRM.RetrieveAppComponents
   description: ""
 - type: Microsoft.Dynamics.CRM.RetrieveApplicationRibbon
   description: "Retrieve the data that defines the content and behavior of the application ribbon.  "
 - type: Microsoft.Dynamics.CRM.RetrieveAttributeChangeHistory
-  description: "retrieve all metadata changes to a specific attribute."
+  description: "Retrieve all metadata changes to a specific attribute."
 - type: Microsoft.Dynamics.CRM.RetrieveAuditDetails
   description: "Retrieve the full audit details from an Audit record. "
 - type: Microsoft.Dynamics.CRM.RetrieveAuditPartitionList
@@ -188,6 +190,8 @@ in_this_section:
   description: "Retrieves the collection of child resource groups from the specified resource group.  "
 - type: Microsoft.Dynamics.CRM.RetrieveTeamPrivileges
   description: "Retrieves the privileges for a team. "
+- type: Microsoft.Dynamics.CRM.RetrieveTimelineWallRecords
+  description: ""
 - type: Microsoft.Dynamics.CRM.RetrieveTimestamp
   description: "Retrieves a time stamp for the metadata.  "
 - type: Microsoft.Dynamics.CRM.RetrieveTotalRecordCount
@@ -198,10 +202,16 @@ in_this_section:
   description: "Retrieves a collection of unpublished organization-owned records that satisfy the specified query criteria. "
 - type: Microsoft.Dynamics.CRM.RetrieveUserLicenseInfo
   description: "Retrieves the license information for the specified system user (user).  "
+- type: Microsoft.Dynamics.CRM.RetrieveUserPrivilegeByPrivilegeId
+  description: ""
+- type: Microsoft.Dynamics.CRM.RetrieveUserPrivilegeByPrivilegeName
+  description: ""
 - type: Microsoft.Dynamics.CRM.RetrieveUserPrivileges
   description: "Retrieves the privileges a system user (user) has through his or her roles in the specified business unit.  "
 - type: Microsoft.Dynamics.CRM.RetrieveUserQueues
   description: "Retrieves all private queues of a specified user and optionally all public queues. "
+- type: Microsoft.Dynamics.CRM.RetrieveUsersPrivilegesThroughTeams
+  description: ""
 - type: Microsoft.Dynamics.CRM.RetrieveVersion
   description: "Retrieves the version number of the Microsoft Dynamics 365 Server. "
 - type: Microsoft.Dynamics.CRM.Rollup
@@ -217,6 +227,8 @@ in_this_section:
 - type: Microsoft.Dynamics.CRM.UtcTimeFromLocalTime
   description: ""
 - type: Microsoft.Dynamics.CRM.ValidateApp
+  description: ""
+- type: Microsoft.Dynamics.CRM.ValidateFetchXmlExpression
   description: ""
 - type: Microsoft.Dynamics.CRM.ValidateRecurrenceRule
   description: "Validates a rule for a recurring appointment. "

@@ -3,17 +3,15 @@ uid: Microsoft.Dynamics.CRM.solution
 name: "solution"
 type: entitytype
 metadata: 
-  title: "Microsoft Dynamics 365 Customer Engagement solution EntityType Reference | MicrosoftDocs"
-  ms.date: "03/20/2018"
+  title: "Common Data Service and Dynamics 365 Customer Engagement solution EntityType Reference | MicrosoftDocs"
+  ms.date: "05/03/2020"
   ms.service: "crm-online"
   ms.topic: "reference"
-  applies_to: 
-  - "Dynamics 365 (online)"
   ms.assetid: 4dd9f73e-8d40-4f80-ade4-a65fabf7f7b8
-  author: "jimdaly"
-  ms.author: "jdaly"
-  manager: "jdaly"
-  meta-description: "Reference information about the Dynamics 365 Customer Engagement solution entitytype."
+  author: "KumarVivek"
+  ms.author: "kvivek"
+  manager: "Annbe"
+  meta-description: "Reference information about the solution entitytype."
 description: "A solution which contains CRM customizations."
 header:
   entity_set_path: "[organization URI]/api/data/v9.0/solutions"
@@ -54,6 +52,17 @@ properties:
       description: "Date and time when the solution was installed/upgraded."
       iscomputed: false
       isreadonly: true
+    - name: isapimanaged
+      type: Edm.Boolean
+      display_name: "Is Api Managed Solution"
+      description: "Information about whether the solution is api managed."
+      iscomputed: false
+      isreadonly: true
+      options:
+        - value: 1
+          label: "Yes"
+        - value: 0
+          label: "No"
     - name: ismanaged
       type: Edm.Boolean
       display_name: "Package Type"
@@ -202,6 +211,9 @@ single_valued_navigation_properties:
   - name: createdonbehalfby
     type: Microsoft.Dynamics.CRM.systemuser
     partner: lk_solutionbase_createdonbehalfby
+  - name: fileid
+    type: Microsoft.Dynamics.CRM.fileattachment
+    partner: solution_fileid
   - name: modifiedby
     type: Microsoft.Dynamics.CRM.systemuser
     partner: lk_solution_modifiedby
@@ -220,9 +232,27 @@ single_valued_navigation_properties:
 collection_valued_navigation_properties:
   description: "Collection-valued navigation properties represent collections of entities which may represent either a one-to-many (1:N) or many-to-many (N:N) relationship between the entities."
   property_items:
+  - name: FK_CanvasApp_Solution
+    type: Microsoft.Dynamics.CRM.canvasapp
+    partner: FK_CanvasApp_Solution
+  - name: regardingobjectid_fileattachment_solution
+    type: Microsoft.Dynamics.CRM.fileattachment
+    partner: FileAttachment_Solution
+  - name: solution_fieldpermission
+    type: Microsoft.Dynamics.CRM.fieldpermission
+    partner: solution_fieldpermission
+  - name: solution_fieldsecurityprofile
+    type: Microsoft.Dynamics.CRM.fieldsecurityprofile
+    partner: solution_fieldsecurityprofile
   - name: solution_parent_solution
     type: Microsoft.Dynamics.CRM.solution
     partner: parentsolutionid
+  - name: solution_privilege
+    type: Microsoft.Dynamics.CRM.privilege
+    partner: solution_privilege
+  - name: solution_role
+    type: Microsoft.Dynamics.CRM.role
+    partner: solution_role
   - name: solution_solutioncomponent
     type: Microsoft.Dynamics.CRM.solutioncomponent
     partner: solutionid
@@ -248,8 +278,8 @@ solutions:
     description: "Internal CRM System Solution"
 # There are no remarks for this entity.
 href_see_also:
-- text: "Use the Microsoft Dynamics 365 Customer Engagement Web API"
-  href: "https://docs.microsoft.com/dynamics365/customer-engagement/developer/use-microsoft-dynamics-365-web-api"
+- text: "Use the Common Data Service Web API"
+  href: "https://docs.microsoft.com/powerapps/developer/common-data-service/webapi/overview"
 xref_see_also:
 - Microsoft.Dynamics.CRM.EntityTypeIndex
 - Microsoft.Dynamics.CRM.ActionIndex

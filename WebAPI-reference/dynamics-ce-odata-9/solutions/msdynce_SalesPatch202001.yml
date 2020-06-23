@@ -1,0 +1,111 @@
+### YamlMime:OData
+uid: Microsoft.Dynamics.CRM.msdynce_SalesPatch202001
+name: "Sales Patch Version 3"
+type: solution
+metadata: 
+  title: "Common Data Service and Dynamics 365 Customer Engagement Sales Patch Version 3 Solution Reference | MicrosoftDocs"
+  ms.date: "05/03/2020"
+  ms.service: "crm-online"
+  ms.topic: "reference"
+  ms.assetid: d05873b6-e281-4cd7-a53e-2c681ef66817
+  author: "KumarVivek"
+  ms.author: "kvivek"
+  manager: "Annbe"
+  meta-description: "Reference information about the Dynamics 365 Customer Engagement Sales Patch Version 3 Solution."
+namespace: Microsoft.Dynamics.CRM
+header:
+ description: "Dynamics 365 workload for third patch of Sales."
+ unique_name: msdynce_SalesPatch202001
+ version: "9.0.2003.4015"
+ customization_prefix: none
+entities:
+  description: "The following entities are included in this solution."
+  entity_items:
+   - type: Microsoft.Dynamics.CRM.account
+     description: "Business that represents a customer or potential customer. The company that is billed in business transactions."
+   - type: Microsoft.Dynamics.CRM.activitypointer
+     description: "Task performed, or to be performed, by a user. An activity is any action for which an entry can be made on a calendar."
+   - type: Microsoft.Dynamics.CRM.adminsettingsentity
+     description: ""
+   - type: Microsoft.Dynamics.CRM.competitor
+     description: "Business competing for the sale represented by a lead or opportunity."
+   - type: Microsoft.Dynamics.CRM.competitoraddress
+     description: "Additional addresses for a competitor. The first two addresses are stored in the competitor object."
+   - type: Microsoft.Dynamics.CRM.competitorproduct
+     description: "Association between a competitor and a product offered by the competitor."
+   - type: Microsoft.Dynamics.CRM.competitorsalesliterature
+     description: ""
+   - type: Microsoft.Dynamics.CRM.contact
+     description: "Person with whom a business unit has a relationship, such as customer, supplier, and colleague."
+   - type: Microsoft.Dynamics.CRM.contactinvoices
+     description: ""
+   - type: Microsoft.Dynamics.CRM.contactorders
+     description: ""
+   - type: Microsoft.Dynamics.CRM.contactquotes
+     description: ""
+   - type: Microsoft.Dynamics.CRM.discount
+     description: "Price reduction made from the list price of a product or service based on the quantity purchased."
+   - type: Microsoft.Dynamics.CRM.discounttype
+     description: "Type of discount specified as either a percentage or an amount."
+   - type: Microsoft.Dynamics.CRM.email
+     description: "Activity that is delivered using email protocols."
+   - type: Microsoft.Dynamics.CRM.invoice
+     description: "Order that has been billed."
+   - type: Microsoft.Dynamics.CRM.invoicedetail
+     description: "Line item in an invoice containing detailed billing information for a product."
+   - type: Microsoft.Dynamics.CRM.lead
+     description: "Prospect or potential sales opportunity. Leads are converted into accounts, contacts, or opportunities when they are qualified. Otherwise, they are deleted or archived."
+   - type: Microsoft.Dynamics.CRM.leadcompetitors
+     description: ""
+   - type: Microsoft.Dynamics.CRM.leadproduct
+     description: ""
+   - type: Microsoft.Dynamics.CRM.leadtoopportunitysalesprocess
+     description: "Lead To Opportunity Sales Process Business Process Flow "
+   - type: Microsoft.Dynamics.CRM.opportunity
+     description: "Potential revenue-generating event, or sale to an account, which needs to be tracked through a sales process to completion."
+   - type: Microsoft.Dynamics.CRM.opportunityclose
+     description: "Activity that is created automatically when an opportunity is closed, containing information such as the description of the closing and actual revenue."
+   - type: Microsoft.Dynamics.CRM.opportunitycompetitors
+     description: ""
+   - type: Microsoft.Dynamics.CRM.opportunityproduct
+     description: "Association between an opportunity and a product."
+   - type: Microsoft.Dynamics.CRM.opportunitysalesprocess
+     description: "Base entity for process Opportunity Sales Process"
+   - type: Microsoft.Dynamics.CRM.orderclose
+     description: "Activity generated automatically when an order is closed."
+   - type: Microsoft.Dynamics.CRM.productpricelevel
+     description: "Information about how to price a product in the specified price level, including pricing method, rounding option, and discount type based on a specified product unit."
+   - type: Microsoft.Dynamics.CRM.productsalesliterature
+     description: ""
+   - type: Microsoft.Dynamics.CRM.quote
+     description: "Formal offer for products and/or services, proposed at specific prices and related payment terms, which is sent to a prospective customer."
+   - type: Microsoft.Dynamics.CRM.quoteclose
+     description: "Activity generated when a quote is closed."
+   - type: Microsoft.Dynamics.CRM.quotedetail
+     description: "Product line item in a quote. The details include such information as product ID, description, quantity, and cost."
+   - type: Microsoft.Dynamics.CRM.recurringappointmentmaster
+     description: "The Master appointment of a recurring appointment series."
+   - type: Microsoft.Dynamics.CRM.salesliterature
+     description: "Storage of sales literature, which may contain one or more documents."
+   - type: Microsoft.Dynamics.CRM.salesliteratureitem
+     description: "Item in the sales literature collection."
+   - type: Microsoft.Dynamics.CRM.salesorder
+     description: "Quote that has been accepted."
+   - type: Microsoft.Dynamics.CRM.salesorderdetail
+     description: "Line item in a sales order."
+   - type: Microsoft.Dynamics.CRM.systemuser
+     description: "Person with access to the Microsoft CRM system and who owns objects in the Microsoft CRM database."
+# This solution includes no actions.
+# This solution has no remarks.
+href_see_also:
+- text: "Use the Common Data Service Web API"
+  href: "https://docs.microsoft.com/powerapps/developer/common-data-service/webapi/overview"
+xref_see_also:
+- Microsoft.Dynamics.CRM.EntityTypeIndex
+- Microsoft.Dynamics.CRM.ActionIndex
+- Microsoft.Dynamics.CRM.FunctionIndex
+- Microsoft.Dynamics.CRM.QueryFunctionIndex
+- Microsoft.Dynamics.CRM.ComplexTypeIndex
+- Microsoft.Dynamics.CRM.EnumTypeIndex
+- Microsoft.Dynamics.CRM.MetadataEntityTypeIndex
+- Microsoft.Dynamics.CRM.SolutionIndex
