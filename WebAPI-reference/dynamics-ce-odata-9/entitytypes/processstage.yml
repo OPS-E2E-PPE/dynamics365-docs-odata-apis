@@ -3,17 +3,15 @@ uid: Microsoft.Dynamics.CRM.processstage
 name: "processstage"
 type: entitytype
 metadata: 
-  title: "Microsoft Dynamics 365 Customer Engagement processstage EntityType Reference | MicrosoftDocs"
-  ms.date: "03/20/2018"
+  title: "Common Data Service and Dynamics 365 Customer Engagement processstage EntityType Reference | MicrosoftDocs"
+  ms.date: "05/03/2020"
   ms.service: "crm-online"
   ms.topic: "reference"
-  applies_to: 
-  - "Dynamics 365 (online)"
   ms.assetid: f222d45f-85fd-455d-9173-144cd43143d8
-  author: "jimdaly"
-  ms.author: "jdaly"
-  manager: "jdaly"
-  meta-description: "Reference information about the Dynamics 365 Customer Engagement processstage entitytype."
+  author: "KumarVivek"
+  ms.author: "kvivek"
+  manager: "Annbe"
+  meta-description: "Reference information about the processstage entitytype."
 description: "Stage associated with a process."
 header:
   entity_set_path: "[organization URI]/api/data/v9.0/processstages"
@@ -22,7 +20,9 @@ header:
   primary_key: processstageid
   primary_name_attribute: stagename
   operations_supported:
+  - POST
   - GET
+  - DELETE
 namespace: Microsoft.Dynamics.CRM
 properties:
   description: "Properties represent fields of data stored in the entity.Some properties are read-only."
@@ -33,6 +33,199 @@ properties:
       description: "Step metadata for process stage"
       iscomputed: false
       isreadonly: true
+    - name: connector
+      type: Edm.String
+      display_name: "Connector"
+      description: "The connector associated with the stage."
+      iscomputed: false
+      isreadonly: false
+    - name: istrigger
+      type: Edm.Boolean
+      display_name: "Is Trigger"
+      description: "Whether the stage is a trigger"
+      iscomputed: false
+      isreadonly: false
+      options:
+        - value: 1
+          label: "Yes"
+        - value: 0
+          label: "No"
+    - name: operationid
+      type: Edm.String
+      display_name: "Operation Id"
+      description: "The operation id of the stage"
+      iscomputed: false
+      isreadonly: false
+    - name: operationkind
+      type: Edm.Int32
+      display_name: "Operation Kind"
+      description: "The operation kind"
+      iscomputed: false
+      isreadonly: false
+      options:
+        - value: 473330000
+          label: "Http"
+        - value: 473330001
+          label: "PowerApp"
+        - value: 473330002
+          label: "PowerAppV2"
+        - value: 473330003
+          label: "Button"
+        - value: 473330004
+          label: "ApiConnection"
+        - value: 473330005
+          label: "Alert"
+        - value: 473330006
+          label: "EventGrid"
+        - value: 473330007
+          label: "CurrentTime"
+        - value: 473330008
+          label: "ConvertTimeZone"
+        - value: 473330009
+          label: "GetFutureTime"
+        - value: 473330010
+          label: "GetPastTime"
+        - value: 473330011
+          label: "AddToTime"
+        - value: 473330012
+          label: "SubtractFromTime"
+        - value: 473330013
+          label: "AzureMonitorAlert"
+        - value: 473330014
+          label: "SecurityCenterAlert"
+        - value: 473330015
+          label: "JsonToJson"
+        - value: 473330016
+          label: "JsonToText"
+        - value: 473330017
+          label: "XmlToJson"
+        - value: 473330018
+          label: "XmlToText"
+        - value: 473330019
+          label: "Geofence"
+        - value: 473330020
+          label: "ODataOpenApiConnection"
+        - value: 473330021
+          label: "IndexOf"
+        - value: 473330022
+          label: "Substring"
+        - value: 473330023
+          label: "VirtualAgent"
+        - value: 473330024
+          label: "FormatNumber"
+    - name: operationtype
+      type: Edm.Int32
+      display_name: "Operation Type"
+      description: "The type of the operation"
+      iscomputed: false
+      isreadonly: false
+      options:
+        - value: 473330000
+          label: "Http"
+        - value: 473330001
+          label: "ApiApp"
+        - value: 473330002
+          label: "Recurrence"
+        - value: 473330003
+          label: "Workflow"
+        - value: 473330004
+          label: "Flow"
+        - value: 473330005
+          label: "Wait"
+        - value: 473330006
+          label: "ApiConnection"
+        - value: 473330007
+          label: "OpenApiConnection"
+        - value: 473330008
+          label: "Manual"
+        - value: 473330009
+          label: "ApiConnectionWebhook"
+        - value: 473330010
+          label: "OpenApiConnectionWebhook"
+        - value: 473330011
+          label: "Response"
+        - value: 473330012
+          label: "HttpWebhook"
+        - value: 473330013
+          label: "Compose"
+        - value: 473330014
+          label: "Query"
+        - value: 473330015
+          label: "Function"
+        - value: 473330016
+          label: "ApiManagement"
+        - value: 473330017
+          label: "XmlValidation"
+        - value: 473330018
+          label: "FlatFileEncoding"
+        - value: 473330019
+          label: "Scope"
+        - value: 473330020
+          label: "Request"
+        - value: 473330021
+          label: "If"
+        - value: 473330022
+          label: "Foreach"
+        - value: 473330023
+          label: "Until"
+        - value: 473330024
+          label: "Xslt"
+        - value: 473330025
+          label: "FlatFileDecoding"
+        - value: 473330026
+          label: "Terminate"
+        - value: 473330027
+          label: "IntegrationAccountArtifactLookup"
+        - value: 473330028
+          label: "Switch"
+        - value: 473330029
+          label: "ParseJson"
+        - value: 473330030
+          label: "Table"
+        - value: 473330031
+          label: "Join"
+        - value: 473330032
+          label: "Select"
+        - value: 473330033
+          label: "InitializeVariable"
+        - value: 473330034
+          label: "IncrementVariable"
+        - value: 473330035
+          label: "DecrementVariable"
+        - value: 473330036
+          label: "SetVariable"
+        - value: 473330037
+          label: "AppendToArrayVariable"
+        - value: 473330038
+          label: "AppendToStringVariable"
+        - value: 473330039
+          label: "Batch"
+        - value: 473330040
+          label: "SendToBatch"
+        - value: 473330041
+          label: "SlidingWindow"
+        - value: 473330042
+          label: "Expression"
+        - value: 473330043
+          label: "Liquid"
+        - value: 473330044
+          label: "JavascriptCode"
+        - value: 473330045
+          label: "As2Decode"
+        - value: 473330046
+          label: "As2Encode"
+        - value: 473330047
+          label: "RosettaNetEncode"
+        - value: 473330048
+          label: "RosettaNetDecode"
+        - value: 473330049
+          label: "RosettaNetWaitForResponse"
+        - value: 473330050
+          label: "ApiConnectionNotification"
+        - value: 473330051
+          label: "Changeset"
+        - value: 473330052
+          label: "SwiftEncode"
     - name: owningbusinessunit
       type: Edm.Guid
       display_name: "Owning Business Unit"
@@ -209,6 +402,9 @@ collection_valued_navigation_properties:
   - name: processstage_msdyn_quotebookingsetup
     type: Microsoft.Dynamics.CRM.msdyn_quotebookingsetup
     partner: stageid
+  - name: processstage_msdyn_timeentry
+    type: Microsoft.Dynamics.CRM.msdyn_timeentry
+    partner: stageid
   - name: processstage_msdyn_timegroup
     type: Microsoft.Dynamics.CRM.msdyn_timegroup
     partner: stageid
@@ -275,12 +471,14 @@ operations:
 solutions:
   description: "The following solutions include the processstage entity type."
   solution_items:
+  - type: Microsoft.Dynamics.CRM.MicrosoftFlowExtensionsCore
+    description: ""
   - type: Microsoft.Dynamics.CRM.System
     description: "Internal CRM System Solution"
 # This entity has no remarks.
 href_see_also:
-- text: "Use the Microsoft Dynamics 365 Customer Engagement Web API"
-  href: "https://docs.microsoft.com/dynamics365/customer-engagement/developer/use-microsoft-dynamics-365-web-api"
+- text: "Use the Common Data Service Web API"
+  href: "https://docs.microsoft.com/powerapps/developer/common-data-service/webapi/overview"
 xref_see_also:
 - Microsoft.Dynamics.CRM.EntityTypeIndex
 - Microsoft.Dynamics.CRM.ActionIndex

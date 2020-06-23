@@ -3,17 +3,15 @@ uid: Microsoft.Dynamics.CRM.crmbaseentity
 name: "crmbaseentity"
 type: entitytype
 metadata: 
-  title: "Microsoft Dynamics 365 Customer Engagement crmbaseentity EntityType Reference | MicrosoftDocs"
-  ms.date: "03/20/2018"
+  title: "Common Data Service and Dynamics 365 Customer Engagement crmbaseentity EntityType Reference | MicrosoftDocs"
+  ms.date: "05/03/2020"
   ms.service: "crm-online"
   ms.topic: "reference"
-  applies_to: 
-  - "Dynamics 365 (online)"
   ms.assetid: 14685ae7-0873-41f1-82ee-c3732a0f62a3
-  author: "jimdaly"
-  ms.author: "jdaly"
-  manager: "jdaly"
-  meta-description: "Reference information about the Dynamics 365 Customer Engagement crmbaseentity entitytype."
+  author: "KumarVivek"
+  ms.author: "kvivek"
+  manager: "Annbe"
+  meta-description: "Reference information about the crmbaseentity entitytype."
 # This entity doesn't have a description
 # No header required.
   # This entity doesn't have an entitysetname
@@ -66,6 +64,10 @@ derived_types:
     description: "Process whose execution can proceed independently or in the background." 
   - type: Microsoft.Dynamics.CRM.attachment 
     description: "Attachment for an email activity." 
+  - type: Microsoft.Dynamics.CRM.attributeimageconfig 
+    description: "Store configuration for each image attribute" 
+  - type: Microsoft.Dynamics.CRM.attribute 
+    description: "" 
   - type: Microsoft.Dynamics.CRM.audit 
     description: "Track changes to records for analysis, record keeping, and compliance." 
   - type: Microsoft.Dynamics.CRM.bookableresourcebookingheader 
@@ -98,12 +100,16 @@ derived_types:
     description: "Defines free/busy times for a service and for resources or resource groups, such as working, non-working, vacation, and blocked." 
   - type: Microsoft.Dynamics.CRM.calendar 
     description: "Calendar used by the scheduling system to define when an appointment or activity is to occur." 
+  - type: Microsoft.Dynamics.CRM.callbackregistration 
+    description: "Callback Registration that stores configuration." 
   - type: Microsoft.Dynamics.CRM.campaignactivityitem 
     description: "Work item of a campaign activity, such as a list or sales literature." 
   - type: Microsoft.Dynamics.CRM.campaignitem 
     description: "Work item in a campaign, a list or sales literature." 
   - type: Microsoft.Dynamics.CRM.campaign 
     description: "Container for campaign activities and responses, sales literature, products, and lists to create, plan, execute, and track the results of a specific marketing campaign through its life." 
+  - type: Microsoft.Dynamics.CRM.canvasapp 
+    description: "An application built through a canvas-based editing experience." 
   - type: Microsoft.Dynamics.CRM.category 
     description: "Entity for categorizing records to make it easier for your customers to find them on portals and through search." 
   - type: Microsoft.Dynamics.CRM.characteristic 
@@ -120,10 +126,14 @@ derived_types:
     description: "" 
   - type: Microsoft.Dynamics.CRM.complexcontrol 
     description: "For internal use only." 
+  - type: Microsoft.Dynamics.CRM.connectionreference 
+    description: "" 
   - type: Microsoft.Dynamics.CRM.connectionrole 
     description: "Role describing a relationship between a two records." 
   - type: Microsoft.Dynamics.CRM.connection 
     description: "Relationship between two entities." 
+  - type: Microsoft.Dynamics.CRM.connector 
+    description: "Connector Entity to support Solutioning Integration" 
   - type: Microsoft.Dynamics.CRM.constraintbasedgroup 
     description: "Group or collection of people, equipment, and/or facilities that can be scheduled." 
   - type: Microsoft.Dynamics.CRM.contactinvoices 
@@ -178,6 +188,8 @@ derived_types:
     description: "Item with a name and value in a property option set type." 
   - type: Microsoft.Dynamics.CRM.emailserverprofile 
     description: "Holds the Email Server Profiles of an organization" 
+  - type: Microsoft.Dynamics.CRM.entity 
+    description: "" 
   - type: Microsoft.Dynamics.CRM.entitlementchannel 
     description: "Defines the amount and type of support for a channel." 
   - type: Microsoft.Dynamics.CRM.entitlementcontacts 
@@ -192,8 +204,20 @@ derived_types:
     description: "" 
   - type: Microsoft.Dynamics.CRM.entitlementtemplate 
     description: "Contains predefined customer support terms that can be used to created entitlements for customers." 
+  - type: Microsoft.Dynamics.CRM.entityanalyticsconfig 
+    description: "This entity contains information about which entities are enabled for Azure Data Lake Services integration" 
   - type: Microsoft.Dynamics.CRM.entitydataprovider 
     description: "Developers can register plug-ins on a data provider to enable data access for virtual entities in the system." 
+  - type: Microsoft.Dynamics.CRM.entityimageconfig 
+    description: "Store image configuration for each entity" 
+  - type: Microsoft.Dynamics.CRM.entitykey 
+    description: "" 
+  - type: Microsoft.Dynamics.CRM.entityrelationship 
+    description: "" 
+  - type: Microsoft.Dynamics.CRM.environmentvariabledefinition 
+    description: "Contains information about the settable variable: its type, default value, and etc." 
+  - type: Microsoft.Dynamics.CRM.environmentvariablevalue 
+    description: "Holds the value for the associated EnvironmentVariableDefinition entity." 
   - type: Microsoft.Dynamics.CRM.equipment 
     description: "Resource that can be scheduled." 
   - type: Microsoft.Dynamics.CRM.exchangesyncidmapping 
@@ -206,8 +230,12 @@ derived_types:
     description: "Group of privileges used to categorize users to provide appropriate access to secured columns." 
   - type: Microsoft.Dynamics.CRM.fieldsecurityprofile 
     description: "Profile which defines access level for secured attributes" 
+  - type: Microsoft.Dynamics.CRM.fileattachment 
+    description: "File Attachment" 
   - type: Microsoft.Dynamics.CRM.fixedmonthlyfiscalcalendar 
     description: "Fixed monthly fiscal calendar of an organization. A span of time during which the financial activities of an organization are calculated." 
+  - type: Microsoft.Dynamics.CRM.flowsession 
+    description: "Entity to store the information that is generated when a modern flow or UI flow runs." 
   - type: Microsoft.Dynamics.CRM.goalrollupquery 
     description: "Query that is used to filter the results of the goal rollup." 
   - type: Microsoft.Dynamics.CRM.goal 
@@ -263,7 +291,7 @@ derived_types:
   - type: Microsoft.Dynamics.CRM.lead 
     description: "Prospect or potential sales opportunity. Leads are converted into accounts, contacts, or opportunities when they are qualified. Otherwise, they are deleted or archived." 
   - type: Microsoft.Dynamics.CRM.leadtoopportunitysalesprocess 
-    description: "Lead To Opportunity Sales Process Business Process Flow" 
+    description: "Lead To Opportunity Sales Process Business Process Flow " 
   - type: Microsoft.Dynamics.CRM.listmember 
     description: "Item in a marketing list." 
   - type: Microsoft.Dynamics.CRM.list 
@@ -276,8 +304,6 @@ derived_types:
     description: "Stores data about what folders for a mailbox are auto tracked" 
   - type: Microsoft.Dynamics.CRM.mailmergetemplate 
     description: "Template for a mail merge document that contains the standard attributes of that document." 
-  - type: Microsoft.Dynamics.CRM.mbs_pluginprofile 
-    description: "" 
   - type: Microsoft.Dynamics.CRM.metric 
     description: "Type of measurement for a goal, such as money amount or count." 
   - type: Microsoft.Dynamics.CRM.mobileofflineprofileitemassociation 
@@ -288,10 +314,6 @@ derived_types:
     description: "Information to administer and manage the data available to mobile devices in offline mode." 
   - type: Microsoft.Dynamics.CRM.monthlyfiscalcalendar 
     description: "Monthly fiscal calendar of an organization. A span of time during which the financial activities of an organization are calculated." 
-  - type: Microsoft.Dynamics.CRM.ms_newsitem 
-    description: "" 
-  - type: Microsoft.Dynamics.CRM.ms_satori 
-    description: "" 
   - type: Microsoft.Dynamics.CRM.msdyn_accountpricelist 
     description: "Sales price list for this customer to capture special pricing agreements for products, roles and categories." 
   - type: Microsoft.Dynamics.CRM.msdyn_actual 
@@ -317,7 +339,43 @@ derived_types:
   - type: Microsoft.Dynamics.CRM.msdyn_agreement 
     description: "Provides ability to store details about service agreements you have with your customers" 
   - type: Microsoft.Dynamics.CRM.msdyn_agreementsubstatus 
-    description: "Specify custom agreement sub-statuses, which can be used to specify the current agreement status more precisely." 
+    description: "Specify custom agreement substatuses, which can be used to specify the current agreement status more precisely." 
+  - type: Microsoft.Dynamics.CRM.msdyn_aibdatasetfile 
+    description: "" 
+  - type: Microsoft.Dynamics.CRM.msdyn_aibdatasetrecord 
+    description: "" 
+  - type: Microsoft.Dynamics.CRM.msdyn_aibdataset 
+    description: "" 
+  - type: Microsoft.Dynamics.CRM.msdyn_aibdatasetscontainer 
+    description: "" 
+  - type: Microsoft.Dynamics.CRM.msdyn_aibfileattacheddata 
+    description: "" 
+  - type: Microsoft.Dynamics.CRM.msdyn_aibfile 
+    description: "" 
+  - type: Microsoft.Dynamics.CRM.msdyn_aiconfiguration 
+    description: "" 
+  - type: Microsoft.Dynamics.CRM.msdyn_aifptrainingdocument 
+    description: "" 
+  - type: Microsoft.Dynamics.CRM.msdyn_aimodel 
+    description: "" 
+  - type: Microsoft.Dynamics.CRM.msdyn_aiodimage 
+    description: "" 
+  - type: Microsoft.Dynamics.CRM.msdyn_aiodlabel 
+    description: "" 
+  - type: Microsoft.Dynamics.CRM.msdyn_aiodtrainingboundingbox 
+    description: "" 
+  - type: Microsoft.Dynamics.CRM.msdyn_aiodtrainingimage 
+    description: "" 
+  - type: Microsoft.Dynamics.CRM.msdyn_aitemplate 
+    description: "" 
+  - type: Microsoft.Dynamics.CRM.msdyn_analysiscomponent 
+    description: "" 
+  - type: Microsoft.Dynamics.CRM.msdyn_analysisjob 
+    description: "" 
+  - type: Microsoft.Dynamics.CRM.msdyn_analysisresultdetail 
+    description: "" 
+  - type: Microsoft.Dynamics.CRM.msdyn_analysisresult 
+    description: "" 
   - type: Microsoft.Dynamics.CRM.msdyn_batchjob 
     description: "Placeholder for workflows used for machine learning scenarios." 
   - type: Microsoft.Dynamics.CRM.msdyn_bookingalertstatus 
@@ -359,7 +417,7 @@ derived_types:
   - type: Microsoft.Dynamics.CRM.msdyn_contractlinescheduleofvalue 
     description: "List of billing milestones and invoice amounts for this project contract line." 
   - type: Microsoft.Dynamics.CRM.msdyn_customerasset 
-    description: "" 
+    description: "Specify customer asset." 
   - type: Microsoft.Dynamics.CRM.msdyn_dataexport 
     description: "Data export entity for the actual entity." 
   - type: Microsoft.Dynamics.CRM.msdyn_delegation 
@@ -382,6 +440,8 @@ derived_types:
     description: "Pricing options in addition to or above the Price List Items" 
   - type: Microsoft.Dynamics.CRM.msdyn_fieldservicesetting 
     description: "Settings controlling functionality related to Field Service" 
+  - type: Microsoft.Dynamics.CRM.msdyn_fieldserviceslaconfiguration 
+    description: "Allows configuration of SLA Type and appropriate behavior based on creation and update of SLA KPI Instances related to Field Service entities." 
   - type: Microsoft.Dynamics.CRM.msdyn_fieldservicesystemjob 
     description: "An internal entity used to track field service system jobs." 
   - type: Microsoft.Dynamics.CRM.msdyn_findworkevent 
@@ -419,11 +479,11 @@ derived_types:
   - type: Microsoft.Dynamics.CRM.msdyn_iotdevicecategory 
     description: "Used to categorize IoT devices." 
   - type: Microsoft.Dynamics.CRM.msdyn_iotdevicecommand 
-    description: "Represents an outgoing message to a device connected to an IoT hub." 
+    description: "Represents an outgoing message to a device connected to an IoT provider." 
   - type: Microsoft.Dynamics.CRM.msdyn_iotdeviceregistrationhistory 
     description: "Tracks registration activities on an IoT device." 
   - type: Microsoft.Dynamics.CRM.msdyn_iotdevice 
-    description: "Represents a connected device that can registered with an IoT hub." 
+    description: "Represents a connected device that can be registered with an IoT provider." 
   - type: Microsoft.Dynamics.CRM.msdyn_journalline 
     description: "Unposted business transaction line details." 
   - type: Microsoft.Dynamics.CRM.msdyn_journal 
@@ -433,13 +493,13 @@ derived_types:
   - type: Microsoft.Dynamics.CRM.msdyn_odatav4ds 
     description: "Data sources used by the OData v4 data provider to access data from an external web service." 
   - type: Microsoft.Dynamics.CRM.msdyn_opportunitylineresourcecategory 
-    description: "List of roles that will be considered as costs when understanding the profit of an opportunity line." 
+    description: "List of roles that will be considered as costs when understanding the profit of an opportunity line (Deprecated in v3.0)" 
   - type: Microsoft.Dynamics.CRM.msdyn_opportunitylinetransactioncategory 
-    description: "List of transaction categories that will be considered as costs when computing the profit of an opportunity line." 
+    description: "List of transaction categories that will be considered as costs when computing the profit of an opportunity line (Deprecated in v3.0)" 
   - type: Microsoft.Dynamics.CRM.msdyn_opportunitylinetransactionclassificatio 
-    description: "List of transaction classification heads, which are four broad cost categories of time, expense, material, and fee, that will be considered as costs when computing the profit of an opportunity line." 
+    description: "List of transaction classification heads, which are four broad cost categories of time, expense, material, and fee, that will be considered as costs when computing the profit of an opportunity line (Deprecated in v3.0)" 
   - type: Microsoft.Dynamics.CRM.msdyn_opportunitylinetransaction 
-    description: "Sales estimate detail of an opportunity line." 
+    description: "Sales estimate detail of an opportunity line (Deprecated in v3.0)" 
   - type: Microsoft.Dynamics.CRM.msdyn_opportunitypricelist 
     description: "Sales price list that will used by the opportunity to set default sales prices on all project-based components such as time and expense." 
   - type: Microsoft.Dynamics.CRM.msdyn_orderinvoicingdate 
@@ -462,8 +522,6 @@ derived_types:
     description: "Sales price list used on the contract to set default sales prices on all project-based components such as time and expense." 
   - type: Microsoft.Dynamics.CRM.msdyn_organizationalunit 
     description: "Division of the company or organization that has a specific cost price list associated to it." 
-  - type: Microsoft.Dynamics.CRM.msdyn_orginsightsuserdashboarddefinition 
-    description: "OrgInsights User Dashboard Definition" 
   - type: Microsoft.Dynamics.CRM.msdyn_paymentdetail 
     description: "Specify payment details." 
   - type: Microsoft.Dynamics.CRM.msdyn_paymentmethod 
@@ -501,13 +559,13 @@ derived_types:
   - type: Microsoft.Dynamics.CRM.msdyn_projecttask 
     description: "Tasks related to project." 
   - type: Microsoft.Dynamics.CRM.msdyn_projecttaskstatususer 
-    description: "User status for project tasks." 
+    description: "User status for project tasks (Deprecated in v3.0)." 
   - type: Microsoft.Dynamics.CRM.msdyn_projectteammembersignup 
     description: "Entity used to capture all resources that have applied for open position on projects." 
   - type: Microsoft.Dynamics.CRM.msdyn_projectteam 
     description: "Entity used to model relationship between resources and project teams." 
   - type: Microsoft.Dynamics.CRM.msdyn_projecttransactioncategory 
-    description: "" 
+    description: "(Deprecated in v3.0)" 
   - type: Microsoft.Dynamics.CRM.msdyn_purchaseorderbill 
     description: "Specify purchase order bill." 
   - type: Microsoft.Dynamics.CRM.msdyn_purchaseorderproduct 
@@ -519,7 +577,7 @@ derived_types:
   - type: Microsoft.Dynamics.CRM.msdyn_purchaseorder 
     description: "Record Purchase Orders pertaining to Work Orders or otherwise" 
   - type: Microsoft.Dynamics.CRM.msdyn_purchaseordersubstatus 
-    description: "Specify custom PO sub-statuses, which can be used to specify the current PO status more precisely." 
+    description: "Specify custom PO Substatuses, which can be used to specify the current PO status more precisely." 
   - type: Microsoft.Dynamics.CRM.msdyn_quotebookingincident 
     description: "Stores the Incidents associated with Quote and Quote Booking Setup" 
   - type: Microsoft.Dynamics.CRM.msdyn_quotebookingproduct 
@@ -585,7 +643,7 @@ derived_types:
   - type: Microsoft.Dynamics.CRM.msdyn_rma 
     description: "Records RMAs for products to be retuned from customers" 
   - type: Microsoft.Dynamics.CRM.msdyn_rmasubstatus 
-    description: "Specify custom RMA sub-statuses, which can be used to specify the current RMA status more precisely." 
+    description: "Specify custom RMA substatuses, which can be used to specify the current RMA status more precisely." 
   - type: Microsoft.Dynamics.CRM.msdyn_rolecompetencyrequirement 
     description: "Entity used  to associate skills in a role." 
   - type: Microsoft.Dynamics.CRM.msdyn_roleutilization 
@@ -595,7 +653,9 @@ derived_types:
   - type: Microsoft.Dynamics.CRM.msdyn_rtv 
     description: "Records RTVs for products to be retuned to vendors" 
   - type: Microsoft.Dynamics.CRM.msdyn_rtvsubstatus 
-    description: "Specify custom RTV sub-statuses, which can be used to specify the current RTV status more precisely." 
+    description: "Specify custom RTV substatuses, which can be used to specify the current RTV status more precisely." 
+  - type: Microsoft.Dynamics.CRM.msdyn_salesinsightssettings 
+    description: "Storing settings for studio feature" 
   - type: Microsoft.Dynamics.CRM.msdyn_scheduleboardsetting 
     description: "To store settings of SB by user & tabs" 
   - type: Microsoft.Dynamics.CRM.msdyn_schedulingparameter 
@@ -604,12 +664,18 @@ derived_types:
     description: "Specify the different service task and labor types that your resources perform as part of their work orders." 
   - type: Microsoft.Dynamics.CRM.msdyn_shipvia 
     description: "Specify the different shipping methods used." 
+  - type: Microsoft.Dynamics.CRM.msdyn_siconfig 
+    description: "" 
+  - type: Microsoft.Dynamics.CRM.msdyn_sikeyvalueconfig 
+    description: "" 
   - type: Microsoft.Dynamics.CRM.msdyn_systemuserschedulersetting 
     description: "Stores user-specific settings for the schedule board." 
   - type: Microsoft.Dynamics.CRM.msdyn_taxcodedetail 
     description: "In this entity you can link multiple tax codes together to form a group of tax codes to be charged for the customer to form the total tax." 
   - type: Microsoft.Dynamics.CRM.msdyn_taxcode 
     description: "Store tax related information. Each tax code could contain multiple child tax codes, and in that case the tax rate will be determined by the total tax of all children." 
+  - type: Microsoft.Dynamics.CRM.msdyn_teamscollaboration 
+    description: "Entity which stores collaboration data of Dynamics 365 with Microsoft Teams" 
   - type: Microsoft.Dynamics.CRM.msdyn_timeentry 
     description: "Entity used  for time entry." 
   - type: Microsoft.Dynamics.CRM.msdyn_timegroupdetail 
@@ -663,11 +729,13 @@ derived_types:
   - type: Microsoft.Dynamics.CRM.msdyn_workorderservicetask 
     description: "Store service tasks that are to be performed for this work order" 
   - type: Microsoft.Dynamics.CRM.msdyn_workordersubstatus 
-    description: "Specify custom work order sub-statuses, which can be used to specify the current work order status more precisely." 
+    description: "Specify custom work order substatuses, which can be used to specify the current work order status more precisely." 
   - type: Microsoft.Dynamics.CRM.msdyn_workordertype 
     description: "Create different work order types to reflect the different types of work that your company offers. Work Order types are used to control various settings on a work order." 
   - type: Microsoft.Dynamics.CRM.navigationsetting 
     description: "Navigation Setting: A setting page or group of pages available for configuration within an app. A record representing a group of pages is regarded as the parent navigation setting of one or more other records. For internal use only." 
+  - type: Microsoft.Dynamics.CRM.adminsettingsentity 
+    description: "" 
   - type: Microsoft.Dynamics.CRM.newprocess 
     description: "New Process Business Process Flow" 
   - type: Microsoft.Dynamics.CRM.officegraphdocument 
@@ -808,6 +876,10 @@ derived_types:
     description: "Item in a Service contract." 
   - type: Microsoft.Dynamics.CRM.serviceendpoint 
     description: "Service endpoint that can be contacted." 
+  - type: Microsoft.Dynamics.CRM.serviceplanappmodules 
+    description: "" 
+  - type: Microsoft.Dynamics.CRM.serviceplan 
+    description: "Service Plan" 
   - type: Microsoft.Dynamics.CRM.service 
     description: "Activity that represents work done to satisfy a customer's need." 
   - type: Microsoft.Dynamics.CRM.sharepointdocumentlocation 
@@ -900,8 +972,8 @@ derived_types:
 # This entity is not included in any solutions.
 # This entity has no remarks.
 href_see_also:
-- text: "Use the Microsoft Dynamics 365 Customer Engagement Web API"
-  href: "https://docs.microsoft.com/dynamics365/customer-engagement/developer/use-microsoft-dynamics-365-web-api"
+- text: "Use the Common Data Service Web API"
+  href: "https://docs.microsoft.com/powerapps/developer/common-data-service/webapi/overview"
 xref_see_also:
 - Microsoft.Dynamics.CRM.EntityTypeIndex
 - Microsoft.Dynamics.CRM.ActionIndex

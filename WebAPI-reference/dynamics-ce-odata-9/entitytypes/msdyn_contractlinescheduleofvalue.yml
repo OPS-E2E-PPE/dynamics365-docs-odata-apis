@@ -3,17 +3,15 @@ uid: Microsoft.Dynamics.CRM.msdyn_contractlinescheduleofvalue
 name: "msdyn_contractlinescheduleofvalue"
 type: entitytype
 metadata: 
-  title: "Microsoft Dynamics 365 Customer Engagement msdyn_contractlinescheduleofvalue EntityType Reference | MicrosoftDocs"
-  ms.date: "03/20/2018"
+  title: "Common Data Service and Dynamics 365 Customer Engagement msdyn_contractlinescheduleofvalue EntityType Reference | MicrosoftDocs"
+  ms.date: "05/03/2020"
   ms.service: "crm-online"
   ms.topic: "reference"
-  applies_to: 
-  - "Dynamics 365 (online)"
   ms.assetid: 7c14c70b-5503-4b46-a57f-7d09cb4b4038
-  author: "jimdaly"
-  ms.author: "jdaly"
-  manager: "jdaly"
-  meta-description: "Reference information about the Dynamics 365 Customer Engagement msdyn_contractlinescheduleofvalue entitytype."
+  author: "KumarVivek"
+  ms.author: "kvivek"
+  manager: "Annbe"
+  meta-description: "Reference information about the msdyn_contractlinescheduleofvalue entitytype."
 description: "List of billing milestones and invoice amounts for this project contract line."
 header:
   entity_set_path: "[organization URI]/api/data/v9.0/msdyn_contractlinescheduleofvalues"
@@ -56,13 +54,13 @@ properties:
       isreadonly: true
     - name: msdyn_amount
       type: Edm.Decimal
-      display_name: "Milestone Amount"
+      display_name: "Line Amount"
       description: "Enter the value of the milestone."
       iscomputed: false
       isreadonly: false
     - name: msdyn_amount_after_tax
       type: Edm.Decimal
-      display_name: "amount_after_tax"
+      display_name: "Milestone Amount"
       description: ""
       iscomputed: true
       isreadonly: true
@@ -80,8 +78,8 @@ properties:
       isreadonly: true
     - name: msdyn_contractline
       type: Edm.String
-      display_name: "Project Contract Line"
-      description: "Shows the project contract line that has this milestone"
+      display_name: "(Deprecated) Project Contract Line"
+      description: "(Deprecated) Shows the project contract line that has this milestone"
       iscomputed: false
       isreadonly: false
     - name: msdyn_contractlinedescription
@@ -176,8 +174,6 @@ properties:
           label: "Commission"
         - value: 690970001
           label: "Additional"
-        - value: 690970002
-          label: "Tax"
         - value: 192350000
           label: "Time"
         - value: 192350001
@@ -188,6 +184,8 @@ properties:
           label: "Milestone"
         - value: 192350004
           label: "Fee"
+        - value: 690970002
+          label: "Tax"
     - name: msdyn_transactiontypecode
       type: Edm.Int32
       display_name: "Transaction Type"
@@ -276,6 +274,10 @@ lookup_properties:
     single_valued_navigation_property:
     - msdyn_contract
     description: "Select the project contract associated with this milestone."
+  - name: _msdyn_contractlineid_value
+    single_valued_navigation_property:
+    - msdyn_ContractLineId
+    description: "Unique identifier for Project Contract Line associated with Project Contract Line Invoice Schedule."
   - name: _msdyn_project_value
     single_valued_navigation_property:
     - msdyn_project
@@ -322,6 +324,9 @@ single_valued_navigation_properties:
   - name: msdyn_contract
     type: Microsoft.Dynamics.CRM.salesorder
     partner: msdyn_salesorder_msdyn_contractlinescheduleofvalue_contract
+  - name: msdyn_ContractLineId
+    type: Microsoft.Dynamics.CRM.salesorderdetail
+    partner: msdyn_salesorderdetail_msdyn_contractlineschedu
   - name: msdyn_project
     type: Microsoft.Dynamics.CRM.msdyn_project
     partner: msdyn_msdyn_project_msdyn_contractlinescheduleofvalue_project
@@ -396,8 +401,8 @@ solutions:
     description: "Microsoft Dynamics 365 for Project Service Automation is an end-to-end solution that helps sales and delivery teams engage customers and deliver billable projects on time and within budget. Project Service gives you the tools you need to: Estimate, quote, and contract work; Plan and assign resources; Enable team collaboration; Capture time, expense, and progress data for real-time insights and accurate invoicing."
 # This entity has no remarks.
 href_see_also:
-- text: "Use the Microsoft Dynamics 365 Customer Engagement Web API"
-  href: "https://docs.microsoft.com/dynamics365/customer-engagement/developer/use-microsoft-dynamics-365-web-api"
+- text: "Use the Common Data Service Web API"
+  href: "https://docs.microsoft.com/powerapps/developer/common-data-service/webapi/overview"
 xref_see_also:
 - Microsoft.Dynamics.CRM.EntityTypeIndex
 - Microsoft.Dynamics.CRM.ActionIndex

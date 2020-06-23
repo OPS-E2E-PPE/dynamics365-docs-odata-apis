@@ -3,17 +3,15 @@ uid: Microsoft.Dynamics.CRM.mobileofflineprofile
 name: "mobileofflineprofile"
 type: entitytype
 metadata: 
-  title: "Microsoft Dynamics 365 Customer Engagement mobileofflineprofile EntityType Reference | MicrosoftDocs"
-  ms.date: "03/20/2018"
+  title: "Common Data Service and Dynamics 365 Customer Engagement mobileofflineprofile EntityType Reference | MicrosoftDocs"
+  ms.date: "05/03/2020"
   ms.service: "crm-online"
   ms.topic: "reference"
-  applies_to: 
-  - "Dynamics 365 (online)"
   ms.assetid: 469d9ded-d4eb-4e3d-8da7-b40cba21f729
-  author: "jimdaly"
-  ms.author: "jdaly"
-  manager: "jdaly"
-  meta-description: "Reference information about the Dynamics 365 Customer Engagement mobileofflineprofile entitytype."
+  author: "KumarVivek"
+  ms.author: "kvivek"
+  manager: "Annbe"
+  meta-description: "Reference information about the mobileofflineprofile entitytype."
 description: "Information to administer and manage the data available to mobile devices in offline mode."
 header:
   entity_set_path: "[organization URI]/api/data/v9.0/mobileofflineprofiles"
@@ -141,13 +139,13 @@ properties:
       isreadonly: true
     - name: stageid
       type: Edm.Guid
-      display_name: "Process Stage"
+      display_name: "(Deprecated) Process Stage"
       description: "Shows the ID of the stage."
       iscomputed: false
       isreadonly: false
     - name: traversedpath
       type: Edm.String
-      display_name: "Traversed Path"
+      display_name: "(Deprecated) Traversed Path"
       description: "For internal use only."
       iscomputed: false
       isreadonly: false
@@ -220,6 +218,12 @@ operations:
     binding_type: "Entity"
   - name: Microsoft.Dynamics.CRM.RetrieveUnpublishedMultiple
     binding_type: "Collection"
+  - name: Microsoft.Dynamics.CRM.Validate
+    binding_type: "Not Bound"
+  - name: Microsoft.Dynamics.CRM.ValidateSavedQuery
+    binding_type: "Not Bound"
+  - name: Microsoft.Dynamics.CRM.ValidateUnpublished
+    binding_type: "Not Bound"
 solutions:
   description: "The following solutions include the mobileofflineprofile entity type."
   solution_items:
@@ -227,8 +231,8 @@ solutions:
     description: "Internal CRM System Solution"
 # This entity has no remarks.
 href_see_also:
-- text: "Use the Microsoft Dynamics 365 Customer Engagement Web API"
-  href: "https://docs.microsoft.com/dynamics365/customer-engagement/developer/use-microsoft-dynamics-365-web-api"
+- text: "Use the Common Data Service Web API"
+  href: "https://docs.microsoft.com/powerapps/developer/common-data-service/webapi/overview"
 xref_see_also:
 - Microsoft.Dynamics.CRM.EntityTypeIndex
 - Microsoft.Dynamics.CRM.ActionIndex

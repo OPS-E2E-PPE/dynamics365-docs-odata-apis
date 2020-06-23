@@ -3,16 +3,14 @@ uid: Microsoft.Dynamics.CRM.System
 name: "System Solution"
 type: solution
 metadata: 
-  title: "Microsoft Dynamics 365 Customer Engagement System Solution Solution Reference | MicrosoftDocs"
-  ms.date: "03/20/2018"
+  title: "Common Data Service and Dynamics 365 Customer Engagement System Solution Solution Reference | MicrosoftDocs"
+  ms.date: "05/03/2020"
   ms.service: "crm-online"
   ms.topic: "reference"
-  applies_to: 
-  - "Dynamics 365 (online)"
   ms.assetid: fd140aad-4df4-11dd-bd17-0019b9312238
-  author: "jimdaly"
-  ms.author: "jdaly"
-  manager: "jdaly"
+  author: "KumarVivek"
+  ms.author: "kvivek"
+  manager: "Annbe"
   meta-description: "Reference information about the Dynamics 365 Customer Engagement System Solution Solution."
 namespace: Microsoft.Dynamics.CRM
 header:
@@ -57,6 +55,8 @@ entities:
      description: "Process whose execution can proceed independently or in the background."
    - type: Microsoft.Dynamics.CRM.attachment
      description: "Attachment for an email activity."
+   - type: Microsoft.Dynamics.CRM.attribute
+     description: ""
    - type: Microsoft.Dynamics.CRM.audit
      description: "Track changes to records for analysis, record keeping, and compliance."
    - type: Microsoft.Dynamics.CRM.bulkdeletefailure
@@ -71,6 +71,8 @@ entities:
      description: "Calendar used by the scheduling system to define when an appointment or activity is to occur."
    - type: Microsoft.Dynamics.CRM.calendarrule
      description: "Defines free/busy times for a service and for resources or resource groups, such as working, non-working, vacation, and blocked."
+   - type: Microsoft.Dynamics.CRM.canvasapp
+     description: "An application built through a canvas-based editing experience."
    - type: Microsoft.Dynamics.CRM.category
      description: "Entity for categorizing records to make it easier for your customers to find them on portals and through search."
    - type: Microsoft.Dynamics.CRM.columnmapping
@@ -109,8 +111,14 @@ entities:
      description: "Activity that is delivered using email protocols."
    - type: Microsoft.Dynamics.CRM.emailserverprofile
      description: "Holds the Email Server Profiles of an organization"
+   - type: Microsoft.Dynamics.CRM.entity
+     description: ""
    - type: Microsoft.Dynamics.CRM.entitydataprovider
      description: "Developers can register plug-ins on a data provider to enable data access for virtual entities in the system."
+   - type: Microsoft.Dynamics.CRM.entitykey
+     description: ""
+   - type: Microsoft.Dynamics.CRM.entityrelationship
+     description: ""
    - type: Microsoft.Dynamics.CRM.exchangesyncidmapping
      description: "The mapping used to keep track of the IDs for items synced between CRM and Exchange."
    - type: Microsoft.Dynamics.CRM.expiredprocess
@@ -251,6 +259,8 @@ entities:
      description: "Categories related to a report. A report can be related to multiple categories."
    - type: Microsoft.Dynamics.CRM.role
      description: "Grouping of security privileges. Users are assigned roles that authorize their access to the Microsoft CRM system."
+   - type: Microsoft.Dynamics.CRM.roleprivileges
+     description: "Group of privileges used to categorize users to provide appropriate access to entities."
    - type: Microsoft.Dynamics.CRM.roletemplate
      description: "Template for a role. Defines initial attributes that will be used when creating a new role."
    - type: Microsoft.Dynamics.CRM.rollupfield
@@ -363,7 +373,7 @@ actions:
   description: "The following actions are included in this solution."
   action_items:
    - type: Microsoft.Dynamics.CRM.AddAppComponents
-     description: ""
+     description: "Adds app components to an app."
    - type: Microsoft.Dynamics.CRM.AddItemCampaign
      description: "Adds an item to a campaign."
    - type: Microsoft.Dynamics.CRM.AddItemCampaignActivity
@@ -372,6 +382,8 @@ actions:
      description: "Adds members to a list. "
    - type: Microsoft.Dynamics.CRM.AddMemberList
      description: "Adds a member to a list (marketing list).  "
+   - type: Microsoft.Dynamics.CRM.AddMembersBatchList
+     description: ""
    - type: Microsoft.Dynamics.CRM.AddMembersTeam
      description: "Adds members to a team. "
    - type: Microsoft.Dynamics.CRM.AddPrincipalToQueue
@@ -394,6 +406,8 @@ actions:
      description: "Generates a new set of attribute mappings based on the metadata. "
    - type: Microsoft.Dynamics.CRM.BackgroundSendEmail
      description: "Send email messages asynchronously."
+   - type: Microsoft.Dynamics.CRM.BatchPrediction
+     description: ""
    - type: Microsoft.Dynamics.CRM.Book
      description: "Schedules or \"books\" an appointment, recurring appointment, or service appointment (service activity). "
    - type: Microsoft.Dynamics.CRM.BulkDelete
@@ -412,8 +426,12 @@ actions:
      description: "Cancels a contract.  "
    - type: Microsoft.Dynamics.CRM.CancelSalesOrder
      description: "Cancels a sales order. "
+   - type: Microsoft.Dynamics.CRM.CancelTraining
+     description: ""
    - type: Microsoft.Dynamics.CRM.CanManyToMany
      description: "Checks whether an entity can participate in a many-to-many relationship.  "
+   - type: Microsoft.Dynamics.CRM.CategorizeText
+     description: ""
    - type: Microsoft.Dynamics.CRM.CloneAsPatch
      description: "Creates a solution patch from a managed or unmanaged solution."
    - type: Microsoft.Dynamics.CRM.CloneAsSolution
@@ -428,6 +446,12 @@ actions:
      description: "Closes an incident (case)."
    - type: Microsoft.Dynamics.CRM.CloseQuote
      description: "Closes a quote.  "
+   - type: Microsoft.Dynamics.CRM.CommitAnnotationBlocksUpload
+     description: ""
+   - type: Microsoft.Dynamics.CRM.CommitAttachmentBlocksUpload
+     description: ""
+   - type: Microsoft.Dynamics.CRM.CommitFileBlocksUpload
+     description: ""
    - type: Microsoft.Dynamics.CRM.CompoundUpdateDuplicateDetectionRule
      description: "Updates a duplicate rule (duplicate detection rule) and its related duplicate rule conditions. "
    - type: Microsoft.Dynamics.CRM.ConvertOwnerTeamToAccessTeam
@@ -464,20 +488,28 @@ actions:
      description: "Replaces managed solution (A) plus all of its patches with managed solution (B) that is the clone of (A) and all of its patches."
    - type: Microsoft.Dynamics.CRM.DeleteAuditData
      description: "Deletes all audit data records up until a specified end date. "
+   - type: Microsoft.Dynamics.CRM.DeleteFile
+     description: ""
    - type: Microsoft.Dynamics.CRM.DeleteOpenInstances
      description: "Deletes instances of a recurring appointment master that have an “Open” state.  "
    - type: Microsoft.Dynamics.CRM.DeleteOptionValue
      description: "Deletes an option value in a global or local option set.  "
    - type: Microsoft.Dynamics.CRM.DeleteRecordChangeHistory
      description: "Deletes all audit change history records for a particular record.  "
+   - type: Microsoft.Dynamics.CRM.DeliverImmediatePromoteEmail
+     description: ""
    - type: Microsoft.Dynamics.CRM.DeliverIncomingEmail
      description: "Creates an email activity record from an incoming email message. "
    - type: Microsoft.Dynamics.CRM.DeliverPromoteEmail
      description: "Creates an email activity record from the specified email message  "
    - type: Microsoft.Dynamics.CRM.DeprovisionLanguage
      description: "Deprovisions a language. "
+   - type: Microsoft.Dynamics.CRM.DetectLanguage
+     description: ""
    - type: Microsoft.Dynamics.CRM.DistributeCampaignActivity
      description: "Creates a bulk operation that distributes a campaign activity. "
+   - type: Microsoft.Dynamics.CRM.DownloadBlock
+     description: ""
    - type: Microsoft.Dynamics.CRM.ExecuteWorkflow
      description: "Executes a workflow."
    - type: Microsoft.Dynamics.CRM.ExportMappingsImportMap
@@ -486,6 +518,10 @@ actions:
      description: "Exports a solution. "
    - type: Microsoft.Dynamics.CRM.ExportTranslation
      description: "Exports all translations for a specific solution to a compressed file. "
+   - type: Microsoft.Dynamics.CRM.ExtractKeyPhrases
+     description: ""
+   - type: Microsoft.Dynamics.CRM.ExtractTextEntities
+     description: ""
    - type: Microsoft.Dynamics.CRM.FulfillSalesOrder
      description: "Fulfills a sales order."
    - type: Microsoft.Dynamics.CRM.FullTextSearchKnowledgeArticle
@@ -498,8 +534,14 @@ actions:
      description: "Generates a sales order (order) from an opportunity.  "
    - type: Microsoft.Dynamics.CRM.GenerateSocialProfile
      description: "Returns an existing social profile record if one exists, otherwise generates a new one and returns it.  "
+   - type: Microsoft.Dynamics.CRM.GetAutoNumberSeed
+     description: ""
    - type: Microsoft.Dynamics.CRM.GetInvoiceProductsFromOpportunity
      description: "Retrieves the products from an opportunity and copy them to the invoice.  "
+   - type: Microsoft.Dynamics.CRM.GetJobStatus
+     description: ""
+   - type: Microsoft.Dynamics.CRM.GetNextAutoNumberValue
+     description: ""
    - type: Microsoft.Dynamics.CRM.GetQuoteProductsFromOpportunity
      description: "Retrieves the products from an opportunity and copy them to the quote. "
    - type: Microsoft.Dynamics.CRM.GetSalesOrderProductsFromOpportunity
@@ -508,6 +550,10 @@ actions:
      description: "Returns a tracking token that can then be passed as a parameter to the SendEmailRequest message. "
    - type: Microsoft.Dynamics.CRM.GrantAccess
      description: "Grants a security principal (user or team) access to the specified record."
+   - type: Microsoft.Dynamics.CRM.ImmediateBook
+     description: ""
+   - type: Microsoft.Dynamics.CRM.ImportCardTypeSchema
+     description: ""
    - type: Microsoft.Dynamics.CRM.ImportFieldTranslation
      description: "Imports translations from a compressed file."
    - type: Microsoft.Dynamics.CRM.ImportMappingsImportMap
@@ -516,8 +562,24 @@ actions:
      description: "Submits an asynchronous job that uploads the transformed data into Microsoft Dynamics 365."
    - type: Microsoft.Dynamics.CRM.ImportSolution
      description: "Imports a solution.  "
+   - type: Microsoft.Dynamics.CRM.ImportSolutions
+     description: ""
    - type: Microsoft.Dynamics.CRM.ImportTranslation
      description: "Imports translations from a compressed file.  "
+   - type: Microsoft.Dynamics.CRM.InitializeAnnotationBlocksDownload
+     description: ""
+   - type: Microsoft.Dynamics.CRM.InitializeAnnotationBlocksUpload
+     description: ""
+   - type: Microsoft.Dynamics.CRM.InitializeAttachmentBlocksDownload
+     description: ""
+   - type: Microsoft.Dynamics.CRM.InitializeAttachmentBlocksUpload
+     description: ""
+   - type: Microsoft.Dynamics.CRM.InitializeFileBlocksDownload
+     description: ""
+   - type: Microsoft.Dynamics.CRM.InitializeFileBlocksUpload
+     description: ""
+   - type: Microsoft.Dynamics.CRM.InitializeModernFlowFromAsyncWorkflow
+     description: ""
    - type: Microsoft.Dynamics.CRM.InsertOptionValue
      description: "Inserts a new option value for a global or local option set.  "
    - type: Microsoft.Dynamics.CRM.InsertStatusValue
@@ -538,20 +600,26 @@ actions:
      description: "Merges the information from two entity records of the same type. "
    - type: Microsoft.Dynamics.CRM.ModifyAccess
      description: "Replaces the access rights on the target record for the specified security principal (user or team). "
-   - type: Microsoft.Dynamics.CRM.msdyn_ExpandResourceAssignment
-     description: ""
    - type: Microsoft.Dynamics.CRM.OrderOption
      description: "Sets the order for an option set.  "
    - type: Microsoft.Dynamics.CRM.ParseImport
      description: "Submits an asynchronous job that parses all import files that are associated with the specified import (data import). "
    - type: Microsoft.Dynamics.CRM.PickFromQueue
      description: "Assigns a queue item to a user and optionally remove the queue item from the queue. "
+   - type: Microsoft.Dynamics.CRM.Predict
+     description: ""
+   - type: Microsoft.Dynamics.CRM.PredictionSchema
+     description: ""
    - type: Microsoft.Dynamics.CRM.ProcessInboundEmail
      description: "Processes the email responses from a marketing campaign. "
    - type: Microsoft.Dynamics.CRM.PropagateByExpression
      description: "Creates a quick campaign to distribute an activity to accounts, contacts, or leads that are selected by a query. "
    - type: Microsoft.Dynamics.CRM.ProvisionLanguage
      description: "Provisions a new language.  "
+   - type: Microsoft.Dynamics.CRM.ProvisionLanguageAsync
+     description: ""
+   - type: Microsoft.Dynamics.CRM.PublishAIConfiguration
+     description: ""
    - type: Microsoft.Dynamics.CRM.PublishAllXml
      description: "Publishes all changes to solution components. "
    - type: Microsoft.Dynamics.CRM.PublishDuplicateRule
@@ -568,6 +636,10 @@ actions:
      description: "Qualifies the specified list and either override the list members or remove them according to the specified option. "
    - type: Microsoft.Dynamics.CRM.QueryExpressionToFetchXml
      description: "Converts a QueryExpression query to its equivalent FetchXML query"
+   - type: Microsoft.Dynamics.CRM.QueueUpdateRibbonClientMetadata
+     description: ""
+   - type: Microsoft.Dynamics.CRM.QuickTest
+     description: ""
    - type: Microsoft.Dynamics.CRM.ReactivateEntityKey
      description: "Submit a new asynchronous system job to create the index for the key."
    - type: Microsoft.Dynamics.CRM.ReassignObjectsOwner
@@ -576,16 +648,20 @@ actions:
      description: "Reassigns all records that are owned by a specified user to another security principal (user or team). "
    - type: Microsoft.Dynamics.CRM.Recalculate
      description: "Recalculate system-computed values for rollup fields in the goal hierarchy. "
+   - type: Microsoft.Dynamics.CRM.RecalculatePrice
+     description: ""
    - type: Microsoft.Dynamics.CRM.ReleaseToQueue
      description: "Assigns a queue item back to the queue owner so others can pick it.  "
    - type: Microsoft.Dynamics.CRM.RemoveAppComponents
-     description: ""
+     description: "Removes app components from an app."
    - type: Microsoft.Dynamics.CRM.RemoveFromQueue
      description: "Removes a queue item from a queue.  "
    - type: Microsoft.Dynamics.CRM.RemoveItemCampaign
      description: "Removes an item from a campaign.  "
    - type: Microsoft.Dynamics.CRM.RemoveItemCampaignActivity
      description: "Removes an item from a campaign activity. "
+   - type: Microsoft.Dynamics.CRM.RemoveListMembersList
+     description: ""
    - type: Microsoft.Dynamics.CRM.RemoveMemberList
      description: "Removes a member from a list (marketing list).  "
    - type: Microsoft.Dynamics.CRM.RemoveMembersTeam
@@ -616,6 +692,12 @@ actions:
      description: "Replaces the access rights on the target record for the specified security principal (user or team).  "
    - type: Microsoft.Dynamics.CRM.RouteTo
      description: "Routes a queue item to a queue, a user, or a team.  "
+   - type: Microsoft.Dynamics.CRM.SchedulePrediction
+     description: ""
+   - type: Microsoft.Dynamics.CRM.ScheduleRetrain
+     description: ""
+   - type: Microsoft.Dynamics.CRM.ScheduleTraining
+     description: ""
    - type: Microsoft.Dynamics.CRM.SendBulkMail
      description: "Sends bulk email messages."
    - type: Microsoft.Dynamics.CRM.SendEmail
@@ -627,21 +709,27 @@ actions:
    - type: Microsoft.Dynamics.CRM.SendTemplate
      description: "Sends a bulk email message that is created from a template.  "
    - type: Microsoft.Dynamics.CRM.SetAutoNumberSeed
-     description: ""
+     description: "Sets a different starting value after creating the auto-numbering attribute.  "
    - type: Microsoft.Dynamics.CRM.SetBusinessSystemUser
      description: "Moves a system user (user) to a different business unit. "
    - type: Microsoft.Dynamics.CRM.SetDataEncryptionKey
      description: "Sets or restore the data encryption key.  "
    - type: Microsoft.Dynamics.CRM.SetFeatureStatus
-     description: "internal"
+     description: "For internal use only."
    - type: Microsoft.Dynamics.CRM.SetLocLabels
      description: "Sets localized labels for a limited set of entity attributes.  "
    - type: Microsoft.Dynamics.CRM.SetParentSystemUser
      description: "Sets a new parent system user (user) for the specified user.  "
    - type: Microsoft.Dynamics.CRM.SetProcess
-     description: "Sets the process that associates with a given target entity. The user can set to another business process or specify null to clear out the current process."
+     description: "For internal use only."
    - type: Microsoft.Dynamics.CRM.SetReportRelated
      description: "Links an instance of a report entity to related entities.  "
+   - type: Microsoft.Dynamics.CRM.StageAndUpgrade
+     description: ""
+   - type: Microsoft.Dynamics.CRM.SyncBulkOperation
+     description: ""
+   - type: Microsoft.Dynamics.CRM.Train
+     description: ""
    - type: Microsoft.Dynamics.CRM.TransformImport
      description: "Submits an asynchronous job that transforms the parsed data.  "
    - type: Microsoft.Dynamics.CRM.TriggerServiceEndpointCheck
@@ -652,30 +740,44 @@ actions:
      description: "Unlocks pricing for an invoice.  "
    - type: Microsoft.Dynamics.CRM.UnlockSalesOrderPricing
      description: "Unlocks pricing for a sales order (order).  "
+   - type: Microsoft.Dynamics.CRM.UnpublishAIConfiguration
+     description: ""
    - type: Microsoft.Dynamics.CRM.UnpublishDuplicateRule
      description: "Submits an asynchronous job to unpublish a duplicate rule.  "
+   - type: Microsoft.Dynamics.CRM.UnschedulePrediction
+     description: ""
+   - type: Microsoft.Dynamics.CRM.UnscheduleTraining
+     description: ""
    - type: Microsoft.Dynamics.CRM.UpdateFeatureConfig
-     description: "internal"
+     description: "For internal use only."
    - type: Microsoft.Dynamics.CRM.UpdateOptionValue
      description: "Updates an option value in a global or local option set. "
    - type: Microsoft.Dynamics.CRM.UpdateProductProperties
      description: "Updates values of the property instances (dynamic property instances) for a product added to an opportunity, quote, order, or invoice. "
+   - type: Microsoft.Dynamics.CRM.UpdateRibbonClientMetadata
+     description: ""
    - type: Microsoft.Dynamics.CRM.UpdateSolutionComponent
      description: "Updates a component in an unmanaged solution."
    - type: Microsoft.Dynamics.CRM.UpdateStateValue
      description: "Updates an option set value in for a StateAttributeMetadata attribute.  "
+   - type: Microsoft.Dynamics.CRM.UploadBlock
+     description: ""
    - type: Microsoft.Dynamics.CRM.Validate
      description: "Verifies that an appointment or service appointment (service activity) has valid available resources for the activity, duration, and site, as appropriate.  "
+   - type: Microsoft.Dynamics.CRM.ValidateAIConfiguration
+     description: ""
    - type: Microsoft.Dynamics.CRM.ValidateSavedQuery
      description: "Validates a saved query."
+   - type: Microsoft.Dynamics.CRM.ValidateUnpublished
+     description: ""
    - type: Microsoft.Dynamics.CRM.WinOpportunity
      description: "Sets the state of an opportunity to Won.  "
    - type: Microsoft.Dynamics.CRM.WinQuote
      description: "Sets the state of a quote to Won.  "
 # This solution has no remarks.
 href_see_also:
-- text: "Use the Microsoft Dynamics 365 Customer Engagement Web API"
-  href: "https://docs.microsoft.com/dynamics365/customer-engagement/developer/use-microsoft-dynamics-365-web-api"
+- text: "Use the Common Data Service Web API"
+  href: "https://docs.microsoft.com/powerapps/developer/common-data-service/webapi/overview"
 xref_see_also:
 - Microsoft.Dynamics.CRM.EntityTypeIndex
 - Microsoft.Dynamics.CRM.ActionIndex

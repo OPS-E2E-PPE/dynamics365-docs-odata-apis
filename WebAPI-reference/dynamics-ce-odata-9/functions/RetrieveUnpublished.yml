@@ -3,17 +3,15 @@ uid: Microsoft.Dynamics.CRM.RetrieveUnpublished
 name: "RetrieveUnpublished"
 type: function
 metadata: 
-  title: "Microsoft Dynamics 365 Customer Engagement RetrieveUnpublished Function Reference | MicrosoftDocs"
-  ms.date: "03/20/2018"
+  title: "Common Data Service and Dynamics 365 Customer Engagement RetrieveUnpublished Function Reference | MicrosoftDocs"
+  ms.date: "05/03/2020"
   ms.service: "crm-online"
   ms.topic: "reference"
-  applies_to: 
-  - "Dynamics 365 (online)"
   ms.assetid: 955e15b8-5896-4bd5-8279-0f38f948bfc7
-  author: "jimdaly"
-  ms.author: "jdaly"
-  manager: "jdaly"
-  meta-description: "Reference information about the Dynamics 365 Customer Engagement RetrieveUnpublished Function."
+  author: "KumarVivek"
+  ms.author: "kvivek"
+  manager: "Annbe"
+  meta-description: "Reference information about the RetrieveUnpublished Function."
 namespace: Microsoft.Dynamics.CRM
 description: ""
 iscomposable: true
@@ -59,8 +57,8 @@ entities:
     description: "Information on relationships to be used to follow related entity's records for mobile offline profile item."
 # This function has no remarks.
 href_see_also:
-- text: "Use the Microsoft Dynamics 365 Customer Engagement Web API"
-  href: "https://docs.microsoft.com/dynamics365/customer-engagement/developer/use-microsoft-dynamics-365-web-api"
+- text: "Use the Common Data Service Web API"
+  href: "https://docs.microsoft.com/powerapps/developer/common-data-service/webapi/overview"
 xref_see_also:
 - Microsoft.Dynamics.CRM.EntityTypeIndex
 - Microsoft.Dynamics.CRM.ActionIndex

@@ -1,0 +1,41 @@
+### YamlMime:OData
+uid: Microsoft.Dynamics.CRM.EnvironmentVariables
+name: "Environment Variables"
+type: solution
+metadata: 
+  title: "Common Data Service and Dynamics 365 Customer Engagement Environment Variables Solution Reference | MicrosoftDocs"
+  ms.date: "05/03/2020"
+  ms.service: "crm-online"
+  ms.topic: "reference"
+  ms.assetid: 3ad12be6-5358-4b4c-9c4e-3c5104a4b94d
+  author: "KumarVivek"
+  ms.author: "kvivek"
+  manager: "Annbe"
+  meta-description: "Reference information about the Dynamics 365 Customer Engagement Environment Variables Solution."
+namespace: Microsoft.Dynamics.CRM
+header:
+# This solution has no description.
+ unique_name: EnvironmentVariables
+ version: "1.0.2.7"
+ customization_prefix: none
+entities:
+  description: "The following entities are included in this solution."
+  entity_items:
+   - type: Microsoft.Dynamics.CRM.environmentvariabledefinition
+     description: "Contains information about the settable variable: its type, default value, and etc."
+   - type: Microsoft.Dynamics.CRM.environmentvariablevalue
+     description: "Holds the value for the associated EnvironmentVariableDefinition entity."
+# This solution includes no actions.
+# This solution has no remarks.
+href_see_also:
+- text: "Use the Common Data Service Web API"
+  href: "https://docs.microsoft.com/powerapps/developer/common-data-service/webapi/overview"
+xref_see_also:
+- Microsoft.Dynamics.CRM.EntityTypeIndex
+- Microsoft.Dynamics.CRM.ActionIndex
+- Microsoft.Dynamics.CRM.FunctionIndex
+- Microsoft.Dynamics.CRM.QueryFunctionIndex
+- Microsoft.Dynamics.CRM.ComplexTypeIndex
+- Microsoft.Dynamics.CRM.EnumTypeIndex
+- Microsoft.Dynamics.CRM.MetadataEntityTypeIndex
+- Microsoft.Dynamics.CRM.SolutionIndex

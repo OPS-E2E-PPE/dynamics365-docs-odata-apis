@@ -3,17 +3,15 @@ uid: Microsoft.Dynamics.CRM.ManagedPropertyType
 name: "ManagedPropertyType"
 type: enumtype
 metadata: 
-  title: "Microsoft Dynamics 365 Customer Engagement ManagedPropertyType EnumType Reference | MicrosoftDocs"
-  ms.date: "03/20/2018"
+  title: "Common Data Service and Dynamics 365 Customer Engagement ManagedPropertyType EnumType Reference | MicrosoftDocs"
+  ms.date: "05/03/2020"
   ms.service: "crm-online"
   ms.topic: "reference"
-  applies_to: 
-    - "Dynamics 365 (online)"
   ms.assetid: 9b69186f-5235-4dc9-a7ed-1d172dfe90f7
-  author: "jimdaly"
-  ms.author: "jdaly"
-  manager: "jdaly"
-  meta-description: "Reference information about the Dynamics 365 Customer Engagement Web API ManagedPropertyType ComplexType."
+  author: "KumarVivek"
+  ms.author: "kvivek"
+  manager: "Annbe"
+  meta-description: "Reference information about the Web API ManagedPropertyType ComplexType."
 namespace: Microsoft.Dynamics.CRM
 description: "For internal use only." 
 members:
@@ -38,8 +36,8 @@ usedby:
     used_as: Property
 # This enum type has no remarks.
 href_see_also:
-- text: "Use the Microsoft Dynamics 365 Customer Engagement Web API"
-  href: "https://docs.microsoft.com/dynamics365/customer-engagement/developer/use-microsoft-dynamics-365-web-api"
+- text: "Use the Common Data Service Web API"
+  href: "https://docs.microsoft.com/powerapps/developer/common-data-service/webapi/overview"
 xref_see_also:
 - Microsoft.Dynamics.CRM.EntityTypeIndex
 - Microsoft.Dynamics.CRM.ActionIndex

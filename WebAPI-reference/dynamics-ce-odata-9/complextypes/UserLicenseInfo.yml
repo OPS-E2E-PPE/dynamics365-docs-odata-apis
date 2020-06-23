@@ -3,17 +3,15 @@ uid: Microsoft.Dynamics.CRM.UserLicenseInfo
 name: "UserLicenseInfo"
 type: complextype
 metadata: 
-  title: "Microsoft Dynamics 365 Customer Engagement UserLicenseInfo ComplexType Reference | MicrosoftDocs"
-  ms.date: "03/20/2018"
+  title: "Common Data Service and Dynamics 365 Customer Engagement UserLicenseInfo ComplexType Reference | MicrosoftDocs"
+  ms.date: "05/03/2020"
   ms.service: "crm-online"
   ms.topic: "reference"
-  applies_to: 
-    - "Dynamics 365 (online)"
-  ms.assetid: a58d8f6f-f6b9-4c16-ba05-e48e6cc1c047
-  author: "jimdaly"
-  ms.author: "jdaly"
-  manager: "jdaly"
-  meta-description: "Reference information about the Dynamics 365 Customer Engagement Web API UserLicenseInfo ComplexType."
+  ms.assetid: 70843012-ad46-406b-bee9-78236466788c
+  author: "KumarVivek"
+  ms.author: "kvivek"
+  manager: "Annbe"
+  meta-description: "Reference information about the Web API UserLicenseInfo ComplexType."
 namespace: Microsoft.Dynamics.CRM
 # This complex type doesn't inherit from another complextype.
 description: "Contains information about the service plans that a system user has access to. " 
@@ -34,8 +32,8 @@ usedby:
     used_as: Property
 # This complex type has no remarks.
 href_see_also:
-- text: "Use the Microsoft Dynamics 365 Customer Engagement Web API"
-  href: "https://docs.microsoft.com/dynamics365/customer-engagement/developer/use-microsoft-dynamics-365-web-api"
+- text: "Use the Common Data Service Web API"
+  href: "https://docs.microsoft.com/powerapps/developer/common-data-service/webapi/overview"
 xref_see_also:
 - Microsoft.Dynamics.CRM.EntityTypeIndex
 - Microsoft.Dynamics.CRM.ActionIndex

@@ -3,17 +3,15 @@ uid: Microsoft.Dynamics.CRM.task
 name: "task"
 type: entitytype
 metadata: 
-  title: "Microsoft Dynamics 365 Customer Engagement task EntityType Reference | MicrosoftDocs"
-  ms.date: "03/20/2018"
+  title: "Common Data Service and Dynamics 365 Customer Engagement task EntityType Reference | MicrosoftDocs"
+  ms.date: "05/03/2020"
   ms.service: "crm-online"
   ms.topic: "reference"
-  applies_to: 
-  - "Dynamics 365 (online)"
   ms.assetid: 59bcbaff-b23e-473a-bf8b-37529176984c
-  author: "jimdaly"
-  ms.author: "jdaly"
-  manager: "jdaly"
-  meta-description: "Reference information about the Dynamics 365 Customer Engagement task entitytype."
+  author: "KumarVivek"
+  ms.author: "kvivek"
+  manager: "Annbe"
+  meta-description: "Reference information about the task entitytype."
 description: "Generic activity representing work needed to be done."
 header:
   entity_set_path: "[organization URI]/api/data/v9.0/tasks"
@@ -276,7 +274,7 @@ properties:
       isreadonly: false
     - name: stageid
       type: Edm.Guid
-      display_name: "Process Stage"
+      display_name: "(Deprecated) Process Stage"
       description: "Unique identifier of the Stage."
       iscomputed: false
       isreadonly: false
@@ -338,7 +336,7 @@ properties:
       isreadonly: false
     - name: traversedpath
       type: Edm.String
-      display_name: "Traversed Path"
+      display_name: "(Deprecated) Traversed Path"
       description: "For internal use only."
       iscomputed: false
       isreadonly: false
@@ -526,18 +524,6 @@ single_valued_navigation_properties:
   - name: regardingobjectid_lead_task
     type: Microsoft.Dynamics.CRM.lead
     partner: Lead_Tasks
-  - name: regardingobjectid_ms_newsitem
-    type: Microsoft.Dynamics.CRM.ms_newsitem
-    partner: ms_newsitem_ActivityPointers
-  - name: regardingobjectid_ms_newsitem_task
-    type: Microsoft.Dynamics.CRM.ms_newsitem
-    partner: ms_newsitem_Tasks
-  - name: regardingobjectid_ms_satori
-    type: Microsoft.Dynamics.CRM.ms_satori
-    partner: ms_satori_ActivityPointers
-  - name: regardingobjectid_ms_satori_task
-    type: Microsoft.Dynamics.CRM.ms_satori
-    partner: ms_satori_Tasks
   - name: regardingobjectid_msdyn_agreement
     type: Microsoft.Dynamics.CRM.msdyn_agreement
     partner: msdyn_agreement_ActivityPointers
@@ -1138,15 +1124,25 @@ solutions:
     description: ""
   - type: Microsoft.Dynamics.CRM.msdynce_Activities
     description: "Dynamics 365 workload for activities."
+  - type: Microsoft.Dynamics.CRM.msdynce_ActivitiesPatch
+    description: "Patch for Dynamics 365 workload for activities."
   - type: Microsoft.Dynamics.CRM.msdynce_AppCommon
     description: "For internal use only."
   - type: Microsoft.Dynamics.CRM.msdynce_Marketing
     description: "Dynamics 365 workload for marketing and enterprise."
+  - type: Microsoft.Dynamics.CRM.msdynce_MarketingPatch
+    description: "Patch for Dynamics 365 workload for marketing and enterprise."
   - type: Microsoft.Dynamics.CRM.msdynce_MarketingSales
     description: "For internal use only."
   - type: Microsoft.Dynamics.CRM.msdynce_Sales
     description: "Dynamics 365 workload for sales."
+  - type: Microsoft.Dynamics.CRM.msdynce_SalesPatch
+    description: "Patch for Dynamics 365 workload for sales."
   - type: Microsoft.Dynamics.CRM.msdynce_Service
+    description: "Dynamics 365 workload for service."
+  - type: Microsoft.Dynamics.CRM.msdynce_ServicePatch
+    description: "Patch for Dynamics 365 workload for service."
+  - type: Microsoft.Dynamics.CRM.msdynce_ServicePatch201911
     description: "Dynamics 365 workload for service."
   - type: Microsoft.Dynamics.CRM.ProjectService
     description: "Microsoft Dynamics 365 for Project Service Automation is an end-to-end solution that helps sales and delivery teams engage customers and deliver billable projects on time and within budget. Project Service gives you the tools you need to: Estimate, quote, and contract work; Plan and assign resources; Enable team collaboration; Capture time, expense, and progress data for real-time insights and accurate invoicing."
@@ -1154,8 +1150,8 @@ solutions:
     description: "Internal CRM System Solution"
 # This entity has no remarks.
 href_see_also:
-- text: "Use the Microsoft Dynamics 365 Customer Engagement Web API"
-  href: "https://docs.microsoft.com/dynamics365/customer-engagement/developer/use-microsoft-dynamics-365-web-api"
+- text: "Use the Common Data Service Web API"
+  href: "https://docs.microsoft.com/powerapps/developer/common-data-service/webapi/overview"
 xref_see_also:
 - Microsoft.Dynamics.CRM.EntityTypeIndex
 - Microsoft.Dynamics.CRM.ActionIndex

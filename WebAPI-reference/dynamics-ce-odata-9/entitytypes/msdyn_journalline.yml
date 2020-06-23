@@ -3,17 +3,15 @@ uid: Microsoft.Dynamics.CRM.msdyn_journalline
 name: "msdyn_journalline"
 type: entitytype
 metadata: 
-  title: "Microsoft Dynamics 365 Customer Engagement msdyn_journalline EntityType Reference | MicrosoftDocs"
-  ms.date: "03/20/2018"
+  title: "Common Data Service and Dynamics 365 Customer Engagement msdyn_journalline EntityType Reference | MicrosoftDocs"
+  ms.date: "05/03/2020"
   ms.service: "crm-online"
   ms.topic: "reference"
-  applies_to: 
-  - "Dynamics 365 (online)"
   ms.assetid: d5ec9b39-e325-4121-85d8-3a26f3302ae8
-  author: "jimdaly"
-  ms.author: "jdaly"
-  manager: "jdaly"
-  meta-description: "Reference information about the Dynamics 365 Customer Engagement msdyn_journalline entitytype."
+  author: "KumarVivek"
+  ms.author: "kvivek"
+  manager: "Annbe"
+  meta-description: "Reference information about the msdyn_journalline entitytype."
 description: "Unposted business transaction line details."
 header:
   entity_set_path: "[organization URI]/api/data/v9.0/msdyn_journallines"
@@ -128,6 +126,8 @@ properties:
       options:
         - value: 690970000
           label: "Work order closed - posted"
+        - value: 192350004
+          label: "Ready to Invoice"
         - value: 192350000
           label: "Unbilled Sales Created"
         - value: 192350001
@@ -235,8 +235,8 @@ properties:
       isreadonly: false
     - name: msdyn_salescontractline
       type: Edm.String
-      display_name: "Project Contract Line"
-      description: "Shows the project contract line."
+      display_name: "(Deprecated) Project Contract Line"
+      description: "(Deprecated) Shows the project contract line."
       iscomputed: false
       isreadonly: false
     - name: msdyn_startdatetime
@@ -256,8 +256,6 @@ properties:
           label: "Commission"
         - value: 690970001
           label: "Additional"
-        - value: 690970002
-          label: "Tax"
         - value: 192350000
           label: "Time"
         - value: 192350001
@@ -268,6 +266,8 @@ properties:
           label: "Milestone"
         - value: 192350004
           label: "Fee"
+        - value: 690970002
+          label: "Tax"
     - name: msdyn_transactiontypecode
       type: Edm.Int32
       display_name: "Transaction Type"
@@ -415,6 +415,10 @@ lookup_properties:
     single_valued_navigation_property:
     - msdyn_SalesContract
     description: "Shows the project contract."
+  - name: _msdyn_salescontractlineid_value
+    single_valued_navigation_property:
+    - msdyn_SalesContractLineId
+    description: "Unique identifier for Project Contract Line associated with Journal Line."
   - name: _msdyn_task_value
     single_valued_navigation_property:
     - msdyn_Task
@@ -505,6 +509,9 @@ single_valued_navigation_properties:
   - name: msdyn_SalesContract
     type: Microsoft.Dynamics.CRM.salesorder
     partner: msdyn_salesorder_msdyn_journalline_SalesContract
+  - name: msdyn_SalesContractLineId
+    type: Microsoft.Dynamics.CRM.salesorderdetail
+    partner: msdyn_salesorderdetail_msdyn_journalline
   - name: msdyn_Task
     type: Microsoft.Dynamics.CRM.msdyn_projecttask
     partner: msdyn_msdyn_projecttask_msdyn_journalline_Task
@@ -588,8 +595,8 @@ solutions:
     description: "Microsoft Dynamics 365 for Project Service Automation is an end-to-end solution that helps sales and delivery teams engage customers and deliver billable projects on time and within budget. Project Service gives you the tools you need to: Estimate, quote, and contract work; Plan and assign resources; Enable team collaboration; Capture time, expense, and progress data for real-time insights and accurate invoicing."
 # This entity has no remarks.
 href_see_also:
-- text: "Use the Microsoft Dynamics 365 Customer Engagement Web API"
-  href: "https://docs.microsoft.com/dynamics365/customer-engagement/developer/use-microsoft-dynamics-365-web-api"
+- text: "Use the Common Data Service Web API"
+  href: "https://docs.microsoft.com/powerapps/developer/common-data-service/webapi/overview"
 xref_see_also:
 - Microsoft.Dynamics.CRM.EntityTypeIndex
 - Microsoft.Dynamics.CRM.ActionIndex

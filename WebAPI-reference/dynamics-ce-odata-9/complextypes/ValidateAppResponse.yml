@@ -3,20 +3,18 @@ uid: Microsoft.Dynamics.CRM.ValidateAppResponse
 name: "ValidateAppResponse"
 type: complextype
 metadata: 
-  title: "Microsoft Dynamics 365 Customer Engagement ValidateAppResponse ComplexType Reference | MicrosoftDocs"
-  ms.date: "03/20/2018"
+  title: "Common Data Service and Dynamics 365 Customer Engagement ValidateAppResponse ComplexType Reference | MicrosoftDocs"
+  ms.date: "05/03/2020"
   ms.service: "crm-online"
   ms.topic: "reference"
-  applies_to: 
-    - "Dynamics 365 (online)"
   ms.assetid: 244980b2-2b3c-4722-911a-fdcf11158ed9
-  author: "jimdaly"
-  ms.author: "jdaly"
-  manager: "jdaly"
-  meta-description: "Reference information about the Dynamics 365 Customer Engagement Web API ValidateAppResponse ComplexType."
+  author: "KumarVivek"
+  ms.author: "kvivek"
+  manager: "Annbe"
+  meta-description: "Reference information about the Web API ValidateAppResponse ComplexType."
 namespace: Microsoft.Dynamics.CRM
 # This complex type doesn't inherit from another complextype.
-description: "" 
+description: "Contains the response from the ValidateApp action. " 
 properties:
   description: "The properties of a complex type contain the structured data of the type."
   property_items:
@@ -24,7 +22,7 @@ properties:
     type: Microsoft.Dynamics.CRM.AppValidationResponse
     nullable: true
     unicode: true
-    description: ""
+    description: "The results of the ValidateApp operation. "
     iscollection: false
 # This complex type doesn't have any navigation properties.
 usedby:
@@ -34,8 +32,8 @@ usedby:
     used_as: ReturnType
 # This complex type has no remarks.
 href_see_also:
-- text: "Use the Microsoft Dynamics 365 Customer Engagement Web API"
-  href: "https://docs.microsoft.com/dynamics365/customer-engagement/developer/use-microsoft-dynamics-365-web-api"
+- text: "Use the Common Data Service Web API"
+  href: "https://docs.microsoft.com/powerapps/developer/common-data-service/webapi/overview"
 xref_see_also:
 - Microsoft.Dynamics.CRM.EntityTypeIndex
 - Microsoft.Dynamics.CRM.ActionIndex

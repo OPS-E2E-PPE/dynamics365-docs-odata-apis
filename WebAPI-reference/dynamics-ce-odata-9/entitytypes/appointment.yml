@@ -3,17 +3,15 @@ uid: Microsoft.Dynamics.CRM.appointment
 name: "appointment"
 type: entitytype
 metadata: 
-  title: "Microsoft Dynamics 365 Customer Engagement appointment EntityType Reference | MicrosoftDocs"
-  ms.date: "03/20/2018"
+  title: "Common Data Service and Dynamics 365 Customer Engagement appointment EntityType Reference | MicrosoftDocs"
+  ms.date: "05/03/2020"
   ms.service: "crm-online"
   ms.topic: "reference"
-  applies_to: 
-  - "Dynamics 365 (online)"
   ms.assetid: 0e56b1bb-f0e5-4a33-a510-f255a983cbcd
-  author: "jimdaly"
-  ms.author: "jdaly"
-  manager: "jdaly"
-  meta-description: "Reference information about the Dynamics 365 Customer Engagement appointment entitytype."
+  author: "KumarVivek"
+  ms.author: "kvivek"
+  manager: "Annbe"
+  meta-description: "Reference information about the appointment entitytype."
 description: "Commitment representing a time interval with start/end times and duration."
 header:
   entity_set_path: "[organization URI]/api/data/v9.0/appointments"
@@ -182,6 +180,17 @@ properties:
           label: "Yes"
         - value: 0
           label: "No"
+    - name: isdraft
+      type: Edm.Boolean
+      display_name: "IsDraft"
+      description: "Information regarding whether the appointment is a draft."
+      iscomputed: false
+      isreadonly: false
+      options:
+        - value: 1
+          label: "Yes"
+        - value: 0
+          label: "No"
     - name: ismapiprivate
       type: Edm.Boolean
       display_name: "Is Private"
@@ -204,6 +213,12 @@ properties:
           label: "Yes"
         - value: 0
           label: "No"
+    - name: isunsafe
+      type: Edm.Int32
+      display_name: "IsUnsafe"
+      description: "For internal use only."
+      iscomputed: false
+      isreadonly: true
     - name: isworkflowcreated
       type: Edm.Boolean
       display_name: "Is Workflow Created"
@@ -332,7 +347,7 @@ properties:
       isreadonly: false
     - name: stageid
       type: Edm.Guid
-      display_name: "Process Stage"
+      display_name: "(Deprecated) Process Stage"
       description: "Unique identifier of the Stage."
       iscomputed: false
       isreadonly: false
@@ -396,7 +411,7 @@ properties:
       isreadonly: false
     - name: traversedpath
       type: Edm.String
-      display_name: "Traversed Path"
+      display_name: "(Deprecated) Traversed Path"
       description: "For internal use only."
       iscomputed: false
       isreadonly: false
@@ -584,18 +599,6 @@ single_valued_navigation_properties:
   - name: regardingobjectid_lead_appointment
     type: Microsoft.Dynamics.CRM.lead
     partner: Lead_Appointments
-  - name: regardingobjectid_ms_newsitem
-    type: Microsoft.Dynamics.CRM.ms_newsitem
-    partner: ms_newsitem_ActivityPointers
-  - name: regardingobjectid_ms_newsitem_appointment
-    type: Microsoft.Dynamics.CRM.ms_newsitem
-    partner: ms_newsitem_Appointments
-  - name: regardingobjectid_ms_satori
-    type: Microsoft.Dynamics.CRM.ms_satori
-    partner: ms_satori_ActivityPointers
-  - name: regardingobjectid_ms_satori_appointment
-    type: Microsoft.Dynamics.CRM.ms_satori
-    partner: ms_satori_Appointments
   - name: regardingobjectid_msdyn_agreement
     type: Microsoft.Dynamics.CRM.msdyn_agreement
     partner: msdyn_agreement_ActivityPointers
@@ -1178,6 +1181,12 @@ collection_valued_navigation_properties:
   - name: CreatedActivity_BulkOperationLogs
     type: Microsoft.Dynamics.CRM.bulkoperationlog
     partner: createdobjectid_activitypointer
+  - name: msdyn_appointment_bookableresourcebooking
+    type: Microsoft.Dynamics.CRM.bookableresourcebooking
+    partner: msdyn_AppointmentBookingId
+  - name: msdyn_appointment_msdyn_resourcerequirement
+    type: Microsoft.Dynamics.CRM.msdyn_resourcerequirement
+    partner: msdyn_AppointmentRequirementId
   - name: slakpiinstance_activitypointer
     type: Microsoft.Dynamics.CRM.slakpiinstance
     partner: regarding_activitypointer
@@ -1196,6 +1205,8 @@ operations:
     binding_type: "Not Bound"
   - name: Microsoft.Dynamics.CRM.GrantAccess
     binding_type: "Not Bound"
+  - name: Microsoft.Dynamics.CRM.ImmediateBook
+    binding_type: "Not Bound"
   - name: Microsoft.Dynamics.CRM.ModifyAccess
     binding_type: "Not Bound"
   - name: Microsoft.Dynamics.CRM.Reschedule
@@ -1210,33 +1221,49 @@ operations:
     binding_type: "Not Bound"
   - name: Microsoft.Dynamics.CRM.ValidateSavedQuery
     binding_type: "Not Bound"
+  - name: Microsoft.Dynamics.CRM.ValidateUnpublished
+    binding_type: "Not Bound"
 solutions:
   description: "The following solutions include the appointment entity type."
   solution_items:
   - type: Microsoft.Dynamics.CRM.AppforOutlook
     description: ""
+  - type: Microsoft.Dynamics.CRM.MicrosoftDynamicsScheduling
+    description: "The Universal Resource Scheduling solution provides the infrastructure to express resource requirements for any entity in the system and help staff those requirements with resources based on the availability and applicability of the resource for the requirement."
   - type: Microsoft.Dynamics.CRM.msdynce_Activities
     description: "Dynamics 365 workload for activities."
+  - type: Microsoft.Dynamics.CRM.msdynce_ActivitiesPatch
+    description: "Patch for Dynamics 365 workload for activities."
   - type: Microsoft.Dynamics.CRM.msdynce_AppCommon
     description: "For internal use only."
   - type: Microsoft.Dynamics.CRM.msdynce_LeadManagement
     description: "Dynamics 365 workload for lead management."
+  - type: Microsoft.Dynamics.CRM.msdynce_LeadManagementPatch
+    description: "Dynamics 365 workload for lead management."
   - type: Microsoft.Dynamics.CRM.msdynce_Marketing
     description: "Dynamics 365 workload for marketing and enterprise."
+  - type: Microsoft.Dynamics.CRM.msdynce_MarketingPatch
+    description: "Patch for Dynamics 365 workload for marketing and enterprise."
   - type: Microsoft.Dynamics.CRM.msdynce_MarketingSales
     description: "For internal use only."
   - type: Microsoft.Dynamics.CRM.msdynce_Sales
     description: "Dynamics 365 workload for sales."
+  - type: Microsoft.Dynamics.CRM.msdynce_SalesPatch
+    description: "Patch for Dynamics 365 workload for sales."
   - type: Microsoft.Dynamics.CRM.msdynce_SalesService
     description: "For internal use only."
   - type: Microsoft.Dynamics.CRM.msdynce_Service
+    description: "Dynamics 365 workload for service."
+  - type: Microsoft.Dynamics.CRM.msdynce_ServicePatch
+    description: "Patch for Dynamics 365 workload for service."
+  - type: Microsoft.Dynamics.CRM.msdynce_ServicePatch201911
     description: "Dynamics 365 workload for service."
   - type: Microsoft.Dynamics.CRM.System
     description: "Internal CRM System Solution"
 # This entity has no remarks.
 href_see_also:
-- text: "Use the Microsoft Dynamics 365 Customer Engagement Web API"
-  href: "https://docs.microsoft.com/dynamics365/customer-engagement/developer/use-microsoft-dynamics-365-web-api"
+- text: "Use the Common Data Service Web API"
+  href: "https://docs.microsoft.com/powerapps/developer/common-data-service/webapi/overview"
 xref_see_also:
 - Microsoft.Dynamics.CRM.EntityTypeIndex
 - Microsoft.Dynamics.CRM.ActionIndex

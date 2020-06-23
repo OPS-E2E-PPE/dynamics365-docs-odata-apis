@@ -3,17 +3,15 @@ uid: Microsoft.Dynamics.CRM.bookableresourcebooking
 name: "bookableresourcebooking"
 type: entitytype
 metadata: 
-  title: "Microsoft Dynamics 365 Customer Engagement bookableresourcebooking EntityType Reference | MicrosoftDocs"
-  ms.date: "03/20/2018"
+  title: "Common Data Service and Dynamics 365 Customer Engagement bookableresourcebooking EntityType Reference | MicrosoftDocs"
+  ms.date: "05/03/2020"
   ms.service: "crm-online"
   ms.topic: "reference"
-  applies_to: 
-  - "Dynamics 365 (online)"
   ms.assetid: 8fe3f331-110e-4c17-832d-78034ffe2ca2
-  author: "jimdaly"
-  ms.author: "jdaly"
-  manager: "jdaly"
-  meta-description: "Reference information about the Dynamics 365 Customer Engagement bookableresourcebooking entitytype."
+  author: "KumarVivek"
+  ms.author: "kvivek"
+  manager: "Annbe"
+  meta-description: "Reference information about the bookableresourcebooking entitytype."
 description: "Represents the line details of a resource booking."
 header:
   entity_set_path: "[organization URI]/api/data/v9.0/bookableresourcebookings"
@@ -83,6 +81,17 @@ properties:
       description: "Date and time when the record was modified."
       iscomputed: false
       isreadonly: true
+    - name: msdyn_acceptcascadecrewchanges
+      type: Edm.Boolean
+      display_name: "Accept Cascade Crew Changes"
+      description: "Defines whether this booking accepts changes propagated as cascading changes"
+      iscomputed: false
+      isreadonly: false
+      options:
+        - value: 1
+          label: "Yes"
+        - value: 0
+          label: "No"
     - name: msdyn_actualarrivaltime
       type: Edm.DateTimeOffset
       display_name: "Actual Arrival Time"
@@ -134,6 +143,12 @@ properties:
           label: "Yes"
         - value: 0
           label: "No"
+    - name: msdyn_effort
+      type: Edm.Decimal
+      display_name: "Capacity"
+      description: "Capacity that needs to take from resource capacity"
+      iscomputed: false
+      isreadonly: false
     - name: msdyn_estimatedarrivaltime
       type: Edm.DateTimeOffset
       display_name: "Estimated Arrival Time"
@@ -240,6 +255,25 @@ properties:
           label: "Yes"
         - value: 0
           label: "No"
+    - name: msdyn_ursinternalflags
+      type: Edm.String
+      display_name: "Internal Flags"
+      description: "For internal use only."
+      iscomputed: false
+      isreadonly: false
+    - name: msdyn_worklocation
+      type: Edm.Int32
+      display_name: "Work Location"
+      description: ""
+      iscomputed: false
+      isreadonly: false
+      options:
+        - value: 690970000
+          label: "Onsite"
+        - value: 690970001
+          label: "Facility"
+        - value: 690970002
+          label: "Location Agnostic"
     - name: name
       type: Edm.String
       display_name: "Name"
@@ -260,7 +294,7 @@ properties:
       isreadonly: false
     - name: stageid
       type: Edm.Guid
-      display_name: "Stage Id"
+      display_name: "(Deprecated) Stage Id"
       description: "Contains the id of the stage where the entity is located."
       iscomputed: false
       isreadonly: false
@@ -300,7 +334,7 @@ properties:
       isreadonly: false
     - name: traversedpath
       type: Edm.String
-      display_name: "Traversed Path"
+      display_name: "(Deprecated) Traversed Path"
       description: "A comma separated list of string values representing the unique identifiers of stages in a Business Process Flow Instance in the order that they occur."
       iscomputed: false
       isreadonly: false
@@ -347,6 +381,8 @@ lookup_properties:
     single_valued_navigation_property:
     - msdyn_agreementbookingdate
     description: "Agreement Booking Date from where this Booking was generated"
+  - name: _msdyn_appointmentbookingid_value
+    description: "Unique identifier for Appointment associated with Bookable Resource Booking."
   - name: _msdyn_bookingsetupmetadataid_value
     single_valued_navigation_property:
     - msdyn_BookingSetupMetadataId
@@ -359,6 +395,10 @@ lookup_properties:
     single_valued_navigation_property:
     - msdyn_projectteamid
     description: "Project team member of booking detail record"
+  - name: _msdyn_requirementgroupid_value
+    single_valued_navigation_property:
+    - msdyn_requirementgroupid
+    description: "Requirement Group"
   - name: _msdyn_resourcecategoryid_value
     single_valued_navigation_property:
     - msdyn_resourcecategoryid
@@ -427,6 +467,9 @@ single_valued_navigation_properties:
   - name: msdyn_agreementbookingdate
     type: Microsoft.Dynamics.CRM.msdyn_agreementbookingdate
     partner: msdyn_msdyn_agreementbookingdate_bookableresourcebooking_AgreementBookingDate
+  - name: msdyn_AppointmentBookingId
+    type: Microsoft.Dynamics.CRM.appointment
+    partner: msdyn_appointment_bookableresourcebooking
   - name: msdyn_BookingSetupMetadataId
     type: Microsoft.Dynamics.CRM.msdyn_bookingsetupmetadata
     partner: msdyn_msdyn_bookingsetupmetadata_bookableresour
@@ -603,15 +646,15 @@ solutions:
   - type: Microsoft.Dynamics.CRM.FieldService
     description: "Microsoft Dynamics 365 for Field Service allows organizations of any size to deliver intelligent, world class field service, managing all aspects of the end-to-end field service management cycle. Features include scheduling, mobile, asset management, inventory control, customer notifications, and resource utilization controls that help maximize efficiency and minimize costs."
   - type: Microsoft.Dynamics.CRM.MicrosoftDynamicsScheduling
-    description: "Unified scheduling solution provides the infrastructure to express resource requirements for any entity in the system and help staff those requirements with resources based on the availability and applicability of the resource for the requirement."
+    description: "The Universal Resource Scheduling solution provides the infrastructure to express resource requirements for any entity in the system and help staff those requirements with resources based on the availability and applicability of the resource for the requirement."
   - type: Microsoft.Dynamics.CRM.msdynce_Scheduling
     description: "Dynamics 365 workload for scheduling."
   - type: Microsoft.Dynamics.CRM.ProjectService
     description: "Microsoft Dynamics 365 for Project Service Automation is an end-to-end solution that helps sales and delivery teams engage customers and deliver billable projects on time and within budget. Project Service gives you the tools you need to: Estimate, quote, and contract work; Plan and assign resources; Enable team collaboration; Capture time, expense, and progress data for real-time insights and accurate invoicing."
 # This entity has no remarks.
 href_see_also:
-- text: "Use the Microsoft Dynamics 365 Customer Engagement Web API"
-  href: "https://docs.microsoft.com/dynamics365/customer-engagement/developer/use-microsoft-dynamics-365-web-api"
+- text: "Use the Common Data Service Web API"
+  href: "https://docs.microsoft.com/powerapps/developer/common-data-service/webapi/overview"
 xref_see_also:
 - Microsoft.Dynamics.CRM.EntityTypeIndex
 - Microsoft.Dynamics.CRM.ActionIndex

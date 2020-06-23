@@ -3,17 +3,15 @@ uid: Microsoft.Dynamics.CRM.msdyn_contractlineinvoiceschedule
 name: "msdyn_contractlineinvoiceschedule"
 type: entitytype
 metadata: 
-  title: "Microsoft Dynamics 365 Customer Engagement msdyn_contractlineinvoiceschedule EntityType Reference | MicrosoftDocs"
-  ms.date: "03/20/2018"
+  title: "Common Data Service and Dynamics 365 Customer Engagement msdyn_contractlineinvoiceschedule EntityType Reference | MicrosoftDocs"
+  ms.date: "05/03/2020"
   ms.service: "crm-online"
   ms.topic: "reference"
-  applies_to: 
-  - "Dynamics 365 (online)"
   ms.assetid: 788a97bd-8eec-4932-9f4d-eaeffe0737ee
-  author: "jimdaly"
-  ms.author: "jdaly"
-  manager: "jdaly"
-  meta-description: "Reference information about the Dynamics 365 Customer Engagement msdyn_contractlineinvoiceschedule entitytype."
+  author: "KumarVivek"
+  ms.author: "kvivek"
+  manager: "Annbe"
+  meta-description: "Reference information about the msdyn_contractlineinvoiceschedule entitytype."
 description: "List of dates that shows when invoicing for this customer should be run. This list is used by the invoice creation job."
 header:
   entity_set_path: "[organization URI]/api/data/v9.0/msdyn_contractlineinvoiceschedules"
@@ -50,8 +48,8 @@ properties:
       isreadonly: true
     - name: msdyn_contractline
       type: Edm.String
-      display_name: "Project Contract Line"
-      description: "Shows the associated project contract line for this invoice schedule."
+      display_name: "(Deprecated) Project Contract Line"
+      description: "(Deprecated) Shows the associated project contract line for this invoice schedule."
       iscomputed: false
       isreadonly: false
     - name: msdyn_contractlineinvoicescheduleid
@@ -68,8 +66,8 @@ properties:
       isreadonly: false
     - name: msdyn_invoicerunstatus
       type: Edm.Int32
-      display_name: "Milestone status"
-      description: "Select the milestone status, for example, Not Ready to Invoice, Ready to Invoice, On an invoice, or Invoiced."
+      display_name: "Invoice Status"
+      description: "Select the invoice status, for example, Not Run, Run Successful, or Run Failed."
       iscomputed: false
       isreadonly: false
       options:
@@ -156,6 +154,10 @@ lookup_properties:
     single_valued_navigation_property:
     - modifiedonbehalfby
     description: "Unique identifier of the delegate user who modified the record."
+  - name: _msdyn_contractlineid_value
+    single_valued_navigation_property:
+    - msdyn_ContractLineId
+    description: "Unique identifier for Project Contract Line associated with Project Contract Line Invoice Schedule."
   - name: _msdyn_contractlinescheduleofvalue_value
     single_valued_navigation_property:
     - msdyn_ContractLineScheduleOfValue
@@ -183,6 +185,9 @@ single_valued_navigation_properties:
   - name: modifiedonbehalfby
     type: Microsoft.Dynamics.CRM.systemuser
     partner: lk_msdyn_contractlineinvoiceschedule_modifiedonbehalfby
+  - name: msdyn_ContractLineId
+    type: Microsoft.Dynamics.CRM.salesorderdetail
+    partner: msdyn_salesorderdetail_msdyn_contractlineinvoic
   - name: msdyn_ContractLineScheduleOfValue
     type: Microsoft.Dynamics.CRM.msdyn_contractlinescheduleofvalue
     partner: msdyn_contractlinescheduleofvalue_msdyn_contractlineinvoiceschedule
@@ -232,8 +237,8 @@ solutions:
     description: "Microsoft Dynamics 365 for Project Service Automation is an end-to-end solution that helps sales and delivery teams engage customers and deliver billable projects on time and within budget. Project Service gives you the tools you need to: Estimate, quote, and contract work; Plan and assign resources; Enable team collaboration; Capture time, expense, and progress data for real-time insights and accurate invoicing."
 # This entity has no remarks.
 href_see_also:
-- text: "Use the Microsoft Dynamics 365 Customer Engagement Web API"
-  href: "https://docs.microsoft.com/dynamics365/customer-engagement/developer/use-microsoft-dynamics-365-web-api"
+- text: "Use the Common Data Service Web API"
+  href: "https://docs.microsoft.com/powerapps/developer/common-data-service/webapi/overview"
 xref_see_also:
 - Microsoft.Dynamics.CRM.EntityTypeIndex
 - Microsoft.Dynamics.CRM.ActionIndex

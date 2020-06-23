@@ -3,17 +3,15 @@ uid: Microsoft.Dynamics.CRM.customcontrol
 name: "customcontrol"
 type: entitytype
 metadata: 
-  title: "Microsoft Dynamics 365 Customer Engagement customcontrol EntityType Reference | MicrosoftDocs"
-  ms.date: "03/20/2018"
+  title: "Common Data Service and Dynamics 365 Customer Engagement customcontrol EntityType Reference | MicrosoftDocs"
+  ms.date: "05/03/2020"
   ms.service: "crm-online"
   ms.topic: "reference"
-  applies_to: 
-  - "Dynamics 365 (online)"
   ms.assetid: e9e61bf7-6995-45a8-8d31-c3c79cb0dc4a
-  author: "jimdaly"
-  ms.author: "jdaly"
-  manager: "jdaly"
-  meta-description: "Reference information about the Dynamics 365 Customer Engagement customcontrol entitytype."
+  author: "KumarVivek"
+  ms.author: "kvivek"
+  manager: "Annbe"
+  meta-description: "Reference information about the customcontrol entitytype."
 description: "For internal use only."
 header:
   entity_set_path: "[organization URI]/api/data/v9.0/customcontrols"
@@ -30,6 +28,12 @@ namespace: Microsoft.Dynamics.CRM
 properties:
   description: "Properties represent fields of data stored in the entity.Some properties are read-only."
   property_items:
+    - name: authoringmanifest
+      type: Edm.String
+      display_name: "Authoring Manifest"
+      description: "Authoring Manifest of the CustomControl."
+      iscomputed: false
+      isreadonly: false
     - name: clientjson
       type: Edm.String
       display_name: "Custom control data in JSON format."
@@ -190,8 +194,8 @@ solutions:
     description: "Internal CRM System Solution"
 # This entity has no remarks.
 href_see_also:
-- text: "Use the Microsoft Dynamics 365 Customer Engagement Web API"
-  href: "https://docs.microsoft.com/dynamics365/customer-engagement/developer/use-microsoft-dynamics-365-web-api"
+- text: "Use the Common Data Service Web API"
+  href: "https://docs.microsoft.com/powerapps/developer/common-data-service/webapi/overview"
 xref_see_also:
 - Microsoft.Dynamics.CRM.EntityTypeIndex
 - Microsoft.Dynamics.CRM.ActionIndex

@@ -3,17 +3,15 @@ uid: Microsoft.Dynamics.CRM.ImportSolution
 name: "ImportSolution"
 type: action
 metadata: 
-  title: "Microsoft Dynamics 365 Customer Engagement ImportSolution Action Reference | MicrosoftDocs"
-  ms.date: "03/20/2018"
+  title: "Common Data Service and Dynamics 365 Customer Engagement ImportSolution Action Reference | MicrosoftDocs"
+  ms.date: "05/03/2020"
   ms.service: "crm-online"
   ms.topic: "reference"
-  applies_to: 
-  - "Dynamics 365 (online)"
   ms.assetid: fcae8173-c927-45a0-9787-e52f0751028c
-  author: "jimdaly"
-  ms.author: "jdaly"
-  manager: "jdaly"
-  meta-description: "Reference information about the Dynamics 365 Customer Engagement ImportSolution Action."
+  author: "KumarVivek"
+  ms.author: "kvivek"
+  manager: "Annbe"
+  meta-description: "Reference information about the ImportSolution Action."
 namespace: Microsoft.Dynamics.CRM
 description: "Imports a solution.  "
 owningsolution: Microsoft.Dynamics.CRM.System
@@ -57,13 +55,33 @@ parameters:
     nullable: true
     unicode: true
     description: ""
+  - name: SkipQueueRibbonJob
+    type: Edm.Boolean
+    nullable: true
+    unicode: true
+    description: ""
+  - name: LayerDesiredOrder
+    type: Microsoft.Dynamics.CRM.LayerDesiredOrder
+    nullable: true
+    unicode: true
+    description: ""
+  - name: AsyncRibbonProcessing
+    type: Edm.Boolean
+    nullable: true
+    unicode: true
+    description: ""
+  - name: ComponentParameters
+    type: Microsoft.Dynamics.CRM.crmbaseentity
+    nullable: false
+    unicode: true
+    description: ""
 # This action has no return value.
 hasreturnvalue: false
 # This action has no identified unbound entities.
 # This action has no remarks.
 href_see_also:
-- text: "Use the Microsoft Dynamics 365 Customer Engagement Web API"
-  href: "https://docs.microsoft.com/dynamics365/customer-engagement/developer/use-microsoft-dynamics-365-web-api"
+- text: "Use the Common Data Service Web API"
+  href: "https://docs.microsoft.com/powerapps/developer/common-data-service/webapi/overview"
 xref_see_also:
 - Microsoft.Dynamics.CRM.EntityTypeIndex
 - Microsoft.Dynamics.CRM.ActionIndex

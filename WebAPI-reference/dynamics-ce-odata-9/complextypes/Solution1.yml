@@ -1,19 +1,17 @@
 ### YamlMime:OData
-uid: Microsoft.Dynamics.CRM.Solution1
+uid: Microsoft.Dynamics.CRM.Solution
 name: "Solution"
 type: complextype
 metadata: 
-  title: "Microsoft Dynamics 365 Customer Engagement Solution ComplexType Reference | MicrosoftDocs"
-  ms.date: "03/20/2018"
+  title: "Common Data Service and Dynamics 365 Customer Engagement Solution ComplexType Reference | MicrosoftDocs"
+  ms.date: "05/03/2020"
   ms.service: "crm-online"
   ms.topic: "reference"
-  applies_to: 
-    - "Dynamics 365 (online)"
-  ms.assetid: 9f906a14-7cf6-433e-b3f1-c540b9187c83
-  author: "jimdaly"
-  ms.author: "jdaly"
-  manager: "jdaly"
-  meta-description: "Reference information about the Dynamics 365 Customer Engagement Web API Solution ComplexType."
+  ms.assetid: e4f8b2be-d3c2-468c-9d27-ecb4e6b352cd
+  author: "KumarVivek"
+  ms.author: "kvivek"
+  manager: "Annbe"
+  meta-description: "Reference information about the Web API Solution ComplexType."
 namespace: Microsoft.Dynamics.CRM
 # This complex type doesn't inherit from another complextype.
 description: "Contains information about a solution in an organization. " 
@@ -70,8 +68,8 @@ usedby:
     used_as: Property
 # This complex type has no remarks.
 href_see_also:
-- text: "Use the Microsoft Dynamics 365 Customer Engagement Web API"
-  href: "https://docs.microsoft.com/dynamics365/customer-engagement/developer/use-microsoft-dynamics-365-web-api"
+- text: "Use the Common Data Service Web API"
+  href: "https://docs.microsoft.com/powerapps/developer/common-data-service/webapi/overview"
 xref_see_also:
 - Microsoft.Dynamics.CRM.EntityTypeIndex
 - Microsoft.Dynamics.CRM.ActionIndex

@@ -3,22 +3,20 @@ uid: Microsoft.Dynamics.CRM.msdynce_SocialProfile
 name: "Social Profile"
 type: solution
 metadata: 
-  title: "Microsoft Dynamics 365 Customer Engagement Social Profile Solution Reference | MicrosoftDocs"
-  ms.date: "03/20/2018"
+  title: "Common Data Service and Dynamics 365 Customer Engagement Social Profile Solution Reference | MicrosoftDocs"
+  ms.date: "05/03/2020"
   ms.service: "crm-online"
   ms.topic: "reference"
-  applies_to: 
-  - "Dynamics 365 (online)"
-  ms.assetid: 71dccddf-5e40-4e55-9cf0-a8668b87e70a
-  author: "jimdaly"
-  ms.author: "jdaly"
-  manager: "jdaly"
+  ms.assetid: c9326c57-8b6e-4504-a2dd-54ddfec0642b
+  author: "KumarVivek"
+  ms.author: "kvivek"
+  manager: "Annbe"
   meta-description: "Reference information about the Dynamics 365 Customer Engagement Social Profile Solution."
 namespace: Microsoft.Dynamics.CRM
 header:
  description: "Dynamics 365 workload for social profiles."
  unique_name: msdynce_SocialProfile
- version: "7.0.0.65"
+ version: "9.0.1.0015"
  customization_prefix: none
 entities:
   description: "The following entities are included in this solution."
@@ -28,8 +26,8 @@ entities:
 # This solution includes no actions.
 # This solution has no remarks.
 href_see_also:
-- text: "Use the Microsoft Dynamics 365 Customer Engagement Web API"
-  href: "https://docs.microsoft.com/dynamics365/customer-engagement/developer/use-microsoft-dynamics-365-web-api"
+- text: "Use the Common Data Service Web API"
+  href: "https://docs.microsoft.com/powerapps/developer/common-data-service/webapi/overview"
 xref_see_also:
 - Microsoft.Dynamics.CRM.EntityTypeIndex
 - Microsoft.Dynamics.CRM.ActionIndex

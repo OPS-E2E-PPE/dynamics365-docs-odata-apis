@@ -3,17 +3,15 @@ uid: Microsoft.Dynamics.CRM.knowledgearticle
 name: "knowledgearticle"
 type: entitytype
 metadata: 
-  title: "Microsoft Dynamics 365 Customer Engagement knowledgearticle EntityType Reference | MicrosoftDocs"
-  ms.date: "03/20/2018"
+  title: "Common Data Service and Dynamics 365 Customer Engagement knowledgearticle EntityType Reference | MicrosoftDocs"
+  ms.date: "05/03/2020"
   ms.service: "crm-online"
   ms.topic: "reference"
-  applies_to: 
-  - "Dynamics 365 (online)"
   ms.assetid: 438dc89a-b8c2-4e28-b4fc-a130d70eff22
-  author: "jimdaly"
-  ms.author: "jdaly"
-  manager: "jdaly"
-  meta-description: "Reference information about the Dynamics 365 Customer Engagement knowledgearticle entitytype."
+  author: "KumarVivek"
+  ms.author: "kvivek"
+  manager: "Annbe"
+  meta-description: "Reference information about the knowledgearticle entitytype."
 description: "Organizational knowledge for internal and external use."
 header:
   entity_set_path: "[organization URI]/api/data/v9.0/knowledgearticles"
@@ -369,7 +367,7 @@ properties:
       isreadonly: false
     - name: traversedpath
       type: Edm.String
-      display_name: "Traversed Path"
+      display_name: "(Deprecated) Traversed Path"
       description: "A comma separated list of string values representing the unique identifiers of stages in a Business Process Flow Instance in the order that they occur."
       iscomputed: false
       isreadonly: false
@@ -537,9 +535,6 @@ collection_valued_navigation_properties:
   - name: knowledgearticle_BulkOperations
     type: Microsoft.Dynamics.CRM.bulkoperation
     partner: regardingobjectid_knowledgearticle_bulkoperation
-  - name: knowledgearticle_CampaignActivities
-    type: Microsoft.Dynamics.CRM.campaignactivity
-    partner: regardingobjectid_knowledgearticle_campaignactivity
   - name: knowledgearticle_CampaignResponses
     type: Microsoft.Dynamics.CRM.campaignresponse
     partner: regardingobjectid_knowledgearticle_campaignresponse
@@ -675,16 +670,22 @@ solutions:
     description: ""
   - type: Microsoft.Dynamics.CRM.msdynce_KnowledgeManagement
     description: "Dynamics 365 workload for knowledge management."
+  - type: Microsoft.Dynamics.CRM.msdynce_KnowledgeManagementFeatures
+    description: "Dynamics 365 features and migrated controls for knowledge management."
+  - type: Microsoft.Dynamics.CRM.msdynce_KnowledgeManagementPatch
+    description: "Dynamics 365 workload for knowledge management."
   - type: Microsoft.Dynamics.CRM.msdynce_ProductManagement
     description: "Dynamics 365 workload for product management."
   - type: Microsoft.Dynamics.CRM.msdynce_Service
+    description: "Dynamics 365 workload for service."
+  - type: Microsoft.Dynamics.CRM.msdynce_ServicePatch201911
     description: "Dynamics 365 workload for service."
   - type: Microsoft.Dynamics.CRM.System
     description: "Internal CRM System Solution"
 # This entity has no remarks.
 href_see_also:
-- text: "Use the Microsoft Dynamics 365 Customer Engagement Web API"
-  href: "https://docs.microsoft.com/dynamics365/customer-engagement/developer/use-microsoft-dynamics-365-web-api"
+- text: "Use the Common Data Service Web API"
+  href: "https://docs.microsoft.com/powerapps/developer/common-data-service/webapi/overview"
 xref_see_also:
 - Microsoft.Dynamics.CRM.EntityTypeIndex
 - Microsoft.Dynamics.CRM.ActionIndex

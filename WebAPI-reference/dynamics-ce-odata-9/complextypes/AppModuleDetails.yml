@@ -1,0 +1,171 @@
+### YamlMime:OData
+uid: Microsoft.Dynamics.CRM.AppModuleDetails
+name: "AppModuleDetails"
+type: complextype
+metadata: 
+  title: "Common Data Service and Dynamics 365 Customer Engagement AppModuleDetails ComplexType Reference | MicrosoftDocs"
+  ms.date: "05/03/2020"
+  ms.service: "crm-online"
+  ms.topic: "reference"
+  ms.assetid: 13446d54-ec08-4156-a9ff-9cffee21b5d2
+  author: "KumarVivek"
+  ms.author: "kvivek"
+  manager: "Annbe"
+  meta-description: "Reference information about the Web API AppModuleDetails ComplexType."
+namespace: Microsoft.Dynamics.CRM
+# This complex type doesn't inherit from another complextype.
+description: "" 
+properties:
+  description: "The properties of a complex type contain the structured data of the type."
+  property_items:
+  - name: AppModuleId
+    type: Edm.Guid
+    nullable: true
+    unicode: true
+    description: ""
+    iscollection: false
+  - name: AppDisplayName
+    type: Microsoft.Dynamics.CRM.LocalizedLabelDetails
+    nullable: true
+    unicode: true
+    description: ""
+    iscollection: false
+  - name: AppUniqueName
+    type: Edm.String
+    nullable: true
+    unicode: false
+    description: ""
+    iscollection: false
+  - name: AppVersion
+    type: Edm.String
+    nullable: true
+    unicode: false
+    description: ""
+    iscollection: false
+  - name: Description
+    type: Microsoft.Dynamics.CRM.LocalizedLabelDetails
+    nullable: true
+    unicode: true
+    description: ""
+    iscollection: false
+  - name: IconWebResource
+    type: Microsoft.Dynamics.CRM.WebResourceDetails
+    nullable: true
+    unicode: true
+    description: ""
+    iscollection: false
+  - name: WelcomePageWebResource
+    type: Microsoft.Dynamics.CRM.WebResourceDetails
+    nullable: true
+    unicode: true
+    description: ""
+    iscollection: false
+  - name: CreatedBy
+    type: Edm.String
+    nullable: true
+    unicode: false
+    description: ""
+    iscollection: false
+  - name: CreatedOn
+    type: Edm.DateTimeOffset
+    nullable: true
+    unicode: true
+    description: ""
+    iscollection: false
+  - name: ModifiedBy
+    type: Edm.String
+    nullable: true
+    unicode: false
+    description: ""
+    iscollection: false
+  - name: ModifiedOn
+    type: Edm.DateTimeOffset
+    nullable: true
+    unicode: true
+    description: ""
+    iscollection: false
+  - name: AppUri
+    type: Edm.String
+    nullable: true
+    unicode: false
+    description: ""
+    iscollection: false
+  - name: IsDefault
+    type: Edm.Boolean
+    nullable: true
+    unicode: true
+    description: ""
+    iscollection: false
+  - name: ClientType
+    type: Edm.Int32
+    nullable: true
+    unicode: true
+    description: ""
+    iscollection: false
+  - name: NavigationType
+    type: Edm.Int32
+    nullable: true
+    unicode: true
+    description: ""
+    iscollection: false
+  - name: OptimizedFor
+    type: Edm.String
+    nullable: true
+    unicode: false
+    description: ""
+    iscollection: false
+  - name: PublisherUniqueName
+    type: Edm.String
+    nullable: true
+    unicode: false
+    description: ""
+    iscollection: false
+  - name: PublisherName
+    type: Edm.String
+    nullable: true
+    unicode: false
+    description: ""
+    iscollection: false
+  - name: PublishedOn
+    type: Edm.DateTimeOffset
+    nullable: true
+    unicode: true
+    description: ""
+    iscollection: false
+  - name: MetadataVersionNumber
+    type: Edm.Int64
+    nullable: true
+    unicode: true
+    description: ""
+    iscollection: false
+  - name: IsFirstPartyApplication
+    type: Edm.Boolean
+    nullable: true
+    unicode: true
+    description: ""
+    iscollection: false
+  - name: CanvasApps
+    type: Microsoft.Dynamics.CRM.IEnumerable`1
+    nullable: true
+    unicode: true
+    description: ""
+    iscollection: false
+# This complex type doesn't have any navigation properties.
+usedby:
+  description: "The following use the AppModuleDetails ComplexType."
+  usedby_items:
+  - name: Microsoft.Dynamics.CRM.AppModuleDetailsCollection
+    used_as: Property
+# This complex type has no remarks.
+href_see_also:
+- text: "Use the Common Data Service Web API"
+  href: "https://docs.microsoft.com/powerapps/developer/common-data-service/webapi/overview"
+xref_see_also:
+- Microsoft.Dynamics.CRM.EntityTypeIndex
+- Microsoft.Dynamics.CRM.ActionIndex
+- Microsoft.Dynamics.CRM.FunctionIndex
+- Microsoft.Dynamics.CRM.QueryFunctionIndex
+- Microsoft.Dynamics.CRM.ComplexTypeIndex
+- Microsoft.Dynamics.CRM.EnumTypeIndex
+- Microsoft.Dynamics.CRM.MetadataEntityTypeIndex
+- Microsoft.Dynamics.CRM.SolutionIndex

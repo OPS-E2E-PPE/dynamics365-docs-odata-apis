@@ -1,0 +1,58 @@
+### YamlMime:OData
+uid: Microsoft.Dynamics.CRM.XrmAggregateType
+name: "XrmAggregateType"
+type: enumtype
+metadata: 
+  title: "Common Data Service and Dynamics 365 Customer Engagement XrmAggregateType EnumType Reference | MicrosoftDocs"
+  ms.date: "05/03/2020"
+  ms.service: "crm-online"
+  ms.topic: "reference"
+  ms.assetid: 3e0d0cda-5c7f-4a32-a6a9-af0d1b1f09dd
+  author: "KumarVivek"
+  ms.author: "kvivek"
+  manager: "Annbe"
+  meta-description: "Reference information about the Web API XrmAggregateType ComplexType."
+namespace: Microsoft.Dynamics.CRM
+description: "Not Found" 
+members:
+  description: "Members define the discrete options for the enumeration type."
+  member_items:
+  - description: ""
+    name: "None"
+    value: 0
+  - description: ""
+    name: "Count"
+    value: 1
+  - description: ""
+    name: "CountColumn"
+    value: 2
+  - description: ""
+    name: "Sum"
+    value: 3
+  - description: ""
+    name: "Avg"
+    value: 4
+  - description: ""
+    name: "Min"
+    value: 5
+  - description: ""
+    name: "Max"
+    value: 6
+usedby:
+  description: "The following use the XrmAggregateType EnumType."
+  usedby_items:
+  - name: Microsoft.Dynamics.CRM.XrmAttributeExpression
+    used_as: Property
+# This enum type has no remarks.
+href_see_also:
+- text: "Use the Common Data Service Web API"
+  href: "https://docs.microsoft.com/powerapps/developer/common-data-service/webapi/overview"
+xref_see_also:
+- Microsoft.Dynamics.CRM.EntityTypeIndex
+- Microsoft.Dynamics.CRM.ActionIndex
+- Microsoft.Dynamics.CRM.FunctionIndex
+- Microsoft.Dynamics.CRM.QueryFunctionIndex
+- Microsoft.Dynamics.CRM.ComplexTypeIndex
+- Microsoft.Dynamics.CRM.EnumTypeIndex
+- Microsoft.Dynamics.CRM.MetadataEntityTypeIndex
+- Microsoft.Dynamics.CRM.SolutionIndex

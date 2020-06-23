@@ -1,0 +1,127 @@
+### YamlMime:OData
+uid: Microsoft.Dynamics.CRM.fileattachment
+name: "fileattachment"
+type: entitytype
+metadata: 
+  title: "Common Data Service and Dynamics 365 Customer Engagement fileattachment EntityType Reference | MicrosoftDocs"
+  ms.date: "05/03/2020"
+  ms.service: "crm-online"
+  ms.topic: "reference"
+  ms.assetid: 0d81dfbd-f6cd-47aa-9c3f-9b6b74d6afc4
+  author: "KumarVivek"
+  ms.author: "kvivek"
+  manager: "Annbe"
+  meta-description: "Reference information about the fileattachment entitytype."
+description: "File Attachment"
+header:
+  entity_set_path: "[organization URI]/api/data/v9.0/fileattachments"
+  base_type: Microsoft.Dynamics.CRM.crmbaseentity
+  display_name: FileAttachment
+  primary_key: fileattachmentid
+  primary_name_attribute: filename
+  # This entity does not support any operations.
+namespace: Microsoft.Dynamics.CRM
+properties:
+  description: "Properties represent fields of data stored in the entity.Some properties are read-only."
+  property_items:
+    - name: createdon
+      type: Edm.DateTimeOffset
+      display_name: "Created On"
+      description: "Date and time when the attachment was created."
+      iscomputed: false
+      isreadonly: true
+    - name: fileattachmentid
+      type: Edm.Guid
+      display_name: "FileAttachmentId"
+      description: "Unique identifier of the file attachment."
+      iscomputed: false
+      isreadonly: false
+    - name: filename
+      type: Edm.String
+      display_name: "File Name"
+      description: "File name of the attachment."
+      iscomputed: false
+      isreadonly: false
+    - name: filesizeinbytes
+      type: Edm.Int64
+      display_name: "File Size (Bytes)"
+      description: "File size of the attachment in bytes."
+      iscomputed: false
+      isreadonly: true
+    - name: mimetype
+      type: Edm.String
+      display_name: "MIME Type"
+      description: "MIME type of the attachment."
+      iscomputed: false
+      isreadonly: false
+    - name: objecttypecode
+      type: Edm.String
+      display_name: "Object Type "
+      description: "Type of entity with which the file attachment is associated."
+      iscomputed: false
+      isreadonly: false
+    - name: regardingfieldname
+      type: Edm.String
+      display_name: "Regarding Attribute Schema Name"
+      description: "Regarding attribute schema name of the attachment."
+      iscomputed: false
+      isreadonly: false
+    - name: versionnumber
+      type: Edm.Int64
+      display_name: "Version Number"
+      description: "Version number of the file attachment."
+      iscomputed: false
+      isreadonly: true
+lookup_properties:
+  description: "Lookup properties are read-only, computed properties which contain entity primary key Edm.Guid data for one or more corresponding single-valued navigation properties. More information: [Lookup properties](https://docs.microsoft.com/dynamics365/customer-engagement/developer/webapi/web-api-types-operations#lookup-properties) and [Retrieve data about lookup properties](https://docs.microsoft.com/dynamics365/customer-engagement/developer/webapi/query-data-web-api#retrieve-data-about-lookup-properties)."
+  property_items:
+  - name: _objectid_value
+    single_valued_navigation_property:
+    - FileAttachment_Solution
+    - objectid_stagesolutionupload
+    - objectid_msdyn_knowledgearticleimage
+    - objectid_msdyn_aibfile
+    - objectid_workflowlog
+    - objectid_flowsession
+    - objectid_workflowbinary
+    description: "Unique identifier of the object with which the attachment is associated."
+single_valued_navigation_properties:
+  description: "Single-valued navigation properties represent lookup fields where a single entity can be referenced. Each single-valued navigation property has a corresponding partner collection-valued navigation property on the related entity."
+  property_items:
+  - name: FileAttachment_Solution
+    type: Microsoft.Dynamics.CRM.solution
+    partner: regardingobjectid_fileattachment_solution
+  - name: objectid_flowsession
+    type: Microsoft.Dynamics.CRM.flowsession
+    partner: flowsession_FileAttachments
+  - name: objectid_msdyn_aibfile
+    type: Microsoft.Dynamics.CRM.msdyn_aibfile
+    partner: msdyn_aibfile_FileAttachments
+  - name: objectid_workflowlog
+    type: Microsoft.Dynamics.CRM.workflowlog
+    partner: workflowlog_FileAttachments
+collection_valued_navigation_properties:
+  description: "Collection-valued navigation properties represent collections of entities which may represent either a one-to-many (1:N) or many-to-many (N:N) relationship between the entities."
+  property_items:
+  - name: FileAttachment_SyncErrors
+    type: Microsoft.Dynamics.CRM.syncerror
+    partner: regardingobjectid_fileattachment_syncerror
+  - name: solution_fileid
+    type: Microsoft.Dynamics.CRM.solution
+    partner: fileid
+# This entity has no derived entities.
+# This entity has no operations
+# This entity is not included in any solutions.
+# This entity has no remarks.
+href_see_also:
+- text: "Use the Common Data Service Web API"
+  href: "https://docs.microsoft.com/powerapps/developer/common-data-service/webapi/overview"
+xref_see_also:
+- Microsoft.Dynamics.CRM.EntityTypeIndex
+- Microsoft.Dynamics.CRM.ActionIndex
+- Microsoft.Dynamics.CRM.FunctionIndex
+- Microsoft.Dynamics.CRM.QueryFunctionIndex
+- Microsoft.Dynamics.CRM.ComplexTypeIndex
+- Microsoft.Dynamics.CRM.EnumTypeIndex
+- Microsoft.Dynamics.CRM.MetadataEntityTypeIndex
+- Microsoft.Dynamics.CRM.SolutionIndex

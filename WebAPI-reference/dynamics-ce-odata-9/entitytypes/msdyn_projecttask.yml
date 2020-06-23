@@ -3,17 +3,15 @@ uid: Microsoft.Dynamics.CRM.msdyn_projecttask
 name: "msdyn_projecttask"
 type: entitytype
 metadata: 
-  title: "Microsoft Dynamics 365 Customer Engagement msdyn_projecttask EntityType Reference | MicrosoftDocs"
-  ms.date: "03/20/2018"
+  title: "Common Data Service and Dynamics 365 Customer Engagement msdyn_projecttask EntityType Reference | MicrosoftDocs"
+  ms.date: "05/03/2020"
   ms.service: "crm-online"
   ms.topic: "reference"
-  applies_to: 
-  - "Dynamics 365 (online)"
   ms.assetid: b49c734a-3a3b-43f6-b9b5-e3c4e0dc77f6
-  author: "jimdaly"
-  ms.author: "jdaly"
-  manager: "jdaly"
-  meta-description: "Reference information about the Dynamics 365 Customer Engagement msdyn_projecttask entitytype."
+  author: "KumarVivek"
+  ms.author: "kvivek"
+  manager: "Annbe"
+  meta-description: "Reference information about the msdyn_projecttask entitytype."
 description: "Tasks related to project."
 header:
   entity_set_path: "[organization URI]/api/data/v9.0/msdyn_projecttasks"
@@ -117,7 +115,7 @@ properties:
           label: "Both"
     - name: msdyn_assignedresources
       type: Edm.String
-      display_name: "Assigned Resources"
+      display_name: "Assigned Resources (Deprecated in v3.0)"
       description: "Type the project team members that are assigned to task."
       iscomputed: false
       isreadonly: false
@@ -152,7 +150,7 @@ properties:
       isreadonly: true
     - name: msdyn_costestimatecontour
       type: Edm.String
-      display_name: "CostEstimateContour"
+      display_name: "CostEstimateContour (Deprecated in v3.0)"
       description: "The cost estimate contour for the task"
       iscomputed: false
       isreadonly: false
@@ -176,7 +174,7 @@ properties:
       isreadonly: false
     - name: msdyn_effortcontour
       type: Edm.String
-      display_name: "Effort Contour"
+      display_name: "Effort Contour (Deprecated in v3.0)"
       description: "The effort distribution"
       iscomputed: false
       isreadonly: false
@@ -216,7 +214,7 @@ properties:
       isreadonly: false
     - name: msdyn_numberofresources
       type: Edm.Int32
-      display_name: "Number of resources"
+      display_name: "Number of resources (Deprecated in v3.0)"
       description: "Shows the number of resources that are estimated for the task. This is not the number of resources assigned to the task."
       iscomputed: false
       isreadonly: false
@@ -324,7 +322,7 @@ properties:
       isreadonly: true
     - name: msdyn_salesestimatecontour
       type: Edm.String
-      display_name: "SalesEstimateContour"
+      display_name: "SalesEstimateContour (Deprecated in v3.0)"
       description: "The sales estimate contour"
       iscomputed: false
       isreadonly: false
@@ -354,7 +352,7 @@ properties:
       isreadonly: false
     - name: msdyn_scheduledhours
       type: Edm.Double
-      display_name: "Scheduled Hours"
+      display_name: "Scheduled Hours (Deprecated in v3.0)"
       description: "Shows the scheduled hours for the task."
       iscomputed: false
       isreadonly: false
@@ -598,6 +596,9 @@ collection_valued_navigation_properties:
   - name: msdyn_msdyn_projecttask_msdyn_invoicelinetransaction_Task
     type: Microsoft.Dynamics.CRM.msdyn_invoicelinetransaction
     partner: msdyn_Task
+  - name: msdyn_msdyn_projecttask_msdyn_journal_ProjectTask
+    type: Microsoft.Dynamics.CRM.msdyn_journal
+    partner: msdyn_ProjectTask
   - name: msdyn_msdyn_projecttask_msdyn_journalline_Task
     type: Microsoft.Dynamics.CRM.msdyn_journalline
     partner: msdyn_Task
@@ -678,23 +679,13 @@ operations:
     binding_type: "Entity"
   - name: Microsoft.Dynamics.CRM.msdyn_BulkDeletePredecessorsForTask
     binding_type: "Entity"
-  - name: Microsoft.Dynamics.CRM.msdyn_CreateEstimatesForProjectTask
-    binding_type: "Entity"
   - name: Microsoft.Dynamics.CRM.msdyn_DeleteEstimatesForProjectTask
     binding_type: "Entity"
   - name: Microsoft.Dynamics.CRM.msdyn_IndentWBSTask
     binding_type: "Entity"
-  - name: Microsoft.Dynamics.CRM.msdyn_MoveDownWBSTask
-    binding_type: "Entity"
   - name: Microsoft.Dynamics.CRM.msdyn_MoveUpWBSTask
     binding_type: "Entity"
   - name: Microsoft.Dynamics.CRM.msdyn_OutdentWBSTask
-    binding_type: "Entity"
-  - name: Microsoft.Dynamics.CRM.msdyn_ResAssignResourcesForTask
-    binding_type: "Entity"
-  - name: Microsoft.Dynamics.CRM.msdyn_SaveProjectLineTasks
-    binding_type: "Entity"
-  - name: Microsoft.Dynamics.CRM.msdyn_UpdateEffortContour
     binding_type: "Entity"
   - name: Microsoft.Dynamics.CRM.msdyn_updateprojecttask
     binding_type: "Entity"
@@ -711,8 +702,8 @@ solutions:
     description: "Microsoft Dynamics 365 for Project Service Automation is an end-to-end solution that helps sales and delivery teams engage customers and deliver billable projects on time and within budget. Project Service gives you the tools you need to: Estimate, quote, and contract work; Plan and assign resources; Enable team collaboration; Capture time, expense, and progress data for real-time insights and accurate invoicing."
 # This entity has no remarks.
 href_see_also:
-- text: "Use the Microsoft Dynamics 365 Customer Engagement Web API"
-  href: "https://docs.microsoft.com/dynamics365/customer-engagement/developer/use-microsoft-dynamics-365-web-api"
+- text: "Use the Common Data Service Web API"
+  href: "https://docs.microsoft.com/powerapps/developer/common-data-service/webapi/overview"
 xref_see_also:
 - Microsoft.Dynamics.CRM.EntityTypeIndex
 - Microsoft.Dynamics.CRM.ActionIndex

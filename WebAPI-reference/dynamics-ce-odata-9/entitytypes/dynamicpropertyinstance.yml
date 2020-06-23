@@ -3,17 +3,15 @@ uid: Microsoft.Dynamics.CRM.dynamicpropertyinstance
 name: "dynamicpropertyinstance"
 type: entitytype
 metadata: 
-  title: "Microsoft Dynamics 365 Customer Engagement dynamicpropertyinstance EntityType Reference | MicrosoftDocs"
-  ms.date: "03/20/2018"
+  title: "Common Data Service and Dynamics 365 Customer Engagement dynamicpropertyinstance EntityType Reference | MicrosoftDocs"
+  ms.date: "05/03/2020"
   ms.service: "crm-online"
   ms.topic: "reference"
-  applies_to: 
-  - "Dynamics 365 (online)"
   ms.assetid: 09cd31b8-fc25-4141-9511-00e40d21141f
-  author: "jimdaly"
-  ms.author: "jdaly"
-  manager: "jdaly"
-  meta-description: "Reference information about the Dynamics 365 Customer Engagement dynamicpropertyinstance entitytype."
+  author: "KumarVivek"
+  ms.author: "kvivek"
+  manager: "Annbe"
+  meta-description: "Reference information about the dynamicpropertyinstance entitytype."
 description: "Instance of a property with its value."
 header:
   entity_set_path: "[organization URI]/api/data/v9.0/dynamicpropertyinstances"
@@ -253,12 +251,16 @@ solutions:
   solution_items:
   - type: Microsoft.Dynamics.CRM.msdynce_ProductManagement
     description: "Dynamics 365 workload for product management."
+  - type: Microsoft.Dynamics.CRM.msdynce_ProductManagementPatch
+    description: "Dynamics 365 workload for product management."
   - type: Microsoft.Dynamics.CRM.msdynce_Sales
     description: "Dynamics 365 workload for sales."
+  - type: Microsoft.Dynamics.CRM.msdynce_SalesPatch201904
+    description: "Dynamics 365 workload for Sales Patch Version 2."
 # This entity has no remarks.
 href_see_also:
-- text: "Use the Microsoft Dynamics 365 Customer Engagement Web API"
-  href: "https://docs.microsoft.com/dynamics365/customer-engagement/developer/use-microsoft-dynamics-365-web-api"
+- text: "Use the Common Data Service Web API"
+  href: "https://docs.microsoft.com/powerapps/developer/common-data-service/webapi/overview"
 xref_see_also:
 - Microsoft.Dynamics.CRM.EntityTypeIndex
 - Microsoft.Dynamics.CRM.ActionIndex

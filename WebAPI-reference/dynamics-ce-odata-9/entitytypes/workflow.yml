@@ -3,17 +3,15 @@ uid: Microsoft.Dynamics.CRM.workflow
 name: "workflow"
 type: entitytype
 metadata: 
-  title: "Microsoft Dynamics 365 Customer Engagement workflow EntityType Reference | MicrosoftDocs"
-  ms.date: "03/20/2018"
+  title: "Common Data Service and Dynamics 365 Customer Engagement workflow EntityType Reference | MicrosoftDocs"
+  ms.date: "05/03/2020"
   ms.service: "crm-online"
   ms.topic: "reference"
-  applies_to: 
-  - "Dynamics 365 (online)"
   ms.assetid: 7c5681b1-7ae7-428e-bbec-6a733a45bb34
-  author: "jimdaly"
-  ms.author: "jdaly"
-  manager: "jdaly"
-  meta-description: "Reference information about the Dynamics 365 Customer Engagement workflow entitytype."
+  author: "KumarVivek"
+  ms.author: "kvivek"
+  manager: "Annbe"
+  meta-description: "Reference information about the workflow entitytype."
 description: "Set of logical rules that define the steps necessary to automate a specific business process, task, or set of actions to be performed."
 header:
   entity_set_path: "[organization URI]/api/data/v9.0/workflows"
@@ -69,12 +67,16 @@ properties:
           label: "Action"
         - value: 4
           label: "Business Process Flow"
+        - value: 5
+          label: "Modern Flow"
+        - value: 6
+          label: "Reserved"
     - name: clientdata
       type: Edm.String
       display_name: "Client Data"
       description: "Business logic converted into client data"
       iscomputed: false
-      isreadonly: true
+      isreadonly: false
     - name: componentstate
       type: Edm.Int32
       display_name: "Component State"
@@ -269,6 +271,23 @@ properties:
       description: "Contains the role assignment for the process."
       iscomputed: false
       isreadonly: false
+    - name: processtriggerformid
+      type: Edm.Guid
+      display_name: "ProcessTriggerFormId"
+      description: "Unique identifier of the associated form for process trigger."
+      iscomputed: false
+      isreadonly: false
+    - name: processtriggerscope
+      type: Edm.Int32
+      display_name: "ProcessTriggerScope"
+      description: "Scope of the process trigger."
+      iscomputed: false
+      isreadonly: false
+      options:
+        - value: 1
+          label: "Form"
+        - value: 2
+          label: "Entity"
     - name: rank
       type: Edm.Int32
       display_name: "Rank"
@@ -404,6 +423,19 @@ properties:
       description: "For internal use only."
       iscomputed: false
       isreadonly: true
+    - name: uiflowtype
+      type: Edm.Int32
+      display_name: "UI Flow Type"
+      description: "Type of the UI Flow process."
+      iscomputed: false
+      isreadonly: false
+      options:
+        - value: 0
+          label: "Desktop"
+        - value: 1
+          label: "Selenium IDE"
+        - value: 2
+          label: "PowerShell"
     - name: uniquename
       type: Edm.String
       display_name: "Unique Name"
@@ -555,12 +587,18 @@ collection_valued_navigation_properties:
   - name: lk_processsession_processid
     type: Microsoft.Dynamics.CRM.processsession
     partner: processid
+  - name: msdyn_retrainworkflow_msdyn_toaimodel
+    type: Microsoft.Dynamics.CRM.msdyn_aimodel
+    partner: msdyn_retrainworkflowid
   - name: process_processstage
     type: Microsoft.Dynamics.CRM.processstage
     partner: processid
   - name: process_processtrigger
     type: Microsoft.Dynamics.CRM.processtrigger
     partner: processid
+  - name: regardingobjectid_process
+    type: Microsoft.Dynamics.CRM.flowsession
+    partner: regardingobjectid_process
   - name: slabase_workflowid
     type: Microsoft.Dynamics.CRM.sla
     partner: workflowid
@@ -607,6 +645,8 @@ operations:
     binding_type: "Entity"
   - name: Microsoft.Dynamics.CRM.GrantAccess
     binding_type: "Not Bound"
+  - name: Microsoft.Dynamics.CRM.InitializeModernFlowFromAsyncWorkflow
+    binding_type: "Entity"
   - name: Microsoft.Dynamics.CRM.ModifyAccess
     binding_type: "Not Bound"
   - name: Microsoft.Dynamics.CRM.RetrievePrincipalAccess
@@ -620,12 +660,16 @@ solutions:
   solution_items:
   - type: Microsoft.Dynamics.CRM.msdynce_AppCommon
     description: "For internal use only."
+  - type: Microsoft.Dynamics.CRM.msdynce_AppCommonPatch
+    description: "For internal use only."
+  - type: Microsoft.Dynamics.CRM.Relationshipassistant
+    description: "Relationship assistant Feature Description."
   - type: Microsoft.Dynamics.CRM.System
     description: "Internal CRM System Solution"
 # This entity has no remarks.
 href_see_also:
-- text: "Use the Microsoft Dynamics 365 Customer Engagement Web API"
-  href: "https://docs.microsoft.com/dynamics365/customer-engagement/developer/use-microsoft-dynamics-365-web-api"
+- text: "Use the Common Data Service Web API"
+  href: "https://docs.microsoft.com/powerapps/developer/common-data-service/webapi/overview"
 xref_see_also:
 - Microsoft.Dynamics.CRM.EntityTypeIndex
 - Microsoft.Dynamics.CRM.ActionIndex

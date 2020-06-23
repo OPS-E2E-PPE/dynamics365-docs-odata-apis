@@ -1,0 +1,54 @@
+### YamlMime:OData
+uid: Microsoft.Dynamics.CRM.QuickFindResult
+name: "QuickFindResult"
+type: complextype
+metadata: 
+  title: "Common Data Service and Dynamics 365 Customer Engagement QuickFindResult ComplexType Reference | MicrosoftDocs"
+  ms.date: "05/03/2020"
+  ms.service: "crm-online"
+  ms.topic: "reference"
+  ms.assetid: f11e42a2-ae07-40f3-bf4a-477fba206213
+  author: "KumarVivek"
+  ms.author: "kvivek"
+  manager: "Annbe"
+  meta-description: "Reference information about the Web API QuickFindResult ComplexType."
+namespace: Microsoft.Dynamics.CRM
+# This complex type doesn't inherit from another complextype.
+description: "" 
+properties:
+  description: "The properties of a complex type contain the structured data of the type."
+  property_items:
+  - name: ErrorCode
+    type: Edm.Int32
+    nullable: true
+    unicode: true
+    description: ""
+    iscollection: false
+  - name: QueryColumnSet
+    type: Edm.String
+    nullable: false
+    unicode: false
+    description: ""
+    iscollection: true
+navigation_properties:
+  description: "The navigation properties of a complex type contain references to an entity type or a collection of entity types."
+  property_items:
+  - name: Data
+    type: mscrm.crmbaseentity
+    nullable: false
+    description: ""
+    iscollection: true
+
+# This complex type has no remarks.
+href_see_also:
+- text: "Use the Common Data Service Web API"
+  href: "https://docs.microsoft.com/powerapps/developer/common-data-service/webapi/overview"
+xref_see_also:
+- Microsoft.Dynamics.CRM.EntityTypeIndex
+- Microsoft.Dynamics.CRM.ActionIndex
+- Microsoft.Dynamics.CRM.FunctionIndex
+- Microsoft.Dynamics.CRM.QueryFunctionIndex
+- Microsoft.Dynamics.CRM.ComplexTypeIndex
+- Microsoft.Dynamics.CRM.EnumTypeIndex
+- Microsoft.Dynamics.CRM.MetadataEntityTypeIndex
+- Microsoft.Dynamics.CRM.SolutionIndex

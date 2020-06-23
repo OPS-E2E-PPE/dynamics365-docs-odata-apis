@@ -1,0 +1,43 @@
+### YamlMime:OData
+uid: Microsoft.Dynamics.CRM.msdynce_SalesServicePatch
+name: "Sales Service Patch"
+type: solution
+metadata: 
+  title: "Common Data Service and Dynamics 365 Customer Engagement Sales Service Patch Solution Reference | MicrosoftDocs"
+  ms.date: "05/03/2020"
+  ms.service: "crm-online"
+  ms.topic: "reference"
+  ms.assetid: 5a222f32-9d95-484c-a483-59ed38368114
+  author: "KumarVivek"
+  ms.author: "kvivek"
+  manager: "Annbe"
+  meta-description: "Reference information about the Dynamics 365 Customer Engagement Sales Service Patch Solution."
+namespace: Microsoft.Dynamics.CRM
+header:
+ description: "For internal use only."
+ unique_name: msdynce_SalesServicePatch
+ version: "9.0.1912.5020"
+ customization_prefix: noe
+entities:
+  description: "The following entities are included in this solution."
+  entity_items:
+   - type: Microsoft.Dynamics.CRM.opportunityclose
+     description: "Activity that is created automatically when an opportunity is closed, containing information such as the description of the closing and actual revenue."
+   - type: Microsoft.Dynamics.CRM.orderclose
+     description: "Activity generated automatically when an order is closed."
+   - type: Microsoft.Dynamics.CRM.quoteclose
+     description: "Activity generated when a quote is closed."
+# This solution includes no actions.
+# This solution has no remarks.
+href_see_also:
+- text: "Use the Common Data Service Web API"
+  href: "https://docs.microsoft.com/powerapps/developer/common-data-service/webapi/overview"
+xref_see_also:
+- Microsoft.Dynamics.CRM.EntityTypeIndex
+- Microsoft.Dynamics.CRM.ActionIndex
+- Microsoft.Dynamics.CRM.FunctionIndex
+- Microsoft.Dynamics.CRM.QueryFunctionIndex
+- Microsoft.Dynamics.CRM.ComplexTypeIndex
+- Microsoft.Dynamics.CRM.EnumTypeIndex
+- Microsoft.Dynamics.CRM.MetadataEntityTypeIndex
+- Microsoft.Dynamics.CRM.SolutionIndex

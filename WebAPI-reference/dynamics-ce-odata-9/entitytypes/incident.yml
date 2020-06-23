@@ -3,17 +3,15 @@ uid: Microsoft.Dynamics.CRM.incident
 name: "incident"
 type: entitytype
 metadata: 
-  title: "Microsoft Dynamics 365 Customer Engagement incident EntityType Reference | MicrosoftDocs"
-  ms.date: "03/20/2018"
+  title: "Common Data Service and Dynamics 365 Customer Engagement incident EntityType Reference | MicrosoftDocs"
+  ms.date: "05/03/2020"
   ms.service: "crm-online"
   ms.topic: "reference"
-  applies_to: 
-  - "Dynamics 365 (online)"
   ms.assetid: 13b598d9-aea9-4cf0-8d80-d038f96790ff
-  author: "jimdaly"
-  ms.author: "jdaly"
-  manager: "jdaly"
-  meta-description: "Reference information about the Dynamics 365 Customer Engagement incident entitytype."
+  author: "KumarVivek"
+  ms.author: "kvivek"
+  manager: "Annbe"
+  meta-description: "Reference information about the incident entitytype."
 description: "Service request case associated with a contract."
 header:
   entity_set_path: "[organization URI]/api/data/v9.0/incidents"
@@ -448,7 +446,7 @@ properties:
           label: "Default Value"
     - name: stageid
       type: Edm.Guid
-      display_name: "Stage Id"
+      display_name: "(Deprecated) Stage Id"
       description: "Contains the id of the stage where the entity is located."
       iscomputed: false
       isreadonly: false
@@ -464,7 +462,7 @@ properties:
         - value: 1
           label: "Resolved"
         - value: 2
-          label: "Canceled"
+          label: "Cancelled"
     - name: statuscode
       type: Edm.Int32
       display_name: "Status Reason"
@@ -477,7 +475,7 @@ properties:
         - value: 1000
           label: "Information Provided"
         - value: 6
-          label: "Canceled"
+          label: "Cancelled"
         - value: 2000
           label: "Merged"
         - value: 1
@@ -508,7 +506,7 @@ properties:
       isreadonly: false
     - name: traversedpath
       type: Edm.String
-      display_name: "Traversed Path"
+      display_name: "(Deprecated) Traversed Path"
       description: "A comma separated list of string values representing the unique identifiers of stages in a Business Process Flow Instance in the order that they occur."
       iscomputed: false
       isreadonly: false
@@ -588,6 +586,10 @@ lookup_properties:
     single_valued_navigation_property:
     - msdyn_incidenttype
     description: "Unique identifier for Incident Type associated with Case."
+  - name: _msdyn_iotalert_value
+    single_valued_navigation_property:
+    - msdyn_IoTAlert
+    description: "The iot alert that initiated this case"
   - name: _ownerid_value
     single_valued_navigation_property:
     - ownerid
@@ -685,6 +687,9 @@ single_valued_navigation_properties:
   - name: msdyn_incidenttype
     type: Microsoft.Dynamics.CRM.msdyn_incidenttype
     partner: msdyn_msdyn_incidenttype_incident_IncidentType
+  - name: msdyn_IoTAlert
+    type: Microsoft.Dynamics.CRM.msdyn_iotalert
+    partner: msdyn_msdyn_iotalert_incident_IoTAlert
   - name: ownerid
     type: Microsoft.Dynamics.CRM.principal
     partner: owner_incidents
@@ -853,6 +858,9 @@ collection_valued_navigation_properties:
   - name: KnowledgeBaseRecord_Incident
     type: Microsoft.Dynamics.CRM.knowledgebaserecord
     partner: KnowledgeBaseRecord_Incident
+  - name: msdyn_incident_msdyn_iotalert_Case
+    type: Microsoft.Dynamics.CRM.msdyn_iotalert
+    partner: msdyn_Case
   - name: msdyn_incident_msdyn_workorder_ServiceRequest
     type: Microsoft.Dynamics.CRM.msdyn_workorder
     partner: msdyn_servicerequest
@@ -895,16 +903,24 @@ solutions:
   solution_items:
   - type: Microsoft.Dynamics.CRM.AppforOutlook
     description: ""
+  - type: Microsoft.Dynamics.CRM.AppforOutlookPatch
+    description: "Microsoft Dynamics 365 App for Outlook is an Office add-in that you can quickly add to your users’ mailbox so they can track communication and review Dynamics 365 applications’ information in Outlook."
+  - type: Microsoft.Dynamics.CRM.ConnectedFieldService
+    description: "Use Connected Field Service to monitor connected devices to make sure your customer’s equipment is always functioning properly. If a piece of equipment fails, you’ll receive a notification, so that you can troubleshoot the problem remotely or send a technician to fix it."
   - type: Microsoft.Dynamics.CRM.FieldService
     description: "Microsoft Dynamics 365 for Field Service allows organizations of any size to deliver intelligent, world class field service, managing all aspects of the end-to-end field service management cycle. Features include scheduling, mobile, asset management, inventory control, customer notifications, and resource utilization controls that help maximize efficiency and minimize costs."
   - type: Microsoft.Dynamics.CRM.msdynce_SalesService
     description: "For internal use only."
   - type: Microsoft.Dynamics.CRM.msdynce_Service
     description: "Dynamics 365 workload for service."
+  - type: Microsoft.Dynamics.CRM.msdynce_ServicePatch
+    description: "Patch for Dynamics 365 workload for service."
+  - type: Microsoft.Dynamics.CRM.msdynce_ServicePatch201911
+    description: "Dynamics 365 workload for service."
 # This entity has no remarks.
 href_see_also:
-- text: "Use the Microsoft Dynamics 365 Customer Engagement Web API"
-  href: "https://docs.microsoft.com/dynamics365/customer-engagement/developer/use-microsoft-dynamics-365-web-api"
+- text: "Use the Common Data Service Web API"
+  href: "https://docs.microsoft.com/powerapps/developer/common-data-service/webapi/overview"
 xref_see_also:
 - Microsoft.Dynamics.CRM.EntityTypeIndex
 - Microsoft.Dynamics.CRM.ActionIndex

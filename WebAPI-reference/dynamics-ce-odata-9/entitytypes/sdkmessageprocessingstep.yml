@@ -3,17 +3,15 @@ uid: Microsoft.Dynamics.CRM.sdkmessageprocessingstep
 name: "sdkmessageprocessingstep"
 type: entitytype
 metadata: 
-  title: "Microsoft Dynamics 365 Customer Engagement sdkmessageprocessingstep EntityType Reference | MicrosoftDocs"
-  ms.date: "03/20/2018"
+  title: "Common Data Service and Dynamics 365 Customer Engagement sdkmessageprocessingstep EntityType Reference | MicrosoftDocs"
+  ms.date: "05/03/2020"
   ms.service: "crm-online"
   ms.topic: "reference"
-  applies_to: 
-  - "Dynamics 365 (online)"
   ms.assetid: 8b4d5a48-8d82-4c43-a83c-220452bb1ae0
-  author: "jimdaly"
-  ms.author: "jdaly"
-  manager: "jdaly"
-  meta-description: "Reference information about the Dynamics 365 Customer Engagement sdkmessageprocessingstep entitytype."
+  author: "KumarVivek"
+  ms.author: "kvivek"
+  manager: "Annbe"
+  meta-description: "Reference information about the sdkmessageprocessingstep entitytype."
 description: "Stage in the execution pipeline that a plug-in is to execute."
 header:
   entity_set_path: "[organization URI]/api/data/v9.0/sdkmessageprocessingsteps"
@@ -214,6 +212,10 @@ properties:
           label: "Post-operation (Deprecated)"
         - value: 55
           label: "Final Post-operation (For internal use only)"
+        - value: 80
+          label: "Pre-Commit stage fired before transaction commit (For internal use only)"
+        - value: 90
+          label: "Post-Commit stage fired after transaction commit (For internal use only)"
     - name: statecode
       type: Edm.Int32
       display_name: "Status"
@@ -356,8 +358,8 @@ solutions:
     description: "Internal CRM System Solution"
 # This entity has no remarks.
 href_see_also:
-- text: "Use the Microsoft Dynamics 365 Customer Engagement Web API"
-  href: "https://docs.microsoft.com/dynamics365/customer-engagement/developer/use-microsoft-dynamics-365-web-api"
+- text: "Use the Common Data Service Web API"
+  href: "https://docs.microsoft.com/powerapps/developer/common-data-service/webapi/overview"
 xref_see_also:
 - Microsoft.Dynamics.CRM.EntityTypeIndex
 - Microsoft.Dynamics.CRM.ActionIndex

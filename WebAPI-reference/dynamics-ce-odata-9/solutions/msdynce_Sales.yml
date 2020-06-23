@@ -3,22 +3,20 @@ uid: Microsoft.Dynamics.CRM.msdynce_Sales
 name: "Sales"
 type: solution
 metadata: 
-  title: "Microsoft Dynamics 365 Customer Engagement Sales Solution Reference | MicrosoftDocs"
-  ms.date: "03/20/2018"
+  title: "Common Data Service and Dynamics 365 Customer Engagement Sales Solution Reference | MicrosoftDocs"
+  ms.date: "05/03/2020"
   ms.service: "crm-online"
   ms.topic: "reference"
-  applies_to: 
-  - "Dynamics 365 (online)"
-  ms.assetid: 8b50ee81-9c87-4f5d-977e-138675e11e15
-  author: "jimdaly"
-  ms.author: "jdaly"
-  manager: "jdaly"
+  ms.assetid: 8a90d50f-37eb-43a4-be97-8ea22dd39fd3
+  author: "KumarVivek"
+  ms.author: "kvivek"
+  manager: "Annbe"
   meta-description: "Reference information about the Dynamics 365 Customer Engagement Sales Solution."
 namespace: Microsoft.Dynamics.CRM
 header:
  description: "Dynamics 365 workload for sales."
  unique_name: msdynce_Sales
- version: "9.0.1.61"
+ version: "9.0.4.0076"
  customization_prefix: none
 entities:
   description: "The following entities are included in this solution."
@@ -68,7 +66,7 @@ entities:
    - type: Microsoft.Dynamics.CRM.leadproduct
      description: ""
    - type: Microsoft.Dynamics.CRM.leadtoopportunitysalesprocess
-     description: "Lead To Opportunity Sales Process Business Process Flow"
+     description: "Lead To Opportunity Sales Process Business Process Flow "
    - type: Microsoft.Dynamics.CRM.letter
      description: "Activity that tracks the delivery of a letter. The activity can contain the electronic copy of the letter."
    - type: Microsoft.Dynamics.CRM.mailmergetemplate
@@ -124,8 +122,8 @@ entities:
 # This solution includes no actions.
 # This solution has no remarks.
 href_see_also:
-- text: "Use the Microsoft Dynamics 365 Customer Engagement Web API"
-  href: "https://docs.microsoft.com/dynamics365/customer-engagement/developer/use-microsoft-dynamics-365-web-api"
+- text: "Use the Common Data Service Web API"
+  href: "https://docs.microsoft.com/powerapps/developer/common-data-service/webapi/overview"
 xref_see_also:
 - Microsoft.Dynamics.CRM.EntityTypeIndex
 - Microsoft.Dynamics.CRM.ActionIndex

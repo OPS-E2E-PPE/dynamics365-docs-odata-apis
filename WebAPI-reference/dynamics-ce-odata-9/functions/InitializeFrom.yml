@@ -3,17 +3,15 @@ uid: Microsoft.Dynamics.CRM.InitializeFrom
 name: "InitializeFrom"
 type: function
 metadata: 
-  title: "Microsoft Dynamics 365 Customer Engagement InitializeFrom Function Reference | MicrosoftDocs"
-  ms.date: "03/20/2018"
+  title: "Common Data Service and Dynamics 365 Customer Engagement InitializeFrom Function Reference | MicrosoftDocs"
+  ms.date: "05/03/2020"
   ms.service: "crm-online"
   ms.topic: "reference"
-  applies_to: 
-  - "Dynamics 365 (online)"
   ms.assetid: ee2a8b1b-0701-46fb-92b1-b044c51db618
-  author: "jimdaly"
-  ms.author: "jdaly"
-  manager: "jdaly"
-  meta-description: "Reference information about the Dynamics 365 Customer Engagement InitializeFrom Function."
+  author: "KumarVivek"
+  ms.author: "kvivek"
+  manager: "Annbe"
+  meta-description: "Reference information about the InitializeFrom Function."
 namespace: Microsoft.Dynamics.CRM
 description: "Initializes a new record from an existing record."
 iscomposable: false
@@ -52,61 +50,10 @@ return_type:
   iscollection: false
   nullable: false
 # This function no specific entities for this function identified.
-remarks: |
-  InitializeFrom function allows you to create new records in the context of an existing record where a mapping exists between the entities to which the records belong. 
-  
-  ## Example
-  
-  **Request**
-  
-  ```HTTP
-  GET [Organization URI]/api/data/v9.0/InitializeFrom(EntityMoniker=@p1,TargetEntityName=@p2,TargetFieldType=@p3)?@p1={'@odata.id':'accounts(c65127ed-2097-e711-80eb-00155db75426)'}&@p2='account'&@p3=Microsoft.Dynamics.CRM.TargetFieldType'ValidForCreate' HTTP/1.1
-  If-None-Match: null
-  OData-Version: 4.0
-  OData-MaxVersion: 4.0
-  Content-Type: application/json
-  Accept: application/json
-  ```
-  
-  **Response**
-  
-  ```JSON
-  {
-          "@odata.context": "[Organization URI]/api/data/v9.0/$metadata#accounts/$entity",
-          "@odata.type": "#Microsoft.Dynamics.CRM.account",
-          "parentaccountid@odata.bind": "accounts(c65127ed-2097-e711-80eb-00155db75426)",
-          "transactioncurrencyid@odata.bind": "transactioncurrencies(732e87e1-1d96-e711-80e4-00155db75426)",
-          "address1_line1":"123 Maple St.",
-          "address1_city":"Seattle",
-          "address1_country":"United States of America"
-  }
-  ```
-  
-  The response received from InitializeFrom request consists of values of mapped attributes between the source entity and target entity and the GUID of parent record. The attribute mapping between entities that have an entity relationship is different for different entity sets and is customizable, so the response from InitializeFrom function request may vary for different entities and organizations. When this response is passed in the body of create request of the new record, these attribute values are replicated in the new record. The values of custom mapped attributes also get set in the new record during the process.
-  
-  > NOTE
-  > To determine whether two entities can be mapped, use this query:  
-  GET [Organization URI]/api/data/v9.0/entitymaps?$select=sourceentityname,targetentityname&$orderby=sourceentityname
-  
-  Other attribute values can also be set and/or modified for the new record by adding them in the JSON request body, as shown in the example below.
-  
-  ```JSON
-  {
-          "@odata.context": "[Organization URI]/api/data/v9.0/$metadata#accounts/$entity",
-          "@odata.type": "#Microsoft.Dynamics.CRM.account",
-          "parentaccountid@odata.bind": "accounts(c65127ed-2097-e711-80eb-00155db75426)",
-          "transactioncurrencyid@odata.bind": "transactioncurrencies(732e87e1-1d96-e711-80e4-00155db75426)",
-          "name":"Contoso Ltd",
-          "numberofemployees":"200",
-          "address1_line1":"100 Maple St.",
-          "address1_city":"Seattle",
-          "address1_country":"United States of America",
-          "fax":"73737"
-  }
-  ```
+# This function has no remarks.
 href_see_also:
-- text: "Use the Microsoft Dynamics 365 Customer Engagement Web API"
-  href: "https://docs.microsoft.com/dynamics365/customer-engagement/developer/use-microsoft-dynamics-365-web-api"
+- text: "Use the Common Data Service Web API"
+  href: "https://docs.microsoft.com/powerapps/developer/common-data-service/webapi/overview"
 xref_see_also:
 - Microsoft.Dynamics.CRM.EntityTypeIndex
 - Microsoft.Dynamics.CRM.ActionIndex

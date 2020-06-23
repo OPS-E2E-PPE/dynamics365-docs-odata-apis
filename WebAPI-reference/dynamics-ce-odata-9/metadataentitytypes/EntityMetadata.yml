@@ -3,17 +3,15 @@ uid: Microsoft.Dynamics.CRM.EntityMetadata
 name: "EntityMetadata"
 type: metadataentitytype
 metadata: 
-  title: "Microsoft Dynamics 365 Customer Engagement EntityMetadata Metadata EntityType Reference | MicrosoftDocs"
-  ms.date: "03/20/2018"
+  title: "Common Data Service and Dynamics 365 Customer Engagement EntityMetadata Metadata EntityType Reference | MicrosoftDocs"
+  ms.date: "05/03/2020"
   ms.service: "crm-online"
   ms.topic: "reference"
-  applies_to: 
-  - "Dynamics 365 (online)"
   ms.assetid: 8595cb4f-a592-4dfa-b66f-af5970c35148
-  author: "jimdaly"
-  ms.author: "jdaly"
-  manager: "jdaly"
-  meta-description: "Reference information about the Dynamics 365 Customer Engagement EntityMetadata metadata entitytype."
+  author: "KumarVivek"
+  ms.author: "kvivek"
+  manager: "Annbe"
+  meta-description: "Reference information about the EntityMetadata metadata entitytype."
 header: 
   description: "Contains the metadata for an entity."
   entity_set_path:  "[organization URI]/api/data/v9.0/EntityDefinitions"
@@ -35,6 +33,9 @@ properties:
   - name: AutoRouteToOwnerQueue
     type: Edm.Boolean
     description: "Indicates whether to automatically move records to the owner’s default queue when a record of this type is created or assigned"
+  - name: CanBeInCustomEntityAssociation
+    type: Microsoft.Dynamics.CRM.BooleanManagedProperty
+    description: ""
   - name: CanBeInManyToMany
     type: Microsoft.Dynamics.CRM.BooleanManagedProperty
     description: "Whether the entity can be in a Many-to-Many entity relationship."
@@ -219,6 +220,9 @@ properties:
   - name: IsMappable
     type: Microsoft.Dynamics.CRM.BooleanManagedProperty
     description: "Whether entity mapping is available for the entity."
+  - name: IsMSTeamsIntegrationEnabled
+    type: Edm.Boolean
+    description: ""
   - name: IsOfflineInMobileClient
     type: Microsoft.Dynamics.CRM.BooleanManagedProperty
     description: "Whether this entity is enabled for offline data with Dynamics 365 for tablets and Dynamics 365 for phones."
@@ -244,6 +248,9 @@ properties:
     type: Microsoft.Dynamics.CRM.BooleanManagedProperty
     description: "Whether the entity DisplayName and DisplayCollectionName can be changed by editing the entity in the application."
   - name: IsSLAEnabled
+    type: Edm.Boolean
+    description: "Whether the entity is enabled for service level agreements (SLAs)."
+  - name: IsSolutionAware
     type: Edm.Boolean
     description: ""
   - name: IsStateModelAware
@@ -301,9 +308,15 @@ properties:
   - name: SchemaName
     type: Edm.String
     description: "The schema name for the entity."
+  - name: SettingOf
+    type: Edm.String
+    description: ""
+  - name: Settings
+    type: Microsoft.Dynamics.CRM.EntitySetting
+    description: ""
   - name: SyncToExternalSearchIndex
     type: Edm.Boolean
-    description: ""
+    description: "Whether this entity is searchable in relevance search."
   - name: UsesBusinessDataLabelTable
     type: Edm.Boolean
     description: ""
@@ -326,8 +339,8 @@ collection_valued_navigation_properties:
 # This entity is not used by other entities or operations.
 # This metadata entity has no remarks.
 href_see_also:
-- text: "Use the Microsoft Dynamics 365 Customer Engagement Web API"
-  href: "https://docs.microsoft.com/dynamics365/customer-engagement/developer/use-microsoft-dynamics-365-web-api"
+- text: "Use the Common Data Service Web API"
+  href: "https://docs.microsoft.com/powerapps/developer/common-data-service/webapi/overview"
 xref_see_also:
 - Microsoft.Dynamics.CRM.EntityTypeIndex
 - Microsoft.Dynamics.CRM.ActionIndex

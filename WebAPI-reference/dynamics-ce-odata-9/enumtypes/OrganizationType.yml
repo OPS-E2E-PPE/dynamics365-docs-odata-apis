@@ -3,19 +3,17 @@ uid: Microsoft.Dynamics.CRM.OrganizationType
 name: "OrganizationType"
 type: enumtype
 metadata: 
-  title: "Microsoft Dynamics 365 Customer Engagement OrganizationType EnumType Reference | MicrosoftDocs"
-  ms.date: "03/20/2018"
+  title: "Common Data Service and Dynamics 365 Customer Engagement OrganizationType EnumType Reference | MicrosoftDocs"
+  ms.date: "05/03/2020"
   ms.service: "crm-online"
   ms.topic: "reference"
-  applies_to: 
-    - "Dynamics 365 (online)"
-  ms.assetid: c1d1da6f-519c-4982-abb7-7ebd316d58e3
-  author: "jimdaly"
-  ms.author: "jdaly"
-  manager: "jdaly"
-  meta-description: "Reference information about the Dynamics 365 Customer Engagement Web API OrganizationType ComplexType."
+  ms.assetid: 53469202-caf7-4d19-a209-0011be4c858d
+  author: "KumarVivek"
+  ms.author: "kvivek"
+  manager: "Annbe"
+  meta-description: "Reference information about the Web API OrganizationType ComplexType."
 namespace: Microsoft.Dynamics.CRM
-description: "Not Found" 
+description: "Contains the possible values for the type of organization or environment. " 
 members:
   description: "Members define the discrete options for the enumeration type."
   member_items:
@@ -61,6 +59,9 @@ members:
   - description: ""
     name: "Developer"
     value: 13
+  - description: ""
+    name: "Trial"
+    value: 14
 usedby:
   description: "The following use the OrganizationType EnumType."
   usedby_items:
@@ -68,8 +69,8 @@ usedby:
     used_as: Property
 # This enum type has no remarks.
 href_see_also:
-- text: "Use the Microsoft Dynamics 365 Customer Engagement Web API"
-  href: "https://docs.microsoft.com/dynamics365/customer-engagement/developer/use-microsoft-dynamics-365-web-api"
+- text: "Use the Common Data Service Web API"
+  href: "https://docs.microsoft.com/powerapps/developer/common-data-service/webapi/overview"
 xref_see_also:
 - Microsoft.Dynamics.CRM.EntityTypeIndex
 - Microsoft.Dynamics.CRM.ActionIndex

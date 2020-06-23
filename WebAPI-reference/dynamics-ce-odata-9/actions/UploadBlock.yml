@@ -1,0 +1,53 @@
+### YamlMime:OData
+uid: Microsoft.Dynamics.CRM.UploadBlock
+name: "UploadBlock"
+type: action
+metadata: 
+  title: "Common Data Service and Dynamics 365 Customer Engagement UploadBlock Action Reference | MicrosoftDocs"
+  ms.date: "05/03/2020"
+  ms.service: "crm-online"
+  ms.topic: "reference"
+  ms.assetid: e0f18528-86b0-41b4-b229-abb9b7015e3a
+  author: "KumarVivek"
+  ms.author: "kvivek"
+  manager: "Annbe"
+  meta-description: "Reference information about the UploadBlock Action."
+namespace: Microsoft.Dynamics.CRM
+# This Action has no description.
+owningsolution: Microsoft.Dynamics.CRM.System
+# This action has no bound entities.
+isbound: false
+parameters:
+  description: "Parameters allow for data to be passed to the action."
+  parameter_items:
+  - name: BlockId
+    type: Edm.String
+    nullable: false
+    unicode: false
+    description: ""
+  - name: BlockData
+    type: Edm.Binary
+    nullable: false
+    unicode: true
+    description: ""
+  - name: FileContinuationToken
+    type: Edm.String
+    nullable: false
+    unicode: false
+    description: ""
+# This action has no return value.
+hasreturnvalue: false
+# This action has no identified unbound entities.
+# This action has no remarks.
+href_see_also:
+- text: "Use the Common Data Service Web API"
+  href: "https://docs.microsoft.com/powerapps/developer/common-data-service/webapi/overview"
+xref_see_also:
+- Microsoft.Dynamics.CRM.EntityTypeIndex
+- Microsoft.Dynamics.CRM.ActionIndex
+- Microsoft.Dynamics.CRM.FunctionIndex
+- Microsoft.Dynamics.CRM.QueryFunctionIndex
+- Microsoft.Dynamics.CRM.ComplexTypeIndex
+- Microsoft.Dynamics.CRM.EnumTypeIndex
+- Microsoft.Dynamics.CRM.MetadataEntityTypeIndex
+- Microsoft.Dynamics.CRM.SolutionIndex

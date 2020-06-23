@@ -1,0 +1,79 @@
+### YamlMime:OData
+uid: Microsoft.Dynamics.CRM.msdynce_MarketingPatch
+name: "Marketing Patch"
+type: solution
+metadata: 
+  title: "Common Data Service and Dynamics 365 Customer Engagement Marketing Patch Solution Reference | MicrosoftDocs"
+  ms.date: "05/03/2020"
+  ms.service: "crm-online"
+  ms.topic: "reference"
+  ms.assetid: 515e0a0e-50b5-48b3-a95f-cfd3f639b69b
+  author: "KumarVivek"
+  ms.author: "kvivek"
+  manager: "Annbe"
+  meta-description: "Reference information about the Dynamics 365 Customer Engagement Marketing Patch Solution."
+namespace: Microsoft.Dynamics.CRM
+header:
+ description: "Patch for Dynamics 365 workload for marketing and enterprise."
+ unique_name: msdynce_MarketingPatch
+ version: "9.0.1904.1019"
+ customization_prefix: none
+entities:
+  description: "The following entities are included in this solution."
+  entity_items:
+   - type: Microsoft.Dynamics.CRM.account
+     description: "Business that represents a customer or potential customer. The company that is billed in business transactions."
+   - type: Microsoft.Dynamics.CRM.activitypointer
+     description: "Task performed, or to be performed, by a user. An activity is any action for which an entry can be made on a calendar."
+   - type: Microsoft.Dynamics.CRM.appointment
+     description: "Commitment representing a time interval with start/end times and duration."
+   - type: Microsoft.Dynamics.CRM.bulkoperation
+     description: "System operation used to perform lengthy and asynchronous operations on large data sets, such as distributing a campaign activity or quick campaign."
+   - type: Microsoft.Dynamics.CRM.bulkoperationlog
+     description: "Log used to track bulk operation execution, successes, and failures."
+   - type: Microsoft.Dynamics.CRM.campaign
+     description: "Container for campaign activities and responses, sales literature, products, and lists to create, plan, execute, and track the results of a specific marketing campaign through its life."
+   - type: Microsoft.Dynamics.CRM.campaignactivity
+     description: "Task performed, or to be performed, by a user for planning or running a campaign."
+   - type: Microsoft.Dynamics.CRM.campaignactivityitem
+     description: "Work item of a campaign activity, such as a list or sales literature."
+   - type: Microsoft.Dynamics.CRM.campaignitem
+     description: "Work item in a campaign, a list or sales literature."
+   - type: Microsoft.Dynamics.CRM.campaignresponse
+     description: "Response from an existing or a potential new customer for a campaign."
+   - type: Microsoft.Dynamics.CRM.contact
+     description: "Person with whom a business unit has a relationship, such as customer, supplier, and colleague."
+   - type: Microsoft.Dynamics.CRM.email
+     description: "Activity that is delivered using email protocols."
+   - type: Microsoft.Dynamics.CRM.fax
+     description: "Activity that tracks call outcome and number of pages for a fax and optionally stores an electronic copy of the document."
+   - type: Microsoft.Dynamics.CRM.lead
+     description: "Prospect or potential sales opportunity. Leads are converted into accounts, contacts, or opportunities when they are qualified. Otherwise, they are deleted or archived."
+   - type: Microsoft.Dynamics.CRM.letter
+     description: "Activity that tracks the delivery of a letter. The activity can contain the electronic copy of the letter."
+   - type: Microsoft.Dynamics.CRM.list
+     description: "Group of existing or potential customers created for a marketing campaign or other sales purposes."
+   - type: Microsoft.Dynamics.CRM.listmember
+     description: "Item in a marketing list."
+   - type: Microsoft.Dynamics.CRM.phonecall
+     description: "Activity to track a telephone call."
+   - type: Microsoft.Dynamics.CRM.product
+     description: "Information about products and their pricing information."
+   - type: Microsoft.Dynamics.CRM.recurringappointmentmaster
+     description: "The Master appointment of a recurring appointment series."
+   - type: Microsoft.Dynamics.CRM.task
+     description: "Generic activity representing work needed to be done."
+# This solution includes no actions.
+# This solution has no remarks.
+href_see_also:
+- text: "Use the Common Data Service Web API"
+  href: "https://docs.microsoft.com/powerapps/developer/common-data-service/webapi/overview"
+xref_see_also:
+- Microsoft.Dynamics.CRM.EntityTypeIndex
+- Microsoft.Dynamics.CRM.ActionIndex
+- Microsoft.Dynamics.CRM.FunctionIndex
+- Microsoft.Dynamics.CRM.QueryFunctionIndex
+- Microsoft.Dynamics.CRM.ComplexTypeIndex
+- Microsoft.Dynamics.CRM.EnumTypeIndex
+- Microsoft.Dynamics.CRM.MetadataEntityTypeIndex
+- Microsoft.Dynamics.CRM.SolutionIndex

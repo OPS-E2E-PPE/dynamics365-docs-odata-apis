@@ -3,17 +3,15 @@ uid: Microsoft.Dynamics.CRM.StringAttributeMetadata
 name: "StringAttributeMetadata"
 type: metadataentitytype
 metadata: 
-  title: "Microsoft Dynamics 365 Customer Engagement StringAttributeMetadata Metadata EntityType Reference | MicrosoftDocs"
-  ms.date: "03/20/2018"
+  title: "Common Data Service and Dynamics 365 Customer Engagement StringAttributeMetadata Metadata EntityType Reference | MicrosoftDocs"
+  ms.date: "05/03/2020"
   ms.service: "crm-online"
   ms.topic: "reference"
-  applies_to: 
-  - "Dynamics 365 (online)"
   ms.assetid: 5ee2ccc9-37bd-476c-8721-38ee1e38ba90
-  author: "jimdaly"
-  ms.author: "jdaly"
-  manager: "jdaly"
-  meta-description: "Reference information about the Dynamics 365 Customer Engagement StringAttributeMetadata metadata entitytype."
+  author: "KumarVivek"
+  ms.author: "kvivek"
+  manager: "Annbe"
+  meta-description: "Reference information about the StringAttributeMetadata metadata entitytype."
 header: 
   description: "Contains the metadata for an String attribute."
   base_type: Microsoft.Dynamics.CRM.AttributeMetadata
@@ -199,6 +197,10 @@ properties:
     type: Edm.Boolean
     inherited_from: Microsoft.Dynamics.CRM.AttributeMetadata
     description: "Whether the value can be updated."
+  - name: IsValidODataAttribute
+    type: Edm.Boolean
+    inherited_from: Microsoft.Dynamics.CRM.AttributeMetadata
+    description: ""
   - name: LinkedAttributeId
     type: Edm.Guid
     inherited_from: Microsoft.Dynamics.CRM.AttributeMetadata
@@ -239,8 +241,8 @@ properties:
 # This entity is not used by other entities or operations.
 # This metadata entity has no remarks.
 href_see_also:
-- text: "Use the Microsoft Dynamics 365 Customer Engagement Web API"
-  href: "https://docs.microsoft.com/dynamics365/customer-engagement/developer/use-microsoft-dynamics-365-web-api"
+- text: "Use the Common Data Service Web API"
+  href: "https://docs.microsoft.com/powerapps/developer/common-data-service/webapi/overview"
 xref_see_also:
 - Microsoft.Dynamics.CRM.EntityTypeIndex
 - Microsoft.Dynamics.CRM.ActionIndex

@@ -1,0 +1,59 @@
+### YamlMime:OData
+uid: Microsoft.Dynamics.CRM.msdynce_ProductManagementPatch
+name: "Product Management Patch"
+type: solution
+metadata: 
+  title: "Common Data Service and Dynamics 365 Customer Engagement Product Management Patch Solution Reference | MicrosoftDocs"
+  ms.date: "05/03/2020"
+  ms.service: "crm-online"
+  ms.topic: "reference"
+  ms.assetid: 1e61d40e-0f43-4f50-863e-4a459efec86e
+  author: "KumarVivek"
+  ms.author: "kvivek"
+  manager: "Annbe"
+  meta-description: "Reference information about the Dynamics 365 Customer Engagement Product Management Patch Solution."
+namespace: Microsoft.Dynamics.CRM
+header:
+ description: "Dynamics 365 workload for product management."
+ unique_name: msdynce_ProductManagementPatch
+ version: "9.0.2002.2005 "
+ customization_prefix: none
+entities:
+  description: "The following entities are included in this solution."
+  entity_items:
+   - type: Microsoft.Dynamics.CRM.dynamicproperty
+     description: "Information about a product property."
+   - type: Microsoft.Dynamics.CRM.dynamicpropertyassociation
+     description: "Association of a property definition with another entity in the system."
+   - type: Microsoft.Dynamics.CRM.dynamicpropertyinstance
+     description: "Instance of a property with its value."
+   - type: Microsoft.Dynamics.CRM.dynamicpropertyoptionsetitem
+     description: "Item with a name and value in a property option set type."
+   - type: Microsoft.Dynamics.CRM.pricelevel
+     description: "Entity that defines pricing levels."
+   - type: Microsoft.Dynamics.CRM.product
+     description: "Information about products and their pricing information."
+   - type: Microsoft.Dynamics.CRM.productassociation
+     description: "Instance of a product added to a bundle or kit."
+   - type: Microsoft.Dynamics.CRM.productpricelevel
+     description: "Information about how to price a product in the specified price level, including pricing method, rounding option, and discount type based on a specified product unit."
+   - type: Microsoft.Dynamics.CRM.productsubstitute
+     description: "Information about the selling relationship between two products, including the relationship type, such as up-sell, cross-sell, substitute, or accessory."
+   - type: Microsoft.Dynamics.CRM.uom
+     description: "Unit of measure."
+   - type: Microsoft.Dynamics.CRM.uomschedule
+     description: "Grouping of units."
+# This solution includes no actions.
+# This solution has no remarks.
+href_see_also:
+- text: "Use the Common Data Service Web API"
+  href: "https://docs.microsoft.com/powerapps/developer/common-data-service/webapi/overview"
+xref_see_also:
+- Microsoft.Dynamics.CRM.EntityTypeIndex
+- Microsoft.Dynamics.CRM.ActionIndex
+- Microsoft.Dynamics.CRM.FunctionIndex
+- Microsoft.Dynamics.CRM.QueryFunctionIndex
+- Microsoft.Dynamics.CRM.ComplexTypeIndex
+- Microsoft.Dynamics.CRM.EnumTypeIndex
+- Microsoft.Dynamics.CRM.MetadataEntityTypeIndex
+- Microsoft.Dynamics.CRM.SolutionIndex

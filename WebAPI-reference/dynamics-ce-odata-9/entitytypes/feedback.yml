@@ -3,17 +3,15 @@ uid: Microsoft.Dynamics.CRM.feedback
 name: "feedback"
 type: entitytype
 metadata: 
-  title: "Microsoft Dynamics 365 Customer Engagement feedback EntityType Reference | MicrosoftDocs"
-  ms.date: "03/20/2018"
+  title: "Common Data Service and Dynamics 365 Customer Engagement feedback EntityType Reference | MicrosoftDocs"
+  ms.date: "05/03/2020"
   ms.service: "crm-online"
   ms.topic: "reference"
-  applies_to: 
-  - "Dynamics 365 (online)"
   ms.assetid: c17e82ee-466a-49f4-b456-248d66077206
-  author: "jimdaly"
-  ms.author: "jdaly"
-  manager: "jdaly"
-  meta-description: "Reference information about the Dynamics 365 Customer Engagement feedback entitytype."
+  author: "KumarVivek"
+  ms.author: "kvivek"
+  manager: "Annbe"
+  meta-description: "Reference information about the feedback entitytype."
 description: "Container for feedback and ratings for knowledge articles."
 header:
   entity_set_path: "[organization URI]/api/data/v9.0/feedback"
@@ -196,9 +194,9 @@ lookup_properties:
     description: "Unique identifier of the user who owns this feedback."
   - name: _regardingobjectid_value
     single_valued_navigation_property:
-    - ContactId
     - FeedbackId
     - KnowledgeArticleId
+    - ContactId
     description: "Shows the record that the feedback is associated with."
   - name: _transactioncurrencyid_value
     single_valued_navigation_property:
@@ -249,6 +247,12 @@ single_valued_navigation_properties:
 collection_valued_navigation_properties:
   description: "Collection-valued navigation properties represent collections of entities which may represent either a one-to-many (1:N) or many-to-many (N:N) relationship between the entities."
   property_items:
+  - name: feedback_DuplicateBaseRecord
+    type: Microsoft.Dynamics.CRM.duplicaterecord
+    partner: baserecordid_feedback
+  - name: feedback_DuplicateMatchingRecord
+    type: Microsoft.Dynamics.CRM.duplicaterecord
+    partner: duplicaterecordid_feedback
   - name: feedback_feedback
     type: Microsoft.Dynamics.CRM.feedback
     partner: FeedbackId
@@ -279,8 +283,8 @@ solutions:
     description: "Internal CRM System Solution"
 # This entity has no remarks.
 href_see_also:
-- text: "Use the Microsoft Dynamics 365 Customer Engagement Web API"
-  href: "https://docs.microsoft.com/dynamics365/customer-engagement/developer/use-microsoft-dynamics-365-web-api"
+- text: "Use the Common Data Service Web API"
+  href: "https://docs.microsoft.com/powerapps/developer/common-data-service/webapi/overview"
 xref_see_also:
 - Microsoft.Dynamics.CRM.EntityTypeIndex
 - Microsoft.Dynamics.CRM.ActionIndex

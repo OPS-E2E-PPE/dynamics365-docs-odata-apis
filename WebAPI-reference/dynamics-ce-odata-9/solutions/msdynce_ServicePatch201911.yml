@@ -1,0 +1,101 @@
+### YamlMime:OData
+uid: Microsoft.Dynamics.CRM.msdynce_ServicePatch201911
+name: "Service"
+type: solution
+metadata: 
+  title: "Common Data Service and Dynamics 365 Customer Engagement Service Solution Reference | MicrosoftDocs"
+  ms.date: "05/03/2020"
+  ms.service: "crm-online"
+  ms.topic: "reference"
+  ms.assetid: d8946f82-b6f7-4d6c-be35-a7cc99fcdada
+  author: "KumarVivek"
+  ms.author: "kvivek"
+  manager: "Annbe"
+  meta-description: "Reference information about the Dynamics 365 Customer Engagement Service Solution."
+namespace: Microsoft.Dynamics.CRM
+header:
+ description: "Dynamics 365 workload for service."
+ unique_name: msdynce_ServicePatch201911
+ version: "9.0.20031.1004"
+ customization_prefix: none
+entities:
+  description: "The following entities are included in this solution."
+  entity_items:
+   - type: Microsoft.Dynamics.CRM.account
+     description: "Business that represents a customer or potential customer. The company that is billed in business transactions."
+   - type: Microsoft.Dynamics.CRM.activitypointer
+     description: "Task performed, or to be performed, by a user. An activity is any action for which an entry can be made on a calendar."
+   - type: Microsoft.Dynamics.CRM.appointment
+     description: "Commitment representing a time interval with start/end times and duration."
+   - type: Microsoft.Dynamics.CRM.connection
+     description: "Relationship between two entities."
+   - type: Microsoft.Dynamics.CRM.constraintbasedgroup
+     description: "Group or collection of people, equipment, and/or facilities that can be scheduled."
+   - type: Microsoft.Dynamics.CRM.contact
+     description: "Person with whom a business unit has a relationship, such as customer, supplier, and colleague."
+   - type: Microsoft.Dynamics.CRM.contract
+     description: "Agreement to provide customer service during a specified amount of time or number of cases."
+   - type: Microsoft.Dynamics.CRM.contractdetail
+     description: "Line item in a contract that specifies the type of service a customer is entitled to."
+   - type: Microsoft.Dynamics.CRM.contracttemplate
+     description: "Template for a contract containing the standard attributes of a contract."
+   - type: Microsoft.Dynamics.CRM.email
+     description: "Activity that is delivered using email protocols."
+   - type: Microsoft.Dynamics.CRM.entitlement
+     description: "Defines the amount and type of support a customer should receive."
+   - type: Microsoft.Dynamics.CRM.entitlementchannel
+     description: "Defines the amount and type of support for a channel."
+   - type: Microsoft.Dynamics.CRM.entitlementtemplate
+     description: "Contains predefined customer support terms that can be used to created entitlements for customers."
+   - type: Microsoft.Dynamics.CRM.entitlementtemplatechannel
+     description: "Contains predefined support terms for a channel to create entitlements for customers."
+   - type: Microsoft.Dynamics.CRM.equipment
+     description: "Resource that can be scheduled."
+   - type: Microsoft.Dynamics.CRM.fax
+     description: "Activity that tracks call outcome and number of pages for a fax and optionally stores an electronic copy of the document."
+   - type: Microsoft.Dynamics.CRM.incident
+     description: "Service request case associated with a contract."
+   - type: Microsoft.Dynamics.CRM.incidentresolution
+     description: "Special type of activity that includes description of the resolution, billing status, and the duration of the case."
+   - type: Microsoft.Dynamics.CRM.knowledgearticle
+     description: "Organizational knowledge for internal and external use."
+   - type: Microsoft.Dynamics.CRM.knowledgearticleincident
+     description: "Association between an knowledge article and incident."
+   - type: Microsoft.Dynamics.CRM.letter
+     description: "Activity that tracks the delivery of a letter. The activity can contain the electronic copy of the letter."
+   - type: Microsoft.Dynamics.CRM.phonecall
+     description: "Activity to track a telephone call."
+   - type: Microsoft.Dynamics.CRM.phonetocaseprocess
+     description: "Phone To Case Process Business Process Flow"
+   - type: Microsoft.Dynamics.CRM.recurringappointmentmaster
+     description: "The Master appointment of a recurring appointment series."
+   - type: Microsoft.Dynamics.CRM.resource
+     description: "User or facility/equipment that can be scheduled for a service."
+   - type: Microsoft.Dynamics.CRM.resourcespec
+     description: "Selection rule that allows the scheduling engine to select a number of resources from a pool of resources. The rules can be associated with a service."
+   - type: Microsoft.Dynamics.CRM.service
+     description: "Activity that represents work done to satisfy a customer's need."
+   - type: Microsoft.Dynamics.CRM.serviceappointment
+     description: "Activity offered by the organization to satisfy its customer's needs. Each service activity includes date, time, duration, and required resources."
+   - type: Microsoft.Dynamics.CRM.site
+     description: "Location or branch office where an organization does business. An organization can have multiple sites."
+   - type: Microsoft.Dynamics.CRM.socialactivity
+     description: "For internal use only."
+   - type: Microsoft.Dynamics.CRM.systemuser
+     description: "Person with access to the Microsoft CRM system and who owns objects in the Microsoft CRM database."
+   - type: Microsoft.Dynamics.CRM.task
+     description: "Generic activity representing work needed to be done."
+# This solution includes no actions.
+# This solution has no remarks.
+href_see_also:
+- text: "Use the Common Data Service Web API"
+  href: "https://docs.microsoft.com/powerapps/developer/common-data-service/webapi/overview"
+xref_see_also:
+- Microsoft.Dynamics.CRM.EntityTypeIndex
+- Microsoft.Dynamics.CRM.ActionIndex
+- Microsoft.Dynamics.CRM.FunctionIndex
+- Microsoft.Dynamics.CRM.QueryFunctionIndex
+- Microsoft.Dynamics.CRM.ComplexTypeIndex
+- Microsoft.Dynamics.CRM.EnumTypeIndex
+- Microsoft.Dynamics.CRM.MetadataEntityTypeIndex
+- Microsoft.Dynamics.CRM.SolutionIndex

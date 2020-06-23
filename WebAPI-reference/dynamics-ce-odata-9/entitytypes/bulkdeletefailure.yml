@@ -3,17 +3,15 @@ uid: Microsoft.Dynamics.CRM.bulkdeletefailure
 name: "bulkdeletefailure"
 type: entitytype
 metadata: 
-  title: "Microsoft Dynamics 365 Customer Engagement bulkdeletefailure EntityType Reference | MicrosoftDocs"
-  ms.date: "03/20/2018"
+  title: "Common Data Service and Dynamics 365 Customer Engagement bulkdeletefailure EntityType Reference | MicrosoftDocs"
+  ms.date: "05/03/2020"
   ms.service: "crm-online"
   ms.topic: "reference"
-  applies_to: 
-  - "Dynamics 365 (online)"
   ms.assetid: 190d387a-f97a-4d9d-ab6a-0b72a7ede0cb
-  author: "jimdaly"
-  ms.author: "jdaly"
-  manager: "jdaly"
-  meta-description: "Reference information about the Dynamics 365 Customer Engagement bulkdeletefailure entitytype."
+  author: "KumarVivek"
+  ms.author: "kvivek"
+  manager: "Annbe"
+  meta-description: "Reference information about the bulkdeletefailure entitytype."
 description: "Record that was not deleted during a bulk deletion job."
 header:
   entity_set_path: "[organization URI]/api/data/v9.0/bulkdeletefailures"
@@ -77,7 +75,87 @@ lookup_properties:
     description: "Unique identifier of the user or team who owns the bulk operation log."
   - name: _regardingobjectid_value
     single_valued_navigation_property:
-    - regardingobjectid_territory
+    - regardingobjectid_calendar
+    - regardingobjectid_userform
+    - regardingobjectid_displaystring
+    - regardingobjectid_template
+    - regardingobjectid_activitymimeattachment
+    - regardingobjectid_subject
+    - regardingobjectid_annotation
+    - regardingobjectid_knowledgebaserecord
+    - regardingobjectid_import
+    - regardingobjectid_contact
+    - regardingobjectid_activitypointer
+    - regardingobjectid_privilege
+    - regardingobjectid_knowledgearticle
+    - regardingobjectid_usermapping
+    - regardingobjectid_businessunitnewsarticle
+    - regardingobjectid_role
+    - regardingobjectid_semiannualfiscalcalendar
+    - regardingobjectid_post
+    - regardingobjectid_emailserverprofile
+    - regardingobjectid_account
+    - regardingobjectid_customeraddress
+    - regardingobjectid_savedquery
+    - regardingobjectid_importmap
+    - regardingobjectid_monthlyfiscalcalendar
+    - regardingobjectid_fixedmonthlyfiscalcalendar
+    - regardingobjectid_importlog
+    - regardingobjectid_systemuser
+    - regardingobjectid_kbarticletemplate
+    - regardingobjectid_userquery
+    - regardingobjectid_businessunit
+    - regardingobjectid_organization
+    - regardingobjectid_queue
+    - regardingobjectid_importfile
+    - regardingobjectid_systemform
+    - regardingobjectid_importdata
+    - regardingobjectid_theme
+    - regardingobjectid_queueitem
+    - regardingobjectid_kbarticlecomment
+    - regardingobjectid_sla
+    - regardingobjectid_quarterlyfiscalcalendar
+    - regardingobjectid_kbarticle
+    - regardingobjectid_team
+    - regardingobjectid_annualfiscalcalendar
+    - regardingobjectid_solutioncomponentattributeconfiguration
+    - regardingobjectid_solutioncomponentconfiguration
+    - regardingobjectid_stagesolutionupload
+    - regardingobjectid_serviceplan
+    - regardingobjectid_msdyn_knowledgearticleimage
+    - regardingobjectid_msdyn_knowledgearticletemplate
+    - regardingobjectid_attributeimageconfig
+    - regardingobjectid_entityimageconfig
+    - regardingobjectid_entityanalyticsconfig
+    - regardingobjectid_msdyn_dataflow
+    - regardingobjectid_connector
+    - regardingobjectid_msdyn_aiconfiguration
+    - regardingobjectid_msdyn_aimodel
+    - regardingobjectid_msdyn_aitemplate
+    - regardingobjectid_msdyn_aibdataset
+    - regardingobjectid_msdyn_aibdatasetfile
+    - regardingobjectid_msdyn_aibdatasetrecord
+    - regardingobjectid_msdyn_aibdatasetscontainer
+    - regardingobjectid_msdyn_aibfile
+    - regardingobjectid_msdyn_aibfileattacheddata
+    - regardingobjectid_msdyn_aifptrainingdocument
+    - regardingobjectid_msdyn_aiodimage
+    - regardingobjectid_msdyn_aiodlabel
+    - regardingobjectid_msdyn_aiodtrainingboundingbox
+    - regardingobjectid_msdyn_aiodtrainingimage
+    - regardingobjectid_environmentvariabledefinition
+    - regardingobjectid_environmentvariablevalue
+    - regardingobjectid_processstageparameter
+    - regardingobjectid_flowsession
+    - regardingobjectid_workflowbinary
+    - regardingobjectid_connectionreference
+    - regardingobjectid_msdyn_analysiscomponent
+    - regardingobjectid_msdyn_analysisjob
+    - regardingobjectid_msdyn_analysisresult
+    - regardingobjectid_msdyn_analysisresultdetail
+    - regardingobjectid_msdyn_solutionhealthrule
+    - regardingobjectid_msdyn_solutionhealthruleargument
+    - regardingobjectid_msdyn_solutionhealthruleset
     - regardingobjectid_accountleads
     - regardingobjectid_contactleads
     - regardingobjectid_leadaddress
@@ -87,7 +165,6 @@ lookup_properties:
     - regardingobjectid_dynamicpropertyinstance
     - regardingobjectid_dynamicpropertyoptionsetitem
     - regardingobjectid_pricelevel
-    - regardingobjectid_product
     - regardingobjectid_productassociation
     - regardingobjectid_productpricelevel
     - regardingobjectid_productsubstitute
@@ -110,6 +187,10 @@ lookup_properties:
     - regardingobjectid_campaignitem
     - regardingobjectid_list
     - regardingobjectid_listmember
+    - regardingobjectid_msdyn_databaseversion
+    - regardingobjectid_msdyn_upgraderun
+    - regardingobjectid_msdyn_upgradestep
+    - regardingobjectid_msdyn_upgradeversion
     - regardingobjectid_constraintbasedgroup
     - regardingobjectid_contract
     - regardingobjectid_contractdetail
@@ -132,6 +213,14 @@ lookup_properties:
     - regardingobjectid_service
     - regardingobjectid_servicecontractcontacts
     - regardingobjectid_site
+    - regardingobjectid_product
+    - regardingobjectid_entitlemententityallocationtypemapping
+    - regardingobjectid_msdyn_callablecontext
+    - regardingobjectid_msdyn_playbookactivity
+    - regardingobjectid_msdyn_playbookactivityattribute
+    - regardingobjectid_msdyn_playbookcategory
+    - regardingobjectid_msdyn_playbookinstance
+    - regardingobjectid_msdyn_playbooktemplate
     - regardingobjectid_competitoraddress
     - regardingobjectid_competitorproduct
     - regardingobjectid_competitorsalesliterature
@@ -157,22 +246,55 @@ lookup_properties:
     - regardingobjectid_salesorder
     - regardingobjectid_salesorderdetail
     - regardingobjectid_competitor
+    - regardingobjectid_territory
+    - regardingobjectid_adminsettingsentity
+    - regardingobjectid_msdyn_forecastconfiguration
+    - regardingobjectid_msdyn_forecastdefinition
+    - regardingobjectid_msdyn_forecastinstance
+    - regardingobjectid_msdyn_forecastrecurrence
+    - regardingobjectid_msdyn_relationshipinsightsunifiedconfig
+    - regardingobjectid_msdyn_siconfig
+    - regardingobjectid_msdyn_sikeyvalueconfig
+    - regardingobjectid_msdyn_actioncardregarding
+    - regardingobjectid_msdyn_actioncardrolesetting
+    - regardingobjectid_msdyn_entityrankingrule
+    - regardingobjectid_msdyn_flowcardtype
+    - regardingobjectid_msdyn_salesinsightssettings
+    - regardingobjectid_msdyn_autocapturerule
+    - regardingobjectid_msdyn_autocapturesettings
+    - regardingobjectid_msdyn_untrackedappointment
+    - regardingobjectid_msdyn_notesanalysisconfig
+    - regardingobjectid_msdyn_icebreakersconfig
     - regardingobjectid_msdyn_postalbum
     - regardingobjectid_msdyn_postconfig
     - regardingobjectid_msdyn_postruleconfig
     - regardingobjectid_msdyn_wallsavedquery
     - regardingobjectid_msdyn_wallsavedqueryusersettings
+    - regardingobjectid_msfp_emailtemplate
+    - regardingobjectid_msfp_question
+    - regardingobjectid_msfp_questionresponse
+    - regardingobjectid_msfp_survey
+    - regardingobjectid_msfp_unsubscribedrecipient
+    - regardingobjectid_msdyn_collabgraphresource
+    - regardingobjectid_msdyn_msteamssetting
+    - regardingobjectid_msdyn_msteamssettingsv2
+    - regardingobjectid_msdyn_teamscollaboration
+    - regardingobjectid_msdyn_3dmodel
     - regardingobjectid_msdyn_actual
+    - regardingobjectid_msdyn_bookableresourceassociation
     - regardingobjectid_msdyn_bookingalertstatus
     - regardingobjectid_msdyn_bookingchange
     - regardingobjectid_msdyn_bookingrule
     - regardingobjectid_msdyn_bookingsetupmetadata
+    - regardingobjectid_msdyn_businessclosure
     - regardingobjectid_msdyn_clientextension
     - regardingobjectid_msdyn_configuration
     - regardingobjectid_msdyn_organizationalunit
     - regardingobjectid_msdyn_priority
     - regardingobjectid_msdyn_requirementcharacteristic
+    - regardingobjectid_msdyn_requirementgroup
     - regardingobjectid_msdyn_requirementorganizationunit
+    - regardingobjectid_msdyn_requirementrelationship
     - regardingobjectid_msdyn_requirementresourcecategory
     - regardingobjectid_msdyn_requirementresourcepreference
     - regardingobjectid_msdyn_requirementstatus
@@ -186,77 +308,6 @@ lookup_properties:
     - regardingobjectid_msdyn_timegroupdetail
     - regardingobjectid_msdyn_transactionorigin
     - regardingobjectid_msdyn_workhourtemplate
-    - regardingobjectid_msdyn_accountpricelist
-    - regardingobjectid_msdyn_batchjob
-    - regardingobjectid_msdyn_bpf_665e73aa18c247d886bfc50499c73b82
-    - regardingobjectid_msdyn_bpf_d8f9dc7f099f44db9d641dd81fbd470d
-    - regardingobjectid_msdyn_characteristicreqforteammember
-    - regardingobjectid_msdyn_contactpricelist
-    - regardingobjectid_msdyn_contractlineinvoiceschedule
-    - regardingobjectid_msdyn_contractlinescheduleofvalue
-    - regardingobjectid_msdyn_dataexport
-    - regardingobjectid_msdyn_delegation
-    - regardingobjectid_msdyn_estimate
-    - regardingobjectid_msdyn_estimateline
-    - regardingobjectid_msdyn_expense
-    - regardingobjectid_msdyn_expensecategory
-    - regardingobjectid_msdyn_expensereceipt
-    - regardingobjectid_msdyn_fact
-    - regardingobjectid_msdyn_fieldcomputation
-    - regardingobjectid_msdyn_findworkevent
-    - regardingobjectid_msdyn_integrationjob
-    - regardingobjectid_msdyn_integrationjobdetail
-    - regardingobjectid_msdyn_invoicefrequency
-    - regardingobjectid_msdyn_invoicefrequencydetail
-    - regardingobjectid_msdyn_invoicelinetransaction
-    - regardingobjectid_msdyn_journal
-    - regardingobjectid_msdyn_journalline
-    - regardingobjectid_msdyn_mlresultcache
-    - regardingobjectid_msdyn_opportunitylineresourcecategory
-    - regardingobjectid_msdyn_opportunitylinetransaction
-    - regardingobjectid_msdyn_opportunitylinetransactioncategory
-    - regardingobjectid_msdyn_opportunitylinetransactionclassificatio
-    - regardingobjectid_msdyn_opportunitypricelist
-    - regardingobjectid_msdyn_orderlineresourcecategory
-    - regardingobjectid_msdyn_orderlinetransaction
-    - regardingobjectid_msdyn_orderlinetransactioncategory
-    - regardingobjectid_msdyn_orderlinetransactionclassification
-    - regardingobjectid_msdyn_orderpricelist
-    - regardingobjectid_msdyn_processnotes
-    - regardingobjectid_msdyn_project
-    - regardingobjectid_msdyn_projectapproval
-    - regardingobjectid_msdyn_projectparameter
-    - regardingobjectid_msdyn_projectparameterpricelist
-    - regardingobjectid_msdyn_projectpricelist
-    - regardingobjectid_msdyn_projecttask
-    - regardingobjectid_msdyn_projecttaskdependency
-    - regardingobjectid_msdyn_projecttaskstatususer
-    - regardingobjectid_msdyn_projectteam
-    - regardingobjectid_msdyn_projectteammembersignup
-    - regardingobjectid_msdyn_projecttransactioncategory
-    - regardingobjectid_msdyn_quotelineanalyticsbreakdown
-    - regardingobjectid_msdyn_quotelineinvoiceschedule
-    - regardingobjectid_msdyn_quotelineresourcecategory
-    - regardingobjectid_msdyn_quotelinescheduleofvalue
-    - regardingobjectid_msdyn_quotelinetransaction
-    - regardingobjectid_msdyn_quotelinetransactioncategory
-    - regardingobjectid_msdyn_quotelinetransactionclassification
-    - regardingobjectid_msdyn_quotepricelist
-    - regardingobjectid_msdyn_resourceassignment
-    - regardingobjectid_msdyn_resourceassignmentdetail
-    - regardingobjectid_msdyn_resourcecategorypricelevel
-    - regardingobjectid_msdyn_resourcerequest
-    - regardingobjectid_msdyn_rolecompetencyrequirement
-    - regardingobjectid_msdyn_roleutilization
-    - regardingobjectid_msdyn_timeentry
-    - regardingobjectid_msdyn_timeoffcalendar
-    - regardingobjectid_msdyn_transactioncategory
-    - regardingobjectid_msdyn_transactioncategoryclassification
-    - regardingobjectid_msdyn_transactioncategoryhierarchyelement
-    - regardingobjectid_msdyn_transactioncategorypricelevel
-    - regardingobjectid_msdyn_transactionconnection
-    - regardingobjectid_msdyn_transactiontype
-    - regardingobjectid_msdyn_userworkhistory
     - regardingobjectid_msdyn_agreement
     - regardingobjectid_msdyn_agreementbookingdate
     - regardingobjectid_msdyn_agreementbookingincident
@@ -275,14 +326,19 @@ lookup_properties:
     - regardingobjectid_msdyn_bpf_baa0a411a239410cb8bded8b5fdd88e3
     - regardingobjectid_msdyn_bpf_d3d97bac8c294105840e99e37a9d1c39
     - regardingobjectid_msdyn_customerasset
+    - regardingobjectid_msdyn_customerassetcategory
+    - regardingobjectid_msdyn_entitlementapplication
     - regardingobjectid_msdyn_fieldservicepricelistitem
     - regardingobjectid_msdyn_fieldservicesetting
+    - regardingobjectid_msdyn_fieldserviceslaconfiguration
     - regardingobjectid_msdyn_fieldservicesystemjob
     - regardingobjectid_msdyn_incidenttype
     - regardingobjectid_msdyn_incidenttypecharacteristic
     - regardingobjectid_msdyn_incidenttypeproduct
     - regardingobjectid_msdyn_incidenttypeservice
     - regardingobjectid_msdyn_incidenttypeservicetask
+    - regardingobjectid_msdyn_incidenttypessetup
+    - regardingobjectid_msdyn_incidenttype_requirementgroup
     - regardingobjectid_msdyn_inventoryadjustment
     - regardingobjectid_msdyn_inventoryadjustmentproduct
     - regardingobjectid_msdyn_inventoryjournal
@@ -336,59 +392,97 @@ lookup_properties:
     - regardingobjectid_msdyn_workorderservicetask
     - regardingobjectid_msdyn_workordersubstatus
     - regardingobjectid_msdyn_workordertype
-    - regardingobjectid_mbs_pluginprofile
     - regardingobjectid_msdyn_iotalert
     - regardingobjectid_msdyn_iotdevice
     - regardingobjectid_msdyn_iotdevicecategory
     - regardingobjectid_msdyn_iotdevicecommand
+    - regardingobjectid_msdyn_iotdevicecommanddefinition
+    - regardingobjectid_msdyn_iotdevicedatahistory
+    - regardingobjectid_msdyn_iotdeviceproperty
     - regardingobjectid_msdyn_iotdeviceregistrationhistory
+    - regardingobjectid_msdyn_iotpropertydefinition
+    - regardingobjectid_msdyn_iotprovider
+    - regardingobjectid_msdyn_iotproviderinstance
+    - regardingobjectid_msdyn_iotsettings
     - regardingobjectid_msdyn_bpf_477c16f59170487b8b4dc895c5dcd09b
-    - regardingobjectid_msdyn_orginsightsuserdashboarddefinition
-    - regardingobjectid_ms_newsitem
-    - regardingobjectid_ms_satori
-    - regardingobjectid_theme
-    - regardingobjectid_usermapping
-    - regardingobjectid_knowledgearticle
-    - regardingobjectid_post
-    - regardingobjectid_knowledgebaserecord
-    - regardingobjectid_customeraddress
-    - regardingobjectid_annualfiscalcalendar
-    - regardingobjectid_queue
-    - regardingobjectid_calendar
-    - regardingobjectid_kbarticlecomment
-    - regardingobjectid_annotation
-    - regardingobjectid_privilege
-    - regardingobjectid_fixedmonthlyfiscalcalendar
-    - regardingobjectid_businessunitnewsarticle
-    - regardingobjectid_systemuser
-    - regardingobjectid_kbarticle
-    - regardingobjectid_template
-    - regardingobjectid_quarterlyfiscalcalendar
-    - regardingobjectid_semiannualfiscalcalendar
-    - regardingobjectid_importfile
-    - regardingobjectid_systemform
-    - regardingobjectid_importlog
-    - regardingobjectid_role
-    - regardingobjectid_userform
-    - regardingobjectid_account
-    - regardingobjectid_displaystring
-    - regardingobjectid_savedquery
-    - regardingobjectid_userquery
-    - regardingobjectid_organization
-    - regardingobjectid_businessunit
-    - regardingobjectid_monthlyfiscalcalendar
-    - regardingobjectid_activitymimeattachment
-    - regardingobjectid_kbarticletemplate
-    - regardingobjectid_emailserverprofile
-    - regardingobjectid_sla
-    - regardingobjectid_import
-    - regardingobjectid_importmap
-    - regardingobjectid_importdata
-    - regardingobjectid_contact
-    - regardingobjectid_activitypointer
-    - regardingobjectid_team
-    - regardingobjectid_queueitem
-    - regardingobjectid_subject
+    - regardingobjectid_msdyn_entityconfiguration
+    - regardingobjectid_msdyn_geofence
+    - regardingobjectid_msdyn_geofenceevent
+    - regardingobjectid_msdyn_geofencingsettings
+    - regardingobjectid_msdyn_accountpricelist
+    - regardingobjectid_msdyn_batchjob
+    - regardingobjectid_msdyn_bpf_665e73aa18c247d886bfc50499c73b82
+    - regardingobjectid_msdyn_bpf_d8f9dc7f099f44db9d641dd81fbd470d
+    - regardingobjectid_msdyn_characteristicreqforteammember
+    - regardingobjectid_msdyn_contactpricelist
+    - regardingobjectid_msdyn_contractlineinvoiceschedule
+    - regardingobjectid_msdyn_contractlinescheduleofvalue
+    - regardingobjectid_msdyn_dataexport
+    - regardingobjectid_msdyn_delegation
+    - regardingobjectid_msdyn_dimension
+    - regardingobjectid_msdyn_dimensionfieldname
+    - regardingobjectid_msdyn_estimate
+    - regardingobjectid_msdyn_estimateline
+    - regardingobjectid_msdyn_expense
+    - regardingobjectid_msdyn_expensecategory
+    - regardingobjectid_msdyn_expensereceipt
+    - regardingobjectid_msdyn_fact
+    - regardingobjectid_msdyn_fieldcomputation
+    - regardingobjectid_msdyn_findworkevent
+    - regardingobjectid_msdyn_integrationjob
+    - regardingobjectid_msdyn_integrationjobdetail
+    - regardingobjectid_msdyn_invoicefrequency
+    - regardingobjectid_msdyn_invoicefrequencydetail
+    - regardingobjectid_msdyn_invoicelinetransaction
+    - regardingobjectid_msdyn_journal
+    - regardingobjectid_msdyn_journalline
+    - regardingobjectid_msdyn_mlresultcache
+    - regardingobjectid_msdyn_opportunitylineresourcecategory
+    - regardingobjectid_msdyn_opportunitylinetransaction
+    - regardingobjectid_msdyn_opportunitylinetransactioncategory
+    - regardingobjectid_msdyn_opportunitylinetransactionclassificatio
+    - regardingobjectid_msdyn_opportunitypricelist
+    - regardingobjectid_msdyn_orderlineresourcecategory
+    - regardingobjectid_msdyn_orderlinetransaction
+    - regardingobjectid_msdyn_orderlinetransactioncategory
+    - regardingobjectid_msdyn_orderlinetransactionclassification
+    - regardingobjectid_msdyn_orderpricelist
+    - regardingobjectid_msdyn_processnotes
+    - regardingobjectid_msdyn_project
+    - regardingobjectid_msdyn_projectapproval
+    - regardingobjectid_msdyn_projectparameter
+    - regardingobjectid_msdyn_projectparameterpricelist
+    - regardingobjectid_msdyn_projectpricelist
+    - regardingobjectid_msdyn_projecttask
+    - regardingobjectid_msdyn_projecttaskdependency
+    - regardingobjectid_msdyn_projecttaskstatususer
+    - regardingobjectid_msdyn_projectteam
+    - regardingobjectid_msdyn_projectteammembersignup
+    - regardingobjectid_msdyn_projecttransactioncategory
+    - regardingobjectid_msdyn_quotelineanalyticsbreakdown
+    - regardingobjectid_msdyn_quotelineinvoiceschedule
+    - regardingobjectid_msdyn_quotelineresourcecategory
+    - regardingobjectid_msdyn_quotelinescheduleofvalue
+    - regardingobjectid_msdyn_quotelinetransaction
+    - regardingobjectid_msdyn_quotelinetransactioncategory
+    - regardingobjectid_msdyn_quotelinetransactionclassification
+    - regardingobjectid_msdyn_quotepricelist
+    - regardingobjectid_msdyn_resourceassignment
+    - regardingobjectid_msdyn_resourceassignmentdetail
+    - regardingobjectid_msdyn_resourcecategorymarkuppricelevel
+    - regardingobjectid_msdyn_resourcecategorypricelevel
+    - regardingobjectid_msdyn_resourcerequest
+    - regardingobjectid_msdyn_rolecompetencyrequirement
+    - regardingobjectid_msdyn_roleutilization
+    - regardingobjectid_msdyn_timeentry
+    - regardingobjectid_msdyn_timeoffcalendar
+    - regardingobjectid_msdyn_transactioncategory
+    - regardingobjectid_msdyn_transactioncategoryclassification
+    - regardingobjectid_msdyn_transactioncategoryhierarchyelement
+    - regardingobjectid_msdyn_transactioncategorypricelevel
+    - regardingobjectid_msdyn_transactionconnection
+    - regardingobjectid_msdyn_transactiontype
+    - regardingobjectid_msdyn_userworkhistory
     description: "Unique identifier of the record that can not be deleted."
 single_valued_navigation_properties:
   description: "Single-valued navigation properties represent lookup fields where a single entity can be referenced. Each single-valued navigation property has a corresponding partner collection-valued navigation property on the related entity."
@@ -408,6 +502,9 @@ single_valued_navigation_properties:
   - name: regardingobjectid_activitypointer
     type: Microsoft.Dynamics.CRM.activitypointer
     partner: ActivityPointer_BulkDeleteFailures
+  - name: regardingobjectid_adminsettingsentity
+    type: Microsoft.Dynamics.CRM.adminsettingsentity
+    partner: adminsettingsentity_BulkDeleteFailures
   - name: regardingobjectid_annotation
     type: Microsoft.Dynamics.CRM.annotation
     partner: Annotation_BulkDeleteFailures
@@ -417,6 +514,9 @@ single_valued_navigation_properties:
   - name: regardingobjectid_appointment
     type: Microsoft.Dynamics.CRM.appointment
     partner: Appointment_BulkDeleteFailures
+  - name: regardingobjectid_attributeimageconfig
+    type: Microsoft.Dynamics.CRM.attributeimageconfig
+    partner: attributeimageconfig_BulkDeleteFailures
   - name: regardingobjectid_bookableresource
     type: Microsoft.Dynamics.CRM.bookableresource
     partner: bookableresource_BulkDeleteFailures
@@ -486,6 +586,12 @@ single_valued_navigation_properties:
   - name: regardingobjectid_competitorsalesliterature
     type: Microsoft.Dynamics.CRM.competitorsalesliterature
     partner: competitorsalesliterature_BulkDeleteFailures
+  - name: regardingobjectid_connectionreference
+    type: Microsoft.Dynamics.CRM.connectionreference
+    partner: connectionreference_BulkDeleteFailures
+  - name: regardingobjectid_connector
+    type: Microsoft.Dynamics.CRM.connector
+    partner: connector_BulkDeleteFailures
   - name: regardingobjectid_constraintbasedgroup
     type: Microsoft.Dynamics.CRM.constraintbasedgroup
     partner: ConstraintBasedGroup_BulkDeleteFailures
@@ -564,6 +670,18 @@ single_valued_navigation_properties:
   - name: regardingobjectid_entitlementtemplateproducts
     type: Microsoft.Dynamics.CRM.entitlementtemplateproducts
     partner: entitlementtemplateproducts_BulkDeleteFailures
+  - name: regardingobjectid_entityanalyticsconfig
+    type: Microsoft.Dynamics.CRM.entityanalyticsconfig
+    partner: entityanalyticsconfig_BulkDeleteFailures
+  - name: regardingobjectid_entityimageconfig
+    type: Microsoft.Dynamics.CRM.entityimageconfig
+    partner: entityimageconfig_BulkDeleteFailures
+  - name: regardingobjectid_environmentvariabledefinition
+    type: Microsoft.Dynamics.CRM.environmentvariabledefinition
+    partner: environmentvariabledefinition_BulkDeleteFailures
+  - name: regardingobjectid_environmentvariablevalue
+    type: Microsoft.Dynamics.CRM.environmentvariablevalue
+    partner: environmentvariablevalue_BulkDeleteFailures
   - name: regardingobjectid_equipment
     type: Microsoft.Dynamics.CRM.equipment
     partner: Equipment_BulkDeleteFailures
@@ -573,6 +691,9 @@ single_valued_navigation_properties:
   - name: regardingobjectid_fixedmonthlyfiscalcalendar
     type: Microsoft.Dynamics.CRM.fixedmonthlyfiscalcalendar
     partner: FixedMonthlyFiscalCalendar_BulkDeleteFailures
+  - name: regardingobjectid_flowsession
+    type: Microsoft.Dynamics.CRM.flowsession
+    partner: flowsession_BulkDeleteFailures
   - name: regardingobjectid_import
     type: Microsoft.Dynamics.CRM.import
     partner: Import_BulkDeleteFailures
@@ -645,18 +766,9 @@ single_valued_navigation_properties:
   - name: regardingobjectid_listmember
     type: Microsoft.Dynamics.CRM.listmember
     partner: listmember_BulkDeleteFailures
-  - name: regardingobjectid_mbs_pluginprofile
-    type: Microsoft.Dynamics.CRM.mbs_pluginprofile
-    partner: mbs_pluginprofile_BulkDeleteFailures
   - name: regardingobjectid_monthlyfiscalcalendar
     type: Microsoft.Dynamics.CRM.monthlyfiscalcalendar
     partner: MonthlyFiscalCalendar_BulkDeleteFailures
-  - name: regardingobjectid_ms_newsitem
-    type: Microsoft.Dynamics.CRM.ms_newsitem
-    partner: ms_newsitem_BulkDeleteFailures
-  - name: regardingobjectid_ms_satori
-    type: Microsoft.Dynamics.CRM.ms_satori
-    partner: ms_satori_BulkDeleteFailures
   - name: regardingobjectid_msdyn_accountpricelist
     type: Microsoft.Dynamics.CRM.msdyn_accountpricelist
     partner: msdyn_accountpricelist_BulkDeleteFailures
@@ -696,6 +808,60 @@ single_valued_navigation_properties:
   - name: regardingobjectid_msdyn_agreementsubstatus
     type: Microsoft.Dynamics.CRM.msdyn_agreementsubstatus
     partner: msdyn_agreementsubstatus_BulkDeleteFailures
+  - name: regardingobjectid_msdyn_aibdataset
+    type: Microsoft.Dynamics.CRM.msdyn_aibdataset
+    partner: msdyn_aibdataset_BulkDeleteFailures
+  - name: regardingobjectid_msdyn_aibdatasetfile
+    type: Microsoft.Dynamics.CRM.msdyn_aibdatasetfile
+    partner: msdyn_aibdatasetfile_BulkDeleteFailures
+  - name: regardingobjectid_msdyn_aibdatasetrecord
+    type: Microsoft.Dynamics.CRM.msdyn_aibdatasetrecord
+    partner: msdyn_aibdatasetrecord_BulkDeleteFailures
+  - name: regardingobjectid_msdyn_aibdatasetscontainer
+    type: Microsoft.Dynamics.CRM.msdyn_aibdatasetscontainer
+    partner: msdyn_aibdatasetscontainer_BulkDeleteFailures
+  - name: regardingobjectid_msdyn_aibfile
+    type: Microsoft.Dynamics.CRM.msdyn_aibfile
+    partner: msdyn_aibfile_BulkDeleteFailures
+  - name: regardingobjectid_msdyn_aibfileattacheddata
+    type: Microsoft.Dynamics.CRM.msdyn_aibfileattacheddata
+    partner: msdyn_aibfileattacheddata_BulkDeleteFailures
+  - name: regardingobjectid_msdyn_aiconfiguration
+    type: Microsoft.Dynamics.CRM.msdyn_aiconfiguration
+    partner: msdyn_aiconfiguration_BulkDeleteFailures
+  - name: regardingobjectid_msdyn_aifptrainingdocument
+    type: Microsoft.Dynamics.CRM.msdyn_aifptrainingdocument
+    partner: msdyn_aifptrainingdocument_BulkDeleteFailures
+  - name: regardingobjectid_msdyn_aimodel
+    type: Microsoft.Dynamics.CRM.msdyn_aimodel
+    partner: msdyn_aimodel_BulkDeleteFailures
+  - name: regardingobjectid_msdyn_aiodimage
+    type: Microsoft.Dynamics.CRM.msdyn_aiodimage
+    partner: msdyn_aiodimage_BulkDeleteFailures
+  - name: regardingobjectid_msdyn_aiodlabel
+    type: Microsoft.Dynamics.CRM.msdyn_aiodlabel
+    partner: msdyn_aiodlabel_BulkDeleteFailures
+  - name: regardingobjectid_msdyn_aiodtrainingboundingbox
+    type: Microsoft.Dynamics.CRM.msdyn_aiodtrainingboundingbox
+    partner: msdyn_aiodtrainingboundingbox_BulkDeleteFailures
+  - name: regardingobjectid_msdyn_aiodtrainingimage
+    type: Microsoft.Dynamics.CRM.msdyn_aiodtrainingimage
+    partner: msdyn_aiodtrainingimage_BulkDeleteFailures
+  - name: regardingobjectid_msdyn_aitemplate
+    type: Microsoft.Dynamics.CRM.msdyn_aitemplate
+    partner: msdyn_aitemplate_BulkDeleteFailures
+  - name: regardingobjectid_msdyn_analysiscomponent
+    type: Microsoft.Dynamics.CRM.msdyn_analysiscomponent
+    partner: msdyn_analysiscomponent_BulkDeleteFailures
+  - name: regardingobjectid_msdyn_analysisjob
+    type: Microsoft.Dynamics.CRM.msdyn_analysisjob
+    partner: msdyn_analysisjob_BulkDeleteFailures
+  - name: regardingobjectid_msdyn_analysisresult
+    type: Microsoft.Dynamics.CRM.msdyn_analysisresult
+    partner: msdyn_analysisresult_BulkDeleteFailures
+  - name: regardingobjectid_msdyn_analysisresultdetail
+    type: Microsoft.Dynamics.CRM.msdyn_analysisresultdetail
+    partner: msdyn_analysisresultdetail_BulkDeleteFailures
   - name: regardingobjectid_msdyn_approval
     type: Microsoft.Dynamics.CRM.msdyn_approval
     partner: msdyn_approval_BulkDeleteFailures
@@ -798,6 +964,9 @@ single_valued_navigation_properties:
   - name: regardingobjectid_msdyn_fieldservicesetting
     type: Microsoft.Dynamics.CRM.msdyn_fieldservicesetting
     partner: msdyn_fieldservicesetting_BulkDeleteFailures
+  - name: regardingobjectid_msdyn_fieldserviceslaconfiguration
+    type: Microsoft.Dynamics.CRM.msdyn_fieldserviceslaconfiguration
+    partner: msdyn_fieldserviceslaconfiguration_BulkDeleteFailures
   - name: regardingobjectid_msdyn_fieldservicesystemjob
     type: Microsoft.Dynamics.CRM.msdyn_fieldservicesystemjob
     partner: msdyn_fieldservicesystemjob_BulkDeleteFailures
@@ -915,9 +1084,6 @@ single_valued_navigation_properties:
   - name: regardingobjectid_msdyn_organizationalunit
     type: Microsoft.Dynamics.CRM.msdyn_organizationalunit
     partner: msdyn_organizationalunit_BulkDeleteFailures
-  - name: regardingobjectid_msdyn_orginsightsuserdashboarddefinition
-    type: Microsoft.Dynamics.CRM.msdyn_orginsightsuserdashboarddefinition
-    partner: msdyn_orginsightsuserdashboarddefinition_BulkDeleteFailures
   - name: regardingobjectid_msdyn_payment
     type: Microsoft.Dynamics.CRM.msdyn_payment
     partner: msdyn_payment_BulkDeleteFailures
@@ -1116,6 +1282,9 @@ single_valued_navigation_properties:
   - name: regardingobjectid_msdyn_rtvsubstatus
     type: Microsoft.Dynamics.CRM.msdyn_rtvsubstatus
     partner: msdyn_rtvsubstatus_BulkDeleteFailures
+  - name: regardingobjectid_msdyn_salesinsightssettings
+    type: Microsoft.Dynamics.CRM.msdyn_salesinsightssettings
+    partner: msdyn_salesinsightssettings_BulkDeleteFailures
   - name: regardingobjectid_msdyn_scheduleboardsetting
     type: Microsoft.Dynamics.CRM.msdyn_scheduleboardsetting
     partner: msdyn_scheduleboardsetting_BulkDeleteFailures
@@ -1128,6 +1297,12 @@ single_valued_navigation_properties:
   - name: regardingobjectid_msdyn_shipvia
     type: Microsoft.Dynamics.CRM.msdyn_shipvia
     partner: msdyn_shipvia_BulkDeleteFailures
+  - name: regardingobjectid_msdyn_siconfig
+    type: Microsoft.Dynamics.CRM.msdyn_siconfig
+    partner: msdyn_siconfig_BulkDeleteFailures
+  - name: regardingobjectid_msdyn_sikeyvalueconfig
+    type: Microsoft.Dynamics.CRM.msdyn_sikeyvalueconfig
+    partner: msdyn_sikeyvalueconfig_BulkDeleteFailures
   - name: regardingobjectid_msdyn_systemuserschedulersetting
     type: Microsoft.Dynamics.CRM.msdyn_systemuserschedulersetting
     partner: msdyn_systemuserschedulersetting_BulkDeleteFailures
@@ -1137,6 +1312,9 @@ single_valued_navigation_properties:
   - name: regardingobjectid_msdyn_taxcodedetail
     type: Microsoft.Dynamics.CRM.msdyn_taxcodedetail
     partner: msdyn_taxcodedetail_BulkDeleteFailures
+  - name: regardingobjectid_msdyn_teamscollaboration
+    type: Microsoft.Dynamics.CRM.msdyn_teamscollaboration
+    partner: msdyn_teamscollaboration_BulkDeleteFailures
   - name: regardingobjectid_msdyn_timeentry
     type: Microsoft.Dynamics.CRM.msdyn_timeentry
     partner: msdyn_timeentry_BulkDeleteFailures
@@ -1338,6 +1516,9 @@ single_valued_navigation_properties:
   - name: regardingobjectid_servicecontractcontacts
     type: Microsoft.Dynamics.CRM.servicecontractcontacts
     partner: servicecontractcontacts_BulkDeleteFailures
+  - name: regardingobjectid_serviceplan
+    type: Microsoft.Dynamics.CRM.serviceplan
+    partner: serviceplan_BulkDeleteFailures
   - name: regardingobjectid_site
     type: Microsoft.Dynamics.CRM.site
     partner: Site_BulkDeleteFailures
@@ -1396,8 +1577,8 @@ solutions:
     description: "Internal CRM System Solution"
 # This entity has no remarks.
 href_see_also:
-- text: "Use the Microsoft Dynamics 365 Customer Engagement Web API"
-  href: "https://docs.microsoft.com/dynamics365/customer-engagement/developer/use-microsoft-dynamics-365-web-api"
+- text: "Use the Common Data Service Web API"
+  href: "https://docs.microsoft.com/powerapps/developer/common-data-service/webapi/overview"
 xref_see_also:
 - Microsoft.Dynamics.CRM.EntityTypeIndex
 - Microsoft.Dynamics.CRM.ActionIndex

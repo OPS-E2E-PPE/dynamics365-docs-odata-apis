@@ -3,17 +3,15 @@ uid: Microsoft.Dynamics.CRM.ComplexEntityMetadata
 name: "ComplexEntityMetadata"
 type: complextype
 metadata: 
-  title: "Microsoft Dynamics 365 Customer Engagement ComplexEntityMetadata ComplexType Reference | MicrosoftDocs"
-  ms.date: "03/20/2018"
+  title: "Common Data Service and Dynamics 365 Customer Engagement ComplexEntityMetadata ComplexType Reference | MicrosoftDocs"
+  ms.date: "05/03/2020"
   ms.service: "crm-online"
   ms.topic: "reference"
-  applies_to: 
-    - "Dynamics 365 (online)"
   ms.assetid: 271618ff-8839-4989-a0d3-431084be5b3f
-  author: "jimdaly"
-  ms.author: "jdaly"
-  manager: "jdaly"
-  meta-description: "Reference information about the Dynamics 365 Customer Engagement Web API ComplexEntityMetadata ComplexType."
+  author: "KumarVivek"
+  ms.author: "kvivek"
+  manager: "Annbe"
+  meta-description: "Reference information about the Web API ComplexEntityMetadata ComplexType."
 namespace: Microsoft.Dynamics.CRM
 # This complex type doesn't inherit from another complextype.
 description: "Contains the metadata for a complex entity." 
@@ -115,6 +113,18 @@ properties:
     nullable: true
     unicode: true
     description: "For internal use only. Whether the entity is enabled for document recommendations."
+    iscollection: false
+  - name: IsMSTeamsIntegrationEnabled
+    type: Edm.Boolean
+    nullable: true
+    unicode: true
+    description: ""
+    iscollection: false
+  - name: SettingOf
+    type: Edm.String
+    nullable: true
+    unicode: false
+    description: ""
     iscollection: false
   - name: DataProviderId
     type: Edm.Guid
@@ -283,6 +293,12 @@ properties:
     nullable: true
     unicode: true
     description: "Whether the complex entity can be in a Many-to-Many entity relationship."
+    iscollection: false
+  - name: CanBeInCustomEntityAssociation
+    type: Microsoft.Dynamics.CRM.BooleanManagedProperty
+    nullable: true
+    unicode: true
+    description: ""
     iscollection: false
   - name: CanEnableSyncToExternalSearchIndex
     type: Microsoft.Dynamics.CRM.BooleanManagedProperty
@@ -578,6 +594,36 @@ properties:
     unicode: true
     description: "For internal use only. "
     iscollection: false
+  - name: HasNotes
+    type: Edm.Boolean
+    nullable: true
+    unicode: true
+    description: ""
+    iscollection: false
+  - name: HasActivities
+    type: Edm.Boolean
+    nullable: true
+    unicode: true
+    description: ""
+    iscollection: false
+  - name: HasFeedback
+    type: Edm.Boolean
+    nullable: true
+    unicode: true
+    description: ""
+    iscollection: false
+  - name: IsSolutionAware
+    type: Edm.Boolean
+    nullable: true
+    unicode: true
+    description: ""
+    iscollection: false
+  - name: Settings
+    type: Microsoft.Dynamics.CRM.EntitySetting
+    nullable: false
+    unicode: true
+    description: ""
+    iscollection: true
   - name: MetadataId
     type: Edm.Guid
     nullable: true
@@ -600,10 +646,12 @@ usedby:
     used_as: Property
   - name: Microsoft.Dynamics.CRM.RetrieveMetadataChangesResponse
     used_as: Property
+  - name: Microsoft.Dynamics.CRM.ClientEntityMetadata
+    used_as: Property
 # This complex type has no remarks.
 href_see_also:
-- text: "Use the Microsoft Dynamics 365 Customer Engagement Web API"
-  href: "https://docs.microsoft.com/dynamics365/customer-engagement/developer/use-microsoft-dynamics-365-web-api"
+- text: "Use the Common Data Service Web API"
+  href: "https://docs.microsoft.com/powerapps/developer/common-data-service/webapi/overview"
 xref_see_also:
 - Microsoft.Dynamics.CRM.EntityTypeIndex
 - Microsoft.Dynamics.CRM.ActionIndex

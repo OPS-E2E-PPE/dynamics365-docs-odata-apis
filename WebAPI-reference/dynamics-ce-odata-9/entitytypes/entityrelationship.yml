@@ -1,0 +1,88 @@
+### YamlMime:OData
+uid: Microsoft.Dynamics.CRM.entityrelationship
+name: "entityrelationship"
+type: entitytype
+metadata: 
+  title: "Common Data Service and Dynamics 365 Customer Engagement entityrelationship EntityType Reference | MicrosoftDocs"
+  ms.date: "05/03/2020"
+  ms.service: "crm-online"
+  ms.topic: "reference"
+  ms.assetid: b6592ab7-b668-40fc-a4f1-fded22cac016
+  author: "KumarVivek"
+  ms.author: "kvivek"
+  manager: "Annbe"
+  meta-description: "Reference information about the entityrelationship entitytype."
+# This entity doesn't have a description
+header:
+  entity_set_path: "[organization URI]/api/data/v9.0/entityrelationships"
+  base_type: Microsoft.Dynamics.CRM.crmbaseentity
+  display_name: Entity Relationship
+  primary_key: entityrelationshipid
+  primary_name_attribute: schemaname
+  # This entity does not support any operations.
+namespace: Microsoft.Dynamics.CRM
+properties:
+  description: "Properties represent fields of data stored in the entity.Some properties are read-only."
+  property_items:
+    - name: componentstate
+      type: Edm.Int32
+      display_name: "Component State"
+      description: "For internal use only."
+      iscomputed: false
+      isreadonly: true
+      options:
+        - value: 0
+          label: "Published"
+        - value: 1
+          label: "Unpublished"
+        - value: 2
+          label: "Deleted"
+        - value: 3
+          label: "Deleted Unpublished"
+    - name: entityrelationshipid
+      type: Edm.Guid
+      display_name: "Entity Relationship"
+      description: "Unique identifier of the entity relationship."
+      iscomputed: false
+      isreadonly: false
+    - name: overwritetime
+      type: Edm.DateTimeOffset
+      display_name: "Record Overwrite Time"
+      description: "For internal use only."
+      iscomputed: false
+      isreadonly: true
+    - name: schemaname
+      type: Edm.String
+      display_name: "Name"
+      description: "The name of this Entity Relationship."
+      iscomputed: false
+      isreadonly: false
+    - name: solutionid
+      type: Edm.Guid
+      display_name: "Solution"
+      description: "Unique identifier of the associated solution."
+      iscomputed: false
+      isreadonly: true
+# This entity has no lookup properties
+# This entity has no single-valued navigation properties
+# This entity has no collection-valued navigation properties
+# This entity has no derived entities.
+# This entity has no operations
+solutions:
+  description: "The following solutions include the entityrelationship entity type."
+  solution_items:
+  - type: Microsoft.Dynamics.CRM.System
+    description: "Internal CRM System Solution"
+# This entity has no remarks.
+href_see_also:
+- text: "Use the Common Data Service Web API"
+  href: "https://docs.microsoft.com/powerapps/developer/common-data-service/webapi/overview"
+xref_see_also:
+- Microsoft.Dynamics.CRM.EntityTypeIndex
+- Microsoft.Dynamics.CRM.ActionIndex
+- Microsoft.Dynamics.CRM.FunctionIndex
+- Microsoft.Dynamics.CRM.QueryFunctionIndex
+- Microsoft.Dynamics.CRM.ComplexTypeIndex
+- Microsoft.Dynamics.CRM.EnumTypeIndex
+- Microsoft.Dynamics.CRM.MetadataEntityTypeIndex
+- Microsoft.Dynamics.CRM.SolutionIndex

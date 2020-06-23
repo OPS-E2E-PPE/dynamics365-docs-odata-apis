@@ -3,17 +3,15 @@ uid: Microsoft.Dynamics.CRM.solutioncomponent
 name: "solutioncomponent"
 type: entitytype
 metadata: 
-  title: "Microsoft Dynamics 365 Customer Engagement solutioncomponent EntityType Reference | MicrosoftDocs"
-  ms.date: "03/20/2018"
+  title: "Common Data Service and Dynamics 365 Customer Engagement solutioncomponent EntityType Reference | MicrosoftDocs"
+  ms.date: "05/03/2020"
   ms.service: "crm-online"
   ms.topic: "reference"
-  applies_to: 
-  - "Dynamics 365 (online)"
   ms.assetid: e891335d-1981-42fc-b2b0-4c98fef78a3d
-  author: "jimdaly"
-  ms.author: "jdaly"
-  manager: "jdaly"
-  meta-description: "Reference information about the Dynamics 365 Customer Engagement solutioncomponent entitytype."
+  author: "KumarVivek"
+  ms.author: "kvivek"
+  manager: "Annbe"
+  meta-description: "Reference information about the solutioncomponent entitytype."
 description: "A component of a CRM solution."
 header:
   entity_set_path: "[organization URI]/api/data/v9.0/solutioncomponents"
@@ -192,6 +190,28 @@ properties:
           label: "Index"
         - value: 208
           label: "Import Map"
+        - value: 300
+          label: "Canvas App"
+        - value: 371
+          label: "Connector"
+        - value: 372
+          label: "Connector"
+        - value: 380
+          label: "Environment Variable Definition"
+        - value: 381
+          label: "Environment Variable Value"
+        - value: 400
+          label: "AI Project Type"
+        - value: 401
+          label: "AI Project"
+        - value: 402
+          label: "AI Configuration"
+        - value: 430
+          label: "Entity Analytics Configuration"
+        - value: 431
+          label: "Attribute Image Configuration"
+        - value: 432
+          label: "Entity Image Configuration"
     - name: createdon
       type: Edm.DateTimeOffset
       display_name: "Created On"
@@ -311,8 +331,8 @@ solutions:
     description: "Internal CRM System Solution"
 # This entity has no remarks.
 href_see_also:
-- text: "Use the Microsoft Dynamics 365 Customer Engagement Web API"
-  href: "https://docs.microsoft.com/dynamics365/customer-engagement/developer/use-microsoft-dynamics-365-web-api"
+- text: "Use the Common Data Service Web API"
+  href: "https://docs.microsoft.com/powerapps/developer/common-data-service/webapi/overview"
 xref_see_also:
 - Microsoft.Dynamics.CRM.EntityTypeIndex
 - Microsoft.Dynamics.CRM.ActionIndex

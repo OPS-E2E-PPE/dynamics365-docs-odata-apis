@@ -1,0 +1,43 @@
+### YamlMime:OData
+uid: Microsoft.Dynamics.CRM.Relationshipassistant
+name: "Relationshipassistant"
+type: solution
+metadata: 
+  title: "Common Data Service and Dynamics 365 Customer Engagement Relationshipassistant Solution Reference | MicrosoftDocs"
+  ms.date: "05/03/2020"
+  ms.service: "crm-online"
+  ms.topic: "reference"
+  ms.assetid: 0ca8daad-e225-4597-a3a2-862a1f350d90
+  author: "KumarVivek"
+  ms.author: "kvivek"
+  manager: "Annbe"
+  meta-description: "Reference information about the Dynamics 365 Customer Engagement Relationshipassistant Solution."
+namespace: Microsoft.Dynamics.CRM
+header:
+ description: "Relationship assistant Feature Description."
+ unique_name: Relationshipassistant
+ version: "9.0.1.70947"
+ customization_prefix: msdyn
+entities:
+  description: "The following entities are included in this solution."
+  entity_items:
+   - type: Microsoft.Dynamics.CRM.actioncard
+     description: "Action card entity to show action cards."
+   - type: Microsoft.Dynamics.CRM.msdyn_salesinsightssettings
+     description: "Storing settings for studio feature"
+   - type: Microsoft.Dynamics.CRM.workflow
+     description: "Set of logical rules that define the steps necessary to automate a specific business process, task, or set of actions to be performed."
+# This solution includes no actions.
+# This solution has no remarks.
+href_see_also:
+- text: "Use the Common Data Service Web API"
+  href: "https://docs.microsoft.com/powerapps/developer/common-data-service/webapi/overview"
+xref_see_also:
+- Microsoft.Dynamics.CRM.EntityTypeIndex
+- Microsoft.Dynamics.CRM.ActionIndex
+- Microsoft.Dynamics.CRM.FunctionIndex
+- Microsoft.Dynamics.CRM.QueryFunctionIndex
+- Microsoft.Dynamics.CRM.ComplexTypeIndex
+- Microsoft.Dynamics.CRM.EnumTypeIndex
+- Microsoft.Dynamics.CRM.MetadataEntityTypeIndex
+- Microsoft.Dynamics.CRM.SolutionIndex

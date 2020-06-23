@@ -3,17 +3,15 @@ uid: Microsoft.Dynamics.CRM.PicklistAttributeMetadata
 name: "PicklistAttributeMetadata"
 type: metadataentitytype
 metadata: 
-  title: "Microsoft Dynamics 365 Customer Engagement PicklistAttributeMetadata Metadata EntityType Reference | MicrosoftDocs"
-  ms.date: "03/20/2018"
+  title: "Common Data Service and Dynamics 365 Customer Engagement PicklistAttributeMetadata Metadata EntityType Reference | MicrosoftDocs"
+  ms.date: "05/03/2020"
   ms.service: "crm-online"
   ms.topic: "reference"
-  applies_to: 
-  - "Dynamics 365 (online)"
   ms.assetid: 5b79035a-15be-4c7f-a555-e3e3b1b3f8c0
-  author: "jimdaly"
-  ms.author: "jdaly"
-  manager: "jdaly"
-  meta-description: "Reference information about the Dynamics 365 Customer Engagement PicklistAttributeMetadata metadata entitytype."
+  author: "KumarVivek"
+  ms.author: "kvivek"
+  manager: "Annbe"
+  meta-description: "Reference information about the PicklistAttributeMetadata metadata entitytype."
 header: 
   description: "Contains the metadata for a Picklist attribute."
   base_type: Microsoft.Dynamics.CRM.EnumAttributeMetadata
@@ -57,6 +55,9 @@ properties:
     type: Microsoft.Dynamics.CRM.BooleanManagedProperty
     inherited_from: Microsoft.Dynamics.CRM.AttributeMetadata
     description: "Whether any settings not controlled by managed properties can be changed."
+  - name: ChildPicklistLogicalNames
+    type: Edm.String
+    description: ""
   - name: ColumnNumber
     type: Edm.Int32
     inherited_from: Microsoft.Dynamics.CRM.AttributeMetadata
@@ -188,6 +189,10 @@ properties:
     type: Edm.Boolean
     inherited_from: Microsoft.Dynamics.CRM.AttributeMetadata
     description: "Whether the value can be updated."
+  - name: IsValidODataAttribute
+    type: Edm.Boolean
+    inherited_from: Microsoft.Dynamics.CRM.AttributeMetadata
+    description: ""
   - name: LinkedAttributeId
     type: Edm.Guid
     inherited_from: Microsoft.Dynamics.CRM.AttributeMetadata
@@ -200,6 +205,9 @@ properties:
     type: Edm.Guid
     inherited_from: Microsoft.Dynamics.CRM.MetadataBase
     description: "A unique identifier for the metadata item."
+  - name: ParentPicklistLogicalName
+    type: Edm.String
+    description: ""
   - name: RequiredLevel
     type: Microsoft.Dynamics.CRM.AttributeRequiredLevelManagedProperty
     inherited_from: Microsoft.Dynamics.CRM.AttributeMetadata
@@ -230,8 +238,8 @@ single_valued_navigation_properties:
 # This entity is not used by other entities or operations.
 # This metadata entity has no remarks.
 href_see_also:
-- text: "Use the Microsoft Dynamics 365 Customer Engagement Web API"
-  href: "https://docs.microsoft.com/dynamics365/customer-engagement/developer/use-microsoft-dynamics-365-web-api"
+- text: "Use the Common Data Service Web API"
+  href: "https://docs.microsoft.com/powerapps/developer/common-data-service/webapi/overview"
 xref_see_also:
 - Microsoft.Dynamics.CRM.EntityTypeIndex
 - Microsoft.Dynamics.CRM.ActionIndex

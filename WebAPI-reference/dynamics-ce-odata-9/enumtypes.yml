@@ -1,17 +1,15 @@
 ### YamlMime:ODataIndex
 uid: Microsoft.Dynamics.CRM.EnumTypeIndex
 name: Web API EnumType Reference
-title: "Dynamics 365 Customer Engagement Web API EnumType Reference | MicrosoftDocs"
+title: "Common Data Service and 365 Customer Engagement Web API EnumType Reference | MicrosoftDocs"
 metadata:   
-  ms.date: "03/20/2018"
+  ms.date: "05/03/2020"
   ms.service: "crm-online"
   ms.topic: "reference"
-  applies_to: 
-    - "Dynamics 365 (online)"
   ms.assetid: ed96bb52-43bc-4b4c-a7e2-f47969238bf5
-  author: "jimdaly"
-  ms.author: "jdaly"
-  manager: "jdaly"
+  author: "KumarVivek"
+  ms.author: "kvivek"
+  manager: "Annbe"
 description: "An EnumType represents an enumeration type in an OData v4 entity model. "
 in_this_section:
 - type: Microsoft.Dynamics.CRM.AccessRights
@@ -36,6 +34,8 @@ in_this_section:
   description: "Describes the formatting of a DateTimeAttributeMetadata attribute. "
 - type: Microsoft.Dynamics.CRM.DeletedMetadataFilters
   description: "Not Found"
+- type: Microsoft.Dynamics.CRM.DependencyDepth
+  description: "Not Found"
 - type: Microsoft.Dynamics.CRM.EndpointAccessType
   description: "Indicates the type of network access an endpoint has. "
 - type: Microsoft.Dynamics.CRM.EndpointType
@@ -52,6 +52,8 @@ in_this_section:
   description: "Describes the formatting of an integer attribute. "
 - type: Microsoft.Dynamics.CRM.JoinOperator
   description: " the possible values for a join operator in a LinkEntity. "
+- type: Microsoft.Dynamics.CRM.LayerDesiredOrderType
+  description: "Not Found"
 - type: Microsoft.Dynamics.CRM.LogicalOperator
   description: "The possible values for an operator in a FilterExpression. "
 - type: Microsoft.Dynamics.CRM.LookupFormat
@@ -71,7 +73,7 @@ in_this_section:
 - type: Microsoft.Dynamics.CRM.OrganizationState
   description: "Describes the state of the organization. "
 - type: Microsoft.Dynamics.CRM.OrganizationType
-  description: "Not Found"
+  description: "Contains the possible values for the type of organization or environment. "
 - type: Microsoft.Dynamics.CRM.OwnershipTypes
   description: "Specifies the type of ownership for an entity. "
 - type: Microsoft.Dynamics.CRM.PrivilegeDepth
@@ -80,6 +82,8 @@ in_this_section:
   description: "Describes the type of operation for the privilege "
 - type: Microsoft.Dynamics.CRM.PropagationOwnershipOptions
   description: "Contains the possible values for propagation ownership options. "
+- type: Microsoft.Dynamics.CRM.RecentlyViewedRecordType
+  description: "Not Found"
 - type: Microsoft.Dynamics.CRM.RelationshipType
   description: "Specifies the type of entity relationship. "
 - type: Microsoft.Dynamics.CRM.RibbonLocationFilters
@@ -90,6 +94,8 @@ in_this_section:
   description: "Contains the possible values for the search direction in an appointment request. "
 - type: Microsoft.Dynamics.CRM.SecurityTypes
   description: "Describes the security type for the relationship. "
+- type: Microsoft.Dynamics.CRM.SolutionValidationResultType
+  description: "Not Found"
 - type: Microsoft.Dynamics.CRM.StringFormat
   description: "Describes the formatting of a string attribute for the StringAttributeMetadata.Format property. (Deprecated)"
 - type: Microsoft.Dynamics.CRM.SubCode
@@ -98,6 +104,10 @@ in_this_section:
   description: "Indicates the attribute type for the target of the InitializeFromRequest message.  "
 - type: Microsoft.Dynamics.CRM.TimeCode
   description: "Contains the possible values for a time code, used when querying a schedule. "
+- type: Microsoft.Dynamics.CRM.XrmAggregateType
+  description: "Not Found"
+- type: Microsoft.Dynamics.CRM.XrmDateTimeGrouping
+  description: "Not Found"
 href_see_also:
 - text: "Use the Microsoft Dynamics 365 Customer Engagement Web API"
   href: "https://docs.microsoft.com/dynamics365/customer-engagement/developer/use-microsoft-dynamics-365-web-api"

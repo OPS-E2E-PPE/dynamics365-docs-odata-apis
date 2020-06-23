@@ -3,20 +3,18 @@ uid: Microsoft.Dynamics.CRM.AppValidationResponse
 name: "AppValidationResponse"
 type: complextype
 metadata: 
-  title: "Microsoft Dynamics 365 Customer Engagement AppValidationResponse ComplexType Reference | MicrosoftDocs"
-  ms.date: "03/20/2018"
+  title: "Common Data Service and Dynamics 365 Customer Engagement AppValidationResponse ComplexType Reference | MicrosoftDocs"
+  ms.date: "05/03/2020"
   ms.service: "crm-online"
   ms.topic: "reference"
-  applies_to: 
-    - "Dynamics 365 (online)"
   ms.assetid: 775e438f-a1a7-4fa8-b2f5-442eee52977a
-  author: "jimdaly"
-  ms.author: "jdaly"
-  manager: "jdaly"
-  meta-description: "Reference information about the Dynamics 365 Customer Engagement Web API AppValidationResponse ComplexType."
+  author: "KumarVivek"
+  ms.author: "kvivek"
+  manager: "Annbe"
+  meta-description: "Reference information about the Web API AppValidationResponse ComplexType."
 namespace: Microsoft.Dynamics.CRM
 # This complex type doesn't inherit from another complextype.
-description: "" 
+description: "Contains the results of the ValidateApp action. " 
 properties:
   description: "The properties of a complex type contain the structured data of the type."
   property_items:
@@ -24,13 +22,13 @@ properties:
     type: Edm.Boolean
     nullable: true
     unicode: true
-    description: ""
+    description: "Whether the app has any validation errors."
     iscollection: false
   - name: ValidationIssueList
     type: Microsoft.Dynamics.CRM.ValidationIssue
     nullable: false
     unicode: true
-    description: ""
+    description: "List of the validation errors, if any."
     iscollection: true
 # This complex type doesn't have any navigation properties.
 usedby:
@@ -40,8 +38,8 @@ usedby:
     used_as: Property
 # This complex type has no remarks.
 href_see_also:
-- text: "Use the Microsoft Dynamics 365 Customer Engagement Web API"
-  href: "https://docs.microsoft.com/dynamics365/customer-engagement/developer/use-microsoft-dynamics-365-web-api"
+- text: "Use the Common Data Service Web API"
+  href: "https://docs.microsoft.com/powerapps/developer/common-data-service/webapi/overview"
 xref_see_also:
 - Microsoft.Dynamics.CRM.EntityTypeIndex
 - Microsoft.Dynamics.CRM.ActionIndex

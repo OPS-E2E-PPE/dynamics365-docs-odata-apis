@@ -3,17 +3,15 @@ uid: Microsoft.Dynamics.CRM.AddToQueue
 name: "AddToQueue"
 type: action
 metadata: 
-  title: "Microsoft Dynamics 365 Customer Engagement AddToQueue Action Reference | MicrosoftDocs"
-  ms.date: "03/20/2018"
+  title: "Common Data Service and Dynamics 365 Customer Engagement AddToQueue Action Reference | MicrosoftDocs"
+  ms.date: "05/03/2020"
   ms.service: "crm-online"
   ms.topic: "reference"
-  applies_to: 
-  - "Dynamics 365 (online)"
   ms.assetid: b0871fcd-bf63-41dc-81c8-a6dd2df1a39e
-  author: "jimdaly"
-  ms.author: "jdaly"
-  manager: "jdaly"
-  meta-description: "Reference information about the Dynamics 365 Customer Engagement AddToQueue Action."
+  author: "KumarVivek"
+  ms.author: "kvivek"
+  manager: "Annbe"
+  meta-description: "Reference information about the AddToQueue Action."
 namespace: Microsoft.Dynamics.CRM
 description: "Moves an entity record from a source queue to a destination queue."
 owningsolution: Microsoft.Dynamics.CRM.System
@@ -53,8 +51,8 @@ entities:
     description: "A specific item in a queue, such as a case record or an activity record."
 # This action has no remarks.
 href_see_also:
-- text: "Use the Microsoft Dynamics 365 Customer Engagement Web API"
-  href: "https://docs.microsoft.com/dynamics365/customer-engagement/developer/use-microsoft-dynamics-365-web-api"
+- text: "Use the Common Data Service Web API"
+  href: "https://docs.microsoft.com/powerapps/developer/common-data-service/webapi/overview"
 xref_see_also:
 - Microsoft.Dynamics.CRM.EntityTypeIndex
 - Microsoft.Dynamics.CRM.ActionIndex

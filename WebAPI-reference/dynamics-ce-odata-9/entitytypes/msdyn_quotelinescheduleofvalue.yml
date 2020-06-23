@@ -3,17 +3,15 @@ uid: Microsoft.Dynamics.CRM.msdyn_quotelinescheduleofvalue
 name: "msdyn_quotelinescheduleofvalue"
 type: entitytype
 metadata: 
-  title: "Microsoft Dynamics 365 Customer Engagement msdyn_quotelinescheduleofvalue EntityType Reference | MicrosoftDocs"
-  ms.date: "03/20/2018"
+  title: "Common Data Service and Dynamics 365 Customer Engagement msdyn_quotelinescheduleofvalue EntityType Reference | MicrosoftDocs"
+  ms.date: "05/03/2020"
   ms.service: "crm-online"
   ms.topic: "reference"
-  applies_to: 
-  - "Dynamics 365 (online)"
   ms.assetid: b12f7dd7-e50c-49db-b69a-e31e1b88e0ee
-  author: "jimdaly"
-  ms.author: "jdaly"
-  manager: "jdaly"
-  meta-description: "Reference information about the Dynamics 365 Customer Engagement msdyn_quotelinescheduleofvalue entitytype."
+  author: "KumarVivek"
+  ms.author: "kvivek"
+  manager: "Annbe"
+  meta-description: "Reference information about the msdyn_quotelinescheduleofvalue entitytype."
 description: "List of billing milestones and invoice amounts for this quote line."
 header:
   entity_set_path: "[organization URI]/api/data/v9.0/msdyn_quotelinescheduleofvalues"
@@ -56,13 +54,13 @@ properties:
       isreadonly: true
     - name: msdyn_amount
       type: Edm.Decimal
-      display_name: "Amount"
+      display_name: "Line Amount"
       description: "Enter the value of the amount on the billing milestone."
       iscomputed: false
       isreadonly: false
     - name: msdyn_amount_after_tax
       type: Edm.Decimal
-      display_name: "amount_after_tax"
+      display_name: "Milestone Amount"
       description: ""
       iscomputed: true
       isreadonly: true
@@ -118,8 +116,8 @@ properties:
       isreadonly: false
     - name: msdyn_quoteline
       type: Edm.String
-      display_name: "Quote Line"
-      description: "Shows a reference to the quote line that this milestone schedule belongs to."
+      display_name: "(Deprecated) Quote Line"
+      description: "(Deprecated) Shows a reference to the quote line that this milestone schedule belongs to."
       iscomputed: false
       isreadonly: false
     - name: msdyn_quotelinescheduleofvalueid
@@ -209,6 +207,10 @@ lookup_properties:
     single_valued_navigation_property:
     - msdyn_projecttask
     description: "Select the project task that is tracking the work for this billing milestone."
+  - name: _msdyn_quotelineid_value
+    single_valued_navigation_property:
+    - msdyn_quotelineid
+    description: "Shows a reference to the quote line that this milestone schedule belongs to."
   - name: _ownerid_value
     single_valued_navigation_property:
     - ownerid
@@ -247,6 +249,9 @@ single_valued_navigation_properties:
   - name: msdyn_projecttask
     type: Microsoft.Dynamics.CRM.msdyn_projecttask
     partner: msdyn_msdyn_projecttask_msdyn_quotelinescheduleofvalue_projecttask
+  - name: msdyn_quotelineid
+    type: Microsoft.Dynamics.CRM.quotedetail
+    partner: msdyn_quotedetail_msdyn_quotelinescheduleofv
   - name: ownerid
     type: Microsoft.Dynamics.CRM.principal
     partner: owner_msdyn_quotelinescheduleofvalue
@@ -318,8 +323,8 @@ solutions:
     description: "Microsoft Dynamics 365 for Project Service Automation is an end-to-end solution that helps sales and delivery teams engage customers and deliver billable projects on time and within budget. Project Service gives you the tools you need to: Estimate, quote, and contract work; Plan and assign resources; Enable team collaboration; Capture time, expense, and progress data for real-time insights and accurate invoicing."
 # This entity has no remarks.
 href_see_also:
-- text: "Use the Microsoft Dynamics 365 Customer Engagement Web API"
-  href: "https://docs.microsoft.com/dynamics365/customer-engagement/developer/use-microsoft-dynamics-365-web-api"
+- text: "Use the Common Data Service Web API"
+  href: "https://docs.microsoft.com/powerapps/developer/common-data-service/webapi/overview"
 xref_see_also:
 - Microsoft.Dynamics.CRM.EntityTypeIndex
 - Microsoft.Dynamics.CRM.ActionIndex

@@ -1,0 +1,356 @@
+### YamlMime:OData
+uid: Microsoft.Dynamics.CRM.canvasapp
+name: "canvasapp"
+type: entitytype
+metadata: 
+  title: "Common Data Service and Dynamics 365 Customer Engagement canvasapp EntityType Reference | MicrosoftDocs"
+  ms.date: "05/03/2020"
+  ms.service: "crm-online"
+  ms.topic: "reference"
+  ms.assetid: b15f91bb-c713-48b9-a684-f8db2d429882
+  author: "KumarVivek"
+  ms.author: "kvivek"
+  manager: "Annbe"
+  meta-description: "Reference information about the canvasapp entitytype."
+description: "An application built through a canvas-based editing experience."
+header:
+  entity_set_path: "[organization URI]/api/data/v9.0/canvasapps"
+  base_type: Microsoft.Dynamics.CRM.crmbaseentity
+  display_name: Canvas App
+  primary_key: canvasappid
+  primary_name_attribute: name
+  operations_supported:
+  - POST
+  - GET
+  - PATCH
+  - DELETE
+namespace: Microsoft.Dynamics.CRM
+properties:
+  description: "Properties represent fields of data stored in the entity.Some properties are read-only."
+  property_items:
+    - name: aadcreatedbyid
+      type: Edm.String
+      display_name: "Created By"
+      description: "Unique identifier of the user who created the canvas app."
+      iscomputed: false
+      isreadonly: false
+    - name: aadlastmodifiedbyid
+      type: Edm.String
+      display_name: "Last Modified By"
+      description: "Unique identifier of the user who last modified the application."
+      iscomputed: false
+      isreadonly: false
+    - name: aadlastpublishedbyid
+      type: Edm.String
+      display_name: "Last Published By"
+      description: "Unique identifier of the user who last published the application."
+      iscomputed: false
+      isreadonly: false
+    - name: admincontrolbypassconsent
+      type: Edm.Boolean
+      display_name: "Admin Control Bypass Consent"
+      description: "Indicates whether the canvas app was marked for bypass consent by an admin."
+      iscomputed: false
+      isreadonly: false
+      options:
+        - value: 1
+          label: "True"
+        - value: 0
+          label: "False"
+    - name: appopenuri
+      type: Edm.String
+      display_name: ""
+      description: "The app open URI."
+      iscomputed: false
+      isreadonly: false
+    - name: appversion
+      type: Edm.String
+      display_name: ""
+      description: "The application version."
+      iscomputed: false
+      isreadonly: false
+    - name: authorizationreferences
+      type: Edm.String
+      display_name: ""
+      description: "The authorization references of the application."
+      iscomputed: false
+      isreadonly: false
+    - name: backgroundcolor
+      type: Edm.String
+      display_name: ""
+      description: "The background image color."
+      iscomputed: false
+      isreadonly: false
+    - name: bypassconsent
+      type: Edm.Boolean
+      display_name: "Bypass Consent"
+      description: "Indicates whether the canvas app should bypass consent from consumers."
+      iscomputed: false
+      isreadonly: false
+      options:
+        - value: 1
+          label: "True"
+        - value: 0
+          label: "False"
+    - name: canvasappid
+      type: Edm.Guid
+      display_name: ""
+      description: "For internal use only."
+      iscomputed: false
+      isreadonly: false
+    - name: canvasapprowid
+      type: Edm.Guid
+      display_name: ""
+      description: "For internal use only."
+      iscomputed: false
+      isreadonly: true
+    - name: cdsdependencies
+      type: Edm.String
+      display_name: ""
+      description: "Internal use. The app dependency details."
+      iscomputed: false
+      isreadonly: false
+    - name: commitmessage
+      type: Edm.String
+      display_name: "The commit message."
+      description: "The commit message of the app."
+      iscomputed: false
+      isreadonly: false
+    - name: componentstate
+      type: Edm.Int32
+      display_name: "Component State"
+      description: "For internal use only."
+      iscomputed: false
+      isreadonly: true
+      options:
+        - value: 0
+          label: "Published"
+        - value: 1
+          label: "Unpublished"
+        - value: 2
+          label: "Deleted"
+        - value: 3
+          label: "Deleted Unpublished"
+    - name: connectionreferences
+      type: Edm.String
+      display_name: ""
+      description: "The connection references of the application."
+      iscomputed: false
+      isreadonly: false
+    - name: createdbyclientversion
+      type: Edm.String
+      display_name: ""
+      description: "The version of the client that was used to author the application."
+      iscomputed: false
+      isreadonly: false
+    - name: createdtime
+      type: Edm.DateTimeOffset
+      display_name: "Created Time"
+      description: "Date and time when the application was created."
+      iscomputed: false
+      isreadonly: false
+    - name: databasereferences
+      type: Edm.String
+      display_name: ""
+      description: "The database references of the application."
+      iscomputed: false
+      isreadonly: false
+    - name: description
+      type: Edm.String
+      display_name: "The description."
+      description: "The description of the app."
+      iscomputed: false
+      isreadonly: false
+    - name: displayname
+      type: Edm.String
+      display_name: ""
+      description: "The display name of the app."
+      iscomputed: false
+      isreadonly: false
+    - name: embeddedapp
+      type: Edm.String
+      display_name: ""
+      description: "Internal use. The embedded app information."
+      iscomputed: false
+      isreadonly: false
+    - name: galleryitemid
+      type: Edm.String
+      display_name: "The gallery item identifier"
+      description: "The gallery item identifier."
+      iscomputed: false
+      isreadonly: false
+    - name: introducedversion
+      type: Edm.String
+      display_name: "Introduced Version"
+      description: "Version in which the canvas app is introduced."
+      iscomputed: false
+      isreadonly: false
+    - name: iscdsupgraded
+      type: Edm.Boolean
+      display_name: "Is CDS Upgraded"
+      description: "Indicates whether the canvas app contains CDS 1.0 references."
+      iscomputed: false
+      isreadonly: false
+      options:
+        - value: 1
+          label: "True"
+        - value: 0
+          label: "False"
+    - name: isfeaturedapp
+      type: Edm.Boolean
+      display_name: "Is Featured App"
+      description: "Indicates whether the canvas app is a featured app."
+      iscomputed: false
+      isreadonly: false
+      options:
+        - value: 1
+          label: "True"
+        - value: 0
+          label: "False"
+    - name: isheroapp
+      type: Edm.Boolean
+      display_name: "Is Hero App"
+      description: "Indicates whether the canvas app is a hero app."
+      iscomputed: false
+      isreadonly: false
+      options:
+        - value: 1
+          label: "True"
+        - value: 0
+          label: "False"
+    - name: ishidden
+      type: Edm.Boolean
+      display_name: "Is Hidden"
+      description: "Indicates whether the canvas app is hidden from a user's list."
+      iscomputed: false
+      isreadonly: false
+      options:
+        - value: 1
+          label: "True"
+        - value: 0
+          label: "False"
+    - name: ismanaged
+      type: Edm.Boolean
+      display_name: "Is Managed"
+      description: "Indicates whether the solution component is part of a managed solution."
+      iscomputed: false
+      isreadonly: true
+      options:
+        - value: 1
+          label: "Managed"
+        - value: 0
+          label: "Unmanaged"
+    - name: lastmodifiedtime
+      type: Edm.DateTimeOffset
+      display_name: "Last Modified Time"
+      description: "Date and time when the application was last modified."
+      iscomputed: false
+      isreadonly: false
+    - name: lastpublishtime
+      type: Edm.DateTimeOffset
+      display_name: "Last Publish Time"
+      description: "Date and time when the application was last published."
+      iscomputed: false
+      isreadonly: false
+    - name: minclientversion
+      type: Edm.String
+      display_name: ""
+      description: "The version of the client that was used to author the application."
+      iscomputed: false
+      isreadonly: false
+    - name: name
+      type: Edm.String
+      display_name: "CanvasApp Name"
+      description: "Name of the CanvasApp"
+      iscomputed: false
+      isreadonly: false
+    - name: overwritetime
+      type: Edm.DateTimeOffset
+      display_name: "Record Overwrite Time"
+      description: "For internal use only."
+      iscomputed: false
+      isreadonly: true
+    - name: publisher
+      type: Edm.String
+      display_name: ""
+      description: "The publisher of the app."
+      iscomputed: false
+      isreadonly: false
+    - name: solutionid
+      type: Edm.Guid
+      display_name: "Solution"
+      description: "Unique identifier of the associated solution."
+      iscomputed: false
+      isreadonly: true
+    - name: status
+      type: Edm.String
+      display_name: "Status"
+      description: "A value indicating whether the application is ready for consumption."
+      iscomputed: false
+      isreadonly: false
+    - name: tags
+      type: Edm.String
+      display_name: ""
+      description: "The metadata tags of the application."
+      iscomputed: false
+      isreadonly: false
+    - name: versionnumber
+      type: Edm.Int64
+      display_name: ""
+      description: ""
+      iscomputed: false
+      isreadonly: true
+lookup_properties:
+  description: "Lookup properties are read-only, computed properties which contain entity primary key Edm.Guid data for one or more corresponding single-valued navigation properties. More information: [Lookup properties](https://docs.microsoft.com/dynamics365/customer-engagement/developer/webapi/web-api-types-operations#lookup-properties) and [Retrieve data about lookup properties](https://docs.microsoft.com/dynamics365/customer-engagement/developer/webapi/query-data-web-api#retrieve-data-about-lookup-properties)."
+  property_items:
+  - name: _ownerid_value
+    single_valued_navigation_property:
+    - ownerid
+    description: "Unique identifier of the user or team who owns the canvas app."
+  - name: _owningbusinessunit_value
+    single_valued_navigation_property:
+    - owningbusinessunit
+    description: "Unique identifier of the business unit that owns the process."
+  - name: _owningteam_value
+    description: "Unique identifier of the team who owns the process."
+  - name: _owninguser_value
+    description: "Unique identifier of the user who owns the process."
+single_valued_navigation_properties:
+  description: "Single-valued navigation properties represent lookup fields where a single entity can be referenced. Each single-valued navigation property has a corresponding partner collection-valued navigation property on the related entity."
+  property_items:
+  - name: FK_CanvasApp_Solution
+    type: Microsoft.Dynamics.CRM.solution
+    partner: FK_CanvasApp_Solution
+  - name: ownerid
+    type: Microsoft.Dynamics.CRM.principal
+    partner: owner_canvasapp
+  - name: owningbusinessunit
+    type: Microsoft.Dynamics.CRM.businessunit
+    partner: businessunit_canvasapp
+# This entity has no collection-valued navigation properties
+# This entity has no derived entities.
+operations:
+  description: "The following operations can be used with the canvasapp entity type."
+  operation_items:
+  - name: Microsoft.Dynamics.CRM.GrantAccess
+    binding_type: "Not Bound"
+  - name: Microsoft.Dynamics.CRM.RevokeAccess
+    binding_type: "Not Bound"
+solutions:
+  description: "The following solutions include the canvasapp entity type."
+  solution_items:
+  - type: Microsoft.Dynamics.CRM.System
+    description: "Internal CRM System Solution"
+# This entity has no remarks.
+href_see_also:
+- text: "Use the Common Data Service Web API"
+  href: "https://docs.microsoft.com/powerapps/developer/common-data-service/webapi/overview"
+xref_see_also:
+- Microsoft.Dynamics.CRM.EntityTypeIndex
+- Microsoft.Dynamics.CRM.ActionIndex
+- Microsoft.Dynamics.CRM.FunctionIndex
+- Microsoft.Dynamics.CRM.QueryFunctionIndex
+- Microsoft.Dynamics.CRM.ComplexTypeIndex
+- Microsoft.Dynamics.CRM.EnumTypeIndex
+- Microsoft.Dynamics.CRM.MetadataEntityTypeIndex
+- Microsoft.Dynamics.CRM.SolutionIndex

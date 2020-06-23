@@ -3,22 +3,20 @@ uid: Microsoft.Dynamics.CRM.msdyn_projectteammembersignup
 name: "msdyn_projectteammembersignup"
 type: entitytype
 metadata: 
-  title: "Microsoft Dynamics 365 Customer Engagement msdyn_projectteammembersignup EntityType Reference | MicrosoftDocs"
-  ms.date: "03/20/2018"
+  title: "Common Data Service and Dynamics 365 Customer Engagement msdyn_projectteammembersignup EntityType Reference | MicrosoftDocs"
+  ms.date: "05/03/2020"
   ms.service: "crm-online"
   ms.topic: "reference"
-  applies_to: 
-  - "Dynamics 365 (online)"
   ms.assetid: 17af18b4-4c5a-41d8-a3a9-c8aef396c5c1
-  author: "jimdaly"
-  ms.author: "jdaly"
-  manager: "jdaly"
-  meta-description: "Reference information about the Dynamics 365 Customer Engagement msdyn_projectteammembersignup entitytype."
+  author: "KumarVivek"
+  ms.author: "kvivek"
+  manager: "Annbe"
+  meta-description: "Reference information about the msdyn_projectteammembersignup entitytype."
 description: "Entity used to capture all resources that have applied for open position on projects."
 header:
   entity_set_path: "[organization URI]/api/data/v9.0/msdyn_projectteammembersignups"
   base_type: Microsoft.Dynamics.CRM.crmbaseentity
-  display_name: Project Team Member Sign-Up
+  display_name: Project Team Member Sign-Up (Deprecated in v3.0)
   primary_key: msdyn_projectteammembersignupid
   primary_name_attribute: msdyn_name
   operations_supported:
@@ -210,10 +208,6 @@ operations:
   operation_items:
   - name: Microsoft.Dynamics.CRM.IsValidStateTransition
     binding_type: "Not Bound"
-  - name: Microsoft.Dynamics.CRM.msdyn_ProjectTeamMemberSignupprocessaccept
-    binding_type: "Entity"
-  - name: Microsoft.Dynamics.CRM.msdyn_ProjectTeamUpdateMembershipStatus
-    binding_type: "Entity"
 solutions:
   description: "The following solutions include the msdyn_projectteammembersignup entity type."
   solution_items:
@@ -221,8 +215,8 @@ solutions:
     description: "Microsoft Dynamics 365 for Project Service Automation is an end-to-end solution that helps sales and delivery teams engage customers and deliver billable projects on time and within budget. Project Service gives you the tools you need to: Estimate, quote, and contract work; Plan and assign resources; Enable team collaboration; Capture time, expense, and progress data for real-time insights and accurate invoicing."
 # This entity has no remarks.
 href_see_also:
-- text: "Use the Microsoft Dynamics 365 Customer Engagement Web API"
-  href: "https://docs.microsoft.com/dynamics365/customer-engagement/developer/use-microsoft-dynamics-365-web-api"
+- text: "Use the Common Data Service Web API"
+  href: "https://docs.microsoft.com/powerapps/developer/common-data-service/webapi/overview"
 xref_see_also:
 - Microsoft.Dynamics.CRM.EntityTypeIndex
 - Microsoft.Dynamics.CRM.ActionIndex

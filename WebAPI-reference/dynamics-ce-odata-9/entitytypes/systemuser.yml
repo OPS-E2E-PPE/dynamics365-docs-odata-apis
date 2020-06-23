@@ -3,17 +3,15 @@ uid: Microsoft.Dynamics.CRM.systemuser
 name: "systemuser"
 type: entitytype
 metadata: 
-  title: "Microsoft Dynamics 365 Customer Engagement systemuser EntityType Reference | MicrosoftDocs"
-  ms.date: "03/20/2018"
+  title: "Common Data Service and Dynamics 365 Customer Engagement systemuser EntityType Reference | MicrosoftDocs"
+  ms.date: "05/03/2020"
   ms.service: "crm-online"
   ms.topic: "reference"
-  applies_to: 
-  - "Dynamics 365 (online)"
   ms.assetid: eab4e150-fafa-40a4-b929-4a6fc08d5cdd
-  author: "jimdaly"
-  ms.author: "jdaly"
-  manager: "jdaly"
-  meta-description: "Reference information about the Dynamics 365 Customer Engagement systemuser entitytype."
+  author: "KumarVivek"
+  ms.author: "kvivek"
+  manager: "Annbe"
+  meta-description: "Reference information about the systemuser entitytype."
 description: "Person with access to the Microsoft CRM system and who owns objects in the Microsoft CRM database."
 header:
   entity_set_path: "[organization URI]/api/data/v9.0/systemusers"
@@ -641,6 +639,17 @@ properties:
       description: "Date and time when the user was last modified."
       iscomputed: false
       isreadonly: true
+    - name: msdyn_gdproptout
+      type: Edm.Boolean
+      display_name: "GDPR Optout"
+      description: "Describes whether user is opted out or not"
+      iscomputed: false
+      isreadonly: false
+      options:
+        - value: 1
+          label: "Yes"
+        - value: 0
+          label: "No"
     - name: nickname
       type: Edm.String
       display_name: "Nickname"
@@ -774,7 +783,7 @@ properties:
       isreadonly: false
     - name: stageid
       type: Edm.Guid
-      display_name: "Process Stage"
+      display_name: "(Deprecated) Process Stage"
       description: "Shows the ID of the stage."
       iscomputed: false
       isreadonly: false
@@ -798,7 +807,7 @@ properties:
       isreadonly: false
     - name: traversedpath
       type: Edm.String
-      display_name: "Traversed Path"
+      display_name: "(Deprecated) Traversed Path"
       description: "For internal use only."
       iscomputed: false
       isreadonly: false
@@ -808,6 +817,12 @@ properties:
       description: "Shows the type of user license."
       iscomputed: false
       isreadonly: false
+    - name: userpuid
+      type: Edm.String
+      display_name: "User PUID"
+      description: " User PUID User Identifiable Information"
+      iscomputed: false
+      isreadonly: true
     - name: utcconversiontimezonecode
       type: Edm.Int32
       display_name: "UTC Conversion Time Zone Code"
@@ -1106,6 +1121,18 @@ collection_valued_navigation_properties:
     partner: modifiedby
   - name: lk_activitypointer_modifiedonbehalfby
     type: Microsoft.Dynamics.CRM.activitypointer
+    partner: modifiedonbehalfby
+  - name: lk_adminsettingsentity_createdby
+    type: Microsoft.Dynamics.CRM.adminsettingsentity
+    partner: createdby
+  - name: lk_adminsettingsentity_createdonbehalfby
+    type: Microsoft.Dynamics.CRM.adminsettingsentity
+    partner: createdonbehalfby
+  - name: lk_adminsettingsentity_modifiedby
+    type: Microsoft.Dynamics.CRM.adminsettingsentity
+    partner: modifiedby
+  - name: lk_adminsettingsentity_modifiedonbehalfby
+    type: Microsoft.Dynamics.CRM.adminsettingsentity
     partner: modifiedonbehalfby
   - name: lk_annotationbase_createdby
     type: Microsoft.Dynamics.CRM.annotation
@@ -1440,11 +1467,35 @@ collection_valued_navigation_properties:
   - name: lk_connectionbase_modifiedonbehalfby
     type: Microsoft.Dynamics.CRM.connection
     partner: modifiedonbehalfby
+  - name: lk_connectionreference_createdby
+    type: Microsoft.Dynamics.CRM.connectionreference
+    partner: createdby
+  - name: lk_connectionreference_createdonbehalfby
+    type: Microsoft.Dynamics.CRM.connectionreference
+    partner: createdonbehalfby
+  - name: lk_connectionreference_modifiedby
+    type: Microsoft.Dynamics.CRM.connectionreference
+    partner: modifiedby
+  - name: lk_connectionreference_modifiedonbehalfby
+    type: Microsoft.Dynamics.CRM.connectionreference
+    partner: modifiedonbehalfby
   - name: lk_connectionrolebase_createdonbehalfby
     type: Microsoft.Dynamics.CRM.connectionrole
     partner: createdonbehalfby
   - name: lk_connectionrolebase_modifiedonbehalfby
     type: Microsoft.Dynamics.CRM.connectionrole
+    partner: modifiedonbehalfby
+  - name: lk_connector_createdby
+    type: Microsoft.Dynamics.CRM.connector
+    partner: createdby
+  - name: lk_connector_createdonbehalfby
+    type: Microsoft.Dynamics.CRM.connector
+    partner: createdonbehalfby
+  - name: lk_connector_modifiedby
+    type: Microsoft.Dynamics.CRM.connector
+    partner: modifiedby
+  - name: lk_connector_modifiedonbehalfby
+    type: Microsoft.Dynamics.CRM.connector
     partner: modifiedonbehalfby
   - name: lk_constraintbasedgroup_createdby
     type: Microsoft.Dynamics.CRM.constraintbasedgroup
@@ -1743,6 +1794,30 @@ collection_valued_navigation_properties:
   - name: lk_entitlementtemplatechannel_modifiedonbehalfby
     type: Microsoft.Dynamics.CRM.entitlementtemplatechannel
     partner: modifiedonbehalfby
+  - name: lk_environmentvariabledefinition_createdby
+    type: Microsoft.Dynamics.CRM.environmentvariabledefinition
+    partner: createdby
+  - name: lk_environmentvariabledefinition_createdonbehalfby
+    type: Microsoft.Dynamics.CRM.environmentvariabledefinition
+    partner: createdonbehalfby
+  - name: lk_environmentvariabledefinition_modifiedby
+    type: Microsoft.Dynamics.CRM.environmentvariabledefinition
+    partner: modifiedby
+  - name: lk_environmentvariabledefinition_modifiedonbehalfby
+    type: Microsoft.Dynamics.CRM.environmentvariabledefinition
+    partner: modifiedonbehalfby
+  - name: lk_environmentvariablevalue_createdby
+    type: Microsoft.Dynamics.CRM.environmentvariablevalue
+    partner: createdby
+  - name: lk_environmentvariablevalue_createdonbehalfby
+    type: Microsoft.Dynamics.CRM.environmentvariablevalue
+    partner: createdonbehalfby
+  - name: lk_environmentvariablevalue_modifiedby
+    type: Microsoft.Dynamics.CRM.environmentvariablevalue
+    partner: modifiedby
+  - name: lk_environmentvariablevalue_modifiedonbehalfby
+    type: Microsoft.Dynamics.CRM.environmentvariablevalue
+    partner: modifiedonbehalfby
   - name: lk_equipment_createdby
     type: Microsoft.Dynamics.CRM.equipment
     partner: createdby
@@ -1821,6 +1896,18 @@ collection_valued_navigation_properties:
   - name: lk_fixedmonthlyfiscalcalendar_salespersonid
     type: Microsoft.Dynamics.CRM.fixedmonthlyfiscalcalendar
     partner: salespersonid
+  - name: lk_flowsession_createdby
+    type: Microsoft.Dynamics.CRM.flowsession
+    partner: createdby
+  - name: lk_flowsession_createdonbehalfby
+    type: Microsoft.Dynamics.CRM.flowsession
+    partner: createdonbehalfby
+  - name: lk_flowsession_modifiedby
+    type: Microsoft.Dynamics.CRM.flowsession
+    partner: modifiedby
+  - name: lk_flowsession_modifiedonbehalfby
+    type: Microsoft.Dynamics.CRM.flowsession
+    partner: modifiedonbehalfby
   - name: lk_goal_createdby
     type: Microsoft.Dynamics.CRM.goal
     partner: createdby
@@ -2181,18 +2268,6 @@ collection_valued_navigation_properties:
   - name: lk_mailmergetemplatebase_modifiedby
     type: Microsoft.Dynamics.CRM.mailmergetemplate
     partner: modifiedby
-  - name: lk_mbs_pluginprofile_createdby
-    type: Microsoft.Dynamics.CRM.mbs_pluginprofile
-    partner: createdby
-  - name: lk_mbs_pluginprofile_createdonbehalfby
-    type: Microsoft.Dynamics.CRM.mbs_pluginprofile
-    partner: createdonbehalfby
-  - name: lk_mbs_pluginprofile_modifiedby
-    type: Microsoft.Dynamics.CRM.mbs_pluginprofile
-    partner: modifiedby
-  - name: lk_mbs_pluginprofile_modifiedonbehalfby
-    type: Microsoft.Dynamics.CRM.mbs_pluginprofile
-    partner: modifiedonbehalfby
   - name: lk_metric_createdby
     type: Microsoft.Dynamics.CRM.metric
     partner: createdby
@@ -2256,30 +2331,6 @@ collection_valued_navigation_properties:
   - name: lk_monthlyfiscalcalendar_salespersonid
     type: Microsoft.Dynamics.CRM.monthlyfiscalcalendar
     partner: salespersonid
-  - name: lk_ms_newsitem_createdby
-    type: Microsoft.Dynamics.CRM.ms_newsitem
-    partner: createdby
-  - name: lk_ms_newsitem_createdonbehalfby
-    type: Microsoft.Dynamics.CRM.ms_newsitem
-    partner: createdonbehalfby
-  - name: lk_ms_newsitem_modifiedby
-    type: Microsoft.Dynamics.CRM.ms_newsitem
-    partner: modifiedby
-  - name: lk_ms_newsitem_modifiedonbehalfby
-    type: Microsoft.Dynamics.CRM.ms_newsitem
-    partner: modifiedonbehalfby
-  - name: lk_ms_satori_createdby
-    type: Microsoft.Dynamics.CRM.ms_satori
-    partner: createdby
-  - name: lk_ms_satori_createdonbehalfby
-    type: Microsoft.Dynamics.CRM.ms_satori
-    partner: createdonbehalfby
-  - name: lk_ms_satori_modifiedby
-    type: Microsoft.Dynamics.CRM.ms_satori
-    partner: modifiedby
-  - name: lk_ms_satori_modifiedonbehalfby
-    type: Microsoft.Dynamics.CRM.ms_satori
-    partner: modifiedonbehalfby
   - name: lk_msdyn_accountpricelist_createdby
     type: Microsoft.Dynamics.CRM.msdyn_accountpricelist
     partner: createdby
@@ -2435,6 +2486,222 @@ collection_valued_navigation_properties:
     partner: modifiedby
   - name: lk_msdyn_agreementsubstatus_modifiedonbehalfby
     type: Microsoft.Dynamics.CRM.msdyn_agreementsubstatus
+    partner: modifiedonbehalfby
+  - name: lk_msdyn_aibdataset_createdby
+    type: Microsoft.Dynamics.CRM.msdyn_aibdataset
+    partner: createdby
+  - name: lk_msdyn_aibdataset_createdonbehalfby
+    type: Microsoft.Dynamics.CRM.msdyn_aibdataset
+    partner: createdonbehalfby
+  - name: lk_msdyn_aibdataset_modifiedby
+    type: Microsoft.Dynamics.CRM.msdyn_aibdataset
+    partner: modifiedby
+  - name: lk_msdyn_aibdataset_modifiedonbehalfby
+    type: Microsoft.Dynamics.CRM.msdyn_aibdataset
+    partner: modifiedonbehalfby
+  - name: lk_msdyn_aibdatasetfile_createdby
+    type: Microsoft.Dynamics.CRM.msdyn_aibdatasetfile
+    partner: createdby
+  - name: lk_msdyn_aibdatasetfile_createdonbehalfby
+    type: Microsoft.Dynamics.CRM.msdyn_aibdatasetfile
+    partner: createdonbehalfby
+  - name: lk_msdyn_aibdatasetfile_modifiedby
+    type: Microsoft.Dynamics.CRM.msdyn_aibdatasetfile
+    partner: modifiedby
+  - name: lk_msdyn_aibdatasetfile_modifiedonbehalfby
+    type: Microsoft.Dynamics.CRM.msdyn_aibdatasetfile
+    partner: modifiedonbehalfby
+  - name: lk_msdyn_aibdatasetrecord_createdby
+    type: Microsoft.Dynamics.CRM.msdyn_aibdatasetrecord
+    partner: createdby
+  - name: lk_msdyn_aibdatasetrecord_createdonbehalfby
+    type: Microsoft.Dynamics.CRM.msdyn_aibdatasetrecord
+    partner: createdonbehalfby
+  - name: lk_msdyn_aibdatasetrecord_modifiedby
+    type: Microsoft.Dynamics.CRM.msdyn_aibdatasetrecord
+    partner: modifiedby
+  - name: lk_msdyn_aibdatasetrecord_modifiedonbehalfby
+    type: Microsoft.Dynamics.CRM.msdyn_aibdatasetrecord
+    partner: modifiedonbehalfby
+  - name: lk_msdyn_aibdatasetscontainer_createdby
+    type: Microsoft.Dynamics.CRM.msdyn_aibdatasetscontainer
+    partner: createdby
+  - name: lk_msdyn_aibdatasetscontainer_createdonbehalfby
+    type: Microsoft.Dynamics.CRM.msdyn_aibdatasetscontainer
+    partner: createdonbehalfby
+  - name: lk_msdyn_aibdatasetscontainer_modifiedby
+    type: Microsoft.Dynamics.CRM.msdyn_aibdatasetscontainer
+    partner: modifiedby
+  - name: lk_msdyn_aibdatasetscontainer_modifiedonbehalfby
+    type: Microsoft.Dynamics.CRM.msdyn_aibdatasetscontainer
+    partner: modifiedonbehalfby
+  - name: lk_msdyn_aibfile_createdby
+    type: Microsoft.Dynamics.CRM.msdyn_aibfile
+    partner: createdby
+  - name: lk_msdyn_aibfile_createdonbehalfby
+    type: Microsoft.Dynamics.CRM.msdyn_aibfile
+    partner: createdonbehalfby
+  - name: lk_msdyn_aibfile_modifiedby
+    type: Microsoft.Dynamics.CRM.msdyn_aibfile
+    partner: modifiedby
+  - name: lk_msdyn_aibfile_modifiedonbehalfby
+    type: Microsoft.Dynamics.CRM.msdyn_aibfile
+    partner: modifiedonbehalfby
+  - name: lk_msdyn_aibfileattacheddata_createdby
+    type: Microsoft.Dynamics.CRM.msdyn_aibfileattacheddata
+    partner: createdby
+  - name: lk_msdyn_aibfileattacheddata_createdonbehalfby
+    type: Microsoft.Dynamics.CRM.msdyn_aibfileattacheddata
+    partner: createdonbehalfby
+  - name: lk_msdyn_aibfileattacheddata_modifiedby
+    type: Microsoft.Dynamics.CRM.msdyn_aibfileattacheddata
+    partner: modifiedby
+  - name: lk_msdyn_aibfileattacheddata_modifiedonbehalfby
+    type: Microsoft.Dynamics.CRM.msdyn_aibfileattacheddata
+    partner: modifiedonbehalfby
+  - name: lk_msdyn_aiconfiguration_createdby
+    type: Microsoft.Dynamics.CRM.msdyn_aiconfiguration
+    partner: createdby
+  - name: lk_msdyn_aiconfiguration_createdonbehalfby
+    type: Microsoft.Dynamics.CRM.msdyn_aiconfiguration
+    partner: createdonbehalfby
+  - name: lk_msdyn_aiconfiguration_modifiedby
+    type: Microsoft.Dynamics.CRM.msdyn_aiconfiguration
+    partner: modifiedby
+  - name: lk_msdyn_aiconfiguration_modifiedonbehalfby
+    type: Microsoft.Dynamics.CRM.msdyn_aiconfiguration
+    partner: modifiedonbehalfby
+  - name: lk_msdyn_aifptrainingdocument_createdby
+    type: Microsoft.Dynamics.CRM.msdyn_aifptrainingdocument
+    partner: createdby
+  - name: lk_msdyn_aifptrainingdocument_createdonbehalfby
+    type: Microsoft.Dynamics.CRM.msdyn_aifptrainingdocument
+    partner: createdonbehalfby
+  - name: lk_msdyn_aifptrainingdocument_modifiedby
+    type: Microsoft.Dynamics.CRM.msdyn_aifptrainingdocument
+    partner: modifiedby
+  - name: lk_msdyn_aifptrainingdocument_modifiedonbehalfby
+    type: Microsoft.Dynamics.CRM.msdyn_aifptrainingdocument
+    partner: modifiedonbehalfby
+  - name: lk_msdyn_aimodel_createdby
+    type: Microsoft.Dynamics.CRM.msdyn_aimodel
+    partner: createdby
+  - name: lk_msdyn_aimodel_createdonbehalfby
+    type: Microsoft.Dynamics.CRM.msdyn_aimodel
+    partner: createdonbehalfby
+  - name: lk_msdyn_aimodel_modifiedby
+    type: Microsoft.Dynamics.CRM.msdyn_aimodel
+    partner: modifiedby
+  - name: lk_msdyn_aimodel_modifiedonbehalfby
+    type: Microsoft.Dynamics.CRM.msdyn_aimodel
+    partner: modifiedonbehalfby
+  - name: lk_msdyn_aiodimage_createdby
+    type: Microsoft.Dynamics.CRM.msdyn_aiodimage
+    partner: createdby
+  - name: lk_msdyn_aiodimage_createdonbehalfby
+    type: Microsoft.Dynamics.CRM.msdyn_aiodimage
+    partner: createdonbehalfby
+  - name: lk_msdyn_aiodimage_modifiedby
+    type: Microsoft.Dynamics.CRM.msdyn_aiodimage
+    partner: modifiedby
+  - name: lk_msdyn_aiodimage_modifiedonbehalfby
+    type: Microsoft.Dynamics.CRM.msdyn_aiodimage
+    partner: modifiedonbehalfby
+  - name: lk_msdyn_aiodlabel_createdby
+    type: Microsoft.Dynamics.CRM.msdyn_aiodlabel
+    partner: createdby
+  - name: lk_msdyn_aiodlabel_createdonbehalfby
+    type: Microsoft.Dynamics.CRM.msdyn_aiodlabel
+    partner: createdonbehalfby
+  - name: lk_msdyn_aiodlabel_modifiedby
+    type: Microsoft.Dynamics.CRM.msdyn_aiodlabel
+    partner: modifiedby
+  - name: lk_msdyn_aiodlabel_modifiedonbehalfby
+    type: Microsoft.Dynamics.CRM.msdyn_aiodlabel
+    partner: modifiedonbehalfby
+  - name: lk_msdyn_aiodtrainingboundingbox_createdby
+    type: Microsoft.Dynamics.CRM.msdyn_aiodtrainingboundingbox
+    partner: createdby
+  - name: lk_msdyn_aiodtrainingboundingbox_createdonbehalfby
+    type: Microsoft.Dynamics.CRM.msdyn_aiodtrainingboundingbox
+    partner: createdonbehalfby
+  - name: lk_msdyn_aiodtrainingboundingbox_modifiedby
+    type: Microsoft.Dynamics.CRM.msdyn_aiodtrainingboundingbox
+    partner: modifiedby
+  - name: lk_msdyn_aiodtrainingboundingbox_modifiedonbehalfby
+    type: Microsoft.Dynamics.CRM.msdyn_aiodtrainingboundingbox
+    partner: modifiedonbehalfby
+  - name: lk_msdyn_aiodtrainingimage_createdby
+    type: Microsoft.Dynamics.CRM.msdyn_aiodtrainingimage
+    partner: createdby
+  - name: lk_msdyn_aiodtrainingimage_createdonbehalfby
+    type: Microsoft.Dynamics.CRM.msdyn_aiodtrainingimage
+    partner: createdonbehalfby
+  - name: lk_msdyn_aiodtrainingimage_modifiedby
+    type: Microsoft.Dynamics.CRM.msdyn_aiodtrainingimage
+    partner: modifiedby
+  - name: lk_msdyn_aiodtrainingimage_modifiedonbehalfby
+    type: Microsoft.Dynamics.CRM.msdyn_aiodtrainingimage
+    partner: modifiedonbehalfby
+  - name: lk_msdyn_aitemplate_createdby
+    type: Microsoft.Dynamics.CRM.msdyn_aitemplate
+    partner: createdby
+  - name: lk_msdyn_aitemplate_createdonbehalfby
+    type: Microsoft.Dynamics.CRM.msdyn_aitemplate
+    partner: createdonbehalfby
+  - name: lk_msdyn_aitemplate_modifiedby
+    type: Microsoft.Dynamics.CRM.msdyn_aitemplate
+    partner: modifiedby
+  - name: lk_msdyn_aitemplate_modifiedonbehalfby
+    type: Microsoft.Dynamics.CRM.msdyn_aitemplate
+    partner: modifiedonbehalfby
+  - name: lk_msdyn_analysiscomponent_createdby
+    type: Microsoft.Dynamics.CRM.msdyn_analysiscomponent
+    partner: createdby
+  - name: lk_msdyn_analysiscomponent_createdonbehalfby
+    type: Microsoft.Dynamics.CRM.msdyn_analysiscomponent
+    partner: createdonbehalfby
+  - name: lk_msdyn_analysiscomponent_modifiedby
+    type: Microsoft.Dynamics.CRM.msdyn_analysiscomponent
+    partner: modifiedby
+  - name: lk_msdyn_analysiscomponent_modifiedonbehalfby
+    type: Microsoft.Dynamics.CRM.msdyn_analysiscomponent
+    partner: modifiedonbehalfby
+  - name: lk_msdyn_analysisjob_createdby
+    type: Microsoft.Dynamics.CRM.msdyn_analysisjob
+    partner: createdby
+  - name: lk_msdyn_analysisjob_createdonbehalfby
+    type: Microsoft.Dynamics.CRM.msdyn_analysisjob
+    partner: createdonbehalfby
+  - name: lk_msdyn_analysisjob_modifiedby
+    type: Microsoft.Dynamics.CRM.msdyn_analysisjob
+    partner: modifiedby
+  - name: lk_msdyn_analysisjob_modifiedonbehalfby
+    type: Microsoft.Dynamics.CRM.msdyn_analysisjob
+    partner: modifiedonbehalfby
+  - name: lk_msdyn_analysisresult_createdby
+    type: Microsoft.Dynamics.CRM.msdyn_analysisresult
+    partner: createdby
+  - name: lk_msdyn_analysisresult_createdonbehalfby
+    type: Microsoft.Dynamics.CRM.msdyn_analysisresult
+    partner: createdonbehalfby
+  - name: lk_msdyn_analysisresult_modifiedby
+    type: Microsoft.Dynamics.CRM.msdyn_analysisresult
+    partner: modifiedby
+  - name: lk_msdyn_analysisresult_modifiedonbehalfby
+    type: Microsoft.Dynamics.CRM.msdyn_analysisresult
+    partner: modifiedonbehalfby
+  - name: lk_msdyn_analysisresultdetail_createdby
+    type: Microsoft.Dynamics.CRM.msdyn_analysisresultdetail
+    partner: createdby
+  - name: lk_msdyn_analysisresultdetail_createdonbehalfby
+    type: Microsoft.Dynamics.CRM.msdyn_analysisresultdetail
+    partner: createdonbehalfby
+  - name: lk_msdyn_analysisresultdetail_modifiedby
+    type: Microsoft.Dynamics.CRM.msdyn_analysisresultdetail
+    partner: modifiedby
+  - name: lk_msdyn_analysisresultdetail_modifiedonbehalfby
+    type: Microsoft.Dynamics.CRM.msdyn_analysisresultdetail
     partner: modifiedonbehalfby
   - name: lk_msdyn_batchjob_createdby
     type: Microsoft.Dynamics.CRM.msdyn_batchjob
@@ -2819,6 +3086,18 @@ collection_valued_navigation_properties:
     partner: modifiedby
   - name: lk_msdyn_fieldservicesetting_modifiedonbehalfby
     type: Microsoft.Dynamics.CRM.msdyn_fieldservicesetting
+    partner: modifiedonbehalfby
+  - name: lk_msdyn_fieldserviceslaconfiguration_createdby
+    type: Microsoft.Dynamics.CRM.msdyn_fieldserviceslaconfiguration
+    partner: createdby
+  - name: lk_msdyn_fieldserviceslaconfiguration_createdonbehalfby
+    type: Microsoft.Dynamics.CRM.msdyn_fieldserviceslaconfiguration
+    partner: createdonbehalfby
+  - name: lk_msdyn_fieldserviceslaconfiguration_modifiedby
+    type: Microsoft.Dynamics.CRM.msdyn_fieldserviceslaconfiguration
+    partner: modifiedby
+  - name: lk_msdyn_fieldserviceslaconfiguration_modifiedonbehalfby
+    type: Microsoft.Dynamics.CRM.msdyn_fieldserviceslaconfiguration
     partner: modifiedonbehalfby
   - name: lk_msdyn_fieldservicesystemjob_createdby
     type: Microsoft.Dynamics.CRM.msdyn_fieldservicesystemjob
@@ -3287,18 +3566,6 @@ collection_valued_navigation_properties:
     partner: modifiedby
   - name: lk_msdyn_organizationalunit_modifiedonbehalfby
     type: Microsoft.Dynamics.CRM.msdyn_organizationalunit
-    partner: modifiedonbehalfby
-  - name: lk_msdyn_orginsightsuserdashboarddefinition_createdby
-    type: Microsoft.Dynamics.CRM.msdyn_orginsightsuserdashboarddefinition
-    partner: createdby
-  - name: lk_msdyn_orginsightsuserdashboarddefinition_createdonbehalfby
-    type: Microsoft.Dynamics.CRM.msdyn_orginsightsuserdashboarddefinition
-    partner: createdonbehalfby
-  - name: lk_msdyn_orginsightsuserdashboarddefinition_modifiedby
-    type: Microsoft.Dynamics.CRM.msdyn_orginsightsuserdashboarddefinition
-    partner: modifiedby
-  - name: lk_msdyn_orginsightsuserdashboarddefinition_modifiedonbehalfby
-    type: Microsoft.Dynamics.CRM.msdyn_orginsightsuserdashboarddefinition
     partner: modifiedonbehalfby
   - name: lk_msdyn_payment_createdby
     type: Microsoft.Dynamics.CRM.msdyn_payment
@@ -4092,6 +4359,18 @@ collection_valued_navigation_properties:
   - name: lk_msdyn_rtvsubstatus_modifiedonbehalfby
     type: Microsoft.Dynamics.CRM.msdyn_rtvsubstatus
     partner: modifiedonbehalfby
+  - name: lk_msdyn_salesinsightssettings_createdby
+    type: Microsoft.Dynamics.CRM.msdyn_salesinsightssettings
+    partner: createdby
+  - name: lk_msdyn_salesinsightssettings_createdonbehalfby
+    type: Microsoft.Dynamics.CRM.msdyn_salesinsightssettings
+    partner: createdonbehalfby
+  - name: lk_msdyn_salesinsightssettings_modifiedby
+    type: Microsoft.Dynamics.CRM.msdyn_salesinsightssettings
+    partner: modifiedby
+  - name: lk_msdyn_salesinsightssettings_modifiedonbehalfby
+    type: Microsoft.Dynamics.CRM.msdyn_salesinsightssettings
+    partner: modifiedonbehalfby
   - name: lk_msdyn_scheduleboardsetting_createdby
     type: Microsoft.Dynamics.CRM.msdyn_scheduleboardsetting
     partner: createdby
@@ -4140,6 +4419,30 @@ collection_valued_navigation_properties:
   - name: lk_msdyn_shipvia_modifiedonbehalfby
     type: Microsoft.Dynamics.CRM.msdyn_shipvia
     partner: modifiedonbehalfby
+  - name: lk_msdyn_siconfig_createdby
+    type: Microsoft.Dynamics.CRM.msdyn_siconfig
+    partner: createdby
+  - name: lk_msdyn_siconfig_createdonbehalfby
+    type: Microsoft.Dynamics.CRM.msdyn_siconfig
+    partner: createdonbehalfby
+  - name: lk_msdyn_siconfig_modifiedby
+    type: Microsoft.Dynamics.CRM.msdyn_siconfig
+    partner: modifiedby
+  - name: lk_msdyn_siconfig_modifiedonbehalfby
+    type: Microsoft.Dynamics.CRM.msdyn_siconfig
+    partner: modifiedonbehalfby
+  - name: lk_msdyn_sikeyvalueconfig_createdby
+    type: Microsoft.Dynamics.CRM.msdyn_sikeyvalueconfig
+    partner: createdby
+  - name: lk_msdyn_sikeyvalueconfig_createdonbehalfby
+    type: Microsoft.Dynamics.CRM.msdyn_sikeyvalueconfig
+    partner: createdonbehalfby
+  - name: lk_msdyn_sikeyvalueconfig_modifiedby
+    type: Microsoft.Dynamics.CRM.msdyn_sikeyvalueconfig
+    partner: modifiedby
+  - name: lk_msdyn_sikeyvalueconfig_modifiedonbehalfby
+    type: Microsoft.Dynamics.CRM.msdyn_sikeyvalueconfig
+    partner: modifiedonbehalfby
   - name: lk_msdyn_systemuserschedulersetting_createdby
     type: Microsoft.Dynamics.CRM.msdyn_systemuserschedulersetting
     partner: createdby
@@ -4175,6 +4478,18 @@ collection_valued_navigation_properties:
     partner: modifiedby
   - name: lk_msdyn_taxcodedetail_modifiedonbehalfby
     type: Microsoft.Dynamics.CRM.msdyn_taxcodedetail
+    partner: modifiedonbehalfby
+  - name: lk_msdyn_teamscollaboration_createdby
+    type: Microsoft.Dynamics.CRM.msdyn_teamscollaboration
+    partner: createdby
+  - name: lk_msdyn_teamscollaboration_createdonbehalfby
+    type: Microsoft.Dynamics.CRM.msdyn_teamscollaboration
+    partner: createdonbehalfby
+  - name: lk_msdyn_teamscollaboration_modifiedby
+    type: Microsoft.Dynamics.CRM.msdyn_teamscollaboration
+    partner: modifiedby
+  - name: lk_msdyn_teamscollaboration_modifiedonbehalfby
+    type: Microsoft.Dynamics.CRM.msdyn_teamscollaboration
     partner: modifiedonbehalfby
   - name: lk_msdyn_timeentry_createdby
     type: Microsoft.Dynamics.CRM.msdyn_timeentry
@@ -5202,6 +5517,18 @@ collection_valued_navigation_properties:
   - name: lk_serviceendpointbase_modifiedonbehalfby
     type: Microsoft.Dynamics.CRM.serviceendpoint
     partner: modifiedonbehalfby
+  - name: lk_serviceplan_createdby
+    type: Microsoft.Dynamics.CRM.serviceplan
+    partner: createdby
+  - name: lk_serviceplan_createdonbehalfby
+    type: Microsoft.Dynamics.CRM.serviceplan
+    partner: createdonbehalfby
+  - name: lk_serviceplan_modifiedby
+    type: Microsoft.Dynamics.CRM.serviceplan
+    partner: modifiedby
+  - name: lk_serviceplan_modifiedonbehalfby
+    type: Microsoft.Dynamics.CRM.serviceplan
+    partner: modifiedonbehalfby
   - name: lk_sharepointdocumentlocationbase_createdby
     type: Microsoft.Dynamics.CRM.sharepointdocumentlocation
     partner: createdby
@@ -5640,9 +5967,6 @@ collection_valued_navigation_properties:
   - name: mailbox_regarding_systemuser
     type: Microsoft.Dynamics.CRM.mailbox
     partner: regardingobjectid
-  - name: mbs_systemuser_mbs_pluginprofile
-    type: Microsoft.Dynamics.CRM.mbs_pluginprofile
-    partner: mbs_InitiatingUserId
   - name: modifiedby_connection
     type: Microsoft.Dynamics.CRM.connection
     partner: modifiedby
@@ -5799,6 +6123,9 @@ collection_valued_navigation_properties:
   - name: owner_activitypointers
     type: Microsoft.Dynamics.CRM.activitypointer
     partner: ownerid
+  - name: owner_adminsettingsentity
+    type: Microsoft.Dynamics.CRM.adminsettingsentity
+    partner: ownerid
   - name: owner_annotations
     type: Microsoft.Dynamics.CRM.annotation
     partner: ownerid
@@ -5829,8 +6156,14 @@ collection_valued_navigation_properties:
   - name: owner_bookingstatus
     type: Microsoft.Dynamics.CRM.bookingstatus
     partner: ownerid
+  - name: owner_callbackregistration
+    type: Microsoft.Dynamics.CRM.callbackregistration
+    partner: ownerid
   - name: owner_campaigns
     type: Microsoft.Dynamics.CRM.campaign
+    partner: ownerid
+  - name: owner_canvasapp
+    type: Microsoft.Dynamics.CRM.canvasapp
     partner: ownerid
   - name: owner_categories
     type: Microsoft.Dynamics.CRM.category
@@ -5838,8 +6171,14 @@ collection_valued_navigation_properties:
   - name: owner_characteristic
     type: Microsoft.Dynamics.CRM.characteristic
     partner: ownerid
+  - name: owner_connectionreference
+    type: Microsoft.Dynamics.CRM.connectionreference
+    partner: ownerid
   - name: owner_connections
     type: Microsoft.Dynamics.CRM.connection
+    partner: ownerid
+  - name: owner_connector
+    type: Microsoft.Dynamics.CRM.connector
     partner: ownerid
   - name: owner_contacts
     type: Microsoft.Dynamics.CRM.contact
@@ -5859,11 +6198,20 @@ collection_valued_navigation_properties:
   - name: owner_entitlement
     type: Microsoft.Dynamics.CRM.entitlement
     partner: ownerid
+  - name: owner_environmentvariabledefinition
+    type: Microsoft.Dynamics.CRM.environmentvariabledefinition
+    partner: ownerid
+  - name: owner_environmentvariablevalue
+    type: Microsoft.Dynamics.CRM.environmentvariablevalue
+    partner: ownerid
   - name: owner_exchangesyncidmapping
     type: Microsoft.Dynamics.CRM.exchangesyncidmapping
     partner: ownerid
   - name: owner_feedback
     type: Microsoft.Dynamics.CRM.feedback
+    partner: ownerid
+  - name: owner_flowsession
+    type: Microsoft.Dynamics.CRM.flowsession
     partner: ownerid
   - name: owner_goal
     type: Microsoft.Dynamics.CRM.goal
@@ -5949,6 +6297,60 @@ collection_valued_navigation_properties:
   - name: owner_msdyn_agreementsubstatus
     type: Microsoft.Dynamics.CRM.msdyn_agreementsubstatus
     partner: ownerid
+  - name: owner_msdyn_aibdataset
+    type: Microsoft.Dynamics.CRM.msdyn_aibdataset
+    partner: ownerid
+  - name: owner_msdyn_aibdatasetfile
+    type: Microsoft.Dynamics.CRM.msdyn_aibdatasetfile
+    partner: ownerid
+  - name: owner_msdyn_aibdatasetrecord
+    type: Microsoft.Dynamics.CRM.msdyn_aibdatasetrecord
+    partner: ownerid
+  - name: owner_msdyn_aibdatasetscontainer
+    type: Microsoft.Dynamics.CRM.msdyn_aibdatasetscontainer
+    partner: ownerid
+  - name: owner_msdyn_aibfile
+    type: Microsoft.Dynamics.CRM.msdyn_aibfile
+    partner: ownerid
+  - name: owner_msdyn_aibfileattacheddata
+    type: Microsoft.Dynamics.CRM.msdyn_aibfileattacheddata
+    partner: ownerid
+  - name: owner_msdyn_aiconfiguration
+    type: Microsoft.Dynamics.CRM.msdyn_aiconfiguration
+    partner: ownerid
+  - name: owner_msdyn_aifptrainingdocument
+    type: Microsoft.Dynamics.CRM.msdyn_aifptrainingdocument
+    partner: ownerid
+  - name: owner_msdyn_aimodel
+    type: Microsoft.Dynamics.CRM.msdyn_aimodel
+    partner: ownerid
+  - name: owner_msdyn_aiodimage
+    type: Microsoft.Dynamics.CRM.msdyn_aiodimage
+    partner: ownerid
+  - name: owner_msdyn_aiodlabel
+    type: Microsoft.Dynamics.CRM.msdyn_aiodlabel
+    partner: ownerid
+  - name: owner_msdyn_aiodtrainingboundingbox
+    type: Microsoft.Dynamics.CRM.msdyn_aiodtrainingboundingbox
+    partner: ownerid
+  - name: owner_msdyn_aiodtrainingimage
+    type: Microsoft.Dynamics.CRM.msdyn_aiodtrainingimage
+    partner: ownerid
+  - name: owner_msdyn_aitemplate
+    type: Microsoft.Dynamics.CRM.msdyn_aitemplate
+    partner: ownerid
+  - name: owner_msdyn_analysiscomponent
+    type: Microsoft.Dynamics.CRM.msdyn_analysiscomponent
+    partner: ownerid
+  - name: owner_msdyn_analysisjob
+    type: Microsoft.Dynamics.CRM.msdyn_analysisjob
+    partner: ownerid
+  - name: owner_msdyn_analysisresult
+    type: Microsoft.Dynamics.CRM.msdyn_analysisresult
+    partner: ownerid
+  - name: owner_msdyn_analysisresultdetail
+    type: Microsoft.Dynamics.CRM.msdyn_analysisresultdetail
+    partner: ownerid
   - name: owner_msdyn_bookingalertstatus
     type: Microsoft.Dynamics.CRM.msdyn_bookingalertstatus
     partner: ownerid
@@ -6011,6 +6413,9 @@ collection_valued_navigation_properties:
     partner: ownerid
   - name: owner_msdyn_fieldservicesetting
     type: Microsoft.Dynamics.CRM.msdyn_fieldservicesetting
+    partner: ownerid
+  - name: owner_msdyn_fieldserviceslaconfiguration
+    type: Microsoft.Dynamics.CRM.msdyn_fieldserviceslaconfiguration
     partner: ownerid
   - name: owner_msdyn_findworkevent
     type: Microsoft.Dynamics.CRM.msdyn_findworkevent
@@ -6113,9 +6518,6 @@ collection_valued_navigation_properties:
     partner: ownerid
   - name: owner_msdyn_orderpricelist
     type: Microsoft.Dynamics.CRM.msdyn_orderpricelist
-    partner: ownerid
-  - name: owner_msdyn_orginsightsuserdashboarddefinition
-    type: Microsoft.Dynamics.CRM.msdyn_orginsightsuserdashboarddefinition
     partner: ownerid
   - name: owner_msdyn_payment
     type: Microsoft.Dynamics.CRM.msdyn_payment
@@ -6288,6 +6690,9 @@ collection_valued_navigation_properties:
   - name: owner_msdyn_rtvsubstatus
     type: Microsoft.Dynamics.CRM.msdyn_rtvsubstatus
     partner: ownerid
+  - name: owner_msdyn_salesinsightssettings
+    type: Microsoft.Dynamics.CRM.msdyn_salesinsightssettings
+    partner: ownerid
   - name: owner_msdyn_scheduleboardsetting
     type: Microsoft.Dynamics.CRM.msdyn_scheduleboardsetting
     partner: ownerid
@@ -6296,6 +6701,9 @@ collection_valued_navigation_properties:
     partner: ownerid
   - name: owner_msdyn_shipvia
     type: Microsoft.Dynamics.CRM.msdyn_shipvia
+    partner: ownerid
+  - name: owner_msdyn_siconfig
+    type: Microsoft.Dynamics.CRM.msdyn_siconfig
     partner: ownerid
   - name: owner_msdyn_systemuserschedulersetting
     type: Microsoft.Dynamics.CRM.msdyn_systemuserschedulersetting
@@ -6564,6 +6972,18 @@ collection_valued_navigation_properties:
   - name: SystemUser_BulkDeleteFailures
     type: Microsoft.Dynamics.CRM.bulkdeletefailure
     partner: regardingobjectid_systemuser
+  - name: systemuser_callbackregistration_createdby
+    type: Microsoft.Dynamics.CRM.callbackregistration
+    partner: callbackregistration_createdby
+  - name: systemuser_callbackregistration_createdonbehalfby
+    type: Microsoft.Dynamics.CRM.callbackregistration
+    partner: callbackregistration_createdonbehalfby
+  - name: systemuser_callbackregistration_modifiedby
+    type: Microsoft.Dynamics.CRM.callbackregistration
+    partner: callbackregistration_modifiedby
+  - name: systemuser_callbackregistration_modifiedonbehalfby
+    type: Microsoft.Dynamics.CRM.callbackregistration
+    partner: callbackregistration_modifiedonbehalfby
   - name: SystemUser_Campaigns
     type: Microsoft.Dynamics.CRM.campaign
     partner: owninguser
@@ -6663,6 +7083,9 @@ collection_valued_navigation_properties:
   - name: user_activity
     type: Microsoft.Dynamics.CRM.activitypointer
     partner: owninguser
+  - name: user_adminsettingsentity
+    type: Microsoft.Dynamics.CRM.adminsettingsentity
+    partner: owninguser
   - name: user_appointment
     type: Microsoft.Dynamics.CRM.appointment
     partner: owninguser_appointment
@@ -6705,6 +7128,12 @@ collection_valued_navigation_properties:
   - name: user_characteristic
     type: Microsoft.Dynamics.CRM.characteristic
     partner: owninguser
+  - name: user_connectionreference
+    type: Microsoft.Dynamics.CRM.connectionreference
+    partner: owninguser
+  - name: user_connector
+    type: Microsoft.Dynamics.CRM.connector
+    partner: owninguser
   - name: user_contractdetail
     type: Microsoft.Dynamics.CRM.contractdetail
     partner: owninguser
@@ -6717,12 +7146,21 @@ collection_valued_navigation_properties:
   - name: user_entitlementchannel
     type: Microsoft.Dynamics.CRM.entitlementchannel
     partner: owninguser
+  - name: user_environmentvariabledefinition
+    type: Microsoft.Dynamics.CRM.environmentvariabledefinition
+    partner: owninguser
+  - name: user_environmentvariablevalue
+    type: Microsoft.Dynamics.CRM.environmentvariablevalue
+    partner: owninguser
   - name: user_exchangesyncidmapping
     type: Microsoft.Dynamics.CRM.exchangesyncidmapping
     partner: owninguser
   - name: user_fax
     type: Microsoft.Dynamics.CRM.fax
     partner: owninguser_fax
+  - name: user_flowsession
+    type: Microsoft.Dynamics.CRM.flowsession
+    partner: owninguser
   - name: user_goal
     type: Microsoft.Dynamics.CRM.goal
     partner: owninguser
@@ -6789,6 +7227,60 @@ collection_valued_navigation_properties:
   - name: user_msdyn_agreementsubstatus
     type: Microsoft.Dynamics.CRM.msdyn_agreementsubstatus
     partner: owninguser
+  - name: user_msdyn_aibdataset
+    type: Microsoft.Dynamics.CRM.msdyn_aibdataset
+    partner: owninguser
+  - name: user_msdyn_aibdatasetfile
+    type: Microsoft.Dynamics.CRM.msdyn_aibdatasetfile
+    partner: owninguser
+  - name: user_msdyn_aibdatasetrecord
+    type: Microsoft.Dynamics.CRM.msdyn_aibdatasetrecord
+    partner: owninguser
+  - name: user_msdyn_aibdatasetscontainer
+    type: Microsoft.Dynamics.CRM.msdyn_aibdatasetscontainer
+    partner: owninguser
+  - name: user_msdyn_aibfile
+    type: Microsoft.Dynamics.CRM.msdyn_aibfile
+    partner: owninguser
+  - name: user_msdyn_aibfileattacheddata
+    type: Microsoft.Dynamics.CRM.msdyn_aibfileattacheddata
+    partner: owninguser
+  - name: user_msdyn_aiconfiguration
+    type: Microsoft.Dynamics.CRM.msdyn_aiconfiguration
+    partner: owninguser
+  - name: user_msdyn_aifptrainingdocument
+    type: Microsoft.Dynamics.CRM.msdyn_aifptrainingdocument
+    partner: owninguser
+  - name: user_msdyn_aimodel
+    type: Microsoft.Dynamics.CRM.msdyn_aimodel
+    partner: owninguser
+  - name: user_msdyn_aiodimage
+    type: Microsoft.Dynamics.CRM.msdyn_aiodimage
+    partner: owninguser
+  - name: user_msdyn_aiodlabel
+    type: Microsoft.Dynamics.CRM.msdyn_aiodlabel
+    partner: owninguser
+  - name: user_msdyn_aiodtrainingboundingbox
+    type: Microsoft.Dynamics.CRM.msdyn_aiodtrainingboundingbox
+    partner: owninguser
+  - name: user_msdyn_aiodtrainingimage
+    type: Microsoft.Dynamics.CRM.msdyn_aiodtrainingimage
+    partner: owninguser
+  - name: user_msdyn_aitemplate
+    type: Microsoft.Dynamics.CRM.msdyn_aitemplate
+    partner: owninguser
+  - name: user_msdyn_analysiscomponent
+    type: Microsoft.Dynamics.CRM.msdyn_analysiscomponent
+    partner: owninguser
+  - name: user_msdyn_analysisjob
+    type: Microsoft.Dynamics.CRM.msdyn_analysisjob
+    partner: owninguser
+  - name: user_msdyn_analysisresult
+    type: Microsoft.Dynamics.CRM.msdyn_analysisresult
+    partner: owninguser
+  - name: user_msdyn_analysisresultdetail
+    type: Microsoft.Dynamics.CRM.msdyn_analysisresultdetail
+    partner: owninguser
   - name: user_msdyn_bookingalertstatus
     type: Microsoft.Dynamics.CRM.msdyn_bookingalertstatus
     partner: owninguser
@@ -6851,6 +7343,9 @@ collection_valued_navigation_properties:
     partner: owninguser
   - name: user_msdyn_fieldservicesetting
     type: Microsoft.Dynamics.CRM.msdyn_fieldservicesetting
+    partner: owninguser
+  - name: user_msdyn_fieldserviceslaconfiguration
+    type: Microsoft.Dynamics.CRM.msdyn_fieldserviceslaconfiguration
     partner: owninguser
   - name: user_msdyn_findworkevent
     type: Microsoft.Dynamics.CRM.msdyn_findworkevent
@@ -6953,9 +7448,6 @@ collection_valued_navigation_properties:
     partner: owninguser
   - name: user_msdyn_orderpricelist
     type: Microsoft.Dynamics.CRM.msdyn_orderpricelist
-    partner: owninguser
-  - name: user_msdyn_orginsightsuserdashboarddefinition
-    type: Microsoft.Dynamics.CRM.msdyn_orginsightsuserdashboarddefinition
     partner: owninguser
   - name: user_msdyn_payment
     type: Microsoft.Dynamics.CRM.msdyn_payment
@@ -7128,6 +7620,9 @@ collection_valued_navigation_properties:
   - name: user_msdyn_rtvsubstatus
     type: Microsoft.Dynamics.CRM.msdyn_rtvsubstatus
     partner: owninguser
+  - name: user_msdyn_salesinsightssettings
+    type: Microsoft.Dynamics.CRM.msdyn_salesinsightssettings
+    partner: owninguser
   - name: user_msdyn_scheduleboardsetting
     type: Microsoft.Dynamics.CRM.msdyn_scheduleboardsetting
     partner: owninguser
@@ -7136,6 +7631,9 @@ collection_valued_navigation_properties:
     partner: owninguser
   - name: user_msdyn_shipvia
     type: Microsoft.Dynamics.CRM.msdyn_shipvia
+    partner: owninguser
+  - name: user_msdyn_siconfig
+    type: Microsoft.Dynamics.CRM.msdyn_siconfig
     partner: owninguser
   - name: user_msdyn_systemuserschedulersetting
     type: Microsoft.Dynamics.CRM.msdyn_systemuserschedulersetting
@@ -7298,13 +7796,9 @@ operations:
     binding_type: "Entity"
   - name: Microsoft.Dynamics.CRM.InstantiateFilters
     binding_type: "Entity"
-  - name: Microsoft.Dynamics.CRM.msdyn_GetMyChangedSkills
-    binding_type: "Entity"
-  - name: Microsoft.Dynamics.CRM.msdyn_LogFindWorkEvent
+  - name: Microsoft.Dynamics.CRM.msdyn_GDPROptoutUser
     binding_type: "Entity"
   - name: Microsoft.Dynamics.CRM.msdyn_RecommendWork
-    binding_type: "Entity"
-  - name: Microsoft.Dynamics.CRM.msdyn_UpdateChangedSkills
     binding_type: "Entity"
   - name: Microsoft.Dynamics.CRM.ReassignObjectsSystemUser
     binding_type: "Entity"
@@ -7322,9 +7816,15 @@ operations:
     binding_type: "Entity"
   - name: Microsoft.Dynamics.CRM.RetrieveUserLicenseInfo
     binding_type: "Entity"
+  - name: Microsoft.Dynamics.CRM.RetrieveUserPrivilegeByPrivilegeId
+    binding_type: "Entity"
+  - name: Microsoft.Dynamics.CRM.RetrieveUserPrivilegeByPrivilegeName
+    binding_type: "Entity"
   - name: Microsoft.Dynamics.CRM.RetrieveUserPrivileges
     binding_type: "Entity"
   - name: Microsoft.Dynamics.CRM.RetrieveUserQueues
+    binding_type: "Entity"
+  - name: Microsoft.Dynamics.CRM.RetrieveUsersPrivilegesThroughTeams
     binding_type: "Entity"
   - name: Microsoft.Dynamics.CRM.SetBusinessSystemUser
     binding_type: "Entity"
@@ -7340,8 +7840,14 @@ solutions:
   - type: Microsoft.Dynamics.CRM.FieldService
     description: "Microsoft Dynamics 365 for Field Service allows organizations of any size to deliver intelligent, world class field service, managing all aspects of the end-to-end field service management cycle. Features include scheduling, mobile, asset management, inventory control, customer notifications, and resource utilization controls that help maximize efficiency and minimize costs."
   - type: Microsoft.Dynamics.CRM.MicrosoftDynamicsScheduling
-    description: "Unified scheduling solution provides the infrastructure to express resource requirements for any entity in the system and help staff those requirements with resources based on the availability and applicability of the resource for the requirement."
+    description: "The Universal Resource Scheduling solution provides the infrastructure to express resource requirements for any entity in the system and help staff those requirements with resources based on the availability and applicability of the resource for the requirement."
+  - type: Microsoft.Dynamics.CRM.MicrosoftFormsPro
+    description: ""
   - type: Microsoft.Dynamics.CRM.msdynce_AppCommon
+    description: "For internal use only."
+  - type: Microsoft.Dynamics.CRM.msdynce_AppCommonPatch
+    description: "For internal use only."
+  - type: Microsoft.Dynamics.CRM.msdynce_AppCommonPatch201904
     description: "For internal use only."
   - type: Microsoft.Dynamics.CRM.msdynce_LeadManagement
     description: "Dynamics 365 workload for lead management."
@@ -7349,16 +7855,22 @@ solutions:
     description: "Dynamics 365 workload for product management."
   - type: Microsoft.Dynamics.CRM.msdynce_Sales
     description: "Dynamics 365 workload for sales."
+  - type: Microsoft.Dynamics.CRM.msdynce_SalesPatch202001
+    description: "Dynamics 365 workload for third patch of Sales."
   - type: Microsoft.Dynamics.CRM.msdynce_Service
+    description: "Dynamics 365 workload for service."
+  - type: Microsoft.Dynamics.CRM.msdynce_ServicePatch201911
     description: "Dynamics 365 workload for service."
   - type: Microsoft.Dynamics.CRM.ProjectService
     description: "Microsoft Dynamics 365 for Project Service Automation is an end-to-end solution that helps sales and delivery teams engage customers and deliver billable projects on time and within budget. Project Service gives you the tools you need to: Estimate, quote, and contract work; Plan and assign resources; Enable team collaboration; Capture time, expense, and progress data for real-time insights and accurate invoicing."
+  - type: Microsoft.Dynamics.CRM.SICommon
+    description: ""
   - type: Microsoft.Dynamics.CRM.System
     description: "Internal CRM System Solution"
 # This entity has no remarks.
 href_see_also:
-- text: "Use the Microsoft Dynamics 365 Customer Engagement Web API"
-  href: "https://docs.microsoft.com/dynamics365/customer-engagement/developer/use-microsoft-dynamics-365-web-api"
+- text: "Use the Common Data Service Web API"
+  href: "https://docs.microsoft.com/powerapps/developer/common-data-service/webapi/overview"
 xref_see_also:
 - Microsoft.Dynamics.CRM.EntityTypeIndex
 - Microsoft.Dynamics.CRM.ActionIndex

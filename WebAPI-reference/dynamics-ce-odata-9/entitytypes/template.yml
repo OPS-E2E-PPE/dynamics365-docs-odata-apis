@@ -3,17 +3,15 @@ uid: Microsoft.Dynamics.CRM.template
 name: "template"
 type: entitytype
 metadata: 
-  title: "Microsoft Dynamics 365 Customer Engagement template EntityType Reference | MicrosoftDocs"
-  ms.date: "03/20/2018"
+  title: "Common Data Service and Dynamics 365 Customer Engagement template EntityType Reference | MicrosoftDocs"
+  ms.date: "05/03/2020"
   ms.service: "crm-online"
   ms.topic: "reference"
-  applies_to: 
-  - "Dynamics 365 (online)"
   ms.assetid: b9687de4-dec1-42a4-8a5a-ff5c756528d5
-  author: "jimdaly"
-  ms.author: "jdaly"
-  manager: "jdaly"
-  meta-description: "Reference information about the Dynamics 365 Customer Engagement template entitytype."
+  author: "KumarVivek"
+  ms.author: "kvivek"
+  manager: "Annbe"
+  meta-description: "Reference information about the template entitytype."
 description: "Template for an email message that contains the standard attributes of an email message."
 header:
   entity_set_path: "[organization URI]/api/data/v9.0/templates"
@@ -343,6 +341,8 @@ solutions:
     description: ""
   - type: Microsoft.Dynamics.CRM.msdynce_Activities
     description: "Dynamics 365 workload for activities."
+  - type: Microsoft.Dynamics.CRM.msdynce_ActivitiesPatch
+    description: "Patch for Dynamics 365 workload for activities."
   - type: Microsoft.Dynamics.CRM.msdynce_LeadManagement
     description: "Dynamics 365 workload for lead management."
   - type: Microsoft.Dynamics.CRM.msdynce_Marketing
@@ -355,8 +355,8 @@ solutions:
     description: "Internal CRM System Solution"
 # This entity has no remarks.
 href_see_also:
-- text: "Use the Microsoft Dynamics 365 Customer Engagement Web API"
-  href: "https://docs.microsoft.com/dynamics365/customer-engagement/developer/use-microsoft-dynamics-365-web-api"
+- text: "Use the Common Data Service Web API"
+  href: "https://docs.microsoft.com/powerapps/developer/common-data-service/webapi/overview"
 xref_see_also:
 - Microsoft.Dynamics.CRM.EntityTypeIndex
 - Microsoft.Dynamics.CRM.ActionIndex

@@ -3,18 +3,16 @@ uid: Microsoft.Dynamics.CRM.calendarrule
 name: "calendarrule"
 type: entitytype
 metadata: 
-  title: "Microsoft Dynamics 365 Customer Engagement calendarrule EntityType Reference | MicrosoftDocs"
-  ms.date: "03/20/2018"
+  title: "Common Data Service and Dynamics 365 Customer Engagement calendarrule EntityType Reference | MicrosoftDocs"
+  ms.date: "05/03/2020"
   ms.service: "crm-online"
   ms.topic: "reference"
-  applies_to: 
-  - "Dynamics 365 (online)"
   ms.assetid: 35884440-4397-47e6-a8f7-d85746b7209b
-  author: "jimdaly"
-  ms.author: "jdaly"
-  manager: "jdaly"
-  meta-description: "Reference information about the Dynamics 365 Customer Engagement calendarrule entitytype."
-description: "Defines free/busy times for a service and for resources or resource groups, such as working, non-working, vacation, and blocked. <br /><b>Note:</b> It is not possible to perform GET, POST, PATCH and DELETE operations with this entity."
+  author: "KumarVivek"
+  ms.author: "kvivek"
+  manager: "Annbe"
+  meta-description: "Reference information about the calendarrule entitytype."
+description: "Defines free/busy times for a service and for resources or resource groups, such as working, non-working, vacation, and blocked."
 header:
   entity_set_path: "[organization URI]/api/data/v9.0/calendarrules"
   base_type: Microsoft.Dynamics.CRM.crmbaseentity
@@ -269,8 +267,8 @@ solutions:
     description: "Internal CRM System Solution"
 # This entity has no remarks.
 href_see_also:
-- text: "Use the Microsoft Dynamics 365 Customer Engagement Web API"
-  href: "https://docs.microsoft.com/dynamics365/customer-engagement/developer/use-microsoft-dynamics-365-web-api"
+- text: "Use the Common Data Service Web API"
+  href: "https://docs.microsoft.com/powerapps/developer/common-data-service/webapi/overview"
 xref_see_also:
 - Microsoft.Dynamics.CRM.EntityTypeIndex
 - Microsoft.Dynamics.CRM.ActionIndex

@@ -3,17 +3,15 @@ uid: Microsoft.Dynamics.CRM.email
 name: "email"
 type: entitytype
 metadata: 
-  title: "Microsoft Dynamics 365 Customer Engagement email EntityType Reference | MicrosoftDocs"
-  ms.date: "03/20/2018"
+  title: "Common Data Service and Dynamics 365 Customer Engagement email EntityType Reference | MicrosoftDocs"
+  ms.date: "05/03/2020"
   ms.service: "crm-online"
   ms.topic: "reference"
-  applies_to: 
-  - "Dynamics 365 (online)"
   ms.assetid: dbf7bf98-8ef0-4fdc-a9c5-5f9f00fc7797
-  author: "jimdaly"
-  ms.author: "jdaly"
-  manager: "jdaly"
-  meta-description: "Reference information about the Dynamics 365 Customer Engagement email entitytype."
+  author: "KumarVivek"
+  ms.author: "kvivek"
+  manager: "Annbe"
+  meta-description: "Reference information about the email entitytype."
 description: "Activity that is delivered using email protocols."
 header:
   entity_set_path: "[organization URI]/api/data/v9.0/emails"
@@ -538,7 +536,7 @@ properties:
       isreadonly: false
     - name: stageid
       type: Edm.Guid
-      display_name: "Process Stage"
+      display_name: "(Deprecated) Process Stage"
       description: "Unique identifier of the Stage."
       iscomputed: false
       isreadonly: false
@@ -616,7 +614,7 @@ properties:
       isreadonly: false
     - name: traversedpath
       type: Edm.String
-      display_name: "Traversed Path"
+      display_name: "(Deprecated) Traversed Path"
       description: "For internal use only."
       iscomputed: false
       isreadonly: false
@@ -641,12 +639,12 @@ lookup_properties:
     description: "Unique identifier of the delegate user who created the activitypointer."
   - name: _emailsender_value
     single_valued_navigation_property:
-    - emailsender_lead
-    - emailsender_equipment
-    - emailsender_account
     - emailsender_contact
     - emailsender_queue
+    - emailsender_account
     - emailsender_systemuser
+    - emailsender_lead
+    - emailsender_equipment
     description: "Shows the sender of the email."
   - name: _modifiedby_value
     description: "Unique identifier of user who last modified the activity."
@@ -847,18 +845,6 @@ single_valued_navigation_properties:
   - name: regardingobjectid_lead_email
     type: Microsoft.Dynamics.CRM.lead
     partner: Lead_Emails
-  - name: regardingobjectid_ms_newsitem
-    type: Microsoft.Dynamics.CRM.ms_newsitem
-    partner: ms_newsitem_ActivityPointers
-  - name: regardingobjectid_ms_newsitem_email
-    type: Microsoft.Dynamics.CRM.ms_newsitem
-    partner: ms_newsitem_Emails
-  - name: regardingobjectid_ms_satori
-    type: Microsoft.Dynamics.CRM.ms_satori
-    partner: ms_satori_ActivityPointers
-  - name: regardingobjectid_ms_satori_email
-    type: Microsoft.Dynamics.CRM.ms_satori
-    partner: ms_satori_Emails
   - name: regardingobjectid_msdyn_agreement
     type: Microsoft.Dynamics.CRM.msdyn_agreement
     partner: msdyn_agreement_ActivityPointers
@@ -1460,6 +1446,8 @@ operations:
     binding_type: "Not Bound"
   - name: Microsoft.Dynamics.CRM.CheckPromoteEmail
     binding_type: "Not Bound"
+  - name: Microsoft.Dynamics.CRM.DeliverImmediatePromoteEmail
+    binding_type: "Entity"
   - name: Microsoft.Dynamics.CRM.DeliverIncomingEmail
     binding_type: "Collection"
   - name: Microsoft.Dynamics.CRM.DeliverPromoteEmail
@@ -1493,26 +1481,46 @@ solutions:
   solution_items:
   - type: Microsoft.Dynamics.CRM.AppforOutlook
     description: ""
+  - type: Microsoft.Dynamics.CRM.EmailEngagement
+    description: "Stay on top of your email with alerts and reminders, prioritizing prospects, or customers that are most engaged."
   - type: Microsoft.Dynamics.CRM.msdynce_Activities
     description: "Dynamics 365 workload for activities."
+  - type: Microsoft.Dynamics.CRM.msdynce_ActivitiesPatch
+    description: "Patch for Dynamics 365 workload for activities."
   - type: Microsoft.Dynamics.CRM.msdynce_AppCommon
     description: "For internal use only."
   - type: Microsoft.Dynamics.CRM.msdynce_LeadManagement
     description: "Dynamics 365 workload for lead management."
+  - type: Microsoft.Dynamics.CRM.msdynce_LeadManagementPatch
+    description: "Dynamics 365 workload for lead management."
   - type: Microsoft.Dynamics.CRM.msdynce_Marketing
     description: "Dynamics 365 workload for marketing and enterprise."
+  - type: Microsoft.Dynamics.CRM.msdynce_MarketingPatch
+    description: "Patch for Dynamics 365 workload for marketing and enterprise."
   - type: Microsoft.Dynamics.CRM.msdynce_MarketingSales
+    description: "For internal use only."
+  - type: Microsoft.Dynamics.CRM.msdynce_MarketingSalesPatch
     description: "For internal use only."
   - type: Microsoft.Dynamics.CRM.msdynce_Sales
     description: "Dynamics 365 workload for sales."
+  - type: Microsoft.Dynamics.CRM.msdynce_SalesPatch
+    description: "Patch for Dynamics 365 workload for sales."
+  - type: Microsoft.Dynamics.CRM.msdynce_SalesPatch201904
+    description: "Dynamics 365 workload for Sales Patch Version 2."
+  - type: Microsoft.Dynamics.CRM.msdynce_SalesPatch202001
+    description: "Dynamics 365 workload for third patch of Sales."
   - type: Microsoft.Dynamics.CRM.msdynce_Service
+    description: "Dynamics 365 workload for service."
+  - type: Microsoft.Dynamics.CRM.msdynce_ServicePatch
+    description: "Patch for Dynamics 365 workload for service."
+  - type: Microsoft.Dynamics.CRM.msdynce_ServicePatch201911
     description: "Dynamics 365 workload for service."
   - type: Microsoft.Dynamics.CRM.System
     description: "Internal CRM System Solution"
 # This entity has no remarks.
 href_see_also:
-- text: "Use the Microsoft Dynamics 365 Customer Engagement Web API"
-  href: "https://docs.microsoft.com/dynamics365/customer-engagement/developer/use-microsoft-dynamics-365-web-api"
+- text: "Use the Common Data Service Web API"
+  href: "https://docs.microsoft.com/powerapps/developer/common-data-service/webapi/overview"
 xref_see_also:
 - Microsoft.Dynamics.CRM.EntityTypeIndex
 - Microsoft.Dynamics.CRM.ActionIndex

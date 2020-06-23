@@ -3,17 +3,15 @@ uid: Microsoft.Dynamics.CRM.RevertProduct
 name: "RevertProduct"
 type: action
 metadata: 
-  title: "Microsoft Dynamics 365 Customer Engagement RevertProduct Action Reference | MicrosoftDocs"
-  ms.date: "03/20/2018"
+  title: "Common Data Service and Dynamics 365 Customer Engagement RevertProduct Action Reference | MicrosoftDocs"
+  ms.date: "05/03/2020"
   ms.service: "crm-online"
   ms.topic: "reference"
-  applies_to: 
-  - "Dynamics 365 (online)"
   ms.assetid: dc3df468-4868-49d3-b73d-3aecf65e8826
-  author: "jimdaly"
-  ms.author: "jdaly"
-  manager: "jdaly"
-  meta-description: "Reference information about the Dynamics 365 Customer Engagement RevertProduct Action."
+  author: "KumarVivek"
+  ms.author: "kvivek"
+  manager: "Annbe"
+  meta-description: "Reference information about the RevertProduct Action."
 namespace: Microsoft.Dynamics.CRM
 description: "Reverts changes done to properties of a product family, product, or bundle record, and set it back to its last published (active) state. "
 owningsolution: Microsoft.Dynamics.CRM.System
@@ -37,8 +35,8 @@ entities:
     description: "Information about products and their pricing information."
 # This action has no remarks.
 href_see_also:
-- text: "Use the Microsoft Dynamics 365 Customer Engagement Web API"
-  href: "https://docs.microsoft.com/dynamics365/customer-engagement/developer/use-microsoft-dynamics-365-web-api"
+- text: "Use the Common Data Service Web API"
+  href: "https://docs.microsoft.com/powerapps/developer/common-data-service/webapi/overview"
 xref_see_also:
 - Microsoft.Dynamics.CRM.EntityTypeIndex
 - Microsoft.Dynamics.CRM.ActionIndex
