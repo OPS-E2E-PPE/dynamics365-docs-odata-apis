@@ -8,7 +8,7 @@
       "monikers": [],
       "moniker_ranges": [],
       "xref_query_tags": [
-        "/dotnet"        
+        "/dotnet"
       ],
       "open_to_public_contributors": true,
       "type_mapping": {
@@ -56,5 +56,11 @@
       "target_framework": "net45",
       "version": "latest-prerelease"
     }
-  ]
+  ],
+  "docs_build_engine": {
+    "name": "docfx_v3"
+  },
+  "feature_flags": {
+    "use_v2_github_user_cache": true
+  }
 }
