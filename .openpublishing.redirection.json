@@ -1,0 +1,9 @@
+{
+  "redirections": [
+    {
+      "source_path": "WebAPI-reference/dynamics-ce-odata-9/index.md",
+      "redirect_url": "/dynamics365/customer-engagement/web-api/about",
+      "redirect_document_id": false
+    }
+  ]
+}
